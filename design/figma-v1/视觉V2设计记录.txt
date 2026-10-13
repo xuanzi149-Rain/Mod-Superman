@@ -1,0 +1,29 @@
+Mod-Superman 视觉 V2
+日期：2026-10-13
+Figma 文件：c8zO9ZFaOsngDCmL63WGxR
+用户练习画框：59:135
+设计：https://www.figma.com/design/c8zO9ZFaOsngDCmL63WGxR?node-id=59-135
+原型：https://www.figma.com/proto/c8zO9ZFaOsngDCmL63WGxR?node-id=59-135&starting-point-node-id=59%3A135
+
+已写入的变更
+1. 红 #D71920、黄 #FFD600、黑 #000000、白 #FFFFFF。
+2. 首页采用用户标题：博德之门3个性化Mod生成器 / 生成你的私人定制Mod！
+3. 大标题、编号步骤、分隔线、黑色所选装备区、黄色说明区、红色主要操作。
+4. 主流程和异常状态统一视觉；现有图层中的演示入口和内部说明以隐藏方式处理。
+5. 用户练习画框作为视觉 V2 起点；原始标题图层仍保留在该画框中并隐藏，新可见标题保持相同内容。
+
+参考首页（内容组织参考，不宣称像素级复刻）
+Vogue：https://www.vogue.com/
+ELLE：https://www.elle.com/
+Harper's BAZAAR：https://www.harpersbazaar.com/
+MoMA：https://www.moma.org/
+Artsy：https://www.artsy.net/
+采用首页标题、栏目、主要内容和操作入口的层级，转换成制作工具。
+Tate 页面读取失败，未作为五个已读取参考之一。
+
+验证状态与后续修正
+Figma 写入调用成功并返回图层ID。随后截图调用被 Starter 套餐 MCP 额度限制阻止；浏览器读取超时。
+本次尚未完成最终视觉截图、四颜色全量扫描及播放器点击回归，不能称为完全验收。
+待修正：问题反馈画面的“问题描述（演示）”输入实例（3:585）被名称中的“演示”误匹配隐藏，应恢复显示，只去除标签中的演示字样。
+恢复调用能力后，先针对 3:585 修正，再截图检查标题区/多行文字/组件内颜色/按钮位置与画框边界；必要时修复高度和间距。
+原型依旧为预设流程；下载与反馈不执行真实业务。

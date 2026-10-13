@@ -120,6 +120,7 @@ def generate(request, output_root=ROOT / "build/equipment-mvp", *, confirmed=Fal
         raise FileNotFoundError("LSLib Divine.exe is missing; specify --packager.")
     identifier = str(uuid.uuid4())
     files = render_files(clean, identifier, catalog=catalog)
+    check_rendered_files(clean, identifier, files, catalog=catalog)
     item = catalog["items"][clean["object"]]
     directory = output_root.resolve() / identifier
     directory.mkdir(parents=True, exist_ok=False)
@@ -160,6 +161,47 @@ def generate(request, output_root=ROOT / "build/equipment-mvp", *, confirmed=Fal
         "伤害与双手伤害分别修改，未提交的字段保持原规则。未直接修改售价，最终价格需游戏实测。\n"
         "已通过生成和解包检查，本次游戏验证待完成。\n" + "\n".join(warnings), encoding="utf-8")
     return pak
+
+
+def check_rendered_files(request, module_id, files, *, catalog):
+    """Check structure and exact Stats scope independently of rendering."""
+    item = catalog['items'][request['object']]
+    expected_fields = {FIELDS[k]: format(Decimal(str(v)), 'f') if k == 'weight_kg' else str(v)
+                       for k, v in request['changes'].items() if k in FIELDS}
+    stats_files = [p for p in files if p.suffix == '.txt']
+    if len(stats_files) != int(bool(expected_fields)):
+        raise ValidationError('Unexpected Stats file count.')
+    for path in files:
+        if path.is_absolute() or '..' in path.parts or 'RootTemplates' in path.parts:
+            raise ValidationError('Unexpected generated path.')
+        if path.suffix == '.lsx':
+            root = ET.fromstring(files[path])
+            value = root.find('.//node[@id="ModuleInfo"]/attribute[@id="UUID"]')
+            if value is None or value.get('value') != module_id:
+                raise ValidationError('Invalid module UUID.')
+    if stats_files:
+        lines = files[stats_files[0]].decode('utf-8').splitlines()
+        if lines[:3] != [f'new entry "{item["record"]}"', f'type "{item["stats_type"]}"',
+                         f'using "{item["record"]}"']:
+            raise ValidationError('Unexpected Stats target or inheritance.')
+        observed = {}
+        for line in lines[3:]:
+            match = re.fullmatch(r'data "([^"]+)" "([^"]*)"', line)
+            if not match or match[1] in observed:
+                raise ValidationError('Invalid or duplicate Stats field.')
+            observed[match[1]] = match[2]
+        if observed != expected_fields:
+            raise ValidationError('Generated Stats modification scope differs from request.')
+    localization_files = [p for p in files if p.suffix == '.xml']
+    if len(localization_files) != int('name' in request['changes']):
+        raise ValidationError('Unexpected localization file count.')
+    if localization_files:
+        root = ET.fromstring(files[localization_files[0]])
+        entries = root.findall('content')
+        if len(entries) != 1 or entries[0].get('contentuid') != item['name_handle'] or entries[0].text != request['changes']['name']:
+            raise ValidationError('Generated name differs from confirmed request.')
+    if len(files) != 1 + len(stats_files) + len(localization_files):
+        raise ValidationError('Unexpected generated file set.')
 
 
 def main():

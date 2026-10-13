@@ -1,0 +1,14 @@
+{
+  "fileKey": "c8zO9ZFaOsngDCmL63WGxR",
+  "pageId": "0:1",
+  "mainFrames": {
+    "select": "3:179",
+    "input": "3:221",
+    "confirm": "3:270",
+    "result": "3:315"
+  },
+  "screenCount": 19,
+  "connectionCount": 39,
+  "userTesting": "not_performed",
+  "playerClickTesting": "not_performed"
+}
