@@ -1,0 +1,13 @@
+{
+  "template_version": "first-blood-v2",
+  "module_uuid": "fa86e11f-65e1-7489-881e-69cb2b80e055",
+  "object": "UND_Duergar_ShortswordOfFirstBlood",
+  "confirmed_damage": "2d6",
+  "explicit_game_fields": [
+    "Damage"
+  ],
+  "inheritance": "same-name source record, matching shipped Honour override pattern",
+  "pak_creation": "not_performed",
+  "game_regression": "not_performed",
+  "toolkit_resave": "not_supported_by_this_workflow"
+}

@@ -1,0 +1,5 @@
+new entry "UND_Duergar_ShortswordOfFirstBlood"
+type "Weapon"
+using "UND_Duergar_ShortswordOfFirstBlood"
+data "PassivesOnEquip" "UND_Duergar_ShortswordOfFirstBlood_Passive;ModSuperman_EquipmentDexterityTest"
+

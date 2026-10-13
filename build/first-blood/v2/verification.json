@@ -1,0 +1,12 @@
+{
+  "template_version": "first-blood-v2",
+  "pak_creation": "passed",
+  "pak_roundtrip": "passed",
+  "explicit_game_fields": [
+    "Damage"
+  ],
+  "pak_sha256": "6ff40dc3bc1b10993cfc0bfd815e512121c63f0b196c74ea553c7b00271a7d02",
+  "game_regression": "not_performed",
+  "pak_bytes": 1479,
+  "tests_passed": 15
+}

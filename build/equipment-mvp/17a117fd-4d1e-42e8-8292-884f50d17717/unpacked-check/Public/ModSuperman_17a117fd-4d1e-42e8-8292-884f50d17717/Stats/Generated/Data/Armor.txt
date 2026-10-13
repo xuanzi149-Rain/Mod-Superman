@@ -1,0 +1,5 @@
+new entry "ARM_ChainMail_Body"
+type "Armor"
+using "ARM_ChainMail_Body"
+data "Weight" "0.5"
+data "Rarity" "Rare"

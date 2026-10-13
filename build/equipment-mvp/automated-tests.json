@@ -1,0 +1,9 @@
+{
+  "tests_run": 40,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "runtime": "Python 3.12.14",
+  "game_validation": "not_performed",
+  "catalog_template_count": 1872
+}

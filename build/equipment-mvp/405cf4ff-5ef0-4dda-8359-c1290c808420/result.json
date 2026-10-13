@@ -1,0 +1,40 @@
+{
+  "request": {
+    "object": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+    "changes": {
+      "name": "曙光短剑"
+    }
+  },
+  "module_uuid": "405cf4ff-5ef0-4dda-8359-c1290c808420",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "UND_Duergar_ShortswordOfFirstBlood",
+  "original": {
+    "Damage": "1d6",
+    "VersatileDamage": null,
+    "Weight": "0.9",
+    "Rarity": "Uncommon"
+  },
+  "honour_original": {
+    "Damage": "1d6",
+    "VersatileDamage": null,
+    "Weight": "0.9",
+    "Rarity": "Uncommon"
+  },
+  "shared_record_templates": [
+    "1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b"
+  ],
+  "name_reference_templates": [
+    "1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b"
+  ],
+  "potential_descendant_records": [],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": false,
+  "warnings": [],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "pak_sha256": "cf31dd20d677a0302a7cd1ac99d9c35f256c67d619b6e1e75752bcdfcdc26b85",
+  "pak_filename": "ModSuperman_405cf4ff-5ef0-4dda-8359-c1290c808420.pak"
+}

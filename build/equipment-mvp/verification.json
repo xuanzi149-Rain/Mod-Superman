@@ -1,0 +1,44 @@
+[
+  {
+    "request": "requests\\equipment-mvp\\body.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\17a117fd-4d1e-42e8-8292-884f50d17717\\ModSuperman_17a117fd-4d1e-42e8-8292-884f50d17717.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "request": "requests\\equipment-mvp\\first-blood.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\8ff888fb-8574-429f-b783-a5f5a2da8f07\\ModSuperman_8ff888fb-8574-429f-b783-a5f5a2da8f07.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "request": "requests\\equipment-mvp\\longsword.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\6255011d-3fc8-4ed0-9f4a-a374d759590b\\ModSuperman_6255011d-3fc8-4ed0-9f4a-a374d759590b.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "request": "requests\\equipment-mvp\\ring.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\68c1e2d4-2fbe-4d78-9df8-7361581188cc\\ModSuperman_68c1e2d4-2fbe-4d78-9df8-7361581188cc.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "request": "requests\\equipment-mvp\\shield.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\66c6c318-ceb3-4f7a-8125-f41221f64f88\\ModSuperman_66c6c318-ceb3-4f7a-8125-f41221f64f88.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "request": "requests\\equipment-mvp\\name.json",
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\equipment-mvp\\405cf4ff-5ef0-4dda-8359-c1290c808420\\ModSuperman_405cf4ff-5ef0-4dda-8359-c1290c808420.pak",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "template_version": "first-blood-v1",
+  "object": "UND_Duergar_ShortswordOfFirstBlood",
+  "module_folder": "FirstBloodDamageTest_fa86e11f-65e1-7489-881e-69cb2b80e055",
+  "confirmed_parameters": {
+    "field": "Damage",
+    "original": "1d6",
+    "multiplier": 2,
+    "new": "2d6"
+  },
+  "original_value_source": "Toolkit screenshots: inherited Damage and Parent value are 1d6",
+  "template_sha256": {
+    "editor-stats\\Stats\\Weapon.stats": "56517302ca71b5cc3853fc3665068764501e883da6c53ee8722ccb17498c809b",
+    "runtime-stats\\Generated\\Data\\Weapon.txt": "de3c17362f7f2835fdb32717515ce399297bf54d2b2571523d98fd757b207089"
+  },
+  "output_sha256": {
+    "editor-stats\\Stats\\Weapon.stats": "990e6660ecf1e3f5c6d3ca885c9d633762d9871eb773f88a013d86181435aa52",
+    "runtime-stats\\Generated\\Data\\Weapon.txt": "0d6ef25c6aecf458287ff19b22bcddff8aca20fa3a8783e1327558b13413819c"
+  },
+  "file_generation": "passed",
+  "pak_publication": "not_performed",
+  "generated_mod_game_verification": "not_performed",
+  "game_version": null
+}

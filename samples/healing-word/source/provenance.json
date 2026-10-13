@@ -1,0 +1,24 @@
+{
+  "module_name": "HealingWordRangeTest",
+  "module_uuid": "9fd6363d-2acf-4acc-94fa-ae9fee76a604",
+  "record": "Target_HealingWord",
+  "original_radius_m": 18,
+  "new_radius_m": 36,
+  "runtime_source": "Shared.pak/Public/Shared/Stats/Generated/Data/Spell_Target.txt",
+  "editor_source": "Data/Editor/Mods/Shared/Stats/SpellData/Target.stats",
+  "game_data_path": "C:\\Program Files (x86)\\Steam\\sbeam\\steamapps\\common\\Baldurs Gate 3\\Data",
+  "original_healing": "RegainHitPoints(1d4+SpellCastingAbilityModifier)",
+  "original_cost": "BonusActionPoint:1;SpellSlotsGroup:1:1:1",
+  "inherited_upcasts": [
+    "Target_HealingWord_2",
+    "Target_HealingWord_3",
+    "Target_HealingWord_4",
+    "Target_HealingWord_5",
+    "Target_HealingWord_6"
+  ],
+  "template_sha256": {
+    "editor-stats/SpellData/Target.stats": "354ec65be4ae157976d17f56944a2d279944a8ab3e4921675df2059f7f1f28f4",
+    "runtime-stats/Generated/Data/Spell_Target.txt": "94b4961aef0c13d9ce2133e63791879970c30d5512d0ddbe534ea128fe705a5b"
+  },
+  "game_verification": "not_performed"
+}

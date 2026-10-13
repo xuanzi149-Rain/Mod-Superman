@@ -1,0 +1,10 @@
+new entry "UND_Duergar_ShortswordOfFirstBlood_Passive"
+type "PassiveData"
+data "DisplayName" "h2961f1ecg362bg4945gb7a3g136a55dfc873;2"
+data "Description" "he0491531g77dbg4a48g98e5gf9276ee9b0c3;2"
+data "DescriptionParams" "DealDamage(1d8,Piercing)"
+data "TooltipConditionalDamage" "DealDamage(1d8,Piercing)"
+data "StatsFunctorContext" "OnAttack"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and HasMaxHP() and IsAttack() and not IsMiss()"
+data "StatsFunctors" "DealDamage(1d8,Piercing,Magical)"
+

@@ -1,0 +1,5 @@
+new entry "UND_MushroomHunger_RingOfExploration"
+type "Armor"
+using "UND_MushroomHunger_RingOfExploration"
+data "Weight" "0.5"
+data "Rarity" "Rare"

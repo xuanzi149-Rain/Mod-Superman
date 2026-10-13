@@ -1,0 +1,25 @@
+{
+  "installed_matches_published_bytes": true,
+  "installed_sha256": "3d2bfb3b86614379c4d32f77068bbe8b890ad258324c94a4189df898f0e4d843",
+  "target_config_entries": 1,
+  "target_config_matches_package_identity": true,
+  "config_modules": [
+    {
+      "name": "GustavX",
+      "uuid": "cb555efe-2d9e-131f-8195-a89329d218ea"
+    },
+    {
+      "name": "HonourX",
+      "uuid": "767d0062-d82c-279c-e16b-dfee7fe94cdd"
+    },
+    {
+      "name": "FirstBloodDamageTest",
+      "uuid": "fa86e11f-65e1-7489-881e-69cb2b80e055"
+    },
+    {
+      "name": "Conjure Gold",
+      "uuid": "8ede1b31-f8d0-a512-87d5-8d4f0a06fa83"
+    }
+  ],
+  "game_load_verified": false
+}

@@ -1,0 +1,18 @@
+{
+  "module": "HealingWordRangeTest_9fd6363d-2acf-4acc-94fa-ae9fee76a604",
+  "generator_tests_passed": 5,
+  "total_tests_passed": 10,
+  "pak_creation": "passed",
+  "pak_roundtrip_comparison": "passed",
+  "pak_files": [
+    "Mods\\HealingWordRangeTest_9fd6363d-2acf-4acc-94fa-ae9fee76a604\\meta.lsx",
+    "Public\\HealingWordRangeTest_9fd6363d-2acf-4acc-94fa-ae9fee76a604\\Stats\\Generated\\Data\\Spell_Target.txt"
+  ],
+  "pak_bytes": 2317,
+  "pak_sha256": "b69df16995af012589af94b8bd025cffc7b3006f709d8ee2475c5c76902f28ea",
+  "game_verification": "not_performed",
+  "toolkit_editor_import": "not_performed",
+  "packager": "LSLib Divine v1.20.4",
+  "packager_release": "https://github.com/Norbyte/lslib/releases/tag/v1.20.4",
+  "download_sha256": "5e02368fb8acafda9b45acba37a3f3bf507fc3d65a083a159abbeab06337190e"
+}

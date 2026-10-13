@@ -1,0 +1,6 @@
+new entry "ModSuperman_Dexterity_e18062ec361848139c4f53022aec7025"
+type "PassiveData"
+data "DisplayName" "ModSupermanDexe18062ec361848139c4f53022aec7025;1"
+data "Description" "ModSupermanDexe18062ec361848139c4f53022aec7025Description;1"
+data "Boosts" "Ability(Dexterity,3)"
+

@@ -1,0 +1,5 @@
+new entry "ARM_Shield"
+type "Armor"
+using "ARM_Shield"
+data "Weight" "0.5"
+data "Rarity" "Rare"

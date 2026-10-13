@@ -1,0 +1,49 @@
+{
+  "request": {
+    "object": "equipment:b973e3cb-c18d-4514-ba01-ebcabbf26968",
+    "changes": {
+      "weight_kg": 0.5,
+      "rarity": "Rare"
+    }
+  },
+  "module_uuid": "17a117fd-4d1e-42e8-8292-884f50d17717",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "ARM_ChainMail_Body",
+  "original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "18",
+    "Rarity": null
+  },
+  "honour_original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "18",
+    "Rarity": null
+  },
+  "shared_record_templates": [
+    "b973e3cb-c18d-4514-ba01-ebcabbf26968"
+  ],
+  "name_reference_templates": [
+    "b973e3cb-c18d-4514-ba01-ebcabbf26968"
+  ],
+  "potential_descendant_records": [
+    "ARM_ChainMail_Body_1",
+    "ARM_ChainMail_Body_2",
+    "MAG_ZOC_ForceConduit_ChainMail"
+  ],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": true,
+  "warnings": [
+    "weight_kg=0.5: no recorded game test for this object/value.",
+    "rarity='Rare': no recorded game test for this object/value.",
+    "This combination requires a separate game regression test."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "pak_sha256": "9483f011223c0baedeadbae699ab920a4e6117badf932fc23018f24bdfff51bd",
+  "pak_filename": "ModSuperman_17a117fd-4d1e-42e8-8292-884f50d17717.pak"
+}

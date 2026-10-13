@@ -1,0 +1,89 @@
+{
+  "request": {
+    "object": "equipment:0e60fb18-4b91-430b-ada8-ed605a450ba1",
+    "changes": {
+      "weight_kg": 0.5,
+      "rarity": "Rare",
+      "damage": "2d8",
+      "versatile_damage": "2d10"
+    }
+  },
+  "module_uuid": "6255011d-3fc8-4ed0-9f4a-a374d759590b",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "WPN_Longsword",
+  "original": {
+    "Damage": "1d8",
+    "VersatileDamage": "1d10",
+    "Weight": "1.35",
+    "Rarity": null
+  },
+  "honour_original": {
+    "Damage": "1d8",
+    "VersatileDamage": "1d10",
+    "Weight": "1.35",
+    "Rarity": null
+  },
+  "shared_record_templates": [
+    "0e60fb18-4b91-430b-ada8-ed605a450ba1",
+    "1865323f-b428-4791-a0a9-578841e57463",
+    "2af7255d-bae1-4d4c-a8ba-4a2b5909a794",
+    "344ac552-11ff-4150-8bb4-7eed8fb78588",
+    "6b7364d6-d33b-4cf6-a398-b2bd0f75138f",
+    "907a794b-b089-406b-880d-6f2df2bb3f13",
+    "9de4ffa7-4d2f-44c5-8bc9-0a17a732f74c",
+    "a4338d7c-5b70-4076-9711-d3803fab2e1b",
+    "f344c6b2-64bc-4c6d-a66d-5d3966191210"
+  ],
+  "name_reference_templates": [
+    "0e60fb18-4b91-430b-ada8-ed605a450ba1"
+  ],
+  "potential_descendant_records": [
+    "LOW_Elfsong_EmperorSword_LongSword",
+    "LOW_RamazithsTower_Nightsong_Silver_Sword",
+    "MAG_Bonded_Lethal_Longsword",
+    "MAG_Drowelf_SpiderSnare_Longsword",
+    "MAG_Finesse_Longsword",
+    "MAG_FlamingFist_FlamingBlade",
+    "MAG_Harpers_SingingSword",
+    "MAG_Illithid_MindOverload_Weapon_Longsword",
+    "MAG_Infernal_Longsword",
+    "MAG_LC_Fleshred_Longsword",
+    "MAG_LowHP_IncreaseDamagePsychic_GithLongsword",
+    "MAG_MeleeDebuff_AttackDebuff12versatile_OnDamage_Longsword",
+    "MAG_OB_Paladin_DeathKnight_Longsword",
+    "MAG_Primeval_Silver_Longsword",
+    "MAG_Surgeon_Bonesaw",
+    "MAG_WYRM_Commander_Longsword",
+    "Quest_SCL_Eclipseblade",
+    "Quest_SCL_Moonblade",
+    "UND_SwordInStone",
+    "WPN_Bonesaw",
+    "WPN_DeathKnight_Longsword",
+    "WPN_Katana",
+    "WPN_KingsKnife",
+    "WPN_Longsword_1",
+    "WPN_Longsword_2",
+    "WPN_Longsword_Gith",
+    "WPN_Longsword_GuardianOfFaith_Evil",
+    "WPN_Longsword_GuardianOfFaith_Good",
+    "WPN_Longsword_GuardianOfFaith_Neutral",
+    "WPN_Longsword_REF",
+    "WPN_Longsword_Rusty"
+  ],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": true,
+  "warnings": [
+    "weight_kg=0.5: no recorded game test for this object/value.",
+    "rarity='Rare': no recorded game test for this object/value.",
+    "damage='2d8': no recorded game test for this object/value.",
+    "versatile_damage='2d10': no recorded game test for this object/value.",
+    "This combination requires a separate game regression test."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "pak_sha256": "fc1d0213c134cdaf28e62dd88a42102511d6e3f304a359d557b3445f7616ea53",
+  "pak_filename": "ModSuperman_6255011d-3fc8-4ed0-9f4a-a374d759590b.pak"
+}

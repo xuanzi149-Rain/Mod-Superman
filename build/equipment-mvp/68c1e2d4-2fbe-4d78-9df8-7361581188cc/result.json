@@ -1,0 +1,45 @@
+{
+  "request": {
+    "object": "equipment:046598e3-8cb4-497c-bfd2-866ff88b50db",
+    "changes": {
+      "weight_kg": 0.5,
+      "rarity": "Rare"
+    }
+  },
+  "module_uuid": "68c1e2d4-2fbe-4d78-9df8-7361581188cc",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "UND_MushroomHunger_RingOfExploration",
+  "original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "0.05",
+    "Rarity": "Uncommon"
+  },
+  "honour_original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "0.05",
+    "Rarity": "Uncommon"
+  },
+  "shared_record_templates": [
+    "046598e3-8cb4-497c-bfd2-866ff88b50db"
+  ],
+  "name_reference_templates": [
+    "046598e3-8cb4-497c-bfd2-866ff88b50db"
+  ],
+  "potential_descendant_records": [],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": true,
+  "warnings": [
+    "weight_kg=0.5: no recorded game test for this object/value.",
+    "rarity='Rare': no recorded game test for this object/value.",
+    "This combination requires a separate game regression test."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "pak_sha256": "386de5e7bd7063d9b738ad44cba11ab03f0591f161d7c6e01ae37ac3f23f4da0",
+  "pak_filename": "ModSuperman_68c1e2d4-2fbe-4d78-9df8-7361581188cc.pak"
+}

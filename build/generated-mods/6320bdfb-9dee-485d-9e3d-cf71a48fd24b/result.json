@@ -1,0 +1,19 @@
+{
+  "request": {
+    "object": "healing_word",
+    "changes": {
+      "cast_distance_m": 36
+    }
+  },
+  "module_uuid": "6320bdfb-9dee-485d-9e3d-cf71a48fd24b",
+  "catalog_version": "parameterized-v1",
+  "experimental": false,
+  "warnings": [],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "install": "not_performed",
+  "pak_filename": "ModSuperman_6320bdfb-9dee-485d-9e3d-cf71a48fd24b.pak",
+  "pak_sha256": "0621425c5c5cbdb4d7b081c26cc560f355984ff318c090f06f653119f3793157"
+}

@@ -1,0 +1,49 @@
+{
+  "request": {
+    "object": "equipment:dff731f7-d6da-403d-80cf-7f3d9cc7345b",
+    "changes": {
+      "rarity": "VeryRare"
+    }
+  },
+  "module_uuid": "599a44dc-a705-4837-a937-adb58bca7b9a",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "UNI_DarkUrge_Bhaal_Cloak",
+  "original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "0.5",
+    "Rarity": "Rare"
+  },
+  "honour_original": {
+    "Damage": null,
+    "VersatileDamage": null,
+    "Weight": "0.5",
+    "Rarity": "Rare"
+  },
+  "shared_record_templates": [
+    "dff731f7-d6da-403d-80cf-7f3d9cc7345b",
+    "e3938af1-a8b5-4608-862d-8252150a0d5b"
+  ],
+  "name_reference_templates": [
+    "dff731f7-d6da-403d-80cf-7f3d9cc7345b",
+    "e3938af1-a8b5-4608-862d-8252150a0d5b"
+  ],
+  "potential_descendant_records": [],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": true,
+  "warnings": [
+    "rarity='VeryRare': no recorded game test for this object/value."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "user_reported_passed",
+  "install": "not_performed",
+  "pak_sha256": "31d2ad13f7301a467b0142350393d83ec02c9300b86c88fa34ce37c9add0f617",
+  "pak_filename": "ModSuperman_599a44dc-a705-4837-a937-adb58bca7b9a.pak",
+  "game_validation_note": "品质修改包总体通过；共用模板分别出现、停用恢复及兼容边界未独立记录。",
+  "game_validation_date": "2026-10-13",
+  "game_validation_evidence": "user_report",
+  "game_validation_report": "data/game_validation_reports.json"
+}

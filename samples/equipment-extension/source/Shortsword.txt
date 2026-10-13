@@ -1,0 +1,13 @@
+new entry "WPN_Shortsword"
+type "Weapon"
+using "_BaseWeapon"
+data "RootTemplate" "467ddb4f-6791-41fa-99f7-ee8620d63bbe"
+data "Damage Type" "Piercing"
+data "Damage" "1d6"
+data "ValueScale" "0.5"
+data "Weight" "0.9"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_OpeningAttack);UnlockSpell(Target_PiercingThrust)"
+data "Weapon Group" "MartialMeleeWeapon"
+data "Weapon Properties" "Finesse;Light;Melee;Dippable"
+data "Proficiency Group" "Shortswords;MartialWeapons"
+

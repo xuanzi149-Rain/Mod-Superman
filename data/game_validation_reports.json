@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "updated_date": "2026-10-13",
+  "evidence_type": "user_report",
+  "reports": [
+    {
+      "module_uuid": "599a44dc-a705-4837-a937-adb58bca7b9a",
+      "object": "equipment:dff731f7-d6da-403d-80cf-7f3d9cc7345b",
+      "display_name": "死亡追踪者斗篷",
+      "changes": {"rarity": "VeryRare"},
+      "source_generation": "passed",
+      "pak_creation": "passed",
+      "package_check": "passed",
+      "game_validation": "user_reported_passed",
+      "user_statement": "通过验证，进行下一项mod制作",
+      "screenshots_received": false,
+      "independently_observed_by_agent": false,
+      "individual_subtests_documented": false,
+      "notes": "品质修改包总体通过；共用模板分别出现、停用恢复及兼容边界未独立记录。"
+    },
+    {
+      "module_uuid": "2fd91d1f-602f-4249-869b-55b32269be86",
+      "object": "equipment:6d0d3206-50b5-48ed-af92-a146ed6b98f2",
+      "display_name": "生离死别",
+      "changes": {"damage": "1d10", "versatile_damage": "2d8", "name": "生死离别", "weight_kg": 1.4},
+      "source_generation": "passed",
+      "pak_creation": "passed",
+      "package_check": "passed",
+      "game_validation": "user_reported_passed",
+      "user_statement": "验证通过，现在是否可以记录并结束部分1",
+      "screenshots_received": false,
+      "independently_observed_by_agent": false,
+      "individual_subtests_documented": false,
+      "notes": "用户报告本次组合通过；第二个名称句柄额外补充后打包；未把两个模板分别实测、停用恢复或所有数值范围记为通过。"
+    }
+  ]
+}

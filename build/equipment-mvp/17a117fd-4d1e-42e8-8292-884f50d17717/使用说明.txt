@@ -1,0 +1,15 @@
+{
+  "object": "equipment:b973e3cb-c18d-4514-ba01-ebcabbf26968",
+  "changes": {
+    "weight_kg": 0.5,
+    "rarity": "Rare"
+  }
+}
+退出游戏，将 .pak 复制到 %LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\Mods，重启并启用。
+停用同对象的旧测试包，加载测试存档，重新装备后检查；恢复时停用并重启加载原档。
+Stats 修改影响共用记录的装备，可能被子记录继承；名称只覆盖简体中文。
+伤害与双手伤害分别修改，未提交的字段保持原规则。重量和稀有度不会自动重算售价。
+已通过生成和解包检查，本次游戏验证待完成。
+weight_kg=0.5: no recorded game test for this object/value.
+rarity='Rare': no recorded game test for this object/value.
+This combination requires a separate game regression test.

@@ -1,0 +1,6 @@
+new entry "ModSuperman_EquipmentDexterityTest"
+type "PassiveData"
+data "DisplayName" "ModSupermanDexterityName;1"
+data "Description" "ModSupermanDexterityDescription;1"
+data "Boosts" "Ability(Dexterity,2)"
+

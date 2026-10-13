@@ -1,0 +1,7 @@
+new entry "UND_Duergar_ShortswordOfFirstBlood_Passive"
+type "PassiveData"
+using "UND_Duergar_ShortswordOfFirstBlood_Passive"
+data "StatsFunctorContext" ""
+data "Conditions" ""
+data "StatsFunctors" ""
+

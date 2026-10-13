@@ -1,0 +1,73 @@
+{
+  "request": {
+    "object": "equipment:6d0d3206-50b5-48ed-af92-a146ed6b98f2",
+    "changes": {
+      "versatile_damage": "2d8",
+      "damage": "1d10",
+      "name": "生死离别",
+      "weight_kg": 1.4
+    }
+  },
+  "module_uuid": "2fd91d1f-602f-4249-869b-55b32269be86",
+  "catalog_version": "equipment-mvp-v1",
+  "catalog_sha256": "cd307c31f065d97f647a6e62a6f4d119b796d4e6002449a5863936f35118268e",
+  "record": "UND_SwordInStone",
+  "original": {
+    "Damage": "1d8",
+    "VersatileDamage": "1d10",
+    "Weight": "1.35",
+    "Rarity": "Rare"
+  },
+  "honour_original": {
+    "Damage": "1d8",
+    "VersatileDamage": "1d10",
+    "Weight": "1.35",
+    "Rarity": "Rare"
+  },
+  "shared_record_templates": [
+    "67914214-e45d-4181-97e6-1c22e406b031",
+    "6d0d3206-50b5-48ed-af92-a146ed6b98f2"
+  ],
+  "name_reference_templates": [
+    "6d0d3206-50b5-48ed-af92-a146ed6b98f2"
+  ],
+  "potential_descendant_records": [],
+  "scope": "Stats edits affect all items using this record and may affect descendants; availability in player saves is not verified.",
+  "experimental": true,
+  "warnings": [
+    "versatile_damage='2d8': no recorded game test for this object/value.",
+    "damage='1d10': no recorded game test for this object/value.",
+    "name='生死离别': no recorded game test for this object/value.",
+    "weight_kg=1.4: no recorded game test for this object/value.",
+    "This combination requires a separate game regression test."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "user_reported_passed",
+  "install": "not_performed",
+  "pak_sha256": "22fcdea85a704cf9a5afa829845be9a60cc4c5c07f37bc7c06652c672ede650b",
+  "pak_filename": "ModSuperman_2fd91d1f-602f-4249-869b-55b32269be86.pak",
+  "localization_overrides": [
+    {
+      "handle": "h53a4178fg4ab0g4c36gbab1g2cd87c693f3e",
+      "version": "1",
+      "text": "生死离别"
+    },
+    {
+      "handle": "hc082e9abgc50dg4111g8184gdf94dae1fba0",
+      "version": "1",
+      "text": "生死离别"
+    }
+  ],
+  "localization_scope_templates": [
+    "67914214-e45d-4181-97e6-1c22e406b031",
+    "6d0d3206-50b5-48ed-af92-a146ed6b98f2"
+  ],
+  "generation_note": "通用脚本生成后，在本次包中补充同记录同名模板的另一名称句柄并重新打包核对；通用脚本未修改。",
+  "final_unpacked_check": "final-unpacked-check",
+  "game_validation_date": "2026-10-13",
+  "game_validation_note": "用户报告本次组合通过；第二个名称句柄额外补充后打包；未把两个模板分别实测、停用恢复或所有数值范围记为通过。",
+  "game_validation_evidence": "user_report",
+  "game_validation_report": "data/game_validation_reports.json"
+}

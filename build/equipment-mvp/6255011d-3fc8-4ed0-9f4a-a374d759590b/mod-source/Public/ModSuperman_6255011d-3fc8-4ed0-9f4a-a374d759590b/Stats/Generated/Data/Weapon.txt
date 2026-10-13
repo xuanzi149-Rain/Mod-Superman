@@ -1,0 +1,7 @@
+new entry "WPN_Longsword"
+type "Weapon"
+using "WPN_Longsword"
+data "Weight" "0.5"
+data "Rarity" "Rare"
+data "Damage" "2d8"
+data "VersatileDamage" "2d10"

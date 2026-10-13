@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-13",
+  "confirmed_parameters": {
+    "name": "曙光短剑",
+    "dexterity": 2,
+    "passive": "replace original full-health bonus with Alert"
+  },
+  "mutually_exclusive": [
+    "FirstBloodDexterityTest",
+    "FirstBloodAlertTest"
+  ],
+  "modules": {
+    "name": {
+      "folder": "FirstBloodNameTest_88545b21-096a-5e35-a0fe-04c417c86dcf",
+      "uuid": "88545b21-096a-5e35-a0fe-04c417c86dcf",
+      "files_sha256": {
+        "Mods\\FirstBloodNameTest_88545b21-096a-5e35-a0fe-04c417c86dcf\\meta.lsx": "92327359a82095b04e34f9125efdd200b4e1331d5744394d2a74ec2d6ec383fe",
+        "Mods\\FirstBloodNameTest_88545b21-096a-5e35-a0fe-04c417c86dcf\\Localization\\Chinese\\chinese.xml": "3cde0d1ce42059bcfa9426dcb27081ab994219aa0fed467eaa3eaefe34545ac2"
+      }
+    },
+    "dexterity": {
+      "folder": "FirstBloodDexterityTest_95520342-0d6c-5473-ad6a-2ae6c20fd40d",
+      "uuid": "95520342-0d6c-5473-ad6a-2ae6c20fd40d",
+      "files_sha256": {
+        "Mods\\FirstBloodDexterityTest_95520342-0d6c-5473-ad6a-2ae6c20fd40d\\meta.lsx": "eade620400f9671b1ee8ed021747bfc8ed03551346890bacf0ec2cf0d610c227",
+        "Public\\FirstBloodDexterityTest_95520342-0d6c-5473-ad6a-2ae6c20fd40d\\Stats\\Generated\\Data\\Weapon.txt": "30c06a6c9b551fc899e3e2c09c72e8f98282d090962e0c8502adc517abd943a4",
+        "Public\\FirstBloodDexterityTest_95520342-0d6c-5473-ad6a-2ae6c20fd40d\\Stats\\Generated\\Data\\Passive.txt": "d382aebcca467ebd0c9f9130a48394d1d160f1675966e0fbcd755170293a09e3",
+        "Mods\\FirstBloodDexterityTest_95520342-0d6c-5473-ad6a-2ae6c20fd40d\\Localization\\Chinese\\chinese.xml": "a992444eb3e2c2256a5665e66d5233c965dd40fbfb7b66c6cb71e720a181d356"
+      }
+    },
+    "alert": {
+      "folder": "FirstBloodAlertTest_31441619-693b-5bf8-b674-ae98bd8403dd",
+      "uuid": "31441619-693b-5bf8-b674-ae98bd8403dd",
+      "files_sha256": {
+        "Mods\\FirstBloodAlertTest_31441619-693b-5bf8-b674-ae98bd8403dd\\meta.lsx": "0373fedbbce7c02ca9c4da44ab2ceb858e97974dd3d0bc3bed3e0d7db5aeb10c",
+        "Public\\FirstBloodAlertTest_31441619-693b-5bf8-b674-ae98bd8403dd\\Stats\\Generated\\Data\\Weapon.txt": "cd837de57d0f00f4ae0637dd476eed924bcc6a65156d04a128dbbc4893ac7f3b"
+      }
+    }
+  },
+  "game_verification": "not_performed"
+}

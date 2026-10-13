@@ -1,0 +1,7 @@
+new entry "UND_Duergar_ShortswordOfFirstBlood"
+type "Weapon"
+using "UND_Duergar_ShortswordOfFirstBlood"
+data "Damage" "3d6"
+data "PassivesOnEquip" "Alert;ModSuperman_Dexterity_e18062ec361848139c4f53022aec7025"
+data "DefaultBoosts" "WeaponProperty(Magical)"
+

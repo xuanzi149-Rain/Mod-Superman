@@ -1,0 +1,11 @@
+{
+  "root_uuid": "1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+  "name_handle": "he122ab64ge979g48b4gb31bg37c62572e3f9",
+  "name_version": "2",
+  "name_references_in_gustav_root_file": 1,
+  "existing_passive": "UND_Duergar_ShortswordOfFirstBlood_Passive",
+  "candidate_passive": "Alert",
+  "candidate_passive_effect": "Initiative(5);StatusImmunity(SURPRISED)",
+  "generation_state": "awaiting_user_parameters",
+  "game_verification": "not_performed"
+}

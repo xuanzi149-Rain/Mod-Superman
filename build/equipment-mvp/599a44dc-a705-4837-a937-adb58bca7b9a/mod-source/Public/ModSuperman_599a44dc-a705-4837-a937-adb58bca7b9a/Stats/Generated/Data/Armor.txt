@@ -1,0 +1,4 @@
+new entry "UNI_DarkUrge_Bhaal_Cloak"
+type "Armor"
+using "UNI_DarkUrge_Bhaal_Cloak"
+data "Rarity" "VeryRare"

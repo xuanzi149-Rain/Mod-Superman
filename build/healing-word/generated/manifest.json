@@ -1,0 +1,31 @@
+{
+  "template_version": "healing-word-v1",
+  "record": "Target_HealingWord",
+  "module_uuid": "9fd6363d-2acf-4acc-94fa-ae9fee76a604",
+  "module_folder": "HealingWordRangeTest_9fd6363d-2acf-4acc-94fa-ae9fee76a604",
+  "confirmed_parameters": {
+    "field": "TargetRadius",
+    "original": 18,
+    "new": 36,
+    "unit": "m"
+  },
+  "template_sha256": {
+    "editor-stats\\SpellData\\Target.stats": "354ec65be4ae157976d17f56944a2d279944a8ab3e4921675df2059f7f1f28f4",
+    "runtime-stats\\Generated\\Data\\Spell_Target.txt": "94b4961aef0c13d9ce2133e63791879970c30d5512d0ddbe534ea128fe705a5b"
+  },
+  "output_sha256": {
+    "editor-stats\\SpellData\\Target.stats": "ecf478115abc7cea9a6aa9f1363df9068f5aa87ff5204f94f21804e02d413fa5",
+    "runtime-stats\\Generated\\Data\\Spell_Target.txt": "c24fafbb344650a8c01e2dedbfc67fcfe2e7608683a493de022493e703bd488e"
+  },
+  "expected_inherited_upcasts": [
+    "Target_HealingWord_2",
+    "Target_HealingWord_3",
+    "Target_HealingWord_4",
+    "Target_HealingWord_5",
+    "Target_HealingWord_6"
+  ],
+  "file_generation": "passed",
+  "game_verification": "not_performed",
+  "packaging": "not_performed",
+  "toolkit_project_import": "not_performed"
+}

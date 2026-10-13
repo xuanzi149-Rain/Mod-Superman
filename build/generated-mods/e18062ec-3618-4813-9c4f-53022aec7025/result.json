@@ -1,0 +1,27 @@
+{
+  "request": {
+    "object": "first_blood_shortsword",
+    "changes": {
+      "name": "晨光短剑",
+      "damage": "3d6",
+      "dexterity_bonus": 3,
+      "passive_mode": "replace_with_alert"
+    }
+  },
+  "module_uuid": "e18062ec-3618-4813-9c4f-53022aec7025",
+  "catalog_version": "parameterized-v1",
+  "experimental": true,
+  "warnings": [
+    "name='晨光短剑' has no recorded game test.",
+    "damage='3d6' has no recorded game test.",
+    "dexterity_bonus=3 has no recorded game test.",
+    "This combined gameplay modification has not been separately game-tested."
+  ],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "install": "not_performed",
+  "pak_filename": "ModSuperman_e18062ec-3618-4813-9c4f-53022aec7025.pak",
+  "pak_sha256": "3d2b0a40a29497f9f0e866d4c6a802d4213f3f2a13db47aa8e2d99c3f47a920e"
+}

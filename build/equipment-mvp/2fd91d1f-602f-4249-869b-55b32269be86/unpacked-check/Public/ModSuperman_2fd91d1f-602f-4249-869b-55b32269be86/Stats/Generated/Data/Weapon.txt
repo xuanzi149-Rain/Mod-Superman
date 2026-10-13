@@ -1,0 +1,6 @@
+new entry "UND_SwordInStone"
+type "Weapon"
+using "UND_SwordInStone"
+data "VersatileDamage" "2d8"
+data "Damage" "1d10"
+data "Weight" "1.4"

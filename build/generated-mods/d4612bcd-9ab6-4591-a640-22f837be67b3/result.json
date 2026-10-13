@@ -1,0 +1,19 @@
+{
+  "request": {
+    "object": "first_blood_shortsword",
+    "changes": {
+      "damage": "2d6"
+    }
+  },
+  "module_uuid": "d4612bcd-9ab6-4591-a640-22f837be67b3",
+  "catalog_version": "parameterized-v1",
+  "experimental": false,
+  "warnings": [],
+  "source_generation": "passed",
+  "pak_creation": "passed",
+  "package_check": "passed",
+  "game_validation": "not_performed",
+  "install": "not_performed",
+  "pak_filename": "ModSuperman_d4612bcd-9ab6-4591-a640-22f837be67b3.pak",
+  "pak_sha256": "159e86605f6c060c89f9b3532169e8f177d3fa5fe3f636f8f934c5eecfa68fc2"
+}

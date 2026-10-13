@@ -1,0 +1,9 @@
+{
+  "object": "equipment:6d0d3206-50b5-48ed-af92-a146ed6b98f2",
+  "changes": {
+    "versatile_damage": "2d8",
+    "damage": "1d10",
+    "name": "生死离别",
+    "weight_kg": 1.4
+  }
+}

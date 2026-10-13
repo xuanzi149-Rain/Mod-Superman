@@ -1,0 +1,20 @@
+本次修改：
+{
+  "object": "first_blood_shortsword",
+  "changes": {
+    "name": "晨光短剑",
+    "damage": "3d6",
+    "dexterity_bonus": 3,
+    "passive_mode": "replace_with_alert"
+  }
+}
+安装：退出游戏，将本目录的 .pak 复制到游戏 Mods 目录，重启并在游戏内启用。
+同一对象的旧测试包或旧生成包请停用，避免覆盖与叠加。重新装备后检查效果。
+停用：停用本包，完整重启并重新加载原测试档；保留原存档。
+作用于原记录，不能默认只影响背包的单一实例。名称只覆盖简体中文。
+治愈真言升环版本可能继承距离；警觉替换会有意移除原满血附伤。
+本包已完成文件和打包检查，尚未进行本次游戏验证。
+name='晨光短剑' has no recorded game test.
+damage='3d6' has no recorded game test.
+dexterity_bonus=3 has no recorded game test.
+This combined gameplay modification has not been separately game-tested.

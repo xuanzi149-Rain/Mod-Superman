@@ -1,0 +1,4 @@
+{
+  "object": "healing_word",
+  "changes": {"cast_distance_m": 36}
+}
