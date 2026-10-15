@@ -1,40 +1,17 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Mod-Superman · 装备修改实验台</title>
-  <link rel="stylesheet" href="/demo-assets/style.css">
-  <script src="/demo-assets/app.js" defer></script>
-</head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mod-Superman · 装备 Mod 制作</title><link rel="stylesheet" href="prototype.css"></head>
 <body>
-<header><div class="eyebrow">MOD-SUPERMAN / LOCAL LAB</div><h1>把修改想法，变成可确认的参数。</h1><p>选择装备，用自然语言描述修改。程序校验后，由你决定是否生成。</p><span class="badge">部分 4 · 本地演示</span></header>
-<main>
-  <section aria-labelledby="choose-title"><h2 id="choose-title"><span>01</span> 选择装备</h2>
-    <form id="search-form"><label for="search">装备名称</label><div class="row"><input id="search" placeholder="例如：第一滴血" value="第一滴血"><button>搜索</button></div></form>
-    <label for="equipment">搜索结果</label><div class="row"><select id="equipment"></select><button id="choose">选择并开始</button></div><p id="search-info" class="muted"></p>
-    <div id="object-info" class="muted">先选择装备，查看它支持的修改。</div>
-  </section>
-  <div class="columns">
-    <section aria-labelledby="chat-title"><h2 id="chat-title"><span>02</span> 描述与澄清</h2>
-      <div id="chat" class="chat" aria-live="polite"><p class="muted">试试“重量减半，名称改为月影”。“再减半”会基于当前草稿继续计算。</p></div>
-      <form id="message-form"><label for="message">你的修改期望</label><textarea id="message" maxlength="4000" rows="3" placeholder="描述想改什么，以及具体数值…"></textarea><button id="send" disabled>解析需求</button></form>
-      <div id="pending" class="notice" hidden></div>
-      <details><summary>本轮处理过程</summary><pre id="trace">这里会显示操作、计算基准、结果与校验状态。</pre></details>
-    </section>
-    <section aria-labelledby="draft-title"><h2 id="draft-title"><span>03</span> 核对与确认</h2>
-      <p class="muted">勾选要修改的字段。保存手动参数会以本表替代草稿，并结束此前澄清。</p>
-      <div class="table-wrap"><table><thead><tr><th>修改</th><th>字段</th><th>原值</th><th>新值</th></tr></thead><tbody id="fields"></tbody></table></div>
-      <label id="supported-label" class="check" hidden><input id="supported" type="checkbox">我选择仅继续已支持部分，放弃列出的不支持要求</label>
-      <div class="row actions"><button id="save" class="secondary" disabled>保存手动参数</button><button id="preview" disabled>创建预览</button></div>
-      <div id="preview-info" class="notice" hidden></div>
-      <label class="check"><input id="confirmed" type="checkbox" disabled>我已核对本次预览，确认这些修改</label>
-      <label id="experimental-label" class="check" hidden><input id="experimental" type="checkbox">我接受此方案尚待游戏验证的试验提示</label>
-      <button id="generate" disabled>确认并生成下载包</button>
-      <a id="download" class="download" hidden>下载 ZIP</a>
-      <p class="muted">ZIP 包含 PAK、修改清单与使用说明。生成或包检查成功不等于游戏验证通过。</p>
-    </section>
-  </div>
-  <div id="status" role="status" aria-live="polite">准备就绪。</div>
+<a class="skip" href="#content">跳到主要内容</a>
+<nav class="rail" aria-label="制作步骤"><span class="diamond" aria-hidden="true"></span><ol id="steps"></ol><span class="rail-bottom">BG3</span></nav>
+<main id="content">
+  <header><strong>MOD—SUPERMAN</strong><button id="reset" class="new">＋ 新的修改</button></header>
+  <section class="hero"><p class="eyebrow">博德之门3个性化Mod生成器</p><img class="logo" src="logo.png" alt="Baldur’s Gate 3" width="150" height="98"><h1 id="heading" tabindex="-1"></h1><span class="spark" aria-hidden="true">✳</span></section>
+  <div class="step-caption" aria-hidden="true"></div>
+  <section id="panel" class="panel" aria-label="修改工作区"></section>
+  <footer><span>博德之门 3 / 个性化 Mod 制作</span></footer>
 </main>
-<footer>模型理解语言 · 程序计算与校验 · 用户确认执行</footer>
+<section class="help-shell" aria-label="使用说明"><button id="toggle-help" class="help-toggle" type="button" aria-controls="help-panel" aria-expanded="true" aria-label="收起右侧说明" title="收起右侧说明"><span id="help-arrow" aria-hidden="true">›</span><span class="help-toggle-label">说明</span></button><aside id="help-panel"><h2 id="aside-title"></h2><div class="object-label">当前对象 / <span id="object-type"></span></div><h3 id="object-name"></h3><div id="aside-copy"></div><div class="flow"><p>制作流程</p><ol id="flow"></ol></div></aside></section>
+<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button id="close-dialog" aria-label="关闭弹窗">×</button></div><div id="dialog-body"></div></dialog>
+<script src="live.js"></script>
 </body></html>

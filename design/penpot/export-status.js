@@ -1,0 +1,1 @@
+return {renders:Object.entries(storage.renders||{}).map(([name,r])=>({name,status:r.status,bytes:r.bytes,error:r.error})),backup:{status:storage.backup?.status,bytes:storage.backup?.bytes,error:storage.backup?.error}};

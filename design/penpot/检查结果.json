@@ -1,0 +1,1885 @@
+{
+  "fileId": "52a5041f-08a1-80f1-8008-c88feb84afb3",
+  "pageId": "52a5041f-08a1-80f1-8008-c88feb84afb4",
+  "report": [
+    {
+      "name": "01-问答首页",
+      "id": "9b6d4256-b9fc-8090-8008-c892561198bc",
+      "texts": 21,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-选择对象",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-解析中",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-伤害示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-距离示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-名称示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "02-问答结果",
+      "id": "9b6d4256-b9fc-8090-8008-c892af3aaca8",
+      "texts": 18,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-确认参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-确认后状态",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-确认后状态",
+      "id": "9b6d4256-b9fc-8090-8008-c892b153a451",
+      "texts": 18,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-生成修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-生成中",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "04-结果下载页",
+      "id": "9b6d4256-b9fc-8090-8008-c892b380661c",
+      "texts": 20,
+      "targets": [
+        {
+          "button": "点击-下载修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-安装与验证说明",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-成功使用",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-SWORD-2D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-遇到问题",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈-DEMO-SWORD-2D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "01-解析中",
+      "id": "9b6d4256-b9fc-8090-8008-c892bcf19caa",
+      "texts": 10,
+      "targets": [
+        {
+          "button": "01-解析中",
+          "actions": [
+            {
+              "trigger": "after-delay",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": 800
+            }
+          ]
+        },
+        {
+          "button": "点击-返回修改输入",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "02-需要澄清",
+      "id": "9b6d4256-b9fc-8090-8008-c892caa3a242",
+      "texts": 11,
+      "targets": [
+        {
+          "button": "点击-基础伤害骰翻倍",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-重新描述",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "技能-结果",
+      "id": "9b6d4256-b9fc-8090-8008-c892da2ee7c7",
+      "texts": 16,
+      "targets": [
+        {
+          "button": "点击-确认参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "技能-确认",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-D-安装与验证说明",
+      "id": "9b6d4256-b9fc-8090-8008-c892e82d4d95",
+      "texts": 16,
+      "targets": [
+        {
+          "button": "点击-知道了",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-H-下载失败",
+      "id": "9b6d4256-b9fc-8090-8008-c892f69fd830",
+      "texts": 5,
+      "targets": [
+        {
+          "button": "点击-重试下载",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-H-下载失败",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "01-治愈真言",
+      "id": "9b6d4256-b9fc-8090-8008-c893042665a7",
+      "texts": 21,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-选择对象",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "技能-结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-伤害示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-距离示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-名称示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "01-不支持需求",
+      "id": "9b6d4256-b9fc-8090-8008-c8931d5d0b76",
+      "texts": 10,
+      "targets": [
+        {
+          "button": "点击-调整修改需求",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "01-解析失败",
+      "id": "9b6d4256-b9fc-8090-8008-c8936e03d6c1",
+      "texts": 11,
+      "targets": [
+        {
+          "button": "点击-重试解析",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-解析中",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-直接填写参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "02-参数无效",
+      "id": "9b6d4256-b9fc-8090-8008-c8936fa6bbaf",
+      "texts": 15,
+      "targets": [
+        {
+          "button": "点击-修正为2d6",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "02-参数编辑",
+      "id": "9b6d4256-b9fc-8090-8008-c893714291e1",
+      "texts": 15,
+      "targets": [
+        {
+          "button": "点击-重新确认参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-确认3d6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-生成中",
+      "id": "9b6d4256-b9fc-8090-8008-c89377bb7d79",
+      "texts": 9,
+      "targets": [
+        {
+          "button": "03-生成中",
+          "actions": [
+            {
+              "trigger": "after-delay",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": 1000
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-生成失败",
+      "id": "9b6d4256-b9fc-8090-8008-c89378a10dba",
+      "texts": 11,
+      "targets": [
+        {
+          "button": "点击-重试生成",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-生成中",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-返回参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-问答结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "技能-确认",
+      "id": "9b6d4256-b9fc-8090-8008-c8937a2ef1e9",
+      "texts": 16,
+      "targets": [
+        {
+          "button": "点击-生成修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-技能下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-A-装备选择",
+      "id": "9b6d4256-b9fc-8090-8008-c89381a90f23",
+      "texts": 12,
+      "targets": [
+        {
+          "button": "点击-选择第一滴血短剑",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-技能标签",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-B-技能选择",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-B-技能选择",
+      "id": "9b6d4256-b9fc-8090-8008-c89382f10229",
+      "texts": 12,
+      "targets": [
+        {
+          "button": "点击-选择治愈真言",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-B-技能选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-B-技能选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-装备标签",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-C-搜索无结果",
+      "id": "9b6d4256-b9fc-8090-8008-c89384ca5c15",
+      "texts": 8,
+      "targets": [
+        {
+          "button": "点击-返回搜索",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-C-搜索无结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-C-搜索无结果",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-E-问题反馈",
+      "id": "9b6d4256-b9fc-8090-8008-c8938c332b9d",
+      "texts": 13,
+      "targets": [
+        {
+          "button": "点击-提交反馈",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-F-反馈完成",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-E-问题反馈",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-E-问题反馈",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-F-反馈完成",
+      "id": "9b6d4256-b9fc-8090-8008-c8938de175f5",
+      "texts": 4,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-F-反馈完成",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-F-反馈完成",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "弹窗-G-下载预览",
+      "id": "9b6d4256-b9fc-8090-8008-c8938e978e28",
+      "texts": 5,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "close-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-确认3d6",
+      "id": "9b6d4256-b9fc-8090-8008-c893967e2f66",
+      "texts": 18,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-生成修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-生成3d6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-参数编辑",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "04-结果3d6",
+      "id": "9b6d4256-b9fc-8090-8008-c89398f06deb",
+      "texts": 20,
+      "targets": [
+        {
+          "button": "点击-下载修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-安装与验证说明",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-成功使用",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-SWORD-3D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-遇到问题",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈-DEMO-SWORD-3D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-生成3d6",
+      "id": "9b6d4256-b9fc-8090-8008-c8939bea7912",
+      "texts": 9,
+      "targets": [
+        {
+          "button": "03-生成3d6",
+          "actions": [
+            {
+              "trigger": "after-delay",
+              "type": "navigate-to",
+              "target": "04-结果3d6",
+              "delay": 1000
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "04-技能下载",
+      "id": "9b6d4256-b9fc-8090-8008-c893a4ea5e21",
+      "texts": 20,
+      "targets": [
+        {
+          "button": "点击-下载修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-安装与验证说明",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-成功使用",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-HEAL-36",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-遇到问题",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈-DEMO-HEAL-36",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "01-修改中文名",
+      "id": "9b6d4256-b9fc-8090-8008-c894955f5c35",
+      "texts": 21,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-选择对象",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-A-装备选择",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "02-中文名结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-伤害示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-距离示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-治愈真言",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-名称示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "02-中文名结果",
+      "id": "9b6d4256-b9fc-8090-8008-c89495e27426",
+      "texts": 18,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-确认参数",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "03-中文名确认",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "03-中文名确认",
+      "id": "9b6d4256-b9fc-8090-8008-c89496c2f17f",
+      "texts": 18,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-生成修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-中文名下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-继续调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送调整",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-修改中文名",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "04-中文名下载",
+      "id": "9b6d4256-b9fc-8090-8008-c894978b1668",
+      "texts": 20,
+      "targets": [
+        {
+          "button": "点击-下载修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-G-下载预览",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-安装与验证说明",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-成功使用",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-NAME",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-遇到问题",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈-DEMO-NAME",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈-DEMO-SWORD-2D6",
+      "id": "9b6d4256-b9fc-8090-8008-c89499f7153c",
+      "texts": 13,
+      "targets": [
+        {
+          "button": "点击-提交反馈",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-SWORD-2D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈完成-DEMO-SWORD-2D6",
+      "id": "9b6d4256-b9fc-8090-8008-c8949a1a652e",
+      "texts": 4,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果下载页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈-DEMO-SWORD-3D6",
+      "id": "9b6d4256-b9fc-8090-8008-c8949aba22ac",
+      "texts": 13,
+      "targets": [
+        {
+          "button": "点击-提交反馈",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-SWORD-3D6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果3d6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果3d6",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈完成-DEMO-SWORD-3D6",
+      "id": "9b6d4256-b9fc-8090-8008-c8949af967b5",
+      "texts": 4,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果3d6",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-结果3d6",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈-DEMO-HEAL-36",
+      "id": "9b6d4256-b9fc-8090-8008-c8949c133867",
+      "texts": 13,
+      "targets": [
+        {
+          "button": "点击-提交反馈",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-HEAL-36",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-技能下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-技能下载",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈完成-DEMO-HEAL-36",
+      "id": "9b6d4256-b9fc-8090-8008-c8949c589df4",
+      "texts": 4,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-技能下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-技能下载",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈-DEMO-NAME",
+      "id": "9b6d4256-b9fc-8090-8008-c8949d4906ff",
+      "texts": 13,
+      "targets": [
+        {
+          "button": "点击-提交反馈",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "反馈完成-DEMO-NAME",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-取消",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-中文名下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-中文名下载",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "反馈完成-DEMO-NAME",
+      "id": "9b6d4256-b9fc-8090-8008-c8949d751760",
+      "texts": 4,
+      "targets": [
+        {
+          "button": "点击-返回制作结果",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-中文名下载",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-关闭",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "04-中文名下载",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "测试-搜索无结果",
+      "id": "9b6d4256-b9fc-8090-8008-c8949e64e17f",
+      "texts": 21,
+      "targets": [
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-选择对象",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-C-搜索无结果",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-发送",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-伤害示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-距离示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-名称示例",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    },
+    {
+      "name": "测试-下载失败",
+      "id": "9b6d4256-b9fc-8090-8008-c894a0018de3",
+      "texts": 20,
+      "targets": [
+        {
+          "button": "点击-下载修改文件",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-H-下载失败",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-安装与验证说明",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-成功使用",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-遇到问题",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "open-overlay",
+              "target": "弹窗-D-安装与验证说明",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "button": "点击-新的修改",
+          "actions": [
+            {
+              "trigger": "click",
+              "type": "navigate-to",
+              "target": "01-问答首页",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "invalid": []
+    }
+  ]
+}

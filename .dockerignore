@@ -1,0 +1,11 @@
+.git
+.env*
+.runtime
+.tools
+build
+design
+docs
+tests
+__pycache__
+**/__pycache__
+*.sqlite3*

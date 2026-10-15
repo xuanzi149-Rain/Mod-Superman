@@ -9,7 +9,7 @@ from pydantic import ValidationError as SchemaError
 
 from backend.ai_protocol import Interpretation, PROMPT_VERSION, apply_operations, parameter_message
 from backend.model_client import ModelClient
-from backend.service import ServiceError, write_json
+from backend.service import ServiceError, write_json, read_record
 from scripts.generate_equipment import validate_request
 from scripts.generate_mod import ValidationError
 
@@ -32,9 +32,9 @@ class AIService:
 
     def read(self, session_id):
         path = self.path(session_id)
-        if not path.exists():
+        state = read_record(path)
+        if state is None:
             raise ServiceError('unknown_session', '会话不存在。', 404)
-        state = json.loads(path.read_text(encoding='utf-8'))
         # A previous process may have stopped during a network request.
         if state['inflight'] and session_id not in self.active:
             state['requests'][state['inflight']]['error'] = {'code': 'request_interrupted', 'message': '请求被中断，请使用新请求编号重试。', 'status': 409}
@@ -59,7 +59,7 @@ class AIService:
             detail = self.equipment.detail(object_id)
             state = {'session_id': str(uuid.uuid4()), 'object': object_id, 'version': 0,
                      'catalog_sha256': self.equipment.versions()['catalog_sha256'],
-                     'detail': {k: detail[k] for k in ('display_name', 'original', 'field_rules', 'scope', 'capabilities')},
+                     'detail': {k: detail[k] for k in ('display_name', 'original', 'field_rules', 'scope', 'capabilities', 'presentation')},
                      'draft': {}, 'questions': [], 'unsupported': [], 'history': [],
                      'status': 'empty', 'explanation': '', 'trace': [], 'preview': None,
                      'requests': {}, 'inflight': None}
@@ -130,8 +130,10 @@ class AIService:
             if current['version'] != body['version']:
                 error = ServiceError('stale_session', '响应已过期，未覆盖新草稿。')
             event = {'request_id': body['request_id'], 'text': body['text'], 'prompt_version': PROMPT_VERSION,
+                     'provider': getattr(self.model, 'provider', 'fixture'),
                      'model': self.model.model, 'version_before': current['version'],
                      'elapsed_ms': round((time.monotonic() - started) * 1000), 'usage': usage,
+                     'model_diagnostics': getattr(self.model, 'diagnostics', None),
                      'interpretation': interpretation.model_dump() if interpretation else None,
                      'invalid_model_output': output if interpretation is None else None}
             if error:

@@ -1,0 +1,59 @@
+{
+  "reviewed_at": "2026-10-15",
+  "items": {
+    "8b5fb90f-f957-4a1a-b8eb-2baff0c3b40b": {
+      "record": "CHA_OutpostJewelry",
+      "availability": "verified",
+      "kind": "魔法首饰",
+      "effect": "可施放神导术戏法",
+      "location": "第一章 · 翠绿林地西南方，竖琴手哨站骷髅身上（X152，Y366）",
+      "source": "https://bg3.wiki/wiki/Silver_Pendant"
+    },
+    "51873c0d-f319-45e6-a6a2-79164cd8f3db": {
+      "record": "ARM_Amulet_Necklace_A_Silver_Orange",
+      "availability": "verified",
+      "kind": "普通首饰",
+      "effect": "无固有魔法效果",
+      "location": "第三章 · 清账屋高安保金库 3 号",
+      "source": "https://bg3.wiki/wiki/Silver_Amulet"
+    },
+    "1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b": {
+      "record": "UND_Duergar_ShortswordOfFirstBlood",
+      "availability": "verified",
+      "kind": "短剑",
+      "effect": "攻击满生命值目标时造成额外伤害",
+      "location": "第一章 · 幽暗地域破败村庄，地底侏儒尸体上（X73，Y-187）",
+      "source": "https://bg3.wiki/wiki/Shortsword_of_First_Blood"
+    },
+    "6d0d3206-50b5-48ed-af92-a146ed6b98f2": {
+      "record": "UND_SwordInStone",
+      "availability": "verified",
+      "kind": "长剑",
+      "effect": "可使用歌唱或尖啸效果",
+      "location": "第一章 · 幽暗地域石中剑（X116，Y-192）",
+      "source": "https://bg3.wiki/wiki/Phalar_Aluve"
+    },
+    "dff731f7-d6da-403d-80cf-7f3d9cc7345b": {
+      "record": "UNI_DarkUrge_Bhaal_Cloak",
+      "availability": "verified",
+      "kind": "斗篷 · 邪念起源限定",
+      "effect": "击杀敌人后隐形 2 回合",
+      "location": "第一章 · 邪念起源剧情，斯卡莱瑞塔斯·费尔赠送",
+      "source": "https://bg3.wiki/wiki/The_Deathstalker_Mantle"
+    },
+    "1df12296-498c-494c-b639-f103b63156a3": {
+      "record": "ARM_Amulet_Necklace_D_Silver_Purple",
+      "availability": "unverified",
+      "kind": "普通首饰",
+      "effect": "本地定义中未发现固有魔法效果",
+      "location": "尚未核实正式游戏中的获取方式"
+    },
+    "86be236b-6da5-4fce-8d96-f027c0780140": {
+      "record": "ARM_Amulet_Necklace_D_Silver_Purple",
+      "availability": "unverified",
+      "kind": "普通首饰 · 继承变体",
+      "effect": "与普通白银坠饰共用修改记录",
+      "location": "尚未核实正式游戏中的获取方式"
+    }
+  }
+}

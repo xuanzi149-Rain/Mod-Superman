@@ -1,0 +1,14 @@
+{
+  "format": "penpot/export-files",
+  "generatedBy": "penpot/2.18.3",
+  "page": "Mod-Superman · 问答原型",
+  "boards": 41,
+  "flows": 11,
+  "interactions": 143,
+  "missingInteractionTargets": [],
+  "zipCRC": "passed",
+  "latestNameRowAlignment": "passed",
+  "reimportTest": "not performed",
+  "bytes": 5652115,
+  "sha256": "ef1dc1efa9101d91ea4320e554f1a8b0f63011705dfe97cce3bbeced7ec2ede1"
+}

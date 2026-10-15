@@ -161,7 +161,8 @@ def render_files(request: dict, module_id: str) -> dict[Path, bytes]:
 
 
 def run_tool(tool: Path, *arguments: str) -> None:
-    result = subprocess.run([str(tool.resolve()), "-g", "bg3", *arguments], capture_output=True,
+    command = ['dotnet', str(tool.resolve())] if tool.suffix.lower() == '.dll' else [str(tool.resolve())]
+    result = subprocess.run([*command, "-g", "bg3", *arguments], capture_output=True,
                             text=True, encoding="utf-8", errors="replace", timeout=60)
     if result.returncode:
         raise RuntimeError(f"LSLib failed ({result.returncode}): {result.stdout} {result.stderr}")

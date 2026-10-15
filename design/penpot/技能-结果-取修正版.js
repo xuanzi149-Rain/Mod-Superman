@@ -1,0 +1,1 @@
+return storage.revisionRenders['技能-结果'];

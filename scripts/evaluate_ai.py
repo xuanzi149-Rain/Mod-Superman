@@ -21,6 +21,7 @@ def evaluate(split):
     run_id = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ') + '-' + uuid.uuid4().hex[:6]
     path = service.root / 'ai_evaluations' / (run_id + '-' + split + '.json')
     report = {'run_id': run_id, 'split': split, 'model': ai.model.model, 'prompt_version': PROMPT_VERSION,
+              'provider': getattr(ai.model, 'provider', 'fixture'),
               'prompt_sha256': hashlib.sha256((ROOT / 'prompts' / (PROMPT_VERSION + '.md')).read_bytes()).hexdigest(),
               'cases_sha256': hashlib.sha256(cases_path.read_bytes()).hexdigest(), 'results': []}
     for case in cases:

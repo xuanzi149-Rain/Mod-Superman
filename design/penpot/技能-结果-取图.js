@@ -1,0 +1,1 @@
+return storage.renders['技能-结果'];

@@ -1,0 +1,1 @@
+return storage.localBackup;

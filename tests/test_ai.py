@@ -12,7 +12,7 @@ from fastapi.testclient import TestClient
 from backend.app import create_app
 from backend.ai_protocol import Interpretation, apply_operations
 from backend.ai_service import AIService
-from backend.model_client import ModelClient, settings
+from backend.model_client import ModelClient, settings, connection
 from backend.service import EquipmentService, ServiceError, write_json
 from scripts.generate_equipment import FIRST_BLOOD
 from scripts.generate_mod import ValidationError
@@ -289,6 +289,7 @@ class ModelClientTests(unittest.TestCase):
 
     def client(self, handler):
         client = ModelClient(httpx.MockTransport(handler))
+        client.config.update(MODEL_PROVIDER='deepseek',MODEL_NAME='',MODEL_BASE_URL='',MODEL_USE_SYSTEM_PROXY='')
         client.config['DEEPSEEK_API_KEY'] = 'test-only'
         return client
 
@@ -297,13 +298,53 @@ class ModelClientTests(unittest.TestCase):
             payload=json.loads(request.content)
             self.assertEqual(payload['response_format'],{'type':'json_object'})
             self.assertFalse(payload['stream'])
+            self.assertEqual(payload['thinking'], {'type':'disabled'})
             return httpx.Response(200,json={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result(op()))}}], 'usage':{'total_tokens':10}})
         parsed, usage = self.client(handler).parse({'text':'减半'})
         self.assertEqual(parsed['operations'][0]['value'],.5)
         self.assertEqual(usage['total_tokens'],10)
 
+    def test_diagnostics_record_stages_without_payload_or_credentials(self):
+        client = self.client(lambda request: httpx.Response(200, json={
+            'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result(op()))}}]}))
+        client.parse({'text':'private-user-text'})
+        diagnostic = client.diagnostics
+        stages = [row['stage'] for row in diagnostic['stages']]
+        self.assertEqual(stages, ['request_started','provider_configured','network_route','response_headers','first_body_chunk','body_complete','completed'])
+        serialized=json.dumps(diagnostic)
+        for secret in ['private-user-text','test-only','Authorization','reasoning_content']:
+            self.assertNotIn(secret,serialized)
+
+    def test_stream_read_error_preserves_response_stage(self):
+        class BrokenBody(httpx.SyncByteStream):
+            def __iter__(self):
+                yield b' '
+                raise httpx.ReadTimeout('private-error-detail')
+        client=self.client(lambda request:httpx.Response(200,stream=BrokenBody()))
+        with self.assertRaises(ServiceError) as caught:
+            client.parse({})
+        self.assertEqual(caught.exception.code,'model_timeout')
+        stages=[row['stage'] for row in client.diagnostics['stages']]
+        self.assertIn('response_headers',stages)
+        self.assertIn('first_body_chunk',stages)
+        self.assertNotIn('body_complete',stages)
+        self.assertNotIn('private-error-detail',json.dumps(client.diagnostics))
+
+    def test_proxy_is_explicit_and_overload_is_not_output_error(self):
+        client=self.client(lambda request:httpx.Response(503,json={'error':{'message':'busy'}}))
+        client.config['DEEPSEEK_USE_SYSTEM_PROXY']='1'
+        with self.assertRaises(ServiceError) as caught:
+            client.parse({})
+        self.assertEqual(caught.exception.code,'model_overloaded')
+        self.assertEqual(caught.exception.status,503)
+        route=next(row for row in client.diagnostics['stages'] if row['stage']=='network_route')
+        self.assertTrue(route['system_proxy'])
+        self.assertNotIn('first_body_chunk',[row['stage'] for row in client.diagnostics['stages']])
+
     def test_errors(self):
         cases=[(401,{},'model_auth_failed'),(429,{},'model_rate_limited'),
+               (402,{},'model_insufficient_balance'),(503,{},'model_overloaded'),
+               (200,{'error':{'type':'service_unavailable_error'}},'model_overloaded'),
                (200,{},'model_invalid_output'),
                (200,{'choices':[{'finish_reason':'length','message':{'content':'{}'}}]},'model_incomplete'),
                (200,{'choices':[{'finish_reason':'stop','message':{'content':''}}]},'model_empty'),
@@ -317,6 +358,52 @@ class ModelClientTests(unittest.TestCase):
         with self.assertRaises(ServiceError) as caught:
             self.client(timeout).parse({})
         self.assertEqual(caught.exception.code,'model_timeout')
+
+    def test_bailian_token_plan_payload_and_separate_credentials(self):
+        def handler(request):
+            self.assertEqual(str(request.url),'https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions')
+            self.assertEqual(request.headers['authorization'],'Bearer token-plan-test')
+            payload=json.loads(request.content)
+            self.assertEqual(payload['model'],'qwen3.7-plus')
+            self.assertIs(payload['enable_thinking'],False)
+            self.assertNotIn('thinking',payload)
+            self.assertEqual(payload['response_format'],{'type':'json_object'})
+            return httpx.Response(200,json={'choices':[{'finish_reason':'stop','message':{'content':json.dumps(result(op()))}}], 'usage':{'total_tokens':23}})
+        client=self.client(handler)
+        client.config.update(MODEL_PROVIDER='bailian',MODEL_NAME='qwen3.7-plus',
+            MODEL_BASE_URL='https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1',
+            BAILIAN_TOKEN_PLAN_API_KEY='token-plan-test',DASHSCOPE_API_KEY='must-not-use')
+        output,usage=client.parse({'text':'重量减半'})
+        self.assertEqual(usage['total_tokens'],23)
+        self.assertEqual(client.model,'qwen3.7-plus')
+        self.assertEqual(client.provider,'bailian')
+
+    def test_provider_key_missing_never_falls_back_or_calls_network(self):
+        def forbidden(request):raise AssertionError('No request expected')
+        client=self.client(forbidden)
+        client.config.update(MODEL_PROVIDER='bailian',MODEL_BASE_URL='',DASHSCOPE_API_KEY='')
+        with self.assertRaises(ServiceError) as caught:client.parse({})
+        self.assertEqual(caught.exception.code,'model_not_configured')
+
+    def test_provider_host_mismatch_rejected_before_credentials_sent(self):
+        client=self.client(lambda request:(_ for _ in ()).throw(AssertionError('No request expected')))
+        for url in ['https://untrusted.example/compatible-mode/v1',
+                    'https://api.deepseek.com/compatible-mode/v1',
+                    'http://dashscope.aliyuncs.com/compatible-mode/v1',
+                    'https://dashscope.aliyuncs.com/compatible-mode/v1?key=private']:
+            client.config.update(MODEL_PROVIDER='bailian',MODEL_BASE_URL=url,DASHSCOPE_API_KEY='private')
+            with self.assertRaises(ServiceError) as caught:client.parse({})
+            self.assertEqual(caught.exception.code,'model_config_invalid')
+
+    def test_standard_bailian_endpoint_and_provider_error_text(self):
+        client=self.client(lambda request:httpx.Response(503,json={}))
+        client.config.update(MODEL_PROVIDER='bailian',MODEL_BASE_URL='',MODEL_NAME='',DASHSCOPE_API_KEY='dashscope-test')
+        selected=connection(client.config)
+        self.assertEqual(selected['model'],'qwen-plus')
+        self.assertEqual(selected['key_name'],'DASHSCOPE_API_KEY')
+        with self.assertRaises(ServiceError) as caught:client.parse({})
+        self.assertIn('阿里云百炼',caught.exception.message)
+        self.assertNotIn('DeepSeek',caught.exception.message)
 
 
 if __name__ == '__main__':

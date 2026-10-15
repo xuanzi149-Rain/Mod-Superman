@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: mod-superman
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    disk:
+      name: mod-superman-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: MOD_PUBLIC
+        value: "1"
+      - key: MOD_DATA_DIR
+        value: /var/data/mod-superman
+      - key: MODEL_PROVIDER
+        value: bailian
+      - key: MODEL_NAME
+        value: qwen3.7-plus
+      - key: MODEL_BASE_URL
+        value: https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      - key: MODEL_USE_SYSTEM_PROXY
+        value: "0"
+      - key: BAILIAN_TOKEN_PLAN_API_KEY
+        sync: false
