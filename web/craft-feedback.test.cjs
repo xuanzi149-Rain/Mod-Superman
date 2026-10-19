@@ -32,3 +32,17 @@ test('unknown capability failures are still visible and blocking',()=>{
   const rows=preparation({texts:[],validation:['effects.test:unexpected_mechanism']});
   assert.equal(rows[0].blocked,true);assert.equal(rows[0].action,'prompt');
 });
+const {latestInput}=require('./craft-feedback.js');
+test('latest feedback excludes unchanged historical issues',()=>{
+ const old={id:'old_q',detail:'旧问题'};
+ const current={issues:[old,{id:'new_q',detail:'缺少数值',question:'请填写目标重量'}],last_result:{before:{x:1},after:{x:1}}};
+ assert.deepEqual(latestInput({issues:[old]},current,'new'),[{reason:'缺少数值',solution:'请填写目标重量'}]);
+});
+test('successful new input does not repeat old warnings',()=>{
+ const old={id:'old_q',detail:'旧问题'};
+ assert.deepEqual(latestInput({issues:[old]},{issues:[old],last_result:{before:{x:1},after:{x:2}}},'next'),[]);
+});
+test('no useful change explains how to retry',()=>{
+ const rows=latestInput({issues:[]},{issues:[],texts:[],last_result:{before:{},after:{}}},'empty');
+ assert.equal(rows.length,1);assert.match(rows[0].solution,/重量改为/);
+});

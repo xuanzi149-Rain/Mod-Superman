@@ -12,7 +12,7 @@ class WorkflowErrorTests(unittest.TestCase):
     def test_failure_types_are_distinct_and_raw_details_are_private(self):
         examples={'schema:operations:secret data':'格式', 'stale_text':'不一致',
                   'effective_facts_incomplete':'资料不完整','context_budget_exceeded':'容量',
-                  'requirement_quote_not_in_message':'原文','unknown-secret-value':'一致性校验'}
+                  'requirement_quote_not_in_message':'原文','unknown-secret-value':'暂时无法确定具体原因'}
         for error,expected in examples.items():
             with self.subTest(error=error):
                 message=explain_failure('message',ValueError(error))

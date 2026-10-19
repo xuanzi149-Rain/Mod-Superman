@@ -64,10 +64,27 @@ class CraftService:
 
     def history(self, visitor):
         with self.store.connect() as db:
-            rows=db.execute("SELECT r.kind,r.id,r.payload,r.updated_at FROM records r JOIN owners o ON r.kind=o.kind AND r.id=o.id WHERE o.token_hash=? AND r.kind IN ('v11_sessions','v11_tasks') ORDER BY r.updated_at DESC LIMIT 50",(self.store.token_hash(visitor),)).fetchall()
+            rows=db.execute("SELECT r.kind,r.id,r.payload,r.updated_at FROM records r JOIN owners o ON r.kind=o.kind AND r.id=o.id WHERE o.token_hash=? AND r.kind IN ('v11_sessions','v11_tasks') AND NOT (r.kind='v11_sessions' AND EXISTS (SELECT 1 FROM records d WHERE d.kind='v11_deleted_drafts' AND d.id=r.id)) ORDER BY r.updated_at DESC LIMIT 50",(self.store.token_hash(visitor),)).fetchall()
         return {'items':[{'kind':kind,'id':ident,'updated_at':stamp,'mode':json.loads(payload)['plan']['mode'],
                          'name':json.loads(payload)['plan'].get('display',{}).get('name') or self.catalog['items'].get(json.loads(payload)['plan']['base_equipment'],{}).get('display_name','历史装备'),
                          'status':json.loads(payload).get('status','draft'),'session_id':json.loads(payload).get('session_id',ident)} for kind,ident,payload,stamp in rows]}
+
+    def delete_draft(self, ident, visitor):
+        if not self.store.allowed('v11_sessions', ident, visitor):
+            raise ServiceError('not_found', '草稿不存在或不属于当前浏览器。', 404)
+        session = self.get(ident)
+        if not session.lock.acquire(blocking=False):
+            raise ServiceError('session_busy', '草稿正在处理，请稍后删除。', 409)
+        try:
+            with self.store.connect() as db:
+                tasks = db.execute("SELECT payload FROM records WHERE kind='v11_tasks'").fetchall()
+            if any((t := json.loads(row[0])).get('session_id') == ident and t.get('status') in ('queued', 'generating') for row in tasks):
+                raise ServiceError('generation_busy', '方案正在制作中，请完成后再删除草稿。', 409)
+            # Keep the session snapshot for existing delivery records; remove only the draft entry.
+            self.store.snapshot('v11_deleted_drafts', ident, {'deleted_at': now()})
+            return {'status': 'deleted', 'session_id': ident}
+        finally:
+            session.lock.release()
 
     def create(self, body, visitor):
         p=Plan(mode=body['mode'],base_equipment=body['base_equipment'],user_goal=body.get('goal') or '装备定制')
@@ -107,6 +124,14 @@ class CraftService:
             for k in SESSION_FIELDS:setattr(s,k,copy.deepcopy(saved[k]))
             s.issues={key:player_issue(value) for key,value in s.issues.items()}
             s.draft=Draft(Plan.model_validate(saved['plan']));s.draft.revision=saved['revision']+1
+            # Failed inputs are no longer persistent tasks. Keep actual plan constraints.
+            s.issues={k:v for k,v in s.issues.items() if k=='inheritance'}
+            s.draft.plan.unresolved=[v['detail'] for v in s.issues.values()]
+            s.history=[h for h in s.history if not h.get('feedback',{}).get('unresolved') and not h.get('feedback',{}).get('failed')]
+            s.requirements=[]
+            for snapshot in s.snapshots.values():
+                snapshot['issues']={k:v for k,v in snapshot.get('issues',{}).items() if k=='inheritance'}
+                snapshot['plan']['unresolved']=[v['detail'] for v in snapshot['issues'].values()]
             s.http_requests=saved.get('http_requests',{});s.last_result=saved.get('last_result');s.last_error=None;s.task_id=saved.get('task_id')
             s.latest_review=None;s.recovery='服务已重启，草稿已恢复；请重新核对并确认。'
             s._queue_existing_texts()
@@ -127,8 +152,10 @@ class CraftService:
                 if ref:reference_names[ref]=self.name(ref)
         errors=validate_plan(p,self.catalog,self.resources,text_receipt=s.draft.text_receipt)
         return {'session_id':ident,'revision':s.draft.revision,'digest':digest(p),'plan':p.model_dump(mode='json'),
-                'has_parsed':any(h.get('parsed',True) for h in s.history),
-                'effective_values':effective_values(p,self.resources),'issues':list(s.issues.values()),
+                'has_parsed':any(h.get('parsed',True) for h in s.history) or bool(p.effects or p.removed_original_passives or s.texts)
+                    or any(v is not None for v in p.parameters.model_dump().values())
+                    or any(v is not None for v in p.display.model_dump().values()),
+                'effective_values':effective_values(p,self.resources),'issues':[player_issue(i,names=reference_names) for i in s.issues.values()],
                 'texts':list(s.texts.values()),'review':s.latest_review['output'] if s.latest_review else None,
                 'validation':errors,'ready':not(errors or s.issues or s.texts),'version':self.version,
                 'last_result':s.last_result,'last_error':({k:v for k,v in s.last_error.items() if k!='details'} if s.last_error else None),'task_id':s.task_id,'recovery':s.recovery,
@@ -190,7 +217,18 @@ class CraftService:
             if action=='message':
                 text=data.get('text','')
                 if not isinstance(text,str) or not text.strip() or len(text)>4000:raise ValueError('invalid_message')
+                previous={k:copy.deepcopy(getattr(s,k)) for k in SESSION_FIELDS}
+                previous_draft=copy.deepcopy(s.draft)
                 result=s.submit(text,key,answers=data.get('answers',[]))
+                if result.get('unresolved') or result.get('failed'):
+                    feedback=[player_issue(i) for i in result.get('unresolved',[])]
+                    if not feedback:
+                        feedback=[{'detail':'本次修改未通过检查，暂时无法确定具体原因。'}]
+                    for k,v in previous.items():setattr(s,k,v)
+                    s.draft=previous_draft
+                    # Transient response only: no failed input, pending issue, request
+                    # cache, snapshot or revision is persisted by this submission.
+                    return {**self.view(ident,s),'input_retained':True,'input_feedback':feedback}
             elif action=='edit':result=self.manual(s,data)
             elif action=='review':result=s.review_text() if s.texts else s.preview()
             elif action=='adopt':result=s.adopt_review(replacements=data.get('replacements',[]))
@@ -219,6 +257,7 @@ class CraftService:
                 self.store.event(str(uuid.uuid4()),ident,s.task_id,action,'failed' if s.last_error else 'completed',
                                  {'revision':s.draft.revision,'elapsed_ms':round((time.monotonic()-started)*1000),'version':self.version})
             finally:
+                if action=='message':del s.log[old_logs:]
                 s.lock.release()
 
     def submit(self,ident,s,data,visitor):

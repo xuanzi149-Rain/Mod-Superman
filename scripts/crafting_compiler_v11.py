@@ -9,7 +9,7 @@ import tempfile
 import uuid
 import xml.etree.ElementTree as ET
 
-from backend.crafting_v11 import Plan, ConstantEffect, NativeBonus, PassiveCopy, TriggerEffect, IndependentStatus, GrantedSpell, digest
+from backend.crafting_v11 import Plan, ConstantEffect, NativeBonus, WeaponDamageBonus, PassiveCopy, TriggerEffect, IndependentStatus, GrantedSpell, digest
 from scripts.generate_mod import ROOT, DIVINE, localization, run_tool
 from scripts.generate_equipment import FIRST_BLOOD
 from scripts.native_dependencies_v11 import closure, spell_profile, rewrite_refs, replace_amount
@@ -125,10 +125,6 @@ def validate_plan(plan, catalog, resources, *, text_receipt=None):
         issues.append('parameters.weapon_properties:magical_has_additional_source')
     for e in plan.effects:
         prefix = f'effects.{e.id}:'
-        if e.display.description is not None:
-            from backend.text_review_v11 import valid_receipt
-            if not valid_receipt(text_receipt, plan, resources):
-                issues.append(prefix + 'custom_effect_text_requires_phase_C_review')
         if isinstance(e, NativeBonus):
             allowed = SKILLS if e.bonus == 'skill' else ABILITIES if e.bonus == 'saving_throw' else DAMAGE_TYPES if e.bonus == 'resistance' else {None}
             if e.selector not in allowed:
@@ -221,6 +217,8 @@ def stat_record(name, kind, fields, parent=None):
 
 
 def bonus_expression(e):
+    if isinstance(e, WeaponDamageBonus):
+        return f'CharacterWeaponDamage({e.dice},{e.damage_type})'
     if isinstance(e, ConstantEffect):
         return f'Ability({e.ability},{e.amount})'
     return {'initiative': lambda: f'Initiative({e.amount})', 'movement': lambda: f'ActionResource(Movement,{e.amount},0)', 'skill': lambda: f'Skill({e.selector},{e.amount})', 'saving_throw': lambda: f'RollBonus(SavingThrow,{e.amount},{e.selector})', 'armor_class': lambda: f'AC({e.amount})', 'resistance': lambda: f'Resistance({e.selector},Resistant)'}[e.bonus]()
@@ -379,7 +377,7 @@ def render_plan(plan, module_id, *, catalog, resources, text_receipt=None):
     for e in plan.effects:
         fields = {}
         summary = ''
-        if isinstance(e, (ConstantEffect, NativeBonus)):
+        if isinstance(e, (ConstantEffect, NativeBonus, WeaponDamageBonus)):
             fields['Boosts'] = bonus_expression(e)
             summary = '装备时生效：' + fields['Boosts']
             kind = 'PassiveData'

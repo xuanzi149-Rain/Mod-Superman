@@ -64,6 +64,44 @@ class Task8Tests(unittest.TestCase):
         self.assertEqual(len(s.issues),1)
         with self.assertRaises(ValueError):s.preview()
 
+    def test_literal_rename_recovers_invalid_quotes_without_old_actions(self):
+        from unittest.mock import patch
+        from backend.task8_protocol import Task8Model,literal_rename
+        s=self.session();s.model=Task8Model()
+        s.issues['old']={'id':'old','kind':'clarification','detail':'原光环要求待处理'}
+        with patch.object(Task8Model,'parse',return_value=({},None)) as call:
+            result=s.submit('名字改为不要承诺\n','rename-recovery')
+        self.assertEqual(call.call_count,2)
+        self.assertEqual(s.draft.plan.display.name,'不要承诺')
+        self.assertIn('old',s.issues)
+        self.assertFalse(result['applied']);self.assertEqual(s.draft.plan.effects,[])
+        self.assertTrue(s.history[-1]['parsed'])
+        for text in ['名字改为Fool，重量改为0','名字改为Fool然后取消光环','把它改成Fool']:
+            self.assertIsNone(literal_rename(s.context(text,'reject')))
+
+    def test_ally_aura_cannot_silently_become_hit_damage(self):
+        s=self.session();o,c=self.response(s,text='装备后周围6m队友的攻击伤害增加1d4，自动生效')
+        self.assertTrue(any(x['id']=='check_ally_aura_missing' for x in c['capabilities']['checks']))
+        o['operations']=[{'id':'op','kind':'add_effect','target':'aura','payload':{'effect':{'kind':'trigger','event':'on_hit','condition':'always','target':'target','action':'damage','dice':'1d4','damage_type':'Force'}},'group_id':'aura','requirement_ids':['r']}]
+        with self.assertRaisesRegex(ValueError,'area_aura_not_representable'):validate_output('parse',o,c)
+
+    def test_history_replay_isolation_requires_full_current_coverage(self):
+        from backend.task8_protocol import recovery_issue,isolate_current_request
+        s=self.session();c=s.context('本轮完整要求','history-test');c['recent_history']=[{'user':'名字改为Fool'}]
+        o=recovery_issue(c)
+        old={'id':'old','quote':'名字改为Fool','meaning':'改名','operation_ids':[],'issue_ids':[],
+             'text_request_ids':['old_name'],'issue_update_ids':[],'no_change':False}
+        o['requirements'].append(old)
+        o['text_requests']=[{'id':'old_name','requirement_ids':['old'],'target':{'owner':'equipment','field':'name'},'mode':'exact','text':'Fool','style':None}]
+        clean=validate_output('parse',o,c)
+        self.assertEqual(len(clean['requirements']),1);self.assertFalse(clean['text_requests'])
+        mixed=copy.deepcopy(o);mixed['text_requests'][0]['requirement_ids'].append(o['requirements'][0]['id'])
+        self.assertEqual(isolate_current_request(mixed,c),mixed)
+        invented=copy.deepcopy(o);invented['requirements'][-1]['quote']='名字改为Bar'
+        with self.assertRaisesRegex(ValueError,'requirement_quote_not_in_message'):validate_output('parse',invented,c)
+        partial=copy.deepcopy(o);partial['requirements'][0]['quote']='本轮'
+        with self.assertRaisesRegex(ValueError,'requirement_quote_not_in_message'):validate_output('parse',partial,c)
+
     def test_unknown_text_owner_rejected_before_application(self):
         s=self.session();o,c=self.response(s,'E09')
         o['text_requests'][0]['target']['owner']=s.draft.plan.base_equipment
@@ -132,26 +170,18 @@ class Task8Tests(unittest.TestCase):
         s=self.session();p=s.draft.plan
         p.effects=Plan.model_validate(examples()['parse_examples'][8]['input']['current_plan']).effects
         s.draft=Draft(p);o,c=self.response(s,'E09');s.apply(o,c)
-        c=s.review_context();t=c['texts'][0]
-        raw={'schema_version':'review-v1',**c['request'],'plan_digest':c['plan_digest'],'items':[{
-            'text_id':t['id'],'source_text_digest':t['source_text_digest'],'source_status':'conflict',
-            'findings':[{'dimension':'condition','quote':'使用后永久','fact_refs':['effect_dex_bonus'],'explanation':'仅装备期间'}],
-            'proposed_text':'装备期间，敏捷提高 2 点。','proposal_status':'consistent','proposal_findings':[]}]}
-        s.apply_review(raw,c)
-        self.assertTrue(s.texts)
-        s.adopt_review(replacements=[t['id']])
+        self.assertFalse(s.texts)
         return s
 
-    def test_review_receipt_actual_compilation_and_invalidation(self):
+    def test_free_text_compiles_without_semantic_receipt(self):
         s=self.reviewed();p=s.draft.plan
-        self.assertFalse(validate_plan(p,self.catalog,self.resources,text_receipt=s.draft.text_receipt))
-        with self.assertRaises(ValueError):render_plan(p,str(uuid.uuid4()),catalog=self.catalog,resources=self.resources)
-        files,_=render_plan(p,str(uuid.uuid4()),catalog=self.catalog,resources=self.resources,text_receipt=s.draft.text_receipt)
-        self.assertIn('装备期间，敏捷提高 2 点。','\n'.join(v.decode('utf-8') for v in files.values()))
+        text=p.effects[0].display.description
+        self.assertIn('永久',text)
+        self.assertFalse(validate_plan(p,self.catalog,self.resources))
+        files,_=render_plan(p,str(uuid.uuid4()),catalog=self.catalog,resources=self.resources)
+        self.assertIn(text,'\n'.join(v.decode('utf-8') for v in files.values()))
         p.effects[0].amount=3
-        self.assertTrue(validate_plan(p,self.catalog,self.resources,text_receipt=s.draft.text_receipt))
-        forged=TextReceipt('x','fake','ai_reviewed')
-        self.assertTrue(validate_plan(p,self.catalog,self.resources,text_receipt=forged))
+        self.assertFalse(validate_plan(p,self.catalog,self.resources))
 
     def test_review_no_missing_text_or_wrong_facts(self):
         e=copy.deepcopy(examples()['review_examples'][0]);e['expected_output']['items']=[]
@@ -237,9 +267,12 @@ class Task8Tests(unittest.TestCase):
         self.assertIn('测试已审核技能说明',text)
         self.assertIn('消耗',text)
 
-    def test_resource_change_invalidates_receipt(self):
-        s=self.reviewed();changed=dict(self.resources,ruleset='changed')
-        self.assertTrue(validate_plan(s.draft.plan,self.catalog,changed,text_receipt=s.draft.text_receipt))
+    def test_resource_change_still_invalidates_confirmation(self):
+        s=self.reviewed();s.preview()
+        s.confirm(expected_revision=s.draft.revision,expected_digest=digest(s.draft.plan))
+        changed=dict(self.resources,ruleset='changed')
+        with self.assertRaisesRegex(ValueError,'Confirmation'):
+            s.draft.begin_generation(self.catalog,changed)
 
 
 if __name__=='__main__':unittest.main()

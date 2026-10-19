@@ -103,9 +103,9 @@ class CompilerTests(unittest.TestCase):
         p=example('create_new');p.base_equipment=FIRST_BLOOD
         self.assertIn('base_equipment:special_behavior_requires_acknowledgement',validate_plan(p,self.c,self.r))
 
-    def test_reject_text_without_semantic_review(self):
+    def test_allow_text_without_semantic_review(self):
         p=example();p.effects[0].display.description='增加100点力量'
-        self.assertTrue(validate_plan(p,self.c,self.r))
+        self.assertFalse(validate_plan(p,self.c,self.r))
 
     def test_armor_dexterity(self):
         key=next(k for k,v in self.c['items'].items() if v['record']=='ARM_Breastplate_Body')

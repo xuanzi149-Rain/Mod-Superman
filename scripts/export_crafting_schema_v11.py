@@ -1,6 +1,6 @@
 """Export the versioned draft contract and reproducible request examples."""
 import json
-from backend.crafting_v11 import Plan, BaseParameters, ConstantEffect, TriggerEffect, GrantedSpell, IndependentStatus, NativeBonus, PassiveCopy
+from backend.crafting_v11 import Plan, BaseParameters, WeaponDamageBonus, ConstantEffect, TriggerEffect, GrantedSpell, IndependentStatus, NativeBonus, PassiveCopy
 from scripts.equipment_catalog import ROOT
 from scripts.generate_equipment import FIRST_BLOOD
 
@@ -18,7 +18,7 @@ if __name__ == '__main__':
     capabilities = json.loads((output / 'capabilities.json').read_text(encoding='utf-8'))
     capabilities['contract_version'] = '1.1-draft-4'
     capabilities['contract_schemas'] = {cls.__name__: cls.model_json_schema() for cls in
-                                         (BaseParameters, ConstantEffect, NativeBonus, PassiveCopy, TriggerEffect, GrantedSpell, IndependentStatus)}
+                                         (BaseParameters, WeaponDamageBonus, ConstantEffect, NativeBonus, PassiveCopy, TriggerEffect, GrantedSpell, IndependentStatus)}
     capabilities['rules_document'] = 'docs/v1.1/能力规则与阶段边界.md'
     capabilities['resource_policy'] = {'new_equipment': 'audited native weapon/armor/shield/jewelry template with complete inheritance',
                                        'armor_creation': '25 native EquipmentRace profiles resolved through native fallbacks; visual and model paths verified',

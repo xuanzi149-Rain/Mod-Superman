@@ -9,6 +9,7 @@ from backend.service import ServiceError
 from backend.text_review_v11 import fingerprint
 from scripts.generate_mod import ROOT, no_duplicate_keys
 from backend.player_language import policy, player_output
+from backend.workflow_errors import parse_failure_reason
 
 VERSION = 'task8-v10'
 DATA = ROOT / 'data/v1.1/task8'
@@ -37,8 +38,50 @@ def validate_output(task, output, context):
     if task == 'review':
         _review(output, context)
     else:
+        output = isolate_current_request(output, context)
+        output = keep_unimplemented_issues_open(output)
         _parse(output, context)
     return copy.deepcopy(output)
+
+
+def keep_unimplemented_issues_open(output):
+    """A reported capability gap cannot close old issues without an applied change."""
+    gaps={i['id'] for i in output['issues'] if i['kind']=='capability_gap'}
+    removable=set()
+    for update in output['issue_updates']:
+        owners=[r for r in output['requirements'] if update['id'] in r['issue_update_ids']]
+        if (update['proposed_action']!='withdrawn' and not update['operation_ids'] and not update['text_request_ids']
+                and gaps and (not owners or all(set(r['issue_ids'])&gaps for r in owners))):
+            removable.add(update['id'])
+    result=copy.deepcopy(output)
+    result['issue_updates']=[u for u in result['issue_updates'] if u['id'] not in removable]
+    for r in result['requirements']:r['issue_update_ids']=[i for i in r['issue_update_ids'] if i not in removable]
+    return result
+
+
+def isolate_current_request(output, context):
+    """Drop only independent replays of known history when the entire new input is covered."""
+    text=context['latest_message']['text'].strip()
+    current=[r for r in output['requirements'] if r['quote'] in context['latest_message']['text']]
+    if not any(r['quote'].strip()==text for r in current):return output
+    foreign=[r for r in output['requirements'] if r not in current]
+    history=[h['user'] for h in context.get('recent_history',[])]
+    history += [m for i in context.get('followup_context',{}).get('linked_issues',[]) for m in i.get('original_messages',[])]
+    if not foreign or any(not r['quote'] or not any(r['quote'] in m for m in history) for r in foreign):return output
+    stale={r['id'] for r in foreign};keep={r['id'] for r in current}
+    for field in ('operations','issues','text_requests'):
+        if any(set(x['requirement_ids'])&stale and set(x['requirement_ids'])&keep for x in output[field]):return output
+    kept_updates={i for r in current for i in r['issue_update_ids']}
+    stale_updates={i for r in foreign for i in r['issue_update_ids']}
+    if kept_updates&stale_updates:return output
+    result=copy.deepcopy(output);result['requirements']=current
+    for field in ('operations','issues','text_requests'):
+        result[field]=[x for x in result[field] if not set(x['requirement_ids'])&stale]
+    result['issue_updates']=[x for x in result['issue_updates'] if x['id'] not in stale_updates]
+    removed_actions={x['id'] for field in ('operations','text_requests') for x in output[field] if set(x['requirement_ids'])&stale}
+    result['issue_updates']=[x for x in result['issue_updates'] if not (
+        set(x['operation_ids']+x['text_request_ids']) and set(x['operation_ids']+x['text_request_ids'])<=removed_actions)]
+    return result
 
 
 def unique(items):
@@ -53,6 +96,11 @@ def _parse(o, c):
     if not o['requirements']:
         raise ValueError('missing_requirements')
     text = c['latest_message']['text']
+    # A continuous ally aura cannot be represented by the current effect types.
+    # Reject substitutions before any operations can reach the draft.
+    if re.search(r'周围|范围|光环',text) and re.search(r'队友|友方',text) and re.search(r'自动|装备后|光环',text):
+        if any(op['kind'] in ('add_effect','update_effect') for op in o['operations']):
+            raise ValueError('area_aura_not_representable')
     for r in o['requirements']:
         if r['quote'] not in text:
             raise ValueError('requirement_quote_not_in_message')
@@ -169,6 +217,7 @@ def select_examples(task, context):
         elif any(f.get('missing') for f in context['facts']): names.append('R04')
         return [x for x in examples()['review_examples'] if x['id'] in names]
     text=context['latest_message']['text']; choices=[]
+    if re.search(r'任意武器|任何武器|腐蚀指环|装备后.*武器.*伤害',text):choices.append('E14')
     if re.search(r'只改.*(字|说明)|效果参数不用动',text):choices.append('E09')
     if re.search(r'技能|被动|状态',text) and not context['capabilities']['candidates']:choices.append('E13')
     for pattern, name in [(r'删除|删掉','E06'),(r'减半|翻倍','E04'),(r'免费|法术位','E07'),
@@ -224,12 +273,23 @@ class Task8Model(ModelClient):
                     raise
                 if code.startswith('stale_') or code == 'context_budget_exceeded':
                     raise
-                attempts.append({'usage':usage, 'error':code[:1000]})
+                diagnostic=getattr(exc,'diagnostic',None)
+                attempts.append({'usage':usage or getattr(exc,'usage',None), 'error':code[:1000],
+                                 **({'diagnostic':diagnostic} if diagnostic else {})})
                 if attempt == 0:
                     request['repair'] = {'validation_error':code[:1500]}
+                    if diagnostic:request['repair']['format_diagnostic']=diagnostic
+                    if code=='area_aura_not_representable':
+                        request['repair']['instruction']='禁止用任何现有效果替代队友持续光环。operations 为空；完整保留本轮要求，使用 check_ally_aura_missing 返回 capability_gap。'
+                    if code=='requirement_quote_not_in_message':
+                        request['repair'].update(latest_message_verbatim=context['latest_message']['text'],
+                            instruction='requirements.quote 必须逐字摘自本次输入；历史要求留在上下文，不能作为本轮原文引用。不要改写、增加标点或混入历史消息。')
                     continue
                 if task == 'parse':
-                    output = recovery_issue(context)
+                    output = literal_rename(context)
+                    if output is not None:
+                        return validate_output(task,output,context), recovery_usage(attempts,'literal_rename_recovery')
+                    output = recovery_issue(context, attempts)
                     return validate_output(task, output, context), recovery_usage(attempts, 'pending_requirement')
                 raise ServiceError('model_review_unresolved',
                     '文案核对未能可靠完成，系统已自动纠正一次。原文和效果参数均已保留，尚未确认一致；可稍后重新核对。', 502) from None
@@ -246,19 +306,36 @@ def recovery_usage(attempts, status):
     return result
 
 
-def recovery_issue(context):
+def literal_rename(context):
+    """Conservative fallback for one explicit equipment rename; never reuse model operations."""
+    text=context['latest_message']['text']
+    match=re.fullmatch(r'\s*(?:装备)?(?:名字|名称)\s*改(?:为|成)\s*([\w\u4e00-\u9fff· -]{1,60})[。！!]?\s*',text)
+    if not match:return None
+    name=match.group(1).strip()
+    if not name or re.search(r'然后|并且|同时|并将|重量|稀有度|伤害|描述|说明',name):return None
+    return {'schema_version':'parse-v1',**context['request'],'intent_summary':'仅修改装备名称，其他要求保持原状态。',
+        'requirements':[{'id':'rename','quote':text.strip(),'meaning':'装备名称改为'+name,
+            'operation_ids':[],'issue_ids':[],'text_request_ids':['name'],'issue_update_ids':[],'no_change':False}],
+        'operations':[],'issues':[],'issue_updates':[],
+        'text_requests':[{'id':'name','requirement_ids':['rename'],'target':{'owner':'equipment','field':'name'},
+            'mode':'exact','text':name,'style':None}]}
+
+
+def recovery_issue(context, attempts=()):
     """Preserve the whole request, not an untrusted partial model interpretation."""
     text = context['latest_message']['text']
     requirements = [{'id':f'r_recovery_{index}', 'quote':text[start:start+1000],
         'meaning':text[start:start+1000], 'operation_ids':[], 'issue_ids':['i_recovery'],
         'text_request_ids':[], 'issue_update_ids':[], 'no_change':False}
         for index, start in enumerate(range(0, len(text), 1000))]
+    last=attempts[-1] if attempts else {}
+    detail=parse_failure_reason(last.get('error'),last.get('diagnostic'))+' 本次要求已保留，未应用本次修改；已有修改不受影响。'
     return {'schema_version':'parse-v1', **context['request'],
         'intent_summary':'本次需求已保留；自动解析及纠正仍未得到可靠结果，尚未修改装备。',
         'requirements':requirements,
         'operations':[], 'text_requests':[], 'issue_updates':[],
         'issues':[{'id':'i_recovery','requirement_ids':[r['id'] for r in requirements], 'kind':'clarification',
-            'detail':'系统自动解析及纠正仍未成功，整条原始需求已保留，未应用任何修改。这不表示该效果不受支持。',
-            'question':'可在补充说明中逐项描述希望改变的属性或效果，也可直接编辑参数；请保留尚未完成的要求。',
+            'detail':detail,
+            'question':'请在上方输入框补充或重试这项要求；原需求已保留，无需重复提交其他已完成的修改。',
             'options':[], 'evidence_refs':[]}]}
 

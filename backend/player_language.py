@@ -18,6 +18,16 @@ def safe_text(text, fallback=REPHRASE):
 
 def player_issue(issue, internal_ids=(), names=None):
     result=copy.deepcopy(issue)
+    if 'check_ally_aura_missing' in result.get('evidence_refs',[]):
+        result['detail']='这项要求已理解，但当前尚未实现“装备后自动影响周围队友”的持续光环生成能力。距离、队友范围和伤害加成都已保留；不会替换成佩戴者命中效果。'
+        result['question']=None
+    if isinstance(result.get('question'),str):
+        result['question']=result['question'].replace('请点击“补充说明”重试这项要求','请在上方输入框补充或重试这项要求')
+    detail=str(result.get('detail') or '')
+    if re.search(r'validation error|errors\.pydantic\.dev|input_type=|input_value=',detail,re.I):
+        result['detail']='系统生成的效果参数没有通过检查，本次效果未应用；你的原要求和补充说明已保留。'
+        result['question']='请保留这项要求等待修正，或明确选择其他效果；无需提供程序字段或重新填写已说明的条件。'
+        return result
     # A real internal reference in an explanation is not a request for the player
     # to supply it. Translate known references before deciding to replace a question.
     def readable(value):

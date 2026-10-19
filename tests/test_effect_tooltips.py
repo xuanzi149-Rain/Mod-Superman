@@ -37,9 +37,8 @@ class EffectTooltipTests(unittest.TestCase):
         fields,texts=self.render(self.plan({'name':'回春'}))
         self.assertNotIn('IsHidden',fields['Properties'].split(';'))
         self.assertEqual(texts[fields['Description'].split(';')[0]],'')
-    def test_custom_text_still_requires_review(self):
-        with self.assertRaisesRegex(ValueError,'custom_effect_text'):
-            render_plan(self.plan({'description':'恢复999生命'}),str(uuid.uuid4()),catalog=self.c,resources=self.r)
+    def test_custom_text_needs_no_semantic_review(self):
+        render_plan(self.plan({'description':'恢复999生命'}),str(uuid.uuid4()),catalog=self.c,resources=self.r)
     def test_real_packages_preserve_documented_xml_loader_path(self):
         results=[]
         for display in ({},{'name':'回春','description':'使用此武器命中后，为自己恢复1d6生命值。'}):

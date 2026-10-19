@@ -568,6 +568,9 @@
         },
         {
           "$ref": "#/$defs/PassiveCopy"
+        },
+        {
+          "$ref": "#/$defs/WeaponDamageBonus"
         }
       ]
     },
@@ -1052,6 +1055,53 @@
               },
               "required": [],
               "title": "PassiveCopy",
+              "type": "object",
+              "minProperties": 1
+            }
+          },
+          "required": [
+            "effect_kind",
+            "changes"
+          ]
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "effect_kind": {
+              "const": "weapon_damage",
+              "type": "string"
+            },
+            "changes": {
+              "additionalProperties": false,
+              "properties": {
+                "dice": {
+                  "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+                  "title": "Dice",
+                  "type": "string"
+                },
+                "damage_type": {
+                  "enum": [
+                    "Slashing",
+                    "Piercing",
+                    "Bludgeoning",
+                    "Acid",
+                    "Cold",
+                    "Fire",
+                    "Force",
+                    "Lightning",
+                    "Necrotic",
+                    "Poison",
+                    "Psychic",
+                    "Radiant",
+                    "Thunder"
+                  ],
+                  "title": "Damage Type",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "title": "ConstantEffect",
               "type": "object",
               "minProperties": 1
             }
@@ -2935,6 +2985,48 @@
         "text",
         "style"
       ]
+    },
+    "WeaponDamageBonus": {
+      "additionalProperties": false,
+      "description": "Equipped passive affecting the wearer's weapons, not the source item.",
+      "properties": {
+        "kind": {
+          "const": "weapon_damage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "dice": {
+          "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+          "title": "Dice",
+          "type": "string"
+        },
+        "damage_type": {
+          "enum": [
+            "Slashing",
+            "Piercing",
+            "Bludgeoning",
+            "Acid",
+            "Cold",
+            "Fire",
+            "Force",
+            "Lightning",
+            "Necrotic",
+            "Poison",
+            "Psychic",
+            "Radiant",
+            "Thunder"
+          ],
+          "title": "Damage Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "dice",
+        "damage_type"
+      ],
+      "title": "WeaponDamageBonus",
+      "type": "object"
     }
   }
 }

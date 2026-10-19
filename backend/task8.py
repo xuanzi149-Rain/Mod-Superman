@@ -7,7 +7,7 @@ import uuid
 from decimal import Decimal
 from backend.crafting_v11 import Plan, Draft, BaseParameters, digest
 from backend.task8_protocol import validate_output, Task8Model, VERSION
-from backend.text_review_v11 import fingerprint, issue_receipt
+from backend.text_review_v11 import fingerprint
 from scripts.crafting_compiler_v11 import validate_plan, render_plan, FIELD_MAP
 from scripts.native_dependencies_v11 import closure, spell_profile
 from backend.resource_names import localized, name_score
@@ -97,7 +97,9 @@ def facts(plan, catalog, resources):
         if e.kind=='trigger' and e.action!='status':v.pop('duration_turns',None)
         if e.kind=='independent_status' and e.amount==0:
             v.pop('ability',None);v.pop('amount',None)
-        if e.kind in ('constant','bonus','passive_copy'):v['activation_condition']='装备期间'
+        if e.kind in ('constant','bonus','passive_copy','weapon_damage'):v['activation_condition']='装备期间'
+        if e.kind=='weapon_damage':
+            v['scope']='佩戴者任意武器攻击附加伤害；不作用于队友、徒手或纯法术伤害'
         stacking={'replace':'重复触发刷新持续时间，不累计加成','ignore':'持续期间重复触发不刷新也不叠加','additive':'按独立状态的加法叠加规则处理'}
         if e.kind=='independent_status':v['stacking_explanation']=stacking[e.stacking]
         if e.kind=='trigger' and e.status_draft_id:
@@ -129,25 +131,29 @@ class Task8Session:
         self.requests={};self.snapshots={};self.log=[];self.goal=plan.user_goal;self.requirements=[]
         self.latest_review=None;self.normalizations=[]
         self.resource_version=fingerprint(resources)
-        for n,t in enumerate(plan.unresolved):self.issues['initial_'+str(n)]={'id':'initial_'+str(n),'detail':t,'kind':'clarification'}
+        for n,t in enumerate(plan.unresolved):
+            if t!='text_review_pending':self.issues['initial_'+str(n)]={'id':'initial_'+str(n),'detail':t,'kind':'clarification'}
         self._queue_existing_texts()
-        if self.texts or (plan.mode=='create_new' and inheritance is None):
+        if plan.mode=='create_new' and inheritance is None:
             p=self.draft.plan
-            if self.texts:p.unresolved.append('text_review_pending')
             if plan.mode=='create_new' and inheritance is None:
                 self.issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'请选择继承策略'}
                 p.unresolved.append('请选择继承策略')
             self.draft=Draft(p)
 
     def _queue_existing_texts(self):
-        p=self.draft.plan
-        for owner,display in [('equipment',p.display)]+[(e.id,e.display) for e in p.effects]:
-            for field in ('name','description'):
-                value=getattr(display,field)
-                if value is not None:
-                    key=owner+':'+field
-                    self.texts.setdefault(key,{'id':key,'target':{'owner':owner,'field':field},
-                        'mode':'exact','text':value,'style':None})
+        """Migrate legacy pending text verbatim; text semantics are not a gate."""
+        p=self.draft.plan.model_dump(mode='json')
+        for t in self.texts.values():
+            owner=t['target']['owner']
+            display=p['display'] if owner=='equipment' else next((e['display'] for e in p['effects'] if e['id']==owner),None)
+            if display is not None:
+                display[t['target']['field']]=None if t['mode']=='reset' else t['text']
+        p['unresolved']=[str(i['detail'])[:1500] for i in self.issues.values() if i.get('detail')!='text_review_pending']
+        new=Plan.model_validate(p)
+        if new!=self.draft.plan:
+            self.draft.replace(new,source='manual',expected_revision=self.draft.revision)
+        self.texts={};self.latest_review=None
 
     def candidates(self, text, expanded=False):
         p=self.draft.plan; records=self.resources['records']; refs=set()
@@ -220,7 +226,9 @@ class Task8Session:
         checks=[{'id':'template_'+fingerprint(audit)[:16],'result':'template_audit',
                  'details':audit.get('special_actions',[])},
                 {'id':'check_growth_missing','result':'capability_gap',
-                 'details':'当前原生生成规则仅开放 on_hit/on_heal/on_damaged；未实现击杀计数或永久成长规则，不得近似为固定加成。'}]
+                 'details':'当前原生生成规则仅开放 on_hit/on_heal/on_damaged；未实现击杀计数或永久成长规则，不得近似为固定加成。'},
+                {'id':'check_ally_aura_missing','result':'capability_gap',
+                 'details':'当前没有装备后持续作用于范围队友的可配置光环生成规则：trigger 仅有 on_hit/on_heal/on_damaged，target 仅 self/target，无半径和队友筛选；原生 AuraStatuses 依赖尚未开放。完整光环需求应保留为能力缺口，不得替代为佩戴者命中伤害或主动技能。'}]
         checks += [{'id':'resource_'+fingerprint(v['id'])[:16],'result':'capability_gap',
                     'resource_id':v['id'],'resource_name':v.get('name'),
                     'scope':'仅针对新增引用或独立复制，不否定保留原装备继承效果',
@@ -231,13 +239,18 @@ class Task8Session:
            'selection':{'mode':p.mode,'base_equipment':p.base_equipment,'inheritance_strategy':self.inheritance},
            'current_plan':p.model_dump(mode='json'),'effective_values':effective_values(p,self.resources),
            'native_equipment_fields':copy.deepcopy(_entry(p,self.resources)),
-           'capabilities':{'version':self.resource_version,'category_summary':['parameters','constant','bonus','trigger','independent_status','grant_spell','passive_copy','display','resources'],
+           'capabilities':{'version':self.resource_version,'category_summary':['parameters','constant','bonus','weapon_damage','trigger','independent_status','grant_spell','passive_copy','display','resources'],
                            'candidates':candidates,'checks':checks,'completeness':'relevant_candidates_only',
                            'lookup_state':'expanded' if expanded else 'initial'},
            'intent_state':{'goal':self.goal,'requirements':copy.deepcopy(self.requirements),'clarifications':[h for h in self.history if h.get('answers')],
                            'open_issues':list(self.issues.values()),'withdrawn':[]},
            'latest_message':{'id':request_id,'text':text,'answers_issue_ids':list(answers)},
-           'recent_history':self.history[-3:],
+           'recent_history':[{'user':h['user'],'answers':h.get('answers',[]),
+               'open_questions':h.get('feedback',{}).get('unresolved',[])} for h in self.history[-3:]],
+           'followup_context':{'answer':text,'linked_issues':[
+               {'issue':copy.deepcopy(self.issues[i]),
+                'original_messages':[h['user'] for h in self.history if any(x.get('id')==i for x in h.get('feedback',{}).get('unresolved',[]))]}
+               for i in answers if i in self.issues]},
            'snapshots':[{'id':k,'revision':v['revision']} for k,v in self.snapshots.items()]}
         c['request']['context_digest']=fingerprint(c)
         return c
@@ -415,7 +428,7 @@ class Task8Session:
                         self._operation(candidate,op,ids,context,meta)
                     proposed=Plan.model_validate(candidate)
                     checks=validate_plan(proposed,self.catalog,self.resources)
-                    errors=[x for x in checks if x not in INCOMPLETE and not x.endswith('custom_effect_text_requires_phase_C_review')]
+                    errors=[x for x in checks if x not in INCOMPLETE]
                     if errors:raise ValueError(';'.join(errors))
                     p=proposed.model_dump(mode='json');metadata=meta;applied += [op['id'] for op in group]
                 except (ValueError,KeyError,TypeError) as e:
@@ -443,7 +456,7 @@ class Task8Session:
                 if t['mode']=='reset':
                     target[field]=None;texts.pop(key,None)
                 else:
-                    texts[key]=dict(t,id=key,target={'owner':owner,'field':field})
+                    target[field]=t['text'];texts.pop(key,None)
                 applied_texts.add(t['id'])
             for u in o['issue_updates']:
                 if u['proposed_action']=='withdrawn' or (set(u['operation_ids'])<=set(applied) and set(u['text_request_ids'])<=applied_texts):
@@ -455,7 +468,6 @@ class Task8Session:
                 issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'重新设定需逐项确认保留、移除及新参数，不能自动清空'}
             texts={k:t for k,t in texts.items() if t['target']['owner']=='equipment' or t['target']['owner'] in {e['id'] for e in p['effects']}}
             blockers=[str(i['detail'])[:1500] for i in issues.values()]
-            if texts:blockers.append('text_review_pending')
             if len(blockers)>20:raise ValueError('too_many_unresolved_requirements')
             p['unresolved']=blockers
             new=Plan.model_validate(p)
@@ -495,44 +507,17 @@ class Task8Session:
         return c
 
     def review_text(self):
+        # Compatibility endpoint: adopt supplied text without a model consistency check.
         with self.lock:
-            c=self.review_context()
-            raw,usage=self.model.run('review',c)
-            self.log.append({'task':'review','context':c,'output':raw,'usage':usage})
-            return self.apply_review(raw,c)
+            self._queue_existing_texts()
+            return self.preview()
 
     def apply_review(self, output, context):
-        o=validate_output('review',output,context)
-        if context['request']['base_revision']!=self.draft.revision or context.get('resource_digest')!=fingerprint(self.resources) or context['plan_digest']!=digest(self.draft.plan) or context['facts_digest']!=fingerprint(facts(self.draft.plan,self.catalog,self.resources)):
-            raise ValueError('stale_review')
-        required={ref for t in context['texts'] for ref in t['required_fact_ids']}
-        if any(f['missing'] for f in context['facts'] if f['id'] in required):raise ValueError('effective_facts_incomplete')
-        self.latest_review={'output':o,'context':copy.deepcopy(context)}
-        return self.adopt_review()
+        # Old clients may still send review results. They cannot replace user text.
+        return self.review_text()
 
     def adopt_review(self, *, replacements=()):
-        with self.lock:
-            if not self.latest_review:raise ValueError('review_required')
-            o=self.latest_review['output'];context=self.latest_review['context']
-            if context['request']['base_revision']!=self.draft.revision or context.get('resource_digest')!=fingerprint(self.resources) or context['plan_digest']!=digest(self.draft.plan):raise ValueError('stale_review')
-            p=self.draft.plan.model_dump(mode='json');remaining={};applied=[]
-            for i in o['items']:
-                t=self.texts[i['text_id']];value=None
-                if t['mode']=='rewrite' and i['proposal_status']=='consistent':value=i['proposed_text']
-                elif t['mode']=='exact' and i['source_status']=='consistent':value=t['text']
-                elif i['text_id'] in replacements and i['proposal_status']=='consistent':value=i['proposed_text']
-                if value is None:remaining[i['text_id']]=t;continue
-                owner=t['target']['owner'];display=p['display'] if owner=='equipment' else next(e['display'] for e in p['effects'] if e['id']==owner)
-                display[t['target']['field']]=value;applied.append(i['text_id'])
-            # Keep one reviewed snapshot until conflicts are explicitly resolved; don't partially
-            # mutate the plan under a receipt that belongs to another revision.
-            if remaining:return {'adopted':[],'pending':list(remaining),'review':o}
-            p['unresolved']=[str(x['detail'])[:1500] for x in self.issues.values()]
-            new=Plan.model_validate(p);self.draft.replace(new,source='ai',expected_revision=self.draft.revision)
-            receipt=None if new.unresolved else issue_receipt(new,self.resources,path='ai_reviewed')
-            self.draft.review(self.catalog,self.resources,text_receipt=receipt)
-            self.texts={};self.latest_review=None
-            return {'adopted':applied,'pending':[],'state':self.draft.state}
+        return self.review_text()
 
     def use_standard_text(self):
         """Explicit user recovery: discard custom descriptions, not unresolved requirements."""

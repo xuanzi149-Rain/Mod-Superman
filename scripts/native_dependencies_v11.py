@@ -9,6 +9,8 @@ FUNCTIONS=set('Ability Initiative ActionResource Skill RollBonus AC Resistance W
 # KingsKnife native passives: numeric boosts and context predicates only;
 # none carries a Stats/Passive/Status/Spell identifier to clone or resolve.
 FUNCTIONS.update({'ReduceCriticalAttackThreshold','AttackingWithMeleeWeapon','Reroll','HasObscuredState'})
+# Caustic Band and native weapon damage statuses; numeric arguments, no references.
+FUNCTIONS.add('CharacterWeaponDamage')
 REF_FUNCTIONS={'StatusImmunity':('StatusData',0),'UseSpell':('SpellData',0),'UnlockSpell':('SpellData',0),'ApplyStatus':('StatusData',0),'HasStatus':('StatusData',0),'RemoveStatus':('StatusData',0),'HasPassive':('PassiveData',0)}
 LIST_FIELDS={'Passives':'PassiveData','PassivesOnEquip':'PassiveData','StatusOnEquip':'StatusData','ContainerSpells':'SpellData'}
 SINGLE_FIELDS={'RootSpellID':'SpellData'}

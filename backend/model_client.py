@@ -16,6 +16,17 @@ from backend.service import ServiceError
 from scripts.generate_mod import ROOT, no_duplicate_keys
 
 
+def decode_model_content(content):
+    if not isinstance(content,str):raise ValueError('content_not_text')
+    text=content.strip().lstrip('\ufeff')
+    fenced=re.fullmatch(r'```(?:json)?\s*\n([\s\S]*?)\n```',text,re.I)
+    if fenced:text=fenced.group(1).strip()
+    result=json.loads(text,object_pairs_hook=no_duplicate_keys,
+                      parse_constant=lambda _: (_ for _ in ()).throw(ValueError('nonfinite')))
+    if not isinstance(result,dict):raise ValueError('root_not_object')
+    return result
+
+
 def settings():
     values = {}
     path = ROOT / '.env.local'
@@ -137,6 +148,7 @@ class ModelClient:
             raise ServiceError('model_not_configured', '服务端未配置'+selected['key_name']+'；可以手动填写参数。', 503)
         use_proxy = selected['use_proxy']
         record('network_route', system_proxy=use_proxy)
+        decode_stage='transport';data=None
         try:
             with httpx.Client(timeout=httpx.Timeout(60, connect=10), transport=self.transport,
                               trust_env=use_proxy) as client:
@@ -168,6 +180,7 @@ class ModelClient:
                     record('body_complete', response_bytes=byte_count)
                 finally:
                     response.close()
+            decode_stage='response_envelope'
             data = json.loads(response_body)
             # Some upstream gateways wrap an API error in an HTTP 200 response.
             if isinstance(data, dict) and data.get('error'):
@@ -181,18 +194,22 @@ class ModelClient:
             choice = data['choices'][0]
             if choice.get('finish_reason') != 'stop':
                 raise ServiceError('model_incomplete', '模型响应未完整结束；请重试或手动填写。', 502)
+            decode_stage='message_content'
             content = choice['message']['content']
             if not content or not content.strip():
                 raise ServiceError('model_empty', '模型返回空内容；请重试或手动填写。', 502)
-            result = json.loads(content, object_pairs_hook=no_duplicate_keys,
-                                parse_constant=lambda _: (_ for _ in ()).throw(ValueError('nonfinite')))
+            result = decode_model_content(content)
             return result, data.get('usage')
         except httpx.TimeoutException:
             raise ServiceError('model_timeout', '模型请求超时；草稿未改变，可重试。', 504) from None
         except httpx.RequestError:
             raise ServiceError('model_network_failed', '无法连接模型服务；草稿未改变，可重试或手动填写。', 502) from None
-        except (ValueError, KeyError, IndexError, TypeError, AttributeError):
-            raise ServiceError('model_invalid_output', '模型响应格式无效；草稿未改变，可重试。', 502) from None
+        except (ValueError, KeyError, IndexError, TypeError, AttributeError) as exc:
+            error=ServiceError('model_invalid_output', '模型响应格式无效；草稿未改变，可重试。', 502)
+            error.diagnostic={'stage':decode_stage,'exception':type(exc).__name__}
+            if isinstance(exc,json.JSONDecodeError):error.diagnostic.update(line=exc.lineno,column=exc.colno,reason=exc.msg)
+            error.usage=data.get('usage') if isinstance(data,dict) else None
+            raise error from None
 
     def payload(self, context, selected):
         from backend.player_language import policy

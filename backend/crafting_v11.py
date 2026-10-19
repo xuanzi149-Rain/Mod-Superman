@@ -45,6 +45,16 @@ class ConstantEffect(StrictModel):
     display: Display = Field(default_factory=Display)
 
 
+class WeaponDamageBonus(StrictModel):
+    """Equipped passive affecting the wearer's weapons, not the source item."""
+    kind: Literal['weapon_damage']
+    id: Identifier
+    dice: Annotated[str, Field(pattern=r'^(?:[1-9]|10)d(?:4|6|8|10|12|20)$')]
+    damage_type: Literal['Slashing', 'Piercing', 'Bludgeoning', 'Acid', 'Cold', 'Fire', 'Force',
+                         'Lightning', 'Necrotic', 'Poison', 'Psychic', 'Radiant', 'Thunder']
+    display: Display = Field(default_factory=Display)
+
+
 class TriggerEffect(StrictModel):
     kind: Literal['trigger']
     id: Identifier
@@ -122,7 +132,7 @@ class PassiveCopy(StrictModel):
     display: Display = Field(default_factory=Display)
 
 
-Effect = Annotated[ConstantEffect | NativeBonus | PassiveCopy | TriggerEffect | GrantedSpell | IndependentStatus, Field(discriminator='kind')]
+Effect = Annotated[ConstantEffect | NativeBonus | WeaponDamageBonus | PassiveCopy | TriggerEffect | GrantedSpell | IndependentStatus, Field(discriminator='kind')]
 
 
 class Plan(StrictModel):

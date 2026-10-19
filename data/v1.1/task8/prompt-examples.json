@@ -1886,6 +1886,116 @@
         "text_requests": []
       },
       "expected_program_behavior": "服务端一次补查后重解析；不要求玩家填写内部标识。"
+    },
+    {
+      "id": "E14",
+      "task": "parse",
+      "source": "synthetic_P1_or_design_extension",
+      "input": {
+        "request": {
+          "request_id": "demo_p1_1",
+          "base_revision": 3,
+          "context_digest": "ctx_p1_1"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:463b0a81-1fc3-4db1-bafe-a915f9a8e028",
+          "inheritance_strategy": null
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:463b0a81-1fc3-4db1-bafe-a915f9a8e028",
+          "user_goal": "合成案例，非玩家记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {},
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {},
+        "capabilities": {
+          "version": "B-fixture-2026-10-17",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources",
+            "weapon_damage"
+          ],
+          "candidates": [],
+          "checks": [],
+          "completeness": "relevant_candidates_only"
+        },
+        "intent_state": {
+          "goal": "装备后自己的任意武器的攻击伤害增加1d4，命中时触发，火焰伤害",
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "msg_p1_1",
+          "text": "装备后自己的任意武器的攻击伤害增加1d4，命中时触发，火焰伤害",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "expected_output": {
+        "schema_version": "parse-v1",
+        "request_id": "demo_p1_1",
+        "base_revision": 3,
+        "context_digest": "ctx_p1_1",
+        "intent_summary": "佩戴期间任意武器附加1d4火焰伤害，原装备效果保留。",
+        "requirements": [
+          {
+            "id": "r",
+            "quote": "装备后自己的任意武器的攻击伤害增加1d4，命中时触发，火焰伤害",
+            "meaning": "装备后自己的任意武器的攻击伤害增加1d4，命中时触发，火焰伤害",
+            "operation_ids": [
+              "op"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op",
+            "kind": "add_effect",
+            "target": "fire",
+            "payload": {
+              "effect": {
+                "kind": "weapon_damage",
+                "dice": "1d4",
+                "damage_type": "Fire"
+              }
+            },
+            "group_id": "g",
+            "requirement_ids": [
+              "r"
+            ]
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "expected_program_behavior": "通过程序校验后反馈三项变化，不罗列全部未改字段。"
     }
   ],
   "review_examples": [

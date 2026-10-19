@@ -41,6 +41,21 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(r.status_code,200,r.text);return r.json()
     def edit(self,s,kind,target,payload):
         return self.act(s,'edit',{'operations':[{'kind':kind,'target':target,'payload':payload,'group_id':'g'}]})
+    def test_delete_draft_is_owned_persistent_and_preserves_delivery(self):
+        s=self.create();ident=s['session_id'];url='/api/v11/sessions/'+ident+'/delete'
+        with TestClient(self.app) as other:
+            self.assertEqual(other.post(url,json={}).status_code,404)
+        task_id=str(uuid.uuid4())
+        self.service.store.snapshot('v11_tasks',task_id,{'session_id':ident,'status':'generating','plan':s['plan']})
+        self.assertEqual(self.client.post(url,json={}).status_code,409)
+        self.service.store.snapshot('v11_tasks',task_id,{'session_id':ident,'status':'succeeded','plan':s['plan']})
+        self.assertEqual(self.client.post(url,json={}).status_code,200)
+        self.assertEqual(self.client.post(url,json={}).status_code,200)
+        self.assertFalse(any(x['kind']=='v11_sessions' and x['id']==ident for x in self.client.get('/api/v11/history').json()['items']))
+        self.assertEqual(self.service.store.get('v11_tasks',task_id)['status'],'succeeded')
+        restored=CraftService(self.service,self.app.state.jobs,FixedModel())
+        self.assertIsNotNone(restored.view(ident))
+
     def test_manual_model_ownership_dedup_and_stale_revision(self):
         s=self.create();before=s
         self.assertFalse(s['has_parsed'])
@@ -72,24 +87,32 @@ class WorkflowTests(unittest.TestCase):
         restored=CraftService(self.service,self.app.state.jobs,FixedModel()).view(s['session_id'])
         self.assertIsNone(restored['plan']['parameters']['weight_kg'])
 
-    def test_restart_restores_requirements_and_requeues_text_without_receipt(self):
-        s=self.create();s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='exact',text='测试名称',style=None)]})
-        self.assertTrue(s['texts'])
-        s=self.act(s,'review');self.assertFalse(s['texts'])
+    def test_free_text_and_legacy_pending_restore_without_review(self):
+        s=self.create()
+        s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='exact',text='测试名称',style=None)]})
+        self.assertFalse(s['texts']);self.assertEqual(s['plan']['display']['name'],'测试名称')
+        craft=self.app.state.craft;session=craft.get(s['session_id'])
+        session.texts={'equipment:description':dict(id='equipment:description',target={'owner':'equipment','field':'description'},mode='exact',text='传说能摧毁世界',style=None)}
+        session.latest_review={'output':{'items':[{'source_status':'conflict'}]}}
+        craft.save(s['session_id'],session)
         fresh=CraftService(self.service,self.app.state.jobs,FixedModel())
-        restored=fresh.view(s['session_id']);self.assertGreater(restored['revision'],s['revision'])
-        self.assertTrue(restored['texts']);self.assertFalse(restored['ready']);self.assertIsNone(fresh.get(s['session_id']).draft.text_receipt)
+        with patch.object(fresh.model,'run',side_effect=AssertionError('No text review call')):
+            restored=fresh.view(s['session_id'])
+            self.assertFalse(restored['texts']);self.assertTrue(restored['ready']);self.assertIsNone(restored['review'])
+            self.assertEqual(restored['plan']['display']['description'],'传说能摧毁世界')
+            self.assertFalse(fresh.get(s['session_id']).preview()['issues'])
 
-    def test_restart_rephrases_legacy_id_question_without_dropping_requirement(self):
-        s=self.create();craft=self.app.state.craft;session=craft.get(s['session_id'])
+    def test_restart_drops_legacy_failed_requirement_but_keeps_adopted_plan(self):
+        s=self.create();s=self.edit(s,'set_parameter','rarity',{'value':'Rare'})
+        craft=self.app.state.craft;session=craft.get(s['session_id'])
         session.issues['old']={'id':'old','kind':'clarification','detail':'需要状态ID','question':'请提供沉睡状态的系统ID','options':[],'requirement_ids':['r1']}
         craft.save(s['session_id'],session)
         fresh=CraftService(self.service,self.app.state.jobs,FixedModel())
         restored=fresh.get(s['session_id'])
-        self.assertEqual(restored.issues['old']['requirement_ids'],['r1'])
-        self.assertEqual(restored.issues['old']['kind'],'information_missing')
-        self.assertIsNone(restored.issues['old']['question'])
-        self.assertNotIn('ID',restored.issues['old']['detail'])
+        self.assertNotIn('old',restored.issues)
+        self.assertFalse(restored.draft.plan.unresolved)
+        self.assertEqual(restored.draft.plan.parameters.rarity,'Rare')
+        self.assertTrue(fresh.view(s['session_id'])['ready'])
 
     def test_parse_error_returns_reason_and_preserves_draft(self):
         s=self.create();session=self.app.state.craft.get(s['session_id'])
@@ -109,6 +132,48 @@ class WorkflowTests(unittest.TestCase):
         self.assertIsNone(s['plan']['parameters']['armor_class']);self.assertTrue(s['issues'])
         s=self.act(s,'edit',{'withdraw':[s['issues'][0]['id']],'quote':'撤回这项要求'})
         self.assertFalse(s['issues'])
+    def test_withdraw_failed_request_can_preview_previous_changes(self):
+        s=self.create();s=self.act(s,'message',{'text':'只改稀有度为稀有'})
+        session=self.app.state.craft.get(s['session_id'])
+        session.issues['failed-request']={'id':'failed-request','kind':'clarification','detail':'后续要求未通过检查'}
+        session.draft.plan.unresolved=['后续要求未通过检查']
+        self.app.state.craft.save(s['session_id'],session)
+        blocked=self.client.post('/api/v11/sessions/'+s['session_id']+'/preview',json={'revision':s['revision'],'request_id':str(uuid.uuid4()),'data':{}})
+        self.assertEqual(blocked.status_code,422)
+        s=self.act(s,'edit',{'withdraw':['failed-request'],'quote':'放弃这些未完成要求，仅核对已采用修改'})
+        self.assertFalse(s['issues']);self.assertEqual(s['plan']['parameters']['rarity'],'Rare')
+        s=self.act(s,'preview');self.assertTrue(s['ready'])
+
+    def test_followup_keeps_original_request_and_hides_internal_error(self):
+        s=self.create();session=self.app.state.craft.get(s['session_id'])
+        issue={'id':'aura','kind':'clarification','detail':'伤害还是命中？'}
+        session.issues['aura']=issue
+        session.history.append({'user':'装备后周围5m的队友攻击获得1d4加成','feedback':{'unresolved':[issue]},'answers':[]})
+        c=session.context('1d4作用于攻击伤害，是自动生效','followup-test',answers=['aura'])
+        linked=c['followup_context']['linked_issues'][0]
+        self.assertIn('周围5m的队友',linked['original_messages'][0])
+        self.assertEqual(c['followup_context']['answer'],'1d4作用于攻击伤害，是自动生效')
+        session.issues['bad']={'id':'bad','kind':'capability_gap','detail':'1 validation error for Plan input_type=dict errors.pydantic.dev'}
+        view=self.app.state.craft.view(s['session_id'])
+        self.assertNotIn('pydantic',str(view['issues']))
+        self.assertIn('pydantic',session.issues['bad']['detail'])
+
+    def test_failed_input_is_transient_and_does_not_block_existing_plan(self):
+        from backend.task8_protocol import recovery_issue
+        s=self.create();s=self.act(s,'message',{'text':'只改稀有度为稀有'})
+        craft=self.app.state.craft;session=craft.get(s['session_id'])
+        before=self.service.store.get('v11_sessions',s['session_id'])
+        rejected='这是一条不能解析的测试输入'
+        with patch.object(session.model,'run',side_effect=lambda task,c:(recovery_issue(c),{})):
+            response=self.act(s,'message',{'text':rejected})
+        self.assertTrue(response['input_retained']);self.assertTrue(response['input_feedback'])
+        self.assertEqual(response['revision'],s['revision'])
+        self.assertEqual(response['plan'],s['plan']);self.assertFalse(response['issues'])
+        after=self.service.store.get('v11_sessions',s['session_id'])
+        self.assertEqual(before,after);self.assertNotIn(rejected,json.dumps(after,ensure_ascii=False))
+        self.assertFalse(session.log)
+        preview=self.act(response,'preview');self.assertTrue(preview['ready'])
+
     def test_schema_and_native_catalog(self):
         self.assertIn('plan',self.client.get('/api/v11/schema').json())
         rows=self.client.get('/api/v11/catalog?kind=PassiveData&search=平衡').json()['items']
@@ -184,7 +249,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(r.status_code,201);self.assertEqual(r.json()['plan']['acquisition'],'dammon_act1')
         self.assertNotIn('acquisition:unknown_or_unverified',r.json()['validation'])
 
-    def test_legacy_unqualified_draft_can_switch_without_losing_pending_name(self):
+    def test_legacy_unqualified_draft_can_switch_without_losing_free_name(self):
         s=self.create('create_new');runtime=self.app.state.craft.get(s['session_id'])
         old=runtime.draft.plan;old.base_equipment='equipment:00353281-1abb-4de6-893b-d6bf7f748da8'
         runtime.draft.replace(old,source='manual',expected_revision=runtime.draft.revision)
@@ -195,7 +260,8 @@ class WorkflowTests(unittest.TestCase):
         s=self.act(s,'edit',{'quote':quote,'operations':[dict(kind='change_context',target='equipment',payload={'mode':'create_new','base_equipment':self.fixtures['create_weapon']['base_equipment'],'carry_policy':'revalidate','evidence_quote':quote},group_id='g')]})
         self.assertFalse(s['last_result']['failed'])
         s=self.edit(s,'set_inheritance_intent','equipment',{'strategy':'retain_base'})
-        self.assertFalse(s['issues']);self.assertEqual(s['texts'][0]['text'],'保留这个新名称')
+        self.assertFalse(s['issues']);self.assertFalse(s['texts'])
+        self.assertEqual(s['plan']['display']['name'],'保留这个新名称')
 
     def test_two_modes_real_package_download_and_feedback(self):
         for mode in ('modify_existing','create_new'):

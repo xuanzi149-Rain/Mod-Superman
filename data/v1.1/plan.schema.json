@@ -752,6 +752,59 @@
       ],
       "title": "TriggerEffect",
       "type": "object"
+    },
+    "WeaponDamageBonus": {
+      "additionalProperties": false,
+      "description": "Equipped passive affecting the wearer's weapons, not the source item.",
+      "properties": {
+        "kind": {
+          "const": "weapon_damage",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "dice": {
+          "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+          "title": "Dice",
+          "type": "string"
+        },
+        "damage_type": {
+          "enum": [
+            "Slashing",
+            "Piercing",
+            "Bludgeoning",
+            "Acid",
+            "Cold",
+            "Fire",
+            "Force",
+            "Lightning",
+            "Necrotic",
+            "Poison",
+            "Psychic",
+            "Radiant",
+            "Thunder"
+          ],
+          "title": "Damage Type",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "dice",
+        "damage_type"
+      ],
+      "title": "WeaponDamageBonus",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -798,7 +851,8 @@
             "grant_spell": "#/$defs/GrantedSpell",
             "independent_status": "#/$defs/IndependentStatus",
             "passive_copy": "#/$defs/PassiveCopy",
-            "trigger": "#/$defs/TriggerEffect"
+            "trigger": "#/$defs/TriggerEffect",
+            "weapon_damage": "#/$defs/WeaponDamageBonus"
           },
           "propertyName": "kind"
         },
@@ -808,6 +862,9 @@
           },
           {
             "$ref": "#/$defs/NativeBonus"
+          },
+          {
+            "$ref": "#/$defs/WeaponDamageBonus"
           },
           {
             "$ref": "#/$defs/PassiveCopy"

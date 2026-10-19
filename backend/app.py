@@ -142,6 +142,10 @@ def create_app(service=None, model=None, craft_model=None):
     def craft_read(identifier: str):
         return craft().view(identifier)
 
+    @app.post('/api/v11/sessions/{identifier}/delete')
+    def craft_delete_draft(identifier: str, request: Request):
+        return craft().delete_draft(identifier, request.state.visitor)
+
     @app.post('/api/v11/sessions/{identifier}/{action}')
     def craft_action(identifier: str, action: str, body: CraftAction, request: Request):
         return craft().action(identifier, action, body.model_dump(), request.state.visitor)
