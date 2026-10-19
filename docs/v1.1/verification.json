@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-17",
+  "phase": "A",
+  "phase_status": "complete_rules_data_contracts_only",
+  "baseline_commit": "c98c606692da87530a2f7f553540d62209f96864",
+  "python_unittest": {
+    "status": "passed",
+    "tests": 110,
+    "new_tests": 16,
+    "duration_seconds": 18.677,
+    "log": "build/v1.1/tests-full.log",
+    "runtime": "bundled Python with PYTHONPATH=.runtime/python",
+    "temp": ".tools/test-temp",
+    "sandbox": "outside; bounded 120-second subprocess"
+  },
+  "frontend_model_tests": {
+    "status": "passed",
+    "tests": 12,
+    "command": "node --test web/model.test.cjs",
+    "frontend_changed": false
+  },
+  "catalog": {
+    "status": "built",
+    "stats_records": 12256,
+    "equipment_templates": 1900,
+    "icon_references": 1738,
+    "direct_reference_diagnostics": 2,
+    "generation_support_inferred": false,
+    "qualified_rigid_weapon_base_templates": 374,
+    "honour_changed_records": 767,
+    "honour_inheritance_errors": 0,
+    "input_files_sha256_verified": 157,
+    "npc_table_mapping": "locally_verified",
+    "acceptance": "docs/v1.1/phase-a-acceptance.json"
+  },
+  "diff_check": {
+    "status": "passed_ignoring_markdown_line_break_spaces",
+    "note": "Default check reports pre-existing user PRD two-space line breaks on lines 3 and 4; preserved."
+  },
+  "model_evaluation": "not_performed",
+  "v11_package_generation": "not_implemented",
+  "game_validation": "not_performed",
+  "deployment": "not_performed",
+  "user_research_analysis": "not_performed",
+  "limitations": [
+    "unknown_native_functions_are_blocked",
+    "armor_body_mapping_not_supported_for_creation",
+    "no_new_generation_or_api_integration",
+    "hotfix_coverage_not_certified",
+    "acquisition_refresh_not_game_tested"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "case": "passive_copy",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-131002\\4ca5ae7c-eda8-406f-8b75-9e760af4c8cd\\eb56f6bd1c0d1c2a\\attempt-ic3jw8l4\\ModSuperman_4ca5ae7c-eda8-406f-8b75-9e760af4c8cd.pak",
+      "pak_sha256": "641d8bc416b1c02696d07a63136f2c6f869b19bc26b3534fbe3b2771f3e9e07c",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    }
+  ],
+  "game_validation": "not_performed"
+}

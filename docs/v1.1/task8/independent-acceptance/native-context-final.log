@@ -1,0 +1,17 @@
+test_native_passive_context_distinguishes_inherited_removed_and_added (tests.test_task8_acceptance.IndependentAcceptance.test_native_passive_context_distinguishes_inherited_removed_and_added) ... FAIL
+
+======================================================================
+FAIL: test_native_passive_context_distinguishes_inherited_removed_and_added (tests.test_task8_acceptance.IndependentAcceptance.test_native_passive_context_distinguishes_inherited_removed_and_added)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 71, in test_native_passive_context_distinguishes_inherited_removed_and_added
+    self.assertEqual(candidate()['equipment_membership'],'inherited_original')
+AssertionError: 'removed_original' != 'inherited_original'
+- removed_original
++ inherited_original
+
+
+----------------------------------------------------------------------
+Ran 1 test in 3.275s
+
+FAILED (failures=1)

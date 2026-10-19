@@ -1,0 +1,71 @@
+[
+  {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+    "user_goal": "短剑伤害改为2d6",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": "2d6",
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "独立长剑，装备后力量加2",
+    "display": {
+      "name": "独立长剑",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "constant",
+        "id": "effect-1",
+        "ability": "Strength",
+        "amount": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+]

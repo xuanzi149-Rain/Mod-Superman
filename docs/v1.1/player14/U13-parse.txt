@@ -1,0 +1,155 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html
+	2 link Description: 跳到制作区, Value: 127.0.0.1:8767/frontend/index.html#workspace
+	3 container
+		4 link Description: MOD—SUPERMAN 1.1, Value: 127.0.0.1:8767/frontend/index.html
+		5 container 其他操作
+			6 link Description: 1.0 历史入口, Value: 127.0.0.1:8767/frontend/legacy.html
+			7 button 我的方案, ID: history
+			8 button 新建方案, ID: new
+	9 container
+		10 text BALDUR’S GATE 3 · 装备定制
+		11 heading 让装备，符合你的玩法。, Value: 1, ID: heading
+			73 text 让装备，符合你的玩法。
+		13 text 修改现有装备，或以原生资源创建一件新装备。
+		14 content list 制作进度
+			15 container step1
+				16 text 01 选择与调整
+			17 container step2
+				18 text 02 核对与确认
+			19 container step3
+				20 text 03 制作与下载
+		74 text 修改已保存。
+		22 container Description: 制作工作区, ID: workspace
+			75 container
+				76 heading 地脉迷城之王的匕首, Value: 2
+					77 text 地脉迷城之王的匕首
+				78 text 创建新装备 · 修订 2 告诉我，你想怎么改？
+				79 text entry area (settable) 告诉我，你想怎么改？, ID: prompt
+				80 button 解析并更新方案, ID: send
+				81 button 切换基础装备／模式, ID: switch-base
+				82 text 只修改展示文字时请明确说明；无法完成的要求会继续保留。
+			83 container
+				84 heading 继续前还需完成, Value: 2
+					85 text 继续前还需完成
+				86 text 新名称「赤焰短刃」已保存，尚未采用。进入确认时会核对文案；无需重复填写。
+				87 button 查看名称
+			88 container
+				89 heading 本次实际修改, Value: 2
+					90 text 本次实际修改
+				91 content list
+					92 container
+						93 AXListMarker • 
+						94 text 伤害骰：沿用原版／未设置 → 2d6
+					95 container
+						96 AXListMarker • 
+						97 text 稀有度：沿用原版／未设置 → 传说
+					98 container
+						99 AXListMarker • 
+						100 text 新增条件触发
+						101 definition list
+							102 container 触发事件
+								103 text 触发事件
+							104 text 命中时
+							105 container 触发条件
+								106 text 触发条件
+							107 text 总是
+							108 container 作用对象
+								109 text 作用对象
+							110 text 目标
+							111 container 触发效果
+								112 text 触发效果
+							113 text 造成伤害
+							114 container 伤害／治疗骰
+								115 text 伤害／治疗骰
+							116 text 1d4
+							117 container 伤害类型
+								118 text 伤害类型
+							119 text 火焰
+			120 container
+				121 button (expanded) 基础信息与参数, Secondary Actions: Collapse
+					122 text 基础信息与参数
+				123 text 名称：地脉迷城之王的匕首
+				124 button 编辑名称与说明, ID: equipment-text
+				125 table
+					126 row
+						127 cell
+							128 text 字段
+						129 cell
+							130 text 原版
+						131 cell
+							132 text 当前方案
+					133 row
+						134 cell
+							135 text 伤害骰
+						136 cell
+							137 text 1d6
+						138 cell
+							139 text 2d6
+					140 row
+						141 cell
+							142 text 稀有度
+						143 cell
+							144 text 珍奇
+						145 cell
+							146 text 传说
+				147 button 编辑基础参数, ID: parameters
+			148 container
+				149 button (expanded) 独立词条与主动技能（1）, Secondary Actions: Collapse
+					150 text 独立词条与主动技能（1）
+				151 heading 条件触发, Value: 3
+					152 text 条件触发
+				153 text 条件触发
+				154 definition list
+					155 container 触发事件
+						156 text 触发事件
+					157 text 命中时
+					158 container 触发条件
+						159 text 触发条件
+					160 text 总是
+					161 container 作用对象
+						162 text 作用对象
+					163 text 目标
+					164 container 触发效果
+						165 text 触发效果
+					166 text 造成伤害
+					167 container 伤害／治疗骰
+						168 text 伤害／治疗骰
+					169 text 1d4
+					170 container 伤害类型
+						171 text 伤害类型
+					172 text 火焰
+				173 text 使用标准／原生说明
+				174 button 编辑效果
+				175 button 修改文案
+				176 button 删除此效果
+				177 pop up button (collapsed, settable) Description: 新增效果类型, Value: 属性加成, ID: effect-kind, Secondary Actions: Expand
+					178 menu
+						179 (selected) 属性加成
+						180 加成类别
+						181 条件触发
+						182 独立状态
+						183 主动技能副本
+						184 独立被动副本
+				185 button 添加效果, ID: add-effect
+			186 button (collapsed) 原生继承与资源设置, Secondary Actions: Expand
+				187 text 原生继承与资源设置
+			188 container
+				189 heading 文案核对, Value: 2
+					190 text 文案核对
+				191 text 装备 · 名称 赤焰短刃
+				192 button 核对自定义文案, ID: review
+				193 button 恢复待核对项的标准文字, ID: standard
+			194 button 核对文案并进入确认, ID: preview
+			195 button 撤销到上个方案, ID: undo
+		23 container
+			24 button (expanded) 制作须知, Secondary Actions: Collapse
+				25 text 制作须知
+			26 text 模型解析你的需求，程序校验并生成文件。未知能力会保留为待处理问题。 确认后才开始制作；修改方案后需要重新确认。 使用已有美术资源。网页为方案示意，不代表游戏内实际外观。 游戏实测尚未进行 请备份存档。打包成功、用户报告与游戏验证分别记录。
+		72 container aside-state
+			196 text 当前：地脉迷城之王的匕首
+			197 text 创建新装备 · 修订 2
+			198 text 方案仍需调整或核对
+		27 text 原生资源 · 独立副本 · 每一步可核对
+
+The focused UI element is 1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html

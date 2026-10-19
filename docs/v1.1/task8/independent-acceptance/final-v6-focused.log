@@ -1,0 +1,8 @@
+test_native_passive_context_distinguishes_inherited_removed_and_added (tests.test_task8_acceptance.IndependentAcceptance.test_native_passive_context_distinguishes_inherited_removed_and_added) ... ok
+test_model_prompt_budget_and_example_counts (tests.test_task8.Task8Tests.test_model_prompt_budget_and_example_counts) ... ok
+test_v2_routes_targeted_examples_within_budget (tests.test_task8.Task8Tests.test_v2_routes_targeted_examples_within_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 10.142s
+
+OK

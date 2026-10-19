@@ -1,0 +1,14 @@
+[
+  {
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\tooltip-regression\\aadc3d19-5264-408a-84c4-5fb407af11ca\\21f652d6c2599a5b\\attempt-1jj90ho_\\ModSuperman_aadc3d19-5264-408a-84c4-5fb407af11ca.pak",
+    "custom_text": false,
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  },
+  {
+    "pak": "C:\\Users\\17583\\Desktop\\Mod-Superman\\build\\tooltip-regression\\ac965f47-8ac6-4430-924a-f861cbd43a97\\b14685b4ed3f42c7\\attempt-hjgitydx\\ModSuperman_ac965f47-8ac6-4430-924a-f861cbd43a97.pak",
+    "custom_text": true,
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  }
+]

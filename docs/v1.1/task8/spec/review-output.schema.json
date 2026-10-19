@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Task8 review-v1 specification only",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "review-v1"
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150,
+      "pattern": "^[A-Za-z0-9_:-]+$"
+    },
+    "base_revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "context_digest": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150,
+      "pattern": "^[A-Za-z0-9_:-]+$"
+    },
+    "plan_digest": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150,
+      "pattern": "^[A-Za-z0-9_:-]+$"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 150,
+            "pattern": "^[A-Za-z0-9_:-]+$"
+          },
+          "source_text_digest": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 150,
+            "pattern": "^[A-Za-z0-9_:-]+$"
+          },
+          "source_status": {
+            "type": "string",
+            "enum": [
+              "consistent",
+              "conflict",
+              "information_missing",
+              "not_provided"
+            ]
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "dimension": {
+                  "type": "string",
+                  "enum": [
+                    "trigger",
+                    "condition",
+                    "target",
+                    "amount",
+                    "damage_type",
+                    "duration",
+                    "stacking",
+                    "action_cost",
+                    "spell_slot",
+                    "cooldown",
+                    "range",
+                    "area",
+                    "dependency",
+                    "acquisition",
+                    "scope",
+                    "omission",
+                    "unsupported_claim"
+                  ]
+                },
+                "quote": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "fact_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 150,
+                    "pattern": "^[A-Za-z0-9_:-]+$"
+                  },
+                  "maxItems": 60
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                }
+              },
+              "required": [
+                "dimension",
+                "quote",
+                "fact_refs",
+                "explanation"
+              ]
+            },
+            "maxItems": 60
+          },
+          "proposed_text": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 2000
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "proposal_status": {
+            "type": "string",
+            "enum": [
+              "consistent",
+              "conflict",
+              "information_missing",
+              "not_requested"
+            ]
+          },
+          "proposal_findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "dimension": {
+                  "type": "string",
+                  "enum": [
+                    "trigger",
+                    "condition",
+                    "target",
+                    "amount",
+                    "damage_type",
+                    "duration",
+                    "stacking",
+                    "action_cost",
+                    "spell_slot",
+                    "cooldown",
+                    "range",
+                    "area",
+                    "dependency",
+                    "acquisition",
+                    "scope",
+                    "omission",
+                    "unsupported_claim"
+                  ]
+                },
+                "quote": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 2000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "fact_refs": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 150,
+                    "pattern": "^[A-Za-z0-9_:-]+$"
+                  },
+                  "maxItems": 60
+                },
+                "explanation": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 2000
+                }
+              },
+              "required": [
+                "dimension",
+                "quote",
+                "fact_refs",
+                "explanation"
+              ]
+            },
+            "maxItems": 60
+          }
+        },
+        "required": [
+          "text_id",
+          "source_text_digest",
+          "source_status",
+          "findings",
+          "proposed_text",
+          "proposal_status",
+          "proposal_findings"
+        ]
+      },
+      "maxItems": 100
+    }
+  },
+  "required": [
+    "schema_version",
+    "request_id",
+    "base_revision",
+    "context_digest",
+    "plan_digest",
+    "items"
+  ]
+}

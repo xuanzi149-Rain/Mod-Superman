@@ -1,0 +1,69 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 90-167
+~			8 button 新建方案, ID: new
++		74 text 修改已保存。
+~				78 text 修改已有装备 · 修订 3 告诉我，你想怎么改？
+~				79 text entry area (settable) 告诉我，你想怎么改？, ID: prompt
+~				80 button 解析并更新方案, ID: send
+~				81 button 切换基础装备／模式, ID: switch-base
+~						89 text 条件触发 · 伤害／治疗骰：1d6 → 2d6
++			90 container
++				91 button (expanded) 基础信息与参数, Secondary Actions: Collapse
++					92 text 基础信息与参数
++				93 text 名称：轻语匕首
++				94 button 编辑名称与说明, ID: equipment-text
++				95 text 基础参数沿用原版。
++				96 button 编辑基础参数, ID: parameters
++			97 container
++				98 button (expanded) 独立词条与主动技能（1）, Secondary Actions: Collapse
++					99 text 独立词条与主动技能（1）
++				100 heading 条件触发, Value: 3
++					101 text 条件触发
++				102 text 条件触发
++				103 definition list
++					104 container 触发事件
++						105 text 触发事件
++					106 text 命中时
++					107 container 触发条件
++						108 text 触发条件
++					109 text 总是
++					110 container 作用对象
++						111 text 作用对象
++					112 text 目标
++					113 container 触发效果
++						114 text 触发效果
++					115 text 造成伤害
++					116 container 伤害／治疗骰
++						117 text 伤害／治疗骰
++					118 text 2d6
++					119 container 伤害类型
++						120 text 伤害类型
++					121 text 火焰
++				122 text 使用标准／原生说明
++				123 button 编辑效果
++				124 button 修改文案
++				125 button 删除此效果
++				126 pop up button (collapsed, settable) Description: 新增效果类型, Value: 属性加成, ID: effect-kind, Secondary Actions: Expand
++					127 menu
++						128 (selected) 属性加成
++						129 加成类别
++						130 条件触发
++						131 独立状态
++						132 主动技能副本
++						133 独立被动副本
++				134 button 添加效果, ID: add-effect
++			135 button (collapsed) 原生继承与资源设置, Secondary Actions: Expand
++				136 text 原生继承与资源设置
++			137 container
++				138 heading 文案核对, Value: 2
++					139 text 文案核对
++				140 text 当前没有待核对的自定义文字。
++				141 button 核对自定义文案, ID: review
++				142 button 恢复待核对项的标准文字, ID: standard
++			143 button 检查并进入确认, ID: preview
++			144 button 撤销到上个方案, ID: undo
++			145 text 当前：轻语匕首
++			146 text 修改已有装备 · 修订 3
++			147 text 方案已通过程序检查
+The focused UI element is 1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html

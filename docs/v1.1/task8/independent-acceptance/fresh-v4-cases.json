@@ -1,0 +1,119 @@
+[
+  {
+    "id": "F01",
+    "fixture": "create_weapon",
+    "text": "这把新武器装备期间智力增加4点。",
+    "expect": {
+      "effect": {
+        "kind": "constant",
+        "ability": "Intelligence",
+        "amount": 4
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "F02",
+    "fixture": "create_weapon",
+    "text": "给装备加体质豁免加2，以及毒素抗性两个词条。",
+    "expect": {
+      "effects": [
+        {
+          "kind": "bonus",
+          "bonus": "saving_throw",
+          "selector": "Constitution",
+          "amount": 2
+        },
+        {
+          "kind": "bonus",
+          "bonus": "resistance",
+          "selector": "Poison",
+          "amount": 1
+        }
+      ]
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "F03",
+    "fixture": "create_weapon",
+    "text": "命中任意目标后立刻为自己恢复1d8生命值，没有额外条件。",
+    "expect": {
+      "effect": {
+        "kind": "trigger",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "1d8"
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "F04",
+    "fixture": "create_body_armor",
+    "text": "自己受到伤害后，无条件给自己一个护甲等级加2的独立状态，持续4回合，重复触发刷新、不叠加，不增加任何属性。表现复用大步奔行。",
+    "expect": {
+      "status_pair": 4
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "F05",
+    "fixture": "create_weapon",
+    "text": "创建治愈真言技能副本，治疗4d4、23米、奖励动作、每长休恢复，取消法术位消耗，其他成本不变。",
+    "expect": {
+      "effect": {
+        "kind": "grant_spell",
+        "base_spell": "Target_HealingWord",
+        "healing": "4d4",
+        "range_m": 23,
+        "action_cost": "bonus_action",
+        "cooldown": "long_rest",
+        "remove_spell_slot": true
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "F06",
+    "fixture": "passive_copy",
+    "text": "保留平衡的现有效果，但换为独立被动副本，并从装备移除原被动防止重复。",
+    "expect": {
+      "effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      },
+      "removed": "ARM_Balance_1_Passive"
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "F07",
+    "fixture": "create_weapon",
+    "text": "价值设为516，还要杀敌后力量永久成长，每次增加2点。",
+    "expect": {
+      "parameters": {
+        "value": 516
+      },
+      "blocked": true
+    }
+  },
+  {
+    "id": "F08",
+    "fixture": "create_weapon",
+    "text": "重量改为2.8千克。",
+    "expect": {
+      "parameters": {
+        "weight_kg": 2.8
+      }
+    },
+    "followup": "以上一版方案为基础，把重量减半。",
+    "followup_expect": {
+      "parameters": {
+        "weight_kg": 1.4
+      }
+    }
+  }
+]

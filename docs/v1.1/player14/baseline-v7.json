@@ -1,0 +1,1930 @@
+{
+  "source": "14 browser UI scenarios; isolated local website; configured real model",
+  "cases": [
+    {
+      "id": "U01",
+      "expect": "仅稀有度变化",
+      "runs": [
+        {
+          "session": "bf594141-ebf8-4f8d-b257-92035a11b323",
+          "inputs": [
+            "只把稀有度改成传奇，其他不变。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": "Legendary",
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "expect": "仅伤害及重量变化",
+      "runs": [
+        {
+          "session": "b04aed35-969d-4325-b283-a8e46f83562b",
+          "inputs": [
+            "基础伤害改为2d6，重量改为0.3千克，其他不变。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": "2d6",
+              "versatile_damage": null,
+              "weight_kg": 0.3,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [
+              "op1",
+              "op2"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": "2d6",
+                "versatile_damage": null,
+                "weight_kg": 0.3,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U03",
+      "expect": "相对当前值连续减半，精度不支持时明确阻止，不截断",
+      "runs": [
+        {
+          "session": "b7cd07e3-60a1-45bf-a2cc-0f468ecc0d47",
+          "inputs": [
+            "重量减半，其他不变。",
+            "再减半。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": 0.225,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": [
+              "parameters.weight_kg:three_decimals_max"
+            ]
+          },
+          "issues": {
+            "failed_2208898e-6b12-4988-b4a3-3e2fe99d1483_op1": {
+              "id": "failed_2208898e-6b12-4988-b4a3-3e2fe99d1483_op1",
+              "kind": "capability_gap",
+              "detail": "parameters.weight_kg:three_decimals_max",
+              "requirements": [
+                "再减半。"
+              ]
+            }
+          },
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 3,
+            "applied": [],
+            "failed": [
+              {
+                "operations": [
+                  "op1"
+                ],
+                "error": "parameters.weight_kg:three_decimals_max"
+              }
+            ],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": 0.225,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": 0.225,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": [
+                "parameters.weight_kg:three_decimals_max"
+              ]
+            },
+            "unresolved": [
+              {
+                "id": "failed_2208898e-6b12-4988-b4a3-3e2fe99d1483_op1",
+                "kind": "capability_gap",
+                "detail": "parameters.weight_kg:three_decimals_max",
+                "requirements": [
+                  "再减半。"
+                ]
+              }
+            ],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U04",
+      "expect": "撤销重量覆盖，保留稀有度",
+      "runs": [
+        {
+          "session": "78658ec0-b1d3-48d5-b6e0-2bea1dff17cf",
+          "inputs": [
+            "重量改为0.2千克，稀有度改为传奇。",
+            "重量恢复原版，稀有度保留。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": "Legendary",
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 3,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": 0.2,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U05",
+      "expect": "新增命中火焰伤害触发",
+      "runs": [
+        {
+          "session": "00c36939-297c-4ef2-a14d-b025d6f9b770",
+          "inputs": [
+            "命中时对命中的目标额外造成1d6火焰伤害，保留原有效果。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [
+              {
+                "kind": "trigger",
+                "id": "e_75d0e196d7b05c15ba62dba9057fb56f",
+                "event": "on_hit",
+                "condition": "always",
+                "target": "target",
+                "action": "damage",
+                "dice": "1d6",
+                "damage_type": "Fire",
+                "status_ref": null,
+                "status_draft_id": null,
+                "duration_turns": 1,
+                "display": {
+                  "name": null,
+                  "description": null
+                }
+              }
+            ],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [
+              {
+                "effect_id": "e_75d0e196d7b05c15ba62dba9057fb56f",
+                "rule": "instant_duration_unused",
+                "technical_value": 1
+              }
+            ],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [
+                {
+                  "kind": "trigger",
+                  "id": "e_75d0e196d7b05c15ba62dba9057fb56f",
+                  "event": "on_hit",
+                  "condition": "always",
+                  "target": "target",
+                  "action": "damage",
+                  "dice": "1d6",
+                  "damage_type": "Fire",
+                  "status_ref": null,
+                  "status_draft_id": null,
+                  "duration_turns": 1,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U06",
+      "expect": "更新同一效果，无重复",
+      "runs": [
+        {
+          "session": "145f0b4d-a096-4236-83ec-87f49d45584d",
+          "inputs": [
+            "命中时对目标额外造成1d6火焰伤害。",
+            "刚才的额外火焰伤害改为2d6，不新增词条。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [
+              {
+                "kind": "trigger",
+                "id": "e_153a4bbd0cc455a4b25f4ec4340ecaa5",
+                "event": "on_hit",
+                "condition": "always",
+                "target": "target",
+                "action": "damage",
+                "dice": "2d6",
+                "damage_type": "Fire",
+                "status_ref": null,
+                "status_draft_id": null,
+                "duration_turns": 1,
+                "display": {
+                  "name": null,
+                  "description": null
+                }
+              }
+            ],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 3,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [
+                {
+                  "kind": "trigger",
+                  "id": "e_153a4bbd0cc455a4b25f4ec4340ecaa5",
+                  "event": "on_hit",
+                  "condition": "always",
+                  "target": "target",
+                  "action": "damage",
+                  "dice": "1d6",
+                  "damage_type": "Fire",
+                  "status_ref": null,
+                  "status_draft_id": null,
+                  "duration_turns": 1,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [
+                {
+                  "kind": "trigger",
+                  "id": "e_153a4bbd0cc455a4b25f4ec4340ecaa5",
+                  "event": "on_hit",
+                  "condition": "always",
+                  "target": "target",
+                  "action": "damage",
+                  "dice": "2d6",
+                  "damage_type": "Fire",
+                  "status_ref": null,
+                  "status_draft_id": null,
+                  "duration_turns": 1,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U07",
+      "expect": "仅删除新增效果",
+      "runs": [
+        {
+          "session": "ebd1ca65-903c-4cb0-a458-dcfb4a1a4940",
+          "inputs": [
+            "装备时敏捷增加2点，稀有度改为传奇。",
+            "删掉刚才新增的敏捷加成，稀有度保留。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": "Legendary",
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 3,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [
+                {
+                  "kind": "constant",
+                  "id": "e_2dd04077314e5ceab7d9a19973df6fec",
+                  "ability": "Dexterity",
+                  "amount": 2,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U08",
+      "expect": "受伤治疗，触发与目标准确",
+      "runs": [
+        {
+          "session": "7f8c85e9-05cc-4b2d-aad3-62371b37a42d",
+          "inputs": [
+            "自己受到伤害后，给自己回复1d6生命值，保留原有效果。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [
+              {
+                "kind": "trigger",
+                "id": "e_74e1f81965365d5db62f0411c431dac4",
+                "event": "on_damaged",
+                "condition": "always",
+                "target": "self",
+                "action": "heal",
+                "dice": "1d6",
+                "damage_type": null,
+                "status_ref": null,
+                "status_draft_id": null,
+                "duration_turns": 1,
+                "display": {
+                  "name": null,
+                  "description": null
+                }
+              }
+            ],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [
+              {
+                "effect_id": "e_74e1f81965365d5db62f0411c431dac4",
+                "rule": "instant_duration_unused",
+                "technical_value": 1
+              }
+            ],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [
+                {
+                  "kind": "trigger",
+                  "id": "e_74e1f81965365d5db62f0411c431dac4",
+                  "event": "on_damaged",
+                  "condition": "always",
+                  "target": "self",
+                  "action": "heal",
+                  "dice": "1d6",
+                  "damage_type": null,
+                  "status_ref": null,
+                  "status_draft_id": null,
+                  "duration_turns": 1,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "unresolved": [],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U09",
+      "expect": "查找震慑；支持则添加，不支持则具体说明并保留要求，不索要ID",
+      "runs": [
+        {
+          "session": "fa0ac292-3497-4545-b2a6-c37c91866e72",
+          "inputs": [
+            "轻语匕首命中后施加一回合的震慑效果，保留原有效果。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": [
+              "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。"
+            ]
+          },
+          "issues": {
+            "9692b1ce-43da-4435-9873-0c926e805ba9_i1": {
+              "id": "9692b1ce-43da-4435-9873-0c926e805ba9_i1",
+              "requirement_ids": [
+                "r1"
+              ],
+              "kind": "information_missing",
+              "detail": "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。",
+              "question": null,
+              "options": [],
+              "evidence_refs": []
+            }
+          },
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": [
+                "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。"
+              ]
+            },
+            "unresolved": [
+              {
+                "id": "9692b1ce-43da-4435-9873-0c926e805ba9_i1",
+                "requirement_ids": [
+                  "r1"
+                ],
+                "kind": "information_missing",
+                "detail": "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。",
+                "question": null,
+                "options": [],
+                "evidence_refs": []
+              }
+            ],
+            "text_review_pending": false,
+            "recovery": {
+              "status": "resource_not_found_in_current_catalog",
+              "message": "补查后仍未找到满足这项要求的资源，原需求已保留。可以描述希望实现的触发条件、作用对象、效果和数值，以便检查能否创建独立词条。",
+              "automatic_substitution": false,
+              "requires_user_choice": true,
+              "support_status": "not_yet_validated"
+            }
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U10",
+      "expect": "辨别原有沉默与请求沉睡，澄清修改或新增，不擅自替换",
+      "runs": [
+        {
+          "session": "266bc2c2-6984-4791-baab-69686e075312",
+          "inputs": [
+            "把沉睡效果改成两回合。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": [
+              "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。"
+            ]
+          },
+          "issues": {
+            "4b23e123-8ef2-49ef-80e4-a82cf3cbc3eb_i1": {
+              "id": "4b23e123-8ef2-49ef-80e4-a82cf3cbc3eb_i1",
+              "requirement_ids": [
+                "r1"
+              ],
+              "kind": "information_missing",
+              "detail": "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。",
+              "question": null,
+              "options": [],
+              "evidence_refs": []
+            }
+          },
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": [
+                "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。"
+              ]
+            },
+            "unresolved": [
+              {
+                "id": "4b23e123-8ef2-49ef-80e4-a82cf3cbc3eb_i1",
+                "requirement_ids": [
+                  "r1"
+                ],
+                "kind": "information_missing",
+                "detail": "这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。",
+                "question": null,
+                "options": [],
+                "evidence_refs": []
+              }
+            ],
+            "text_review_pending": false,
+            "recovery": {
+              "status": "resource_not_found_in_current_catalog",
+              "message": "补查后仍未找到满足这项要求的资源，原需求已保留。可以描述希望实现的触发条件、作用对象、效果和数值，以便检查能否创建独立词条。",
+              "automatic_substitution": false,
+              "requires_user_choice": true,
+              "support_status": "not_yet_validated"
+            }
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U11",
+      "expect": "保留稀有度成功项，成长机制明确阻塞，不静默降级",
+      "runs": [
+        {
+          "session": "271e31f3-7dc2-48d3-bb14-9315ecf84a64",
+          "inputs": [
+            "每击杀一个敌人永久增加1点力量，稀有度改为传奇。"
+          ],
+          "revision": 2,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "modify_existing",
+            "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+            "user_goal": "装备定制",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": "Legendary",
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": null,
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": [
+              "缺少累计击杀永久成长的生成规则。"
+            ]
+          },
+          "issues": {
+            "6258f46b-194c-4e13-ae7a-9e5cbcd4488a_i1": {
+              "id": "6258f46b-194c-4e13-ae7a-9e5cbcd4488a_i1",
+              "requirement_ids": [
+                "r1"
+              ],
+              "kind": "capability_gap",
+              "detail": "缺少累计击杀永久成长的生成规则。",
+              "question": null,
+              "options": [],
+              "evidence_refs": [
+                "check_growth_missing"
+              ]
+            }
+          },
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "revision": 2,
+            "applied": [
+              "op1"
+            ],
+            "failed": [],
+            "normalizations": [],
+            "before": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": null,
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": []
+            },
+            "after": {
+              "schema_version": "1.1-draft-4",
+              "mode": "modify_existing",
+              "base_equipment": "equipment:8733edb7-f04e-4b6d-ad48-7d49fb782bef",
+              "user_goal": "装备定制",
+              "display": {
+                "name": null,
+                "description": null
+              },
+              "parameters": {
+                "weapon_properties": null,
+                "dexterity_rule": null,
+                "damage": null,
+                "versatile_damage": null,
+                "weight_kg": null,
+                "rarity": "Legendary",
+                "armor_class": null,
+                "enchantment": null,
+                "value": null,
+                "damage_type": null
+              },
+              "effects": [],
+              "removed_original_passives": [],
+              "acquisition": null,
+              "appearance_equipment": null,
+              "template_behavior": "reject_special",
+              "icon": null,
+              "unresolved": [
+                "缺少累计击杀永久成长的生成规则。"
+              ]
+            },
+            "unresolved": [
+              {
+                "id": "6258f46b-194c-4e13-ae7a-9e5cbcd4488a_i1",
+                "requirement_ids": [
+                  "r1"
+                ],
+                "kind": "capability_gap",
+                "detail": "缺少累计击杀永久成长的生成规则。",
+                "question": null,
+                "options": [],
+                "evidence_refs": [
+                  "check_growth_missing"
+                ]
+              }
+            ],
+            "text_review_pending": false
+          },
+          "task_id": null
+        }
+      ]
+    },
+    {
+      "id": "U12",
+      "expect": "独立标识、名称、达蒙入口，原有效果不变；真实打包下载",
+      "runs": [
+        {
+          "session": "8daaad13-033f-40a8-8b46-8e4d0b06db1d",
+          "inputs": [
+            "新装备命名为星夜匕首，只改名字，其他全部继承基础装备。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "create_new",
+            "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+            "user_goal": "装备定制",
+            "display": {
+              "name": "星夜匕首",
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [],
+            "removed_original_passives": [],
+            "acquisition": "dammon_act1",
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "task_id": "43d8ea1f-c18d-4b6e-af0c-06d7d2720c85",
+            "status": "queued"
+          },
+          "task_id": "43d8ea1f-c18d-4b6e-af0c-06d7d2720c85"
+        }
+      ]
+    },
+    {
+      "id": "U13",
+      "expect": "新武器参数与新增触发准确，确认后真实打包",
+      "runs": [
+        {
+          "session": "d502ffaf-3768-492d-bdc5-1abf8ae3141b",
+          "inputs": [
+            "命名为赤焰短刃，伤害改成2d6，稀有度改成传奇，命中时对目标额外造成1d4火焰伤害，其他继承。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "create_new",
+            "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+            "user_goal": "装备定制",
+            "display": {
+              "name": "赤焰短刃",
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": "2d6",
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": "Legendary",
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [
+              {
+                "kind": "trigger",
+                "id": "e_2f7e90f6c8485aa7981e19f75089ffd1",
+                "event": "on_hit",
+                "condition": "always",
+                "target": "target",
+                "action": "damage",
+                "dice": "1d4",
+                "damage_type": "Fire",
+                "status_ref": null,
+                "status_draft_id": null,
+                "duration_turns": 1,
+                "display": {
+                  "name": null,
+                  "description": null
+                }
+              }
+            ],
+            "removed_original_passives": [],
+            "acquisition": "dammon_act1",
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "task_id": "25010bd9-cf23-47d9-83c0-c0e0a192073b",
+            "status": "queued"
+          },
+          "task_id": "25010bd9-cf23-47d9-83c0-c0e0a192073b"
+        }
+      ]
+    },
+    {
+      "id": "U14",
+      "expect": "技能独立副本、名称审核，不覆盖公共技能；资料不足明确阻塞",
+      "runs": [
+        {
+          "session": "c6beffe4-5623-489b-bf86-106fe32ab58c",
+          "inputs": [
+            "命名为疗愈之刃，保留原有效果，并添加一个治疗真言的独立技能副本，治疗量改为2d4，其他技能参数不变。"
+          ],
+          "revision": 3,
+          "plan": {
+            "schema_version": "1.1-draft-4",
+            "mode": "create_new",
+            "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+            "user_goal": "装备定制",
+            "display": {
+              "name": "疗愈之刃",
+              "description": null
+            },
+            "parameters": {
+              "weapon_properties": null,
+              "dexterity_rule": null,
+              "damage": null,
+              "versatile_damage": null,
+              "weight_kg": null,
+              "rarity": null,
+              "armor_class": null,
+              "enchantment": null,
+              "value": null,
+              "damage_type": null
+            },
+            "effects": [
+              {
+                "kind": "grant_spell",
+                "id": "e_8dd1b4f481a05f479b26b27968e4c299",
+                "base_spell": "Target_HealingWord",
+                "display": {
+                  "name": null,
+                  "description": null
+                },
+                "range_m": null,
+                "area_radius_m": null,
+                "action_cost": null,
+                "cooldown": null,
+                "spell_slot": null,
+                "remove_spell_slot": false,
+                "healing": "2d4",
+                "damage": null,
+                "status_duration_turns": null
+              }
+            ],
+            "removed_original_passives": [],
+            "acquisition": "dammon_act1",
+            "appearance_equipment": null,
+            "template_behavior": "reject_special",
+            "icon": null,
+            "unresolved": []
+          },
+          "issues": {},
+          "texts": {},
+          "last_error": null,
+          "last_result": {
+            "task_id": "3255d278-56de-4c07-b3ad-2a179ab008f0",
+            "status": "queued"
+          },
+          "task_id": "3255d278-56de-4c07-b3ad-2a179ab008f0"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "25010bd9-cf23-47d9-83c0-c0e0a192073b",
+      "session_id": "d502ffaf-3768-492d-bdc5-1abf8ae3141b",
+      "status": "succeeded",
+      "plan": {
+        "schema_version": "1.1-draft-4",
+        "mode": "create_new",
+        "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+        "user_goal": "装备定制",
+        "display": {
+          "name": "赤焰短刃",
+          "description": null
+        },
+        "parameters": {
+          "weapon_properties": null,
+          "dexterity_rule": null,
+          "damage": "2d6",
+          "versatile_damage": null,
+          "weight_kg": null,
+          "rarity": "Legendary",
+          "armor_class": null,
+          "enchantment": null,
+          "value": null,
+          "damage_type": null
+        },
+        "effects": [
+          {
+            "kind": "trigger",
+            "id": "e_2f7e90f6c8485aa7981e19f75089ffd1",
+            "event": "on_hit",
+            "condition": "always",
+            "target": "target",
+            "action": "damage",
+            "dice": "1d4",
+            "damage_type": "Fire",
+            "status_ref": null,
+            "status_draft_id": null,
+            "duration_turns": 1,
+            "display": {
+              "name": null,
+              "description": null
+            }
+          }
+        ],
+        "removed_original_passives": [],
+        "acquisition": "dammon_act1",
+        "appearance_equipment": null,
+        "template_behavior": "reject_special",
+        "icon": null,
+        "unresolved": []
+      },
+      "revision": 3,
+      "digest": "60e5f265e3b7a2380e3b731f81b7fdfd45c8a7d7375b2d13929440c51e695185",
+      "version": {
+        "prompt": "task8-v7",
+        "compiler": "v11-task8-v4",
+        "resources": "80edf9ee0f7ee06942898e901d7ab9053ceb9abae99c65081945d02baa08c6c3",
+        "catalog": "b092442f6f309ee844ae3711034f41420d0bdbe2c9ebfa36a906d8a65114463e",
+        "schema": "1.1-draft-4"
+      },
+      "created_at": "2026-10-17T07:20:30.295797+00:00",
+      "game_validation": "not_performed",
+      "generated_at": "2026-10-17T07:20:32.174623+00:00",
+      "instructions": "Mod-Superman 1.1 本地程序验收产物\n退出游戏后将 PAK 放入游戏 Mods 目录，使用现有安装流程启用；本工具不自动安装。\n当前产物已做格式转换、打包和解包检查；游戏内效果未测试。\n不要同时启用修改相同 Stats 或 TreasureTable 的测试包。\n卸载：停用本包，重启游戏并加载启用前的备份存档。\n模式：create_new\n方案摘要：60e5f265e3b7a2380e3b731f81b7fdfd45c8a7d7375b2d13929440c51e695185\n获取入口：第一章翠绿林地达蒙；必须仍存活且可访问。\n旧库存刷新及是否需要新档尚未验证，不保证旧存档立即出现。\n获取表：DEN_Weaponsmith_Trade\n基础装备：地脉迷城之王的匕首\n资源及依赖：详见修改清单.json；复用原生资源，不安装运行时脚本。\n反馈中报告生效不等于独立游戏验证。",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "archive_sha256": "e8723470f10a35f8354b3872fa4611ac81bc5fa1097102da7b2c55eae161ac15"
+    },
+    {
+      "task_id": "3255d278-56de-4c07-b3ad-2a179ab008f0",
+      "session_id": "c6beffe4-5623-489b-bf86-106fe32ab58c",
+      "status": "succeeded",
+      "plan": {
+        "schema_version": "1.1-draft-4",
+        "mode": "create_new",
+        "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+        "user_goal": "装备定制",
+        "display": {
+          "name": "疗愈之刃",
+          "description": null
+        },
+        "parameters": {
+          "weapon_properties": null,
+          "dexterity_rule": null,
+          "damage": null,
+          "versatile_damage": null,
+          "weight_kg": null,
+          "rarity": null,
+          "armor_class": null,
+          "enchantment": null,
+          "value": null,
+          "damage_type": null
+        },
+        "effects": [
+          {
+            "kind": "grant_spell",
+            "id": "e_8dd1b4f481a05f479b26b27968e4c299",
+            "base_spell": "Target_HealingWord",
+            "display": {
+              "name": null,
+              "description": null
+            },
+            "range_m": null,
+            "area_radius_m": null,
+            "action_cost": null,
+            "cooldown": null,
+            "spell_slot": null,
+            "remove_spell_slot": false,
+            "healing": "2d4",
+            "damage": null,
+            "status_duration_turns": null
+          }
+        ],
+        "removed_original_passives": [],
+        "acquisition": "dammon_act1",
+        "appearance_equipment": null,
+        "template_behavior": "reject_special",
+        "icon": null,
+        "unresolved": []
+      },
+      "revision": 3,
+      "digest": "641f08df9b3acec712d04329de1a9df446d0716d840302200bee7ca5a3bcb683",
+      "version": {
+        "prompt": "task8-v7",
+        "compiler": "v11-task8-v4",
+        "resources": "80edf9ee0f7ee06942898e901d7ab9053ceb9abae99c65081945d02baa08c6c3",
+        "catalog": "b092442f6f309ee844ae3711034f41420d0bdbe2c9ebfa36a906d8a65114463e",
+        "schema": "1.1-draft-4"
+      },
+      "created_at": "2026-10-17T07:22:14.181568+00:00",
+      "game_validation": "not_performed",
+      "generated_at": "2026-10-17T07:22:16.322530+00:00",
+      "instructions": "Mod-Superman 1.1 本地程序验收产物\n退出游戏后将 PAK 放入游戏 Mods 目录，使用现有安装流程启用；本工具不自动安装。\n当前产物已做格式转换、打包和解包检查；游戏内效果未测试。\n不要同时启用修改相同 Stats 或 TreasureTable 的测试包。\n卸载：停用本包，重启游戏并加载启用前的备份存档。\n模式：create_new\n方案摘要：641f08df9b3acec712d04329de1a9df446d0716d840302200bee7ca5a3bcb683\n获取入口：第一章翠绿林地达蒙；必须仍存活且可访问。\n旧库存刷新及是否需要新档尚未验证，不保证旧存档立即出现。\n获取表：DEN_Weaponsmith_Trade\n基础装备：地脉迷城之王的匕首\n资源及依赖：详见修改清单.json；复用原生资源，不安装运行时脚本。\n反馈中报告生效不等于独立游戏验证。",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "archive_sha256": "a5dd2efbee3b62463319ec6cfc2d5c10a3662d33c410728de20e03463bae7821"
+    },
+    {
+      "task_id": "43d8ea1f-c18d-4b6e-af0c-06d7d2720c85",
+      "session_id": "8daaad13-033f-40a8-8b46-8e4d0b06db1d",
+      "status": "succeeded",
+      "plan": {
+        "schema_version": "1.1-draft-4",
+        "mode": "create_new",
+        "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+        "user_goal": "装备定制",
+        "display": {
+          "name": "星夜匕首",
+          "description": null
+        },
+        "parameters": {
+          "weapon_properties": null,
+          "dexterity_rule": null,
+          "damage": null,
+          "versatile_damage": null,
+          "weight_kg": null,
+          "rarity": null,
+          "armor_class": null,
+          "enchantment": null,
+          "value": null,
+          "damage_type": null
+        },
+        "effects": [],
+        "removed_original_passives": [],
+        "acquisition": "dammon_act1",
+        "appearance_equipment": null,
+        "template_behavior": "reject_special",
+        "icon": null,
+        "unresolved": []
+      },
+      "revision": 3,
+      "digest": "7a279a609023365cabbd77d2c3271394027e6b38c6be65e27007d01ba05f4f65",
+      "version": {
+        "prompt": "task8-v7",
+        "compiler": "v11-task8-v4",
+        "resources": "80edf9ee0f7ee06942898e901d7ab9053ceb9abae99c65081945d02baa08c6c3",
+        "catalog": "b092442f6f309ee844ae3711034f41420d0bdbe2c9ebfa36a906d8a65114463e",
+        "schema": "1.1-draft-4"
+      },
+      "created_at": "2026-10-17T07:18:37.949369+00:00",
+      "game_validation": "not_performed",
+      "generated_at": "2026-10-17T07:18:40.112936+00:00",
+      "instructions": "Mod-Superman 1.1 本地程序验收产物\n退出游戏后将 PAK 放入游戏 Mods 目录，使用现有安装流程启用；本工具不自动安装。\n当前产物已做格式转换、打包和解包检查；游戏内效果未测试。\n不要同时启用修改相同 Stats 或 TreasureTable 的测试包。\n卸载：停用本包，重启游戏并加载启用前的备份存档。\n模式：create_new\n方案摘要：7a279a609023365cabbd77d2c3271394027e6b38c6be65e27007d01ba05f4f65\n获取入口：第一章翠绿林地达蒙；必须仍存活且可访问。\n旧库存刷新及是否需要新档尚未验证，不保证旧存档立即出现。\n获取表：DEN_Weaponsmith_Trade\n基础装备：地脉迷城之王的匕首\n资源及依赖：详见修改清单.json；复用原生资源，不安装运行时脚本。\n反馈中报告生效不等于独立游戏验证。",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "archive_sha256": "7b7f2d6f4d745a37c43bc19d7565bdea04e906a053188d114fc10cee8665fe4c"
+    }
+  ],
+  "game_validation": "not_performed"
+}

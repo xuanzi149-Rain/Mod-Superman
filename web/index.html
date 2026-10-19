@@ -1,17 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mod-Superman · 装备 Mod 制作</title><link rel="stylesheet" href="prototype.css"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mod-Superman · 装备制作 1.1</title><link rel="stylesheet" href="craft.css?v=20261019-results1"></head>
 <body>
-<a class="skip" href="#content">跳到主要内容</a>
-<nav class="rail" aria-label="制作步骤"><span class="diamond" aria-hidden="true"></span><ol id="steps"></ol><span class="rail-bottom">BG3</span></nav>
-<main id="content">
-  <header><strong>MOD—SUPERMAN</strong><button id="reset" class="new">＋ 新的修改</button></header>
-  <section class="hero"><p class="eyebrow">博德之门3个性化Mod生成器</p><img class="logo" src="logo.png" alt="Baldur’s Gate 3" width="150" height="98"><h1 id="heading" tabindex="-1"></h1><span class="spark" aria-hidden="true">✳</span></section>
-  <div class="step-caption" aria-hidden="true"></div>
-  <section id="panel" class="panel" aria-label="修改工作区"></section>
-  <footer><span>博德之门 3 / 个性化 Mod 制作</span></footer>
+<a class="skip" href="#workspace">跳到制作区</a>
+<header><a class="brand" href="index.html">MOD<span>—</span>SUPERMAN <small>1.1</small></a><nav aria-label="其他操作"><a href="legacy.html">1.0 历史入口</a><button id="history">我的方案</button><button id="new">新建方案</button></nav></header>
+<main>
+<section class="intro"><div><p class="eyebrow">BALDUR’S GATE 3</p><h1 id="heading" tabindex="-1">定制你的个性化Mod！</h1><p>修改现有装备，或以原生资源创建一件新装备。</p></div><img src="logo.png" alt="博德之门 3" width="150" height="98"></section>
+<ol class="steps" aria-label="制作进度"><li id="step1">01 <span>选择与调整</span></li><li id="step2">02 <span>核对与确认</span></li><li id="step3">03 <span>制作与下载</span></li></ol>
+<div id="notice" role="status" aria-live="polite"></div><div id="error" role="alert" tabindex="-1" hidden></div>
+<div class="layout"><section id="workspace" tabindex="-1" aria-label="制作工作区"></section><aside><details open><summary>制作须知</summary><p>模型解析你的需求，程序校验并生成文件。未知能力会保留为待处理问题。</p><p>确认后才开始制作；修改方案后需要重新确认。</p><p>使用已有美术资源。网页为方案示意，不代表游戏内实际外观。</p><strong>游戏实测尚未进行</strong><p>请备份存档。打包成功、用户报告与游戏验证分别记录。</p></details><div id="aside-state"></div></aside></div>
+
 </main>
-<section class="help-shell" aria-label="使用说明"><button id="toggle-help" class="help-toggle" type="button" aria-controls="help-panel" aria-expanded="true" aria-label="收起右侧说明" title="收起右侧说明"><span id="help-arrow" aria-hidden="true">›</span><span class="help-toggle-label">说明</span></button><aside id="help-panel"><h2 id="aside-title"></h2><div class="object-label">当前对象 / <span id="object-type"></span></div><h3 id="object-name"></h3><div id="aside-copy"></div><div class="flow"><p>制作流程</p><ol id="flow"></ol></div></aside></section>
-<dialog id="dialog" aria-labelledby="dialog-title"><div class="dialog-head"><h2 id="dialog-title"></h2><button id="close-dialog" aria-label="关闭弹窗">×</button></div><div id="dialog-body"></div></dialog>
-<script src="live.js"></script>
-</body></html>
+<dialog id="editor" aria-labelledby="editor-title"><form id="editor-form"><div class="dialog-head"><h2 id="editor-title"></h2><button type="button" id="close-editor" aria-label="关闭编辑器">关闭</button></div><div id="editor-fields"></div><p id="editor-error" role="alert"></p><div class="actions"><button type="submit" class="primary">保存修改</button></div></form></dialog>
+<script src="craft-feedback.js"></script><script src="craft.js?v=20261019-results1"></script></body></html>

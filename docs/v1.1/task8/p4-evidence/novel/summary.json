@@ -1,0 +1,23 @@
+{
+  "cases": [
+    {
+      "case_id": "N01",
+      "status": "passed_mechanical_checks"
+    },
+    {
+      "case_id": "N02",
+      "status": "passed_mechanical_checks"
+    },
+    {
+      "case_id": "N03",
+      "status": "passed_mechanical_checks"
+    },
+    {
+      "case_id": "N04",
+      "status": "passed_mechanical_checks"
+    }
+  ],
+  "suite_fingerprint": "4b1499aca68763654529aebf4adb7298fc2a8e506ebba361f317cfb5767fd349",
+  "scope": "Four synthetic variants, not broad generalization evidence",
+  "prompt_version": "task8-v2"
+}

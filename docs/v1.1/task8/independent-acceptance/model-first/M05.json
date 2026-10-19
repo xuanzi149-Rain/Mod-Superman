@@ -1,0 +1,491 @@
+{
+  "case": {
+    "id": "M05",
+    "fixture": "create_weapon",
+    "text": "装备期间奥秘技能检定加2，魅力豁免加1，并获得寒冷抗性。",
+    "expect": {
+      "effects": [
+        {
+          "kind": "bonus",
+          "bonus": "skill",
+          "selector": "Arcana",
+          "amount": 2
+        },
+        {
+          "kind": "bonus",
+          "bonus": "saving_throw",
+          "selector": "Charisma",
+          "amount": 1
+        },
+        {
+          "kind": "bonus",
+          "bonus": "resistance",
+          "selector": "Cold",
+          "amount": 1
+        }
+      ]
+    },
+    "mode": "modify_existing"
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v2",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [
+      "op1",
+      "op2",
+      "op3"
+    ],
+    "failed": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [
+        {
+          "kind": "bonus",
+          "id": "e_5271915e55f75fb481e152a29a1e9e4b",
+          "bonus": "skill",
+          "amount": 2,
+          "selector": "Arcana",
+          "display": {
+            "name": null,
+            "description": null
+          }
+        },
+        {
+          "kind": "bonus",
+          "id": "e_cf48a37198425a52b01fb05003bbe787",
+          "bonus": "saving_throw",
+          "amount": 1,
+          "selector": "Charisma",
+          "display": {
+            "name": null,
+            "description": null
+          }
+        },
+        {
+          "kind": "bonus",
+          "id": "e_8c44c709ca855b01b6e39867aeee698e",
+          "bonus": "resistance",
+          "amount": 1,
+          "selector": "Cold",
+          "display": {
+            "name": null,
+            "description": null
+          }
+        }
+      ],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "unresolved": [],
+    "text_review_pending": false
+  },
+  "failures": [],
+  "status": "passed",
+  "mechanical_compile": "passed_fixture_name_not_user_confirmation",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "M05",
+          "base_revision": 1,
+          "context_digest": "281a05e6392238d71ceb2001dcf90fd9b9dc9b4f609766d51de0db2b060917b7"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "user_goal": "程序验收案例，非玩家使用记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "current": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": "1d8",
+            "current": "1d8",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": "1d10",
+            "current": "1d10",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 1.35,
+            "current": 1.35,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": "Slashing",
+            "current": "Slashing",
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_f99316622202f171",
+              "result": "template_audit",
+              "details": []
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "程序验收案例，非玩家使用记录",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "M05",
+          "text": "装备期间奥秘技能检定加2，魅力豁免加1，并获得寒冷抗性。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "M05",
+        "base_revision": 1,
+        "context_digest": "281a05e6392238d71ceb2001dcf90fd9b9dc9b4f609766d51de0db2b060917b7",
+        "intent_summary": "添加装备期间的技能加成、豁免加成及抗性效果。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "装备期间奥秘技能检定加2",
+            "meaning": "添加一个提供奥秘技能检定向上修正+2的常驻效果",
+            "operation_ids": [
+              "op1"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r2",
+            "quote": "魅力豁免加1",
+            "meaning": "添加一个提供魅力豁免检定向上修正+1的常驻效果",
+            "operation_ids": [
+              "op2"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r3",
+            "quote": "并获得寒冷抗性",
+            "meaning": "添加一个提供寒冷伤害抗性的常驻效果",
+            "operation_ids": [
+              "op3"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g1",
+            "kind": "add_effect",
+            "target": "effect_arcane_bonus",
+            "payload": {
+              "effect": {
+                "kind": "bonus",
+                "bonus": "skill",
+                "amount": 2,
+                "selector": "Arcana"
+              }
+            }
+          },
+          {
+            "id": "op2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "group_id": "g1",
+            "kind": "add_effect",
+            "target": "effect_cha_save_bonus",
+            "payload": {
+              "effect": {
+                "kind": "bonus",
+                "bonus": "saving_throw",
+                "amount": 1,
+                "selector": "Charisma"
+              }
+            }
+          },
+          {
+            "id": "op3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "group_id": "g1",
+            "kind": "add_effect",
+            "target": "effect_cold_resistance",
+            "payload": {
+              "effect": {
+                "kind": "bonus",
+                "bonus": "resistance",
+                "amount": 1,
+                "selector": "Cold"
+              }
+            }
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 12295,
+        "total_tokens": 13070,
+        "completion_tokens": 775,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880,
+          "text_tokens": 12295
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 15360,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "bonus",
+        "id": "e_5271915e55f75fb481e152a29a1e9e4b",
+        "bonus": "skill",
+        "amount": 2,
+        "selector": "Arcana",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "e_cf48a37198425a52b01fb05003bbe787",
+        "bonus": "saving_throw",
+        "amount": 1,
+        "selector": "Charisma",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "e_8c44c709ca855b01b6e39867aeee698e",
+        "bonus": "resistance",
+        "amount": 1,
+        "selector": "Cold",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

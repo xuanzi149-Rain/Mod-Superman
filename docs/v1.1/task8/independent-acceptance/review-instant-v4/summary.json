@@ -1,0 +1,9 @@
+{
+  "cases": [
+    {
+      "id": "M06",
+      "status": "protocol_adoption_compile_passed_semantic_read_required"
+    }
+  ],
+  "scope": "same authorized synthetic cases, real review and compilation, no packaging or game run"
+}

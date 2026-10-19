@@ -1,0 +1,16 @@
+test_all_bonus_subtypes_and_nested_status_updates (tests.test_task8_acceptance.IndependentAcceptance.test_all_bonus_subtypes_and_nested_status_updates) ... ok
+test_all_review_targets_and_resource_selection (tests.test_task8_acceptance.IndependentAcceptance.test_all_review_targets_and_resource_selection) ... ok
+test_context_reset_does_not_reapply_old_pending_text (tests.test_task8_acceptance.IndependentAcceptance.test_context_reset_does_not_reapply_old_pending_text) ... ok
+test_relative_effect_uses_inherited_spell_value (tests.test_task8_acceptance.IndependentAcceptance.test_relative_effect_uses_inherited_spell_value) ... ok
+test_relative_parameter_precision_rejects_without_clipping (tests.test_task8_acceptance.IndependentAcceptance.test_relative_parameter_precision_rejects_without_clipping) ... ok
+test_reset_rewrite_standard_and_confirmation_invalidation (tests.test_task8_acceptance.IndependentAcceptance.test_reset_rewrite_standard_and_confirmation_invalidation) ... ok
+test_resource_change_between_review_and_adoption_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_resource_change_between_review_and_adoption_rejected) ... ok
+test_six_effects_add_update_delete_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_six_effects_add_update_delete_both_modes) ... ok
+test_status_duration_relative_and_dependency_atomicity (tests.test_task8_acceptance.IndependentAcceptance.test_status_duration_relative_and_dependency_atomicity) ... ok
+test_ten_parameters_set_restore_in_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_ten_parameters_set_restore_in_both_modes) ... ok
+test_text_same_target_conflict_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_text_same_target_conflict_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 51.800s
+
+OK

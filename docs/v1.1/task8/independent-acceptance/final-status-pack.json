@@ -1,0 +1,14 @@
+{
+  "case": "M07_pure_bonus_status",
+  "actor": "automated_fixture",
+  "review": "recorded_real_v4_response_replay_same_fact_digest_not_new_model_call",
+  "pak": "build\\v1.1\\task8\\final-status-pack\\3954be36-0b43-4e2f-a8cb-13a25003537d\\b8f3cf6db5d044fd\\attempt-zkla6960\\ModSuperman_3954be36-0b43-4e2f-a8cb-13a25003537d.pak",
+  "pak_sha256": "cb5508432624c1a72235ee055050f6530588b55a53ccc9f9ee0c77fcc7184107",
+  "stages": {
+    "source_generation": "passed",
+    "conversion": "passed",
+    "pak_creation": "passed",
+    "package_check": "passed",
+    "game_validation": "not_performed"
+  }
+}

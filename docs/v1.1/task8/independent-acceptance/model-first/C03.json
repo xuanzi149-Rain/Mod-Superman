@@ -1,0 +1,352 @@
+{
+  "case": {
+    "id": "C03",
+    "fixture": "create_weapon",
+    "text": "给武器增加轻型特性，其余特性保留。",
+    "expect": {
+      "property": "Light"
+    },
+    "mode": "create_new"
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v2",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [
+      "op1"
+    ],
+    "failed": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": "dammon_act1",
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": [
+          "Dippable",
+          "Light",
+          "Melee",
+          "Versatile"
+        ],
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": "dammon_act1",
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "unresolved": [],
+    "text_review_pending": false
+  },
+  "failures": [],
+  "status": "passed",
+  "mechanical_compile": "passed_fixture_name_not_user_confirmation",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "C03",
+          "base_revision": 1,
+          "context_digest": "c2ec2724b9994058b28225ea2bd3c0713e0848ae7bb138f1c62ac94a0e35736c"
+        },
+        "selection": {
+          "mode": "create_new",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "create_new",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "user_goal": "程序验收案例，非玩家使用记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": "dammon_act1",
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "current": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": "1d8",
+            "current": "1d8",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": "1d10",
+            "current": "1d10",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 1.35,
+            "current": 1.35,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": "Slashing",
+            "current": "Slashing",
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_f99316622202f171",
+              "result": "template_audit",
+              "details": []
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "程序验收案例，非玩家使用记录",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "C03",
+          "text": "给武器增加轻型特性，其余特性保留。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "C03",
+        "base_revision": 1,
+        "context_digest": "c2ec2724b9994058b28225ea2bd3c0713e0848ae7bb138f1c62ac94a0e35736c",
+        "intent_summary": "在保留现有武器特性的基础上，增加轻型（Light）特性。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "给武器增加轻型特性，其余特性保留。",
+            "meaning": "向武器属性中添加 Light 特性，不删除现有特性。",
+            "operation_ids": [
+              "op1"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g1",
+            "kind": "edit_weapon_properties",
+            "target": "weapon_properties",
+            "payload": {
+              "add": [
+                "Light"
+              ],
+              "remove": []
+            }
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 12293,
+        "total_tokens": 12641,
+        "completion_tokens": 348,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880,
+          "text_tokens": 12293
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 8297,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": [
+        "Dippable",
+        "Light",
+        "Melee",
+        "Versatile"
+      ],
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

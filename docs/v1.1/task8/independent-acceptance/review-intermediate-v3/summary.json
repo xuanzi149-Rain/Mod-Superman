@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "M04",
+      "status": "protocol_adoption_compile_passed_semantic_read_required"
+    },
+    {
+      "id": "M05",
+      "status": "protocol_adoption_compile_passed_semantic_read_required"
+    },
+    {
+      "id": "M07",
+      "status": "failed"
+    },
+    {
+      "id": "M08",
+      "status": "protocol_adoption_compile_passed_semantic_read_required"
+    },
+    {
+      "id": "M09",
+      "status": "protocol_adoption_compile_passed_semantic_read_required"
+    }
+  ],
+  "scope": "same authorized synthetic cases, real review and compilation, no packaging or game run"
+}

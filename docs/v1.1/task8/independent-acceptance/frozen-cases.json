@@ -1,0 +1,350 @@
+[
+  {
+    "id": "M01",
+    "fixture": "create_weapon",
+    "text": "伤害设为3d4，双手伤害3d6，伤害类型寒冷，附魔等级3，重量2.375千克，稀有度极珍稀，配置价值742。",
+    "expect": {
+      "parameters": {
+        "damage": "3d4",
+        "versatile_damage": "3d6",
+        "damage_type": "Cold",
+        "enchantment": 3,
+        "weight_kg": 2.375,
+        "rarity": "VeryRare",
+        "value": 742
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M02",
+    "fixture": "create_body_armor",
+    "text": "护甲等级设为19，敏捷加值上限2。",
+    "expect": {
+      "parameters": {
+        "armor_class": 19,
+        "dexterity_rule": "capped_2"
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M03",
+    "fixture": "create_weapon",
+    "text": "给武器增加轻型特性，其余特性保留。",
+    "expect": {
+      "property": "Light"
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M04",
+    "fixture": "create_weapon",
+    "text": "装备期间魅力提高3点。",
+    "expect": {
+      "effect": {
+        "kind": "constant",
+        "ability": "Charisma",
+        "amount": 3
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M05",
+    "fixture": "create_weapon",
+    "text": "装备期间奥秘技能检定加2，魅力豁免加1，并获得寒冷抗性。",
+    "expect": {
+      "effects": [
+        {
+          "kind": "bonus",
+          "bonus": "skill",
+          "selector": "Arcana",
+          "amount": 2
+        },
+        {
+          "kind": "bonus",
+          "bonus": "saving_throw",
+          "selector": "Charisma",
+          "amount": 1
+        },
+        {
+          "kind": "bonus",
+          "bonus": "resistance",
+          "selector": "Cold",
+          "amount": 1
+        }
+      ]
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M06",
+    "fixture": "create_weapon",
+    "text": "每次命中后给自己恢复2d6生命，没有额外条件。",
+    "expect": {
+      "effect": {
+        "kind": "trigger",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "2d6"
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M07",
+    "fixture": "create_body_armor",
+    "text": "每次自己受到伤害后，无额外条件，给自己施加持续3回合的独立状态：护甲等级加2，不加属性，重复触发刷新持续时间。复用大步奔行的状态表现。",
+    "expect": {
+      "status_pair": 3
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M08",
+    "fixture": "create_weapon",
+    "text": "添加治愈真言独立技能，治疗3d4，距离21米，改用动作，长休恢复，取消法术位成本，其他资源成本保留。",
+    "expect": {
+      "effect": {
+        "kind": "grant_spell",
+        "base_spell": "Target_HealingWord",
+        "healing": "3d4",
+        "range_m": 21,
+        "action_cost": "action",
+        "cooldown": "long_rest",
+        "remove_spell_slot": true
+      }
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "M09",
+    "fixture": "passive_copy",
+    "text": "移除装备原有的平衡被动，换成它的独立副本，效果保持不变。",
+    "expect": {
+      "effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      },
+      "removed": "ARM_Balance_1_Passive"
+    },
+    "mode": "modify_existing"
+  },
+  {
+    "id": "C01",
+    "fixture": "create_weapon",
+    "text": "伤害设为3d4，双手伤害3d6，伤害类型寒冷，附魔等级3，重量2.375千克，稀有度极珍稀，配置价值742。",
+    "expect": {
+      "parameters": {
+        "damage": "3d4",
+        "versatile_damage": "3d6",
+        "damage_type": "Cold",
+        "enchantment": 3,
+        "weight_kg": 2.375,
+        "rarity": "VeryRare",
+        "value": 742
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C02",
+    "fixture": "create_body_armor",
+    "text": "护甲等级设为19，敏捷加值上限2。",
+    "expect": {
+      "parameters": {
+        "armor_class": 19,
+        "dexterity_rule": "capped_2"
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C03",
+    "fixture": "create_weapon",
+    "text": "给武器增加轻型特性，其余特性保留。",
+    "expect": {
+      "property": "Light"
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C04",
+    "fixture": "create_weapon",
+    "text": "装备期间魅力提高3点。",
+    "expect": {
+      "effect": {
+        "kind": "constant",
+        "ability": "Charisma",
+        "amount": 3
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C05",
+    "fixture": "create_weapon",
+    "text": "装备期间奥秘技能检定加2，魅力豁免加1，并获得寒冷抗性。",
+    "expect": {
+      "effects": [
+        {
+          "kind": "bonus",
+          "bonus": "skill",
+          "selector": "Arcana",
+          "amount": 2
+        },
+        {
+          "kind": "bonus",
+          "bonus": "saving_throw",
+          "selector": "Charisma",
+          "amount": 1
+        },
+        {
+          "kind": "bonus",
+          "bonus": "resistance",
+          "selector": "Cold",
+          "amount": 1
+        }
+      ]
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C06",
+    "fixture": "create_weapon",
+    "text": "每次命中后给自己恢复2d6生命，没有额外条件。",
+    "expect": {
+      "effect": {
+        "kind": "trigger",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "2d6"
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C07",
+    "fixture": "create_body_armor",
+    "text": "每次自己受到伤害后，无额外条件，给自己施加持续3回合的独立状态：护甲等级加2，不加属性，重复触发刷新持续时间。复用大步奔行的状态表现。",
+    "expect": {
+      "status_pair": 3
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C08",
+    "fixture": "create_weapon",
+    "text": "添加治愈真言独立技能，治疗3d4，距离21米，改用动作，长休恢复，取消法术位成本，其他资源成本保留。",
+    "expect": {
+      "effect": {
+        "kind": "grant_spell",
+        "base_spell": "Target_HealingWord",
+        "healing": "3d4",
+        "range_m": 21,
+        "action_cost": "action",
+        "cooldown": "long_rest",
+        "remove_spell_slot": true
+      }
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "C09",
+    "fixture": "passive_copy",
+    "text": "移除装备原有的平衡被动，换成它的独立副本，效果保持不变。",
+    "expect": {
+      "effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      },
+      "removed": "ARM_Balance_1_Passive"
+    },
+    "mode": "create_new"
+  },
+  {
+    "id": "L01",
+    "fixture": "create_weapon",
+    "text": "重量先改为1.6千克。",
+    "expect": {
+      "parameters": {
+        "weight_kg": 1.6
+      }
+    },
+    "followup": "再减少四分之一，按当前方案算。",
+    "followup_expect": {
+      "parameters": {
+        "weight_kg": 1.2
+      }
+    }
+  },
+  {
+    "id": "L02",
+    "fixture": "create_weapon",
+    "text": "我想让它变得厉害一些。",
+    "expect": {
+      "blocked": true
+    }
+  },
+  {
+    "id": "L03",
+    "fixture": "create_weapon",
+    "text": "价值改为615，同时每杀一个敌人永久增加1点力量。",
+    "expect": {
+      "parameters": {
+        "value": 615
+      },
+      "blocked": true
+    }
+  },
+  {
+    "id": "L04",
+    "fixture": "create_weapon",
+    "text": "只把装备名称改为“晚潮”，不改变效果。",
+    "expect": {
+      "text_only": true,
+      "text": "晚潮"
+    }
+  },
+  {
+    "id": "L05",
+    "fixture": "create_weapon",
+    "text": "恢复原装备的重量，保留其他修改。",
+    "expect": {
+      "parameters": {
+        "weight_kg": null
+      }
+    },
+    "initial_parameters": {
+      "weight_kg": 3,
+      "value": 500
+    }
+  },
+  {
+    "id": "L06",
+    "fixture": "create_weapon",
+    "text": "删除当前魅力加成词条，其他词条不变。",
+    "expect": {
+      "no_effect_id": "charisma"
+    },
+    "initial_effects": [
+      {
+        "kind": "constant",
+        "id": "charisma",
+        "ability": "Charisma",
+        "amount": 3
+      },
+      {
+        "kind": "bonus",
+        "id": "speed",
+        "bonus": "movement",
+        "amount": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,192 @@
+{
+  "cases": [
+    {
+      "case": "modify_existing",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\fa184ef7-84bd-4f76-8e94-6cee4c8bc17f\\7fceac0ca7c07343\\attempt-tz4wqrdd\\ModSuperman_fa184ef7-84bd-4f76-8e94-6cee4c8bc17f.pak",
+      "pak_sha256": "373f5147c3fae3ee888e9880302234cb77c6620a4b862ce3390b72a7ccb5870e",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "create_weapon",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\3207e269-2434-4fc7-92e4-847787d2f26e\\5a7689b1c9d5f8dc\\attempt-827f4788\\ModSuperman_3207e269-2434-4fc7-92e4-847787d2f26e.pak",
+      "pak_sha256": "1cb3098246b450446581dc63a7cbec7e94ed06d40fa96fc5d67ee58570e13072",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "create_body_armor",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\dc6c87e2-54f8-4b51-80ce-9cdb416e2404\\2c07ff3d8a36beca\\attempt-h5b2gyl0\\ModSuperman_dc6c87e2-54f8-4b51-80ce-9cdb416e2404.pak",
+      "pak_sha256": "175b9201a304aa35e87bf151d3efb21e0507dfd45fddbcac0c8ac9cee18a1b5d",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "create_shield",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\33b78b94-f52a-4f16-8cfe-0b67edd013fe\\8962524bade42602\\attempt-ooygju45\\ModSuperman_33b78b94-f52a-4f16-8cfe-0b67edd013fe.pak",
+      "pak_sha256": "aee32730d39b5f6ad8a19998426377917c07c36348df77fe7f1e8b453fdf52e5",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "create_ring_with_reviewed_behavior",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\deee89f7-e4c2-4e2d-8fcb-fa7105f60096\\8ff1cd3d0f0021df\\attempt-bzzurw26\\ModSuperman_deee89f7-e4c2-4e2d-8fcb-fa7105f60096.pak",
+      "pak_sha256": "a27273d6208c3437e036f3a38920830e11455e33f913803547a2990d88a7eba3",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "armor_appearance_swap",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\30af8da2-18e7-4d0d-b11a-a8d8f0967aa3\\01529b833eaaa87e\\attempt-2fxcsp9r\\ModSuperman_30af8da2-18e7-4d0d-b11a-a8d8f0967aa3.pak",
+      "pak_sha256": "da6a5289f773d738bfffddefa051f02dc1c3323818dbf615f71162b889d07970",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "special_gale_template",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\82bf5fa1-5f90-4745-a918-deeafc0dc4ab\\17c0d39fafd6216c\\attempt-5nxyk1zy\\ModSuperman_82bf5fa1-5f90-4745-a918-deeafc0dc4ab.pak",
+      "pak_sha256": "0778d69a0737e455acbb4233e39a9701514e12af3458bfed776eeda2ff527bac",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "independent_status",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\49d2b7d2-c1ec-4b4c-ba09-06d9e558cce0\\1d8313ca4b3ef96b\\attempt-hfx3povv\\ModSuperman_49d2b7d2-c1ec-4b4c-ba09-06d9e558cce0.pak",
+      "pak_sha256": "ba981346398a84407d54e480096f2450628c535ca0add4d5b9af65b23e80b768",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "passive_copy",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "failed",
+      "error": "effective_facts_incomplete"
+    },
+    {
+      "case": "status_spell_upcasts",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\fa7990a0-ba43-459b-9473-0f7ea2d7eb5b\\b14023643ac964ef\\attempt-owkrv7yr\\ModSuperman_fa7990a0-ba43-459b-9473-0f7ea2d7eb5b.pak",
+      "pak_sha256": "0f90cf67f88ddb4a92228efa93be0b72b473a3adbac3556409a7eefef71c2aa3",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "delayed_heal",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\15fe29fa-778b-4c7f-8d60-592067a774b1\\1eb88c96c2847770\\attempt-tgxb5nzt\\ModSuperman_15fe29fa-778b-4c7f-8d60-592067a774b1.pak",
+      "pak_sha256": "df1fd00c46f699af6757f6de3dad9699681bf2401a59a295a6fabc7c23a30ba1",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "damage_spell",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\89d4221a-3904-4a68-bb45-764558191460\\a49c5e1dd0be512e\\attempt-ma3v2cko\\ModSuperman_89d4221a-3904-4a68-bb45-764558191460.pak",
+      "pak_sha256": "c4851028007903c5cc2e77202c210d01f0f639925acc629a3c0965495a443c9c",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "case": "container_spell",
+      "actor": "automated_fixture",
+      "model": "mock_review_not_real_model",
+      "status": "passed",
+      "pak": "build\\v1.1\\task8\\independent-pack-20261017-130756\\13568fab-ca6f-4542-b0a8-8a199989c4ae\\6c49a3e1b9384ca2\\attempt-hdujlxfr\\ModSuperman_13568fab-ca6f-4542-b0a8-8a199989c4ae.pak",
+      "pak_sha256": "168f205a85548b2d7e661bdf7a80a49d912dd0dec7523161a91ab1ac44efc833",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    }
+  ],
+  "game_validation": "not_performed"
+}

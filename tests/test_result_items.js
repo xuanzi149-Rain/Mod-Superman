@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const source=fs.readFileSync('web/craft.js','utf8');
+const code=source.slice(source.indexOf('function resultItems()'),source.indexOf('function renderEdit()'));
+const state={plan:{display:{name:null,description:null},parameters:{weight_kg:0,rarity:null},effects:[],template_behavior:'reject_special'},texts:[{target:{owner:'equipment',field:'name'},mode:'exact',text:'Fool'}],effective_values:{weight_kg:{original:1.35}},original_passives:[]};
+const ctx={state,labels:{name:'名称',description:'说明',weight_kg:'重量'},esc:String,show:String,op:(kind,target,payload={})=>({kind,target,payload}),textReq:(owner,field,text,mode)=>({target:{owner,field},text,mode}),effectCard:()=>''};
+vm.createContext(ctx);vm.runInContext(code,ctx);
+let rows=ctx.resultItems();assert.equal(rows.length,2);assert.match(rows[0].html,/Fool/);assert.match(rows[1].html,/<strong>0<\/strong>/);
+assert.equal(rows[0].texts[0].mode,'reset');assert.equal(rows[1].operations[0].kind,'restore_parameter');
+state.texts=[];state.plan.display.name='Fool';rows=ctx.resultItems();assert.equal(rows.length,2);
+state.plan.parameters.weight_kg=null;rows=ctx.resultItems();assert.equal(rows.length,1);assert.equal(rows[0].title,'名称');
+state.plan.display.name=null;assert.equal(ctx.resultItems().length,0);
+state.plan.effects=[{id:'s',kind:'independent_status',display:{}},{id:'t',kind:'trigger',status_draft_id:'s',display:{}}];
+rows=ctx.resultItems();assert.equal(rows[0].operations.length,2);assert.equal(rows[0].operations[0].target,'t');assert.equal(rows[0].operations[1].target,'s');
+console.log('Result list: zero, pending/adopted name, independent removal, empty list and dependent effect removal passed.');

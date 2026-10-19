@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-17",
+  "status": "passed",
+  "game_validation": "not_performed",
+  "coverage": {
+    "display_and_base_parameters": [
+      "modify_existing",
+      "create_weapon"
+    ],
+    "weapon_damage_enchantment_properties": [
+      "create_weapon"
+    ],
+    "armor_class_dexterity_and_shields": [
+      "create_body_armor",
+      "create_shield"
+    ],
+    "constant_bonuses": [
+      "modify_existing"
+    ],
+    "trigger_damage_healing_status": [
+      "modify_existing",
+      "create_body_armor",
+      "independent_status"
+    ],
+    "independent_status_duration_stacking": [
+      "independent_status"
+    ],
+    "spell_effect_range_cost_cooldown": [
+      "status_spell_upcasts",
+      "delayed_heal",
+      "damage_spell"
+    ],
+    "compatible_visuals_icons_body_maps": [
+      "armor_appearance_swap",
+      "create_body_armor"
+    ],
+    "new_equipment_acquisition": [
+      "create_weapon",
+      "create_body_armor",
+      "create_shield",
+      "create_ring_with_reviewed_behavior"
+    ],
+    "native_dependencies_passives_upcasts_containers": [
+      "passive_copy",
+      "status_spell_upcasts",
+      "delayed_heal",
+      "container_spell"
+    ],
+    "special_template_behavior": [
+      "special_gale_template"
+    ]
+  },
+  "cases": [
+    {
+      "name": "modify_existing",
+      "mode": "modify_existing",
+      "plan_digest": "7fceac0ca7c0734350051e38264536637017e15092b9753e570fdf767fc000b6",
+      "pak": "build\\v1.1\\phase-b\\e447c3ef-ad20-59cc-80fb-e4743415e265\\7fceac0ca7c07343\\attempt-hx6wf1f9\\ModSuperman_e447c3ef-ad20-59cc-80fb-e4743415e265.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "d60efa66d3dbe8ff43ff64c2f7398929eac1bb0b4d8e111f304a1ee7ec7e5232"
+      },
+      "dependency_copies": 6
+    },
+    {
+      "name": "create_weapon",
+      "mode": "create_new",
+      "plan_digest": "5a7689b1c9d5f8dc9a23e51aefe6ebfca9c974b0d8f00c25f36a844815f3f53a",
+      "pak": "build\\v1.1\\phase-b\\4ddaec07-e474-5574-a213-f3c50691fc95\\5a7689b1c9d5f8dc\\attempt-a6i153yj\\ModSuperman_4ddaec07-e474-5574-a213-f3c50691fc95.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "3831cbae10287085f08b6e1571ef4bfc639206d488d40fabe7e6f1d58c7cd8dc"
+      },
+      "dependency_copies": 6
+    },
+    {
+      "name": "create_body_armor",
+      "mode": "create_new",
+      "plan_digest": "2c07ff3d8a36beca08045a9df59e287f8cd4c548643a0d4326852347fecbcb0f",
+      "pak": "build\\v1.1\\phase-b\\269c4ae9-8a97-5ffd-8fe2-034f4123da3a\\2c07ff3d8a36beca\\attempt-xird3270\\ModSuperman_269c4ae9-8a97-5ffd-8fe2-034f4123da3a.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "c55ef0feaf02da1f4aa43b61e9c817f3350cf035956aa06ec992da4063f95d56"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "create_shield",
+      "mode": "create_new",
+      "plan_digest": "8962524bade426020307eb66feb2daf580d828b7a538c17f6e8dde8364ef0fea",
+      "pak": "build\\v1.1\\phase-b\\708f961d-b65d-500e-9985-256e45501494\\8962524bade42602\\attempt-2vuln3py\\ModSuperman_708f961d-b65d-500e-9985-256e45501494.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "2e5c4f480b460a650cd94fa218f4907a649daa56fd9d2c2699a0e80de77aa520"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "create_ring_with_reviewed_behavior",
+      "mode": "create_new",
+      "plan_digest": "8ff1cd3d0f0021df1f0d3725de4d87ae73a69f9e8c6f3412216aeaa8b2371a2a",
+      "pak": "build\\v1.1\\phase-b\\5a99020f-55e3-535a-8c5f-6b769659dccb\\8ff1cd3d0f0021df\\attempt-69y8_htf\\ModSuperman_5a99020f-55e3-535a-8c5f-6b769659dccb.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "d49eb06e7b55cff3abedcd6dd3df19662c9733d0d9b74edbeaf75367216468da"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "armor_appearance_swap",
+      "mode": "create_new",
+      "plan_digest": "01529b833eaaa87eedd5de05722215cf1fffc925f8dac6c6bf5ffc438c17f82e",
+      "pak": "build\\v1.1\\phase-b\\dee38377-877f-5e4f-ba2f-8faa92b7bb0e\\01529b833eaaa87e\\attempt-hleeuxz8\\ModSuperman_dee38377-877f-5e4f-ba2f-8faa92b7bb0e.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "03523eaa79baf5f8788cc20d8a4ced8e3fb47e79a01a121c19045151ee377210"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "special_gale_template",
+      "mode": "create_new",
+      "plan_digest": "17c0d39fafd6216cf6f8430b860f118c19cc6027b691c073aade00a30fdeba33",
+      "pak": "build\\v1.1\\phase-b\\d46332cc-1dff-56ae-930a-b196b8e0dc88\\17c0d39fafd6216c\\attempt-2r0x7s63\\ModSuperman_d46332cc-1dff-56ae-930a-b196b8e0dc88.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "ac53014db3c0577c29b019dc925a61d1e01b1755d7ba887124a0eaeb47e94fe1"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "independent_status",
+      "mode": "create_new",
+      "plan_digest": "1d8313ca4b3ef96b4cd574ac9bb64709d269bf7a6b14affb8b3c2ec4543ce0a8",
+      "pak": "build\\v1.1\\phase-b\\55c05617-229a-5c98-a201-55c654002d5b\\1d8313ca4b3ef96b\\attempt-7npkyq87\\ModSuperman_55c05617-229a-5c98-a201-55c654002d5b.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "f8af2f555766d44ceabee62d46913f4e56b49ee13367256ed3ef0fc9c41a82c8"
+      },
+      "dependency_copies": 0
+    },
+    {
+      "name": "passive_copy",
+      "mode": "modify_existing",
+      "plan_digest": "eb56f6bd1c0d1c2af80825140e703aec20abbda26177fbdfa48df401fa3eda40",
+      "pak": "build\\v1.1\\phase-b\\63ad8b88-4bcb-5fb2-9ccd-f630eab8bb2d\\eb56f6bd1c0d1c2a\\attempt-w4uc83_1\\ModSuperman_63ad8b88-4bcb-5fb2-9ccd-f630eab8bb2d.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "00b395cc864770befb7cb16034b25273a204bccdb16c412c462f88349c21833f"
+      },
+      "dependency_copies": 1
+    },
+    {
+      "name": "status_spell_upcasts",
+      "mode": "create_new",
+      "plan_digest": "b14023643ac964ef8b27ba592ad3dea3780ea313106546b5ef1f2ba2f8c02c54",
+      "pak": "build\\v1.1\\phase-b\\970da737-fbe3-500a-8e5d-6e292dd7ab44\\b14023643ac964ef\\attempt-w079j021\\ModSuperman_970da737-fbe3-500a-8e5d-6e292dd7ab44.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "9fb6ce18b723706549d2e0bc13775646bb5a4163693cefd26d32914e2f963365"
+      },
+      "dependency_copies": 13
+    },
+    {
+      "name": "delayed_heal",
+      "mode": "create_new",
+      "plan_digest": "1eb88c96c2847770e098596421e7b62483709154149eafd5f44757f2ae92d302",
+      "pak": "build\\v1.1\\phase-b\\e02d7253-292e-560c-8e70-d2910eed3fa5\\1eb88c96c2847770\\attempt-e4o45kc2\\ModSuperman_e02d7253-292e-560c-8e70-d2910eed3fa5.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "484af6ac485fec4cab90cad7fa1066763db42eb7abec5a857dce1b0c1dde94a6"
+      },
+      "dependency_copies": 3
+    },
+    {
+      "name": "damage_spell",
+      "mode": "create_new",
+      "plan_digest": "a49c5e1dd0be512e66a0bd577fe2ad75668fdae13b2bd0edc0da68531a4ca5a6",
+      "pak": "build\\v1.1\\phase-b\\419a75a1-75af-521d-8d80-42ffa5c44491\\a49c5e1dd0be512e\\attempt-3_kysiyq\\ModSuperman_419a75a1-75af-521d-8d80-42ffa5c44491.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "ac35a75ce75557a636b0fc691f42fce59fa0c8a71fb54c5edfeec1b34b6dad96"
+      },
+      "dependency_copies": 12
+    },
+    {
+      "name": "container_spell",
+      "mode": "create_new",
+      "plan_digest": "6c49a3e1b9384ca212ecdf12d44d5fb9f15f2ad3ee765459016827bfbc3ef5fc",
+      "pak": "build\\v1.1\\phase-b\\7b78cc24-3ced-5c19-b566-7b14fc05bde8\\6c49a3e1b9384ca2\\attempt-wg8r9e8y\\ModSuperman_7b78cc24-3ced-5c19-b566-7b14fc05bde8.pak",
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed",
+        "pak_sha256": "6ac12aef338b117dd31fd3e406fa59643075ec68104fe0fa37fc09a74efd7819"
+      },
+      "dependency_copies": 37
+    }
+  ],
+  "regression": {
+    "result": "passed",
+    "tests": 152,
+    "elapsed_seconds": 19.1,
+    "log": "build/v1.1/phase-b-tests.log",
+    "log_sha256": "32087627d0d5ab706d21ee80adca90778ef278e9fd85f99eed2f2bf70abde3d0",
+    "game_validation": "not_performed"
+  },
+  "tasks": {
+    "4": "passed",
+    "5": "passed",
+    "6": "passed",
+    "7": "passed"
+  },
+  "resource_evidence": {
+    "native_body_profiles": 25,
+    "qualified_templates": 1056,
+    "body_asset_inputs": 182,
+    "base_catalog_inputs": 157
+  },
+  "scope": "All agreed target capability categories and task 4-7 criteria; native data/PAK acceptance only, not all original records or arbitrary combinations.",
+  "deferred": [
+    "C: AI semantic review, HTTP/persistence/UI/download integration",
+    "D: model evaluation and evidence synthesis",
+    "gameplay, external users and public deployment"
+  ]
+}

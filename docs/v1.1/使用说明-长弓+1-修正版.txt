@@ -1,0 +1,18 @@
+Mod-Superman 1.1 本地程序验收产物
+安装步骤（Windows）：
+1. 完全退出游戏，将下载的 ZIP 解压，找到其中的 .pak 文件。
+2. 在资源管理器地址栏粘贴以下路径并回车：
+   %LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\Mods
+   例如本机对应：C:\Users\17583\AppData\Local\Larian Studios\Baldur's Gate 3\Mods
+3. 将 .pak 文件直接复制到该文件夹。不要放到 Steam 游戏安装目录的 Data\Mods，不要复制整个 ZIP 或额外套一层文件夹。
+4. 重新启动游戏，进入主菜单的 Mod 管理器，在已安装列表中查找并启用 ModSuperman 1.1。
+5. 模块名称不一定等于装备名称。若没有出现，检查 .pak 是否在上述目录，并完全退出游戏后重试。
+本工具不自动安装或启用 Mod。
+当前产物已做格式转换、打包和解包检查；游戏内效果未测试。
+不要同时启用修改相同 Stats 或 TreasureTable 的测试包。
+卸载：停用本包，重启游戏并加载启用前的备份存档。
+模式：modify_existing
+方案摘要：21692343586607fa0be53e281e56ad42e3cc20b7e7d1b139bb220a4b5a92430e
+基础装备：长弓 +1
+资源及依赖：详见修改清单.json；复用原生资源，不安装运行时脚本。
+反馈中报告生效不等于独立游戏验证。

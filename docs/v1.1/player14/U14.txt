@@ -1,0 +1,94 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html
+	2 link Description: 跳到制作区, Value: 127.0.0.1:8767/frontend/index.html#workspace
+	3 container
+		4 link Description: MOD—SUPERMAN 1.1, Value: 127.0.0.1:8767/frontend/index.html
+		5 container 其他操作
+			6 link Description: 1.0 历史入口, Value: 127.0.0.1:8767/frontend/legacy.html
+			7 button 我的方案, ID: history
+			8 button 新建方案, ID: new
+	9 container
+		10 text BALDUR’S GATE 3 · 装备定制
+		11 heading 准备把方案带进游戏。, Value: 1, ID: heading
+			73 text 准备把方案带进游戏。
+		13 text 修改现有装备，或以原生资源创建一件新装备。
+		14 content list 制作进度
+			15 container step1
+				16 text 01 选择与调整
+			17 container step2
+				18 text 02 核对与确认
+			19 container step3
+				20 text 03 制作与下载
+		74 text 修改已保存。
+		22 container Description: 制作工作区, ID: workspace
+			75 container
+				76 text DELIVERY
+				77 heading 制作完成，可以下载, Value: 2
+					78 text 制作完成，可以下载
+				79 text 程序检查结果与游戏表现分别记录。
+				80 definition list
+					81 container 文件生成
+						82 text 文件生成
+					83 text 通过
+					84 container 格式转换
+						85 text 格式转换
+					86 text 通过
+					87 container 打包
+						88 text 打包
+					89 text 通过
+					90 container 解包核对
+						91 text 解包核对
+					92 text 通过
+					93 container 游戏验证
+						94 text 游戏验证
+					95 text 未进行
+				96 link Description: 下载 Mod ZIP, Value: 127.0.0.1:8767/api/v11/tasks/3255d278-56de-4c07-b3ad-2a179ab008f0/download
+				97 button 返回方案, ID: back-edit
+			98 container
+				99 button (expanded) 安装、获取与卸载说明, Secondary Actions: Collapse
+					100 text 安装、获取与卸载说明
+				101 text Mod-Superman 1.1 本地程序验收产物
+退出游戏后将 PAK 放入游戏 Mods 目录，使用现有安装流程启用；本工具不自动安装。
+当前产物已做格式转换、打包和解包检查；游戏内效果未测试。
+不要同时启用修改相同 Stats 或 TreasureTable 的测试包。
+卸载：停用本包，重启游戏并加载启用前的备份存档。
+模式：create_new
+方案摘要：641f08df9b3acec712d04329de1a9df446d0716d840302200bee7ca5a3bcb683
+获取入口：第一章翠绿林地达蒙；必须仍存活且可访问。
+旧库存刷新及是否需要新档尚未验证，不保证旧存档立即出现。
+获取表：DEN_Weaponsmith_Trade
+基础装备：地脉迷城之王的匕首
+资源及依赖：详见修改清单.json；复用原生资源，不安装运行时脚本。
+反馈中报告生效不等于独立游戏验证。
+			102 container
+				103 heading 后续体验反馈, Value: 2
+					104 text 后续体验反馈
+				105 container feedback
+					106 text 使用结果
+					107 pop up button (collapsed, settable) 使用结果, Value: 遇到问题, ID: outcome, Secondary Actions: Expand
+						108 menu
+							109 (selected) 遇到问题
+							110 报告已生效
+					111 text 发生环节
+					112 pop up button (collapsed, settable) 发生环节, Value: 游戏效果, ID: stage, Secondary Actions: Expand
+						113 menu
+							114 (selected) 游戏效果
+							115 安装
+							116 下载
+					117 text 游戏版本（选填）
+					118 text field (settable) 游戏版本（选填）, ID: game-version
+					119 text 情况说明
+					120 text entry area (settable) 情况说明, ID: feedback-detail
+					121 button 提交反馈
+					122 text 反馈仅记录用户报告，不改变游戏验证状态。
+		23 container
+			24 button (expanded) 制作须知, Secondary Actions: Collapse
+				25 text 制作须知
+			26 text 模型解析你的需求，程序校验并生成文件。未知能力会保留为待处理问题。 确认后才开始制作；修改方案后需要重新确认。 使用已有美术资源。网页为方案示意，不代表游戏内实际外观。 游戏实测尚未进行 请备份存档。打包成功、用户报告与游戏验证分别记录。
+		72 container aside-state
+			123 text 当前：地脉迷城之王的匕首
+			124 text 创建新装备 · 修订 3
+			125 text 方案已通过程序检查
+		27 text 原生资源 · 独立副本 · 每一步可核对
+
+The focused UI element is 11 heading 准备把方案带进游戏。, Value: 1, ID: heading

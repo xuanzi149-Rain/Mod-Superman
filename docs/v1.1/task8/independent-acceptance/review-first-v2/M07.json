@@ -1,0 +1,343 @@
+{
+  "case_id": "M07",
+  "source": "build\\v1.1\\task8\\independent-20261017-130917",
+  "model": "qwen3.7-plus",
+  "result": {
+    "adopted": [
+      "e_f4e9e890c5895e4ab149ca0f2bda0dad:name",
+      "e_f4e9e890c5895e4ab149ca0f2bda0dad:description",
+      "e_61e681c74d99522ca0e3b5f78fa12d85:description"
+    ],
+    "pending": [],
+    "state": "ready"
+  },
+  "status": "protocol_adoption_compile_passed_semantic_read_required",
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "independent_status",
+        "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+        "base_status": "LONGSTRIDER",
+        "display": {
+          "name": "独立状态",
+          "description": "获得 +2 护甲加值，持续 3 回合。"
+        },
+        "duration_turns": 3,
+        "stacking": "replace",
+        "ability": "Strength",
+        "bonuses": [
+          {
+            "kind": "bonus",
+            "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad_bonus_0",
+            "bonus": "armor_class",
+            "amount": 2,
+            "selector": null,
+            "display": {
+              "name": null,
+              "description": null
+            }
+          }
+        ],
+        "amount": 0
+      },
+      {
+        "kind": "trigger",
+        "id": "e_61e681c74d99522ca0e3b5f78fa12d85",
+        "event": "on_damaged",
+        "condition": "always",
+        "target": "self",
+        "action": "status",
+        "dice": null,
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+        "duration_turns": 3,
+        "display": {
+          "name": null,
+          "description": "受到伤害时，自身获得一个持续 3 回合的状态，该状态提供 +2 护甲加值。"
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "log": [
+    {
+      "task": "review",
+      "context": {
+        "request": {
+          "request_id": "8795b577-d9e4-4cdf-b6e6-3c243abdf7ae",
+          "base_revision": 1,
+          "context_digest": "6cf3f0ec4f15a8e006cd014ac37100e42ecf24b62c70a6b2ba7fa6ee6adb158f"
+        },
+        "resource_digest": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+        "plan_digest": "583342909a87f62ec5807c67ea1cc184935fb66f71e9e9a3cd30b32f8a935678",
+        "facts_digest": "c185ac35a4bfacaa2edf9dff0103669bdfdc68441f613a1d88ea04056883ffe2",
+        "facts": [
+          {
+            "id": "equipment",
+            "owner": "equipment",
+            "dimensions": {
+              "mode": "modify_existing",
+              "parameters": {
+                "weapon_properties": {
+                  "original": [],
+                  "current": [],
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "dexterity_rule": {
+                  "original": "capped_2",
+                  "current": "capped_2",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "versatile_damage": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "weight_kg": {
+                  "original": 9.0,
+                  "current": 9.0,
+                  "unit": "kg",
+                  "source": "effective_native_fields"
+                },
+                "rarity": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "armor_class": {
+                  "original": 14,
+                  "current": 14,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "enchantment": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "value": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage_type": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                }
+              },
+              "inherited_fields": {
+                "Level": "1",
+                "Slot": "Breast",
+                "UseCosts": "ActionPoint:1",
+                "ValueLevel": "5",
+                "ValueUUID": "9495e96a-7e7c-4e3a-8d81-51611908908c",
+                "ValueScale": "1",
+                "ValueRounding": "1",
+                "Weight": "9",
+                "ComboCategory": "DyableArmor",
+                "InventoryTab": "Equipment",
+                "ArmorType": "BreastPlate",
+                "Shield": "No",
+                "Armor Class Ability": "Dexterity",
+                "RootTemplate": "4814825e-23ee-41ed-9784-d9963434150d",
+                "ArmorClass": "14",
+                "MinAmount": "1",
+                "MaxAmount": "1",
+                "Priority": "1",
+                "MinLevel": "5",
+                "Ability Modifier Cap": "2",
+                "Proficiency Group": "MediumArmor"
+              },
+              "removed_original_passives": [],
+              "inherited_dependencies": {},
+              "acquisition": null,
+              "template_behavior": "reject_special"
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_f4e9e890c5895e4ab149ca0f2bda0dad",
+            "owner": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+            "dimensions": {
+              "kind": "independent_status",
+              "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+              "base_status": "LONGSTRIDER",
+              "duration_turns": 3,
+              "stacking": "replace",
+              "bonuses": [
+                {
+                  "kind": "bonus",
+                  "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad_bonus_0",
+                  "bonus": "armor_class",
+                  "amount": 2,
+                  "selector": null,
+                  "display": {
+                    "name": null,
+                    "description": null
+                  }
+                }
+              ]
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_61e681c74d99522ca0e3b5f78fa12d85",
+            "owner": "e_61e681c74d99522ca0e3b5f78fa12d85",
+            "dimensions": {
+              "kind": "trigger",
+              "id": "e_61e681c74d99522ca0e3b5f78fa12d85",
+              "event": "on_damaged",
+              "condition": "always",
+              "target": "self",
+              "action": "status",
+              "dice": null,
+              "damage_type": null,
+              "status_ref": null,
+              "status_draft_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+              "duration_turns": 3
+            },
+            "missing": []
+          },
+          {
+            "id": "compiled_dependencies",
+            "owner": "equipment",
+            "dimensions": {
+              "final_native_records": {
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/StatusData.txt": "new entry \"MS_b4774379e8cc59d0ae7907999851608c\"\ntype \"StatusData\"\ndata \"Icon\" \"Spell_Transmutation_Longstrider\"\ndata \"SoundLoop\" \"Spell_Status_Longstrider_MO\"\ndata \"SoundStop\" \"Spell_Status_Longstrider_MO_Stop\"\ndata \"StatusEffect\" \"e14337a2-55b0-495a-8294-02f7de8d0209\"\ndata \"StatusType\" \"BOOST\"\ndata \"StackId\" \"MS_b4774379e8cc59d0ae7907999851608c\"\ndata \"StackType\" \"Overwrite\"\ndata \"Boosts\" \"Ability(Strength,0);AC(2)\"\ndata \"DisplayName\" \"h52b174acg7a90g503bga998g635074086adf;1\"\ndata \"Description\" \"h208b0142g71a9g5198gb8feg811cab675f9c;1\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/PassiveData.txt": "new entry \"MS_23fa92a6caeb526b90ed8945719598d2\"\ntype \"PassiveData\"\ndata \"StatsFunctorContext\" \"OnDamaged\"\ndata \"Conditions\" \"\"\ndata \"StatsFunctors\" \"ApplyStatus(SELF,MS_b4774379e8cc59d0ae7907999851608c,100,3)\"\ndata \"DisplayName\" \"h06634453g4e53g5fbegb669g4adcbbf25d51;1\"\ndata \"Description\" \"hca66e519gcc9ag5a1bg9ceeg31f891d4eb96;1\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/Armor.txt": "new entry \"ARM_Breastplate_Body\"\ntype \"Armor\"\nusing \"ARM_Breastplate_Body\"\ndata \"PassivesOnEquip\" \"MS_23fa92a6caeb526b90ed8945719598d2\"\n\n"
+              }
+            },
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad:name",
+            "owner": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+            "field": "name",
+            "mode": "exact",
+            "source_text": "独立状态",
+            "source_text_digest": "0705a028e536d138727a7238970dc015991e0be23e1c8883cc78d5ee2a3d3828",
+            "style": null,
+            "required_fact_ids": [
+              "effect_e_f4e9e890c5895e4ab149ca0f2bda0dad",
+              "compiled_dependencies"
+            ]
+          },
+          {
+            "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad:description",
+            "owner": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_f4e9e890c5895e4ab149ca0f2bda0dad",
+              "compiled_dependencies"
+            ]
+          },
+          {
+            "id": "e_61e681c74d99522ca0e3b5f78fa12d85:description",
+            "owner": "e_61e681c74d99522ca0e3b5f78fa12d85",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_61e681c74d99522ca0e3b5f78fa12d85",
+              "compiled_dependencies"
+            ]
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "review-v1",
+        "request_id": "8795b577-d9e4-4cdf-b6e6-3c243abdf7ae",
+        "base_revision": 1,
+        "context_digest": "6cf3f0ec4f15a8e006cd014ac37100e42ecf24b62c70a6b2ba7fa6ee6adb158f",
+        "plan_digest": "583342909a87f62ec5807c67ea1cc184935fb66f71e9e9a3cd30b32f8a935678",
+        "items": [
+          {
+            "text_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad:name",
+            "source_text_digest": "0705a028e536d138727a7238970dc015991e0be23e1c8883cc78d5ee2a3d3828",
+            "source_status": "consistent",
+            "findings": [],
+            "proposed_text": null,
+            "proposal_status": "not_requested",
+            "proposal_findings": []
+          },
+          {
+            "text_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "获得 +2 护甲加值，持续 3 回合。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          },
+          {
+            "text_id": "e_61e681c74d99522ca0e3b5f78fa12d85:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "受到伤害时，自身获得一个持续 3 回合的状态，该状态提供 +2 护甲加值。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 5016,
+        "total_tokens": 5641,
+        "completion_tokens": 625,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "text_tokens": 5016
+        }
+      }
+    }
+  ]
+}

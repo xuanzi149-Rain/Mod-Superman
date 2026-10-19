@@ -1,0 +1,347 @@
+{
+  "case_id": "E01",
+  "task": "parse",
+  "source": "synthetic_development_replay",
+  "prompt_version": "task8-v1",
+  "context": {
+    "request": {
+      "request_id": "demo_p1_1",
+      "base_revision": 3,
+      "context_digest": "ctx_p1_1"
+    },
+    "selection": {
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+      "inheritance_strategy": null
+    },
+    "current_plan": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+      "user_goal": "合成案例，非玩家记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {},
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "effective_values": {
+      "weight_kg": {
+        "original": 2,
+        "current": 1,
+        "unit": "kg",
+        "source": "fixture"
+      }
+    },
+    "capabilities": {
+      "version": "B-fixture-2026-10-17",
+      "category_summary": [
+        "parameters",
+        "constant",
+        "bonus",
+        "trigger",
+        "independent_status",
+        "grant_spell",
+        "passive_copy",
+        "display",
+        "resources"
+      ],
+      "candidates": [],
+      "checks": [],
+      "completeness": "relevant_candidates_only"
+    },
+    "intent_state": {
+      "goal": "基础伤害改成 2d6，重量改成 0.5 千克，稀有度改成传奇，其他保持原样。",
+      "clarifications": [],
+      "open_issues": [],
+      "withdrawn": []
+    },
+    "latest_message": {
+      "id": "msg_p1_1",
+      "text": "基础伤害改成 2d6，重量改成 0.5 千克，稀有度改成传奇，其他保持原样。",
+      "answers_issue_ids": []
+    },
+    "recent_history": [],
+    "snapshots": []
+  },
+  "expected_output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_p1_1",
+    "base_revision": 3,
+    "context_digest": "ctx_p1_1",
+    "intent_summary": "建议修改伤害、重量与稀有度，不附加其他效果。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "基础伤害改成 2d6",
+        "meaning": "基础伤害改成 2d6",
+        "operation_ids": [
+          "op1"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r2",
+        "quote": "重量改成 0.5 千克",
+        "meaning": "重量改成 0.5 千克",
+        "operation_ids": [
+          "op2"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r3",
+        "quote": "稀有度改成传奇",
+        "meaning": "稀有度改成传奇",
+        "operation_ids": [
+          "op3"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "set_parameter",
+        "target": "damage",
+        "payload": {
+          "value": "2d6",
+          "unit": null
+        }
+      },
+      {
+        "id": "op2",
+        "requirement_ids": [
+          "r2"
+        ],
+        "group_id": "g2",
+        "kind": "set_parameter",
+        "target": "weight_kg",
+        "payload": {
+          "value": 0.5,
+          "unit": "kg"
+        }
+      },
+      {
+        "id": "op3",
+        "requirement_ids": [
+          "r3"
+        ],
+        "group_id": "g3",
+        "kind": "set_parameter",
+        "target": "rarity",
+        "payload": {
+          "value": "Legendary",
+          "unit": null
+        }
+      }
+    ],
+    "issues": [],
+    "issue_updates": [],
+    "text_requests": []
+  },
+  "mode": "real_model",
+  "p3_user_judgment": null,
+  "output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_p1_1",
+    "base_revision": 3,
+    "context_digest": "ctx_p1_1",
+    "intent_summary": "建议修改基础伤害为 2d6，重量为 0.5 kg，稀有度为传奇。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "基础伤害改成 2d6",
+        "meaning": "将武器基础伤害骰设置为 2d6",
+        "operation_ids": [
+          "op1"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r2",
+        "quote": "重量改成 0.5 千克",
+        "meaning": "将装备重量设置为 0.5 kg",
+        "operation_ids": [
+          "op2"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r3",
+        "quote": "稀有度改成传奇",
+        "meaning": "将装备稀有度设置为 Legendary",
+        "operation_ids": [
+          "op3"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "set_parameter",
+        "target": "damage",
+        "payload": {
+          "value": "2d6",
+          "unit": null
+        }
+      },
+      {
+        "id": "op2",
+        "requirement_ids": [
+          "r2"
+        ],
+        "group_id": "g2",
+        "kind": "set_parameter",
+        "target": "weight_kg",
+        "payload": {
+          "value": 0.5,
+          "unit": "kg"
+        }
+      },
+      {
+        "id": "op3",
+        "requirement_ids": [
+          "r3"
+        ],
+        "group_id": "g3",
+        "kind": "set_parameter",
+        "target": "rarity",
+        "payload": {
+          "value": "Legendary",
+          "unit": null
+        }
+      }
+    ],
+    "issues": [],
+    "issue_updates": [],
+    "text_requests": []
+  },
+  "usage": {
+    "prompt_tokens": 12301,
+    "total_tokens": 12944,
+    "completion_tokens": 643,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 12301
+    }
+  },
+  "contract": "passed",
+  "projection_equal": true,
+  "status": "matched_reference",
+  "elapsed_ms": 11828,
+  "model": "qwen3.7-plus",
+  "diagnostics": {
+    "trace_id": "ddcf548c-2d51-4448-a2a9-79f6b7969f4e",
+    "thinking": "disabled",
+    "stages": [
+      {
+        "stage": "request_started",
+        "elapsed_ms": 0
+      },
+      {
+        "stage": "provider_configured",
+        "elapsed_ms": 0,
+        "provider": "bailian",
+        "model": "qwen3.7-plus"
+      },
+      {
+        "stage": "network_route",
+        "elapsed_ms": 0,
+        "system_proxy": false
+      },
+      {
+        "stage": "connection.connect_tcp.started",
+        "elapsed_ms": 188
+      },
+      {
+        "stage": "connection.connect_tcp.complete",
+        "elapsed_ms": 359
+      },
+      {
+        "stage": "connection.start_tls.started",
+        "elapsed_ms": 359
+      },
+      {
+        "stage": "connection.start_tls.complete",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.send_request_headers.started",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.send_request_headers.complete",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.send_request_body.started",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.send_request_body.complete",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.receive_response_headers.started",
+        "elapsed_ms": 375
+      },
+      {
+        "stage": "http11.receive_response_headers.complete",
+        "elapsed_ms": 11828
+      },
+      {
+        "stage": "response_headers",
+        "elapsed_ms": 11828,
+        "http_status": 200
+      },
+      {
+        "stage": "first_body_chunk",
+        "elapsed_ms": 11828
+      },
+      {
+        "stage": "body_complete",
+        "elapsed_ms": 11828,
+        "response_bytes": 2529
+      },
+      {
+        "stage": "completed",
+        "elapsed_ms": 11828
+      }
+    ]
+  }
+}

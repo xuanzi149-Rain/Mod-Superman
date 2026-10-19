@@ -58,6 +58,10 @@ class Interpretation(StrictModel):
 
     @model_validator(mode='after')
     def check_result(self):
+        from backend.player_language import safe_text
+        self.questions=[safe_text(v) for v in self.questions]
+        self.unsupported=[safe_text(v) for v in self.unsupported]
+        self.explanation=safe_text(self.explanation)
         fields = [op.field for op in self.operations]
         if len(set(fields)) != len(fields):
             raise ValueError('同字段重复操作，需澄清。')

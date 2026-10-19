@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "source_files_verified": 157,
+  "stats_records": 12256,
+  "honour_changes": 767,
+  "qualified_base_templates": 374,
+  "native_acquisition": {
+    "source": ".tools/v11-assets/characters.lsx",
+    "uuid": "e2ad06ec-8034-479a-9f69-b86faea6dc79",
+    "name": "S_DEN_Weaponsmith",
+    "tables": [
+      "DEN_Weaponsmith_Trade"
+    ],
+    "matched": true
+  },
+  "examples": [
+    {
+      "mode": "modify_existing",
+      "issues": []
+    },
+    {
+      "mode": "create_new",
+      "issues": []
+    }
+  ],
+  "generation_performed": false,
+  "game_validation": "not_performed"
+}

@@ -1,0 +1,14 @@
+new entry "MS_f293255322d35693ae76f2cb90d5b279"
+type "PassiveData"
+data "StatsFunctorContext" "OnAttack"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and IsAttack() and not IsMiss()"
+data "StatsFunctors" "RegainHitPoints(SELF,1d6)"
+data "DisplayName" "he00d75fbgece8g5a94ga15cg3b1cc30c7cf0;1"
+data "Description" "hefea5fe3g337fg562dg852eg9ff5eee765bf;1"
+
+new entry "MS_85667b24b2505642b43f75a7c95d1a04"
+type "PassiveData"
+data "Boosts" "Initiative(9)"
+data "DisplayName" "he14c941ag80bdg5898gbadfg42ad3fa2b2da;1"
+data "Description" "h04dc8a81g9df2g5febga642gea61b55fd8e9;1"
+

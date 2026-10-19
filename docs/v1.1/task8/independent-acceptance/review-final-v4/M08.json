@@ -1,0 +1,256 @@
+{
+  "case_id": "M08",
+  "source": "build\\v1.1\\task8\\independent-20261017-130917",
+  "model": "qwen3.7-plus",
+  "result": {
+    "adopted": [
+      "e_44436eaf287753188db39e944729d092:description"
+    ],
+    "pending": [],
+    "state": "ready"
+  },
+  "status": "protocol_adoption_compile_passed_semantic_read_required",
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "grant_spell",
+        "id": "e_44436eaf287753188db39e944729d092",
+        "base_spell": "Target_HealingWord",
+        "display": {
+          "name": null,
+          "description": "消耗1个动作，恢复目标3d4点生命值。目标必须是21米范围内的活体角色（非亡灵、非构装体）。该技能不消耗法术位，但每次长休后只能使用一次。"
+        },
+        "range_m": 21.0,
+        "area_radius_m": null,
+        "action_cost": "action",
+        "cooldown": "long_rest",
+        "spell_slot": null,
+        "remove_spell_slot": true,
+        "healing": "3d4",
+        "damage": null,
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "log": [
+    {
+      "task": "review",
+      "context": {
+        "request": {
+          "request_id": "3d135c0a-024e-45e9-a485-e49e86166202",
+          "base_revision": 1,
+          "context_digest": "7301616ec96f47289d18b0357f09e56aad2d1784497703a6ded91063bed8de85"
+        },
+        "resource_digest": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+        "plan_digest": "11367c36b1ed538f79d696682ab36e50fe85c6394d5692591152d529e5cfd34c",
+        "facts_digest": "adc881f7d29893277493a15249ae76e72b670d08fec2b5d4f100c7d8aa743a2c",
+        "facts": [
+          {
+            "id": "equipment",
+            "owner": "equipment",
+            "dimensions": {
+              "mode": "modify_existing",
+              "parameters": {
+                "weapon_properties": {
+                  "original": [
+                    "Versatile",
+                    "Melee",
+                    "Dippable"
+                  ],
+                  "current": [
+                    "Versatile",
+                    "Melee",
+                    "Dippable"
+                  ],
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "dexterity_rule": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage": {
+                  "original": "1d8",
+                  "current": "1d8",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "versatile_damage": {
+                  "original": "1d10",
+                  "current": "1d10",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "weight_kg": {
+                  "original": 1.35,
+                  "current": 1.35,
+                  "unit": "kg",
+                  "source": "effective_native_fields"
+                },
+                "rarity": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "armor_class": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "enchantment": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "value": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage_type": {
+                  "original": "Slashing",
+                  "current": "Slashing",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                }
+              },
+              "inherited_fields": {
+                "Level": "1",
+                "UseCosts": "ActionPoint:1",
+                "Damage Type": "Slashing",
+                "Damage": "1d8",
+                "WeaponRange": "150",
+                "ValueLevel": "2",
+                "ValueUUID": "3ae7de83-816a-43e3-a0e1-4d5b78664fc6",
+                "ValueScale": "1",
+                "ValueRounding": "1",
+                "Weight": "1.35",
+                "Slot": "Melee Main Weapon",
+                "PersonalStatusImmunities": "SILENCED;SG_Condition;BLEEDING;BURNING",
+                "InventoryTab": "Equipment",
+                "ItemColor": "DefaultGray",
+                "Weapon Group": "MartialMeleeWeapon",
+                "RootTemplate": "1865323f-b428-4791-a0a9-578841e57463",
+                "BoostsOnEquipMainHand": "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack);",
+                "VersatileDamage": "1d10",
+                "Weapon Properties": "Versatile;Melee;Dippable",
+                "Proficiency Group": "Longswords;MartialWeapons"
+              },
+              "removed_original_passives": [],
+              "inherited_dependencies": {},
+              "acquisition": null,
+              "template_behavior": "reject_special"
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_44436eaf287753188db39e944729d092",
+            "owner": "e_44436eaf287753188db39e944729d092",
+            "dimensions": {
+              "kind": "grant_spell",
+              "id": "e_44436eaf287753188db39e944729d092",
+              "base_spell": "Target_HealingWord",
+              "range_m": 21.0,
+              "area_radius_m": null,
+              "action_cost": "action",
+              "cooldown": "long_rest",
+              "spell_slot": null,
+              "remove_spell_slot": true,
+              "healing": "3d4",
+              "damage": null,
+              "status_duration_turns": null,
+              "display_name": "独立技能"
+            },
+            "missing": []
+          },
+          {
+            "id": "compiled_dependencies",
+            "owner": "equipment",
+            "dimensions": {
+              "final_native_records": {
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/SpellData.txt": "new entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"hd3cc355cg8fccg5e41g813egb5f5c72891de;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"Cooldown\" \"OncePerRest\"\ndata \"DescriptionParams\" \"\"\n\nnew entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2_2\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"ha77cd4afgc242g5fecgbe68g0dd4ff1cd24f;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"RootSpellID\" \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ndata \"PowerLevel\" \"2\"\ndata \"Cooldown\" \"OncePerRest\"\ndata \"DescriptionParams\" \"\"\n\nnew entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2_3\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"h44de29bag516dg5760gb4bagc495b65a7392;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"DescriptionParams\" \"\"\ndata \"RootSpellID\" \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ndata \"PowerLevel\" \"3\"\ndata \"Cooldown\" \"OncePerRest\"\n\nnew entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2_4\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"h9b989b58gee60g588ega6begaac902f7b8b7;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"DescriptionParams\" \"\"\ndata \"RootSpellID\" \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ndata \"PowerLevel\" \"4\"\ndata \"Cooldown\" \"OncePerRest\"\n\nnew entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2_5\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"h65263af5g62d8g5610ga7d8gcdc359b3b83b;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"RootSpellID\" \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ndata \"PowerLevel\" \"5\"\ndata \"Cooldown\" \"OncePerRest\"\ndata \"DescriptionParams\" \"\"\n\nnew entry \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2_6\"\ntype \"SpellData\"\ndata \"SpellType\" \"Target\"\ndata \"Level\" \"1\"\ndata \"SpellSchool\" \"Evocation\"\ndata \"SpellProperties\" \"RegainHitPoints(3d4)\"\ndata \"TargetRadius\" \"21.0\"\ndata \"TargetConditions\" \"Character() and not Dead() and not Tagged('UNDEAD') and not Tagged('CONSTRUCT')\"\ndata \"Icon\" \"Spell_Evocation_HealingWord\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"hb63c9687g3424g50cfgb1d3g6906296c9a58;1\"\ndata \"TooltipDamageList\" \"RegainHitPoints(3d4)\"\ndata \"TooltipUpcastDescription\" \"\"\ndata \"TooltipUpcastDescriptionParams\" \"\"\ndata \"TooltipPermanentWarnings\" \"662e013d-e5cb-4669-9a4b-771636b24aa2\"\ndata \"CastSound\" \"Spell_Cast_Healing_HealingWord_L1to3\"\ndata \"TargetSound\" \"Spell_Impact_Healing_HealingWord_L1to3\"\ndata \"CastTextEvent\" \"Cast\"\ndata \"CycleConditions\" \"Ally() and not Dead()\"\ndata \"UseCosts\" \"ActionPoint:1\"\ndata \"SpellAnimation\" \"414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;2f893fad-98eb-47cf-a524-dd4efd42bc2a,,;ca3147a8-2cf6-45a8-ac9a-1ce0fc11305f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;4156d364-d2c0-4a01-908c-3552f78f434d,,;6f0a29b6-0ae8-4ebf-a1e4-8069c4a6ad16,,\"\ndata \"VerbalIntent\" \"Healing\"\ndata \"SpellFlags\" \"HasVerbalComponent;IsSpell;RangeIgnoreVerticalThreshold\"\ndata \"HitAnimationType\" \"MagicalNonDamage\"\ndata \"MemoryCost\" \"1\"\ndata \"PrepareEffect\" \"96a51ac8-2e7e-4718-bb62-dcfd18964a02\"\ndata \"CastEffect\" \"7a73fa11-81e8-44bc-8653-a0d0ebbecf4b\"\ndata \"TargetEffect\" \"70319a43-6342-4996-811d-dd50df8b3fa1\"\ndata \"RootSpellID\" \"Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2\"\ndata \"PowerLevel\" \"6\"\ndata \"Cooldown\" \"OncePerRest\"\ndata \"DescriptionParams\" \"\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/PassiveData.txt": "new entry \"MS_58b4b0851f335b889dce2d6e4baf5d07\"\ntype \"PassiveData\"\ndata \"Boosts\" \"UnlockSpell(Target_MS_23c18e6dc20f5dd8a06f628a416d4fd2)\"\ndata \"DisplayName\" \"h36329692g7403g5a29g8f84g98a27839e451;1\"\ndata \"Description\" \"hd3cc355cg8fccg5e41g813egb5f5c72891de;1\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/Weapon.txt": "new entry \"WPN_Longsword\"\ntype \"Weapon\"\nusing \"WPN_Longsword\"\ndata \"PassivesOnEquip\" \"MS_58b4b0851f335b889dce2d6e4baf5d07\"\n\n"
+              }
+            },
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "e_44436eaf287753188db39e944729d092:description",
+            "owner": "e_44436eaf287753188db39e944729d092",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_44436eaf287753188db39e944729d092",
+              "compiled_dependencies"
+            ]
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "review-v1",
+        "request_id": "3d135c0a-024e-45e9-a485-e49e86166202",
+        "base_revision": 1,
+        "context_digest": "7301616ec96f47289d18b0357f09e56aad2d1784497703a6ded91063bed8de85",
+        "plan_digest": "11367c36b1ed538f79d696682ab36e50fe85c6394d5692591152d529e5cfd34c",
+        "items": [
+          {
+            "text_id": "e_44436eaf287753188db39e944729d092:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "消耗1个动作，恢复目标3d4点生命值。目标必须是21米范围内的活体角色（非亡灵、非构装体）。该技能不消耗法术位，但每次长休后只能使用一次。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 9495,
+        "total_tokens": 9867,
+        "completion_tokens": 372,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "text_tokens": 9495
+        }
+      }
+    }
+  ]
+}

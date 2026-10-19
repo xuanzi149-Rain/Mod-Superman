@@ -1,0 +1,53 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 28, 30-71, 73-76
+~			8 button 新建方案, ID: new
++			73 text 让装备，符合你的玩法。
++		74 text 部分修改未应用，请处理下方问题。
++			75 container
++				76 heading 轻语匕首, Value: 2
++					77 text 轻语匕首
++				78 text 修改已有装备 · 修订 2 告诉我，你想怎么改？
++				79 text entry area (settable) 告诉我，你想怎么改？, ID: prompt
++				80 button 解析并更新方案, ID: send
++				81 button 切换基础装备／模式, ID: switch-base
++				82 text 只修改展示文字时请明确说明；无法完成的要求会继续保留。
++			83 container issues
++				84 text 待处理要求 1
++				85 text 该原生效果包含尚未核实的机制，当前不能生成。可保留要求并描述想实现的效果。
++				86 button 补充说明
++				87 button 撤回这项要求
++			88 container
++				89 button (expanded) 基础信息与参数, Secondary Actions: Collapse
++					90 text 基础信息与参数
++				91 text 名称：轻语匕首
++				92 button 编辑名称与说明, ID: equipment-text
++				93 text 基础参数沿用原版。
++				94 button 编辑基础参数, ID: parameters
++			95 container
++				96 button (expanded) 独立词条与主动技能（0）, Secondary Actions: Collapse
++					97 text 独立词条与主动技能（0）
++				98 text 尚未新增独立效果。原装备效果仍按继承规则保留。
++				99 pop up button (collapsed, settable) Description: 新增效果类型, Value: 属性加成, ID: effect-kind, Secondary Actions: Expand
++					100 menu
++						101 (selected) 属性加成
++						102 加成类别
++						103 条件触发
++						104 独立状态
++						105 主动技能副本
++						106 独立被动副本
++				107 button 添加效果, ID: add-effect
++			108 button (collapsed) 原生继承与资源设置, Secondary Actions: Expand
++				109 text 原生继承与资源设置
++			110 container
++				111 heading 文案核对, Value: 2
++					112 text 文案核对
++				113 text 当前没有待核对的自定义文字。
++				114 button 核对自定义文案, ID: review
++				115 button 恢复待核对项的标准文字, ID: standard
++			116 button 检查并进入确认, ID: preview
++			117 button 撤销到上个方案, ID: undo
++			118 text 当前：轻语匕首
++			119 text 修改已有装备 · 修订 2
++			120 text 方案仍需调整或核对
+The focused UI element is 1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html

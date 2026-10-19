@@ -208,7 +208,9 @@ def generate(request: dict, output_root: Path = ROOT / "build/generated-mods", *
     manifest.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (directory / "使用说明.txt").write_text(
         "本次修改：\n" + json.dumps(clean, ensure_ascii=False, indent=2) +
-        "\n安装：退出游戏，将本目录的 .pak 复制到游戏 Mods 目录，重启并在游戏内启用。\n"
+        "\n安装：完全退出游戏，将 .pak 文件复制到 %LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\Mods。\n"
+        "可将上述路径粘贴到资源管理器地址栏；不要放入 Steam 安装目录 Data/Mods，也不要复制整个 ZIP。\n"
+        "重启游戏，在主菜单 Mod 管理器的已安装列表中查找 ModSuperman 开头的模块并启用。\n"
         "同一对象的旧测试包或旧生成包请停用，避免覆盖与叠加。重新装备后检查效果。\n"
         "停用：停用本包，完整重启并重新加载原测试档；保留原存档。\n"
         "作用于原记录，不能默认只影响背包的单一实例。名称只覆盖简体中文。\n"

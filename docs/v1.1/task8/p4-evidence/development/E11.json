@@ -1,0 +1,326 @@
+{
+  "case_id": "E11",
+  "task": "parse",
+  "source": "synthetic_development_replay",
+  "prompt_version": "task8-v2",
+  "context": {
+    "request": {
+      "request_id": "demo_status_pair",
+      "base_revision": 3,
+      "context_digest": "ctx_status_pair"
+    },
+    "selection": {
+      "mode": "create_new",
+      "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+      "inheritance_strategy": "retain_base"
+    },
+    "current_plan": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+      "user_goal": "合成案例，非玩家记录",
+      "display": {
+        "name": "示例装备",
+        "description": null
+      },
+      "parameters": {},
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": "dammon_act1",
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "effective_values": {
+      "weight_kg": {
+        "original": 2,
+        "current": 1,
+        "unit": "kg",
+        "source": "fixture"
+      }
+    },
+    "capabilities": {
+      "version": "B-fixture-2026-10-17",
+      "category_summary": [
+        "parameters",
+        "constant",
+        "bonus",
+        "trigger",
+        "independent_status",
+        "grant_spell",
+        "passive_copy",
+        "display",
+        "resources"
+      ],
+      "candidates": [
+        {
+          "id": "LONGSTRIDER",
+          "type": "StatusData",
+          "status_type": "BOOST",
+          "use": "presentation_only",
+          "qualification": "fixture_assumed"
+        }
+      ],
+      "checks": [],
+      "completeness": "relevant_candidates_only"
+    },
+    "intent_state": {
+      "goal": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+      "clarifications": [
+        {
+          "id": "style_base",
+          "answer": "已选基础状态表现 LONGSTRIDER。"
+        }
+      ],
+      "open_issues": [],
+      "withdrawn": []
+    },
+    "latest_message": {
+      "id": "msg_status_pair",
+      "text": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+      "answers_issue_ids": []
+    },
+    "recent_history": [],
+    "snapshots": []
+  },
+  "expected_output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_status_pair",
+    "base_revision": 3,
+    "context_digest": "ctx_status_pair",
+    "intent_summary": "建议新建独立护甲状态并由受伤事件施加，同组校验。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+        "meaning": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+        "operation_ids": [
+          "op1",
+          "op2"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "add_effect",
+        "target": "tmp_status",
+        "payload": {
+          "effect": {
+            "kind": "independent_status",
+            "base_status": "LONGSTRIDER",
+            "duration_turns": 2,
+            "stacking": "replace",
+            "bonuses": [
+              {
+                "kind": "bonus",
+                "bonus": "armor_class",
+                "amount": 1,
+                "selector": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "op2",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "add_effect",
+        "target": "tmp_trigger",
+        "payload": {
+          "effect": {
+            "kind": "trigger",
+            "event": "on_damaged",
+            "condition": "always",
+            "target": "self",
+            "action": "status",
+            "status_draft_id": "tmp_status",
+            "duration_turns": 2
+          }
+        }
+      }
+    ],
+    "issues": [],
+    "issue_updates": [],
+    "text_requests": []
+  },
+  "mode": "real_model",
+  "p3_user_judgment": null,
+  "output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_status_pair",
+    "base_revision": 3,
+    "context_digest": "ctx_status_pair",
+    "intent_summary": "建议新建独立护甲状态并由受伤事件施加，同组校验。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+        "meaning": "受到伤害后，自己护甲等级增加 1，持续 2 回合，重复触发覆盖，不增加属性。",
+        "operation_ids": [
+          "op1",
+          "op2"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "add_effect",
+        "target": "tmp_status",
+        "payload": {
+          "effect": {
+            "kind": "independent_status",
+            "base_status": "LONGSTRIDER",
+            "duration_turns": 2,
+            "stacking": "replace",
+            "bonuses": [
+              {
+                "kind": "bonus",
+                "bonus": "armor_class",
+                "amount": 1,
+                "selector": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "op2",
+        "requirement_ids": [
+          "r1"
+        ],
+        "group_id": "g1",
+        "kind": "add_effect",
+        "target": "tmp_trigger",
+        "payload": {
+          "effect": {
+            "kind": "trigger",
+            "event": "on_damaged",
+            "condition": "always",
+            "target": "self",
+            "action": "status",
+            "status_draft_id": "tmp_status",
+            "duration_turns": 2
+          }
+        }
+      }
+    ],
+    "issues": [],
+    "issue_updates": [],
+    "text_requests": []
+  },
+  "usage": {
+    "prompt_tokens": 12737,
+    "total_tokens": 13115,
+    "completion_tokens": 378,
+    "prompt_tokens_details": {
+      "cached_tokens": 10880,
+      "text_tokens": 12737
+    }
+  },
+  "contract": "passed",
+  "projection_equal": true,
+  "status": "matched_reference",
+  "elapsed_ms": 6734,
+  "model": "qwen3.7-plus",
+  "diagnostics": {
+    "trace_id": "095aa017-0940-4afe-8c74-638d1154c3fc",
+    "thinking": "disabled",
+    "stages": [
+      {
+        "stage": "request_started",
+        "elapsed_ms": 0
+      },
+      {
+        "stage": "provider_configured",
+        "elapsed_ms": 15,
+        "provider": "bailian",
+        "model": "qwen3.7-plus"
+      },
+      {
+        "stage": "network_route",
+        "elapsed_ms": 15,
+        "system_proxy": false
+      },
+      {
+        "stage": "connection.connect_tcp.started",
+        "elapsed_ms": 15
+      },
+      {
+        "stage": "connection.connect_tcp.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "connection.start_tls.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "connection.start_tls.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_headers.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_headers.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_body.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_body.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.receive_response_headers.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.receive_response_headers.complete",
+        "elapsed_ms": 6719
+      },
+      {
+        "stage": "response_headers",
+        "elapsed_ms": 6719,
+        "http_status": 200
+      },
+      {
+        "stage": "first_body_chunk",
+        "elapsed_ms": 6719
+      },
+      {
+        "stage": "body_complete",
+        "elapsed_ms": 6719,
+        "response_bytes": 1817
+      },
+      {
+        "stage": "completed",
+        "elapsed_ms": 6719
+      }
+    ]
+  }
+}

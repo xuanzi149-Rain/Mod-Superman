@@ -1,0 +1,8 @@
+{
+  "result": "passed",
+  "tests": 152,
+  "elapsed_seconds": 19.1,
+  "log": "build/v1.1/phase-b-tests.log",
+  "log_sha256": "32087627d0d5ab706d21ee80adca90778ef278e9fd85f99eed2f2bf70abde3d0",
+  "game_validation": "not_performed"
+}

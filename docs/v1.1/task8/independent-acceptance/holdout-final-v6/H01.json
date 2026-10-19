@@ -1,0 +1,441 @@
+{
+  "case": {
+    "id": "H01",
+    "fixture": "passive_copy",
+    "mode": "create_new",
+    "text": "做一件新装备，沿用底装参数，把原来的平衡被动做成效果一样的独立副本；旧平衡被动不要再保留，免得算两遍。",
+    "expect": {
+      "effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      },
+      "removed": "ARM_Balance_1_Passive"
+    }
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v6",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [
+      "op_inherit",
+      "op_add_passive",
+      "op_remove_passive"
+    ],
+    "failed": [],
+    "normalizations": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+      "user_goal": "独立被动",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+      "user_goal": "独立被动",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [
+        {
+          "kind": "passive_copy",
+          "id": "e_684ffc5c45d25e3c88847ea72d7469cb",
+          "base_passive": "ARM_Balance_1_Passive",
+          "display": {
+            "name": null,
+            "description": null
+          }
+        }
+      ],
+      "removed_original_passives": [
+        "ARM_Balance_1_Passive"
+      ],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "unresolved": [],
+    "text_review_pending": false
+  },
+  "failures": [],
+  "status": "passed",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "H01",
+          "base_revision": 1,
+          "context_digest": "e5553428c3aef0bd0703d7204a57f0951ab5ec21f0d16bf13636b5a0ff97d043"
+        },
+        "selection": {
+          "mode": "create_new",
+          "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "create_new",
+          "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+          "user_goal": "独立被动",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [],
+            "current": [],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": "capped_2",
+            "current": "capped_2",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 9.0,
+            "current": 9.0,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": "Rare",
+            "current": "Rare",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": 15,
+            "current": 15,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "ARM_Balance_1_Passive",
+              "type": "PassiveData",
+              "effective": {
+                "DisplayName": "hfa195d11gb383g4f2fg9d6ag948e8cdf8bcd;2",
+                "Description": "h459b537egde90g4a50gb159g7948d4baef7c;2",
+                "DescriptionParams": "1",
+                "Boosts": "RollBonus(SavingThrow, 1, Dexterity);RollBonus(RawAbility, 1, Dexterity);RollBonus(SkillCheck, 1, Acrobatics);RollBonus(SkillCheck, 1, SleightOfHand);RollBonus(SkillCheck, 1, Stealth)"
+              },
+              "known_names": [],
+              "equipment_membership": "inherited_original",
+              "dependency_count": 1
+            },
+            {
+              "id": "ARM_SuperiorMaterial_1_Passive",
+              "type": "PassiveData",
+              "effective": {
+                "DisplayName": "hb08d6e6dge3e1g4fd1g81cegc90c18f5a783;2",
+                "Description": "h55624d56g5e10g488cgaaeeg5d15ed233e60;2",
+                "DescriptionParams": "1",
+                "Boosts": "DamageReduction(Slashing, Flat, 1)"
+              },
+              "known_names": [],
+              "equipment_membership": "inherited_original",
+              "dependency_issue": "ARM_SuperiorMaterial_1_Passive:unreviewed_function:DamageReduction"
+            },
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_ad4666fb50bf178e",
+              "result": "template_audit",
+              "details": []
+            },
+            {
+              "id": "check_growth_missing",
+              "result": "capability_gap",
+              "details": "当前原生生成规则仅开放 on_hit/on_heal/on_damaged；未实现击杀计数或永久成长规则，不得近似为固定加成。"
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "独立被动",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "H01",
+          "text": "做一件新装备，沿用底装参数，把原来的平衡被动做成效果一样的独立副本；旧平衡被动不要再保留，免得算两遍。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "H01",
+        "base_revision": 1,
+        "context_digest": "e5553428c3aef0bd0703d7204a57f0951ab5ec21f0d16bf13636b5a0ff97d043",
+        "intent_summary": "创建新装备，继承基础参数。移除原生平衡被动并添加其独立副本。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "做一件新装备，沿用底装参数",
+            "meaning": "创建新装备，继承基础对象参数",
+            "operation_ids": [
+              "op_inherit"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r2",
+            "quote": "把原来的平衡被动做成效果一样的独立副本",
+            "meaning": "添加 ARM_Balance_1_Passive 的独立副本效果",
+            "operation_ids": [
+              "op_add_passive"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r3",
+            "quote": "旧平衡被动不要再保留，免得算两遍",
+            "meaning": "移除原生的 ARM_Balance_1_Passive",
+            "operation_ids": [
+              "op_remove_passive"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op_inherit",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g_inherit",
+            "kind": "set_inheritance_intent",
+            "target": "equipment",
+            "payload": {
+              "strategy": "retain_base"
+            }
+          },
+          {
+            "id": "op_add_passive",
+            "requirement_ids": [
+              "r2"
+            ],
+            "group_id": "g_balance_swap",
+            "kind": "add_effect",
+            "target": "temp_balance_copy",
+            "payload": {
+              "effect": {
+                "kind": "passive_copy",
+                "base_passive": "ARM_Balance_1_Passive"
+              }
+            }
+          },
+          {
+            "id": "op_remove_passive",
+            "requirement_ids": [
+              "r3"
+            ],
+            "group_id": "g_balance_swap",
+            "kind": "remove_original_passive",
+            "target": "ARM_Balance_1_Passive",
+            "payload": {}
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 12890,
+        "total_tokens": 13612,
+        "completion_tokens": 722,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152,
+          "text_tokens": 12890
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 15265,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "passive_copy",
+        "id": "e_684ffc5c45d25e3c88847ea72d7469cb",
+        "base_passive": "ARM_Balance_1_Passive",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [
+      "ARM_Balance_1_Passive"
+    ],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

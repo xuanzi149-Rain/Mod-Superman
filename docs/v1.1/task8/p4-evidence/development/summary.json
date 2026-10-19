@@ -1,0 +1,171 @@
+{
+  "run_id": "baseline-20261017-125637",
+  "mode": "real_model",
+  "model": "qwen3.7-plus",
+  "cases": [
+    {
+      "case_id": "E01",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 8860,
+      "error_code": null
+    },
+    {
+      "case_id": "E02",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 5500,
+      "error_code": null
+    },
+    {
+      "case_id": "E03",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 9250,
+      "error_code": null
+    },
+    {
+      "case_id": "E04",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 5390,
+      "error_code": null
+    },
+    {
+      "case_id": "E05",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4875,
+      "error_code": null
+    },
+    {
+      "case_id": "E06",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4438,
+      "error_code": null
+    },
+    {
+      "case_id": "E07",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 10828,
+      "error_code": null
+    },
+    {
+      "case_id": "E08",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 5859,
+      "error_code": null
+    },
+    {
+      "case_id": "E09",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4282,
+      "error_code": null
+    },
+    {
+      "case_id": "E10",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 8453,
+      "error_code": null
+    },
+    {
+      "case_id": "E11",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 6734,
+      "error_code": null
+    },
+    {
+      "case_id": "E12",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4985,
+      "error_code": null
+    },
+    {
+      "case_id": "E13",
+      "task": "parse",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4578,
+      "error_code": null
+    },
+    {
+      "case_id": "R01",
+      "task": "review",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 4093,
+      "error_code": null
+    },
+    {
+      "case_id": "R02",
+      "task": "review",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 2454,
+      "error_code": null
+    },
+    {
+      "case_id": "R03",
+      "task": "review",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 3515,
+      "error_code": null
+    },
+    {
+      "case_id": "R04",
+      "task": "review",
+      "status": "matched_reference",
+      "contract": "passed",
+      "projection_equal": true,
+      "elapsed_ms": 3578,
+      "error_code": null
+    }
+  ],
+  "count": 17,
+  "p3_status": "decisions_recorded_v2",
+  "note": "Development seed replay; examples may occur in prompt. Not holdout, user research, or game evidence.",
+  "assets": {
+    "prompts\\task8-parse-v2.md": "b7d5e4e7cb672a50edc7edafb16e3cd4b42703213a0d8eee9fc30ccac38dc550",
+    "prompts\\task8-review-v2.md": "eed9eea1b0cbc37498e1a3e58375b0fe53ef78fd2acca7f1867611d777895081",
+    "data\\v1.1\\task8\\parse-output.schema.json": "2cd7e9350178678e717859110ad344aecf598625ff1d89025990ff11552a91e7",
+    "data\\v1.1\\task8\\review-output.schema.json": "6f62aa26822bc8a78914a520898f8d91c8ea4fd62955475bc72e32ecc32f3387",
+    "data\\v1.1\\task8\\prompt-examples.json": "81ac8d5b3a0abab99aaa7eca6db36e2bca4987c0f9e37bbde8ac18ddd90ca99c",
+    "backend\\task8_protocol.py": "aae40cf3437b49d39f16eff783502e4407de766ddd605bb40396d19759a26f74"
+  }
+}

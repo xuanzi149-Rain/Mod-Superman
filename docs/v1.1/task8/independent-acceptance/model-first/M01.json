@@ -1,0 +1,504 @@
+{
+  "case": {
+    "id": "M01",
+    "fixture": "create_weapon",
+    "text": "伤害设为3d4，双手伤害3d6，伤害类型寒冷，附魔等级3，重量2.375千克，稀有度极珍稀，配置价值742。",
+    "expect": {
+      "parameters": {
+        "damage": "3d4",
+        "versatile_damage": "3d6",
+        "damage_type": "Cold",
+        "enchantment": 3,
+        "weight_kg": 2.375,
+        "rarity": "VeryRare",
+        "value": 742
+      }
+    },
+    "mode": "modify_existing"
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v2",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [
+      "op1",
+      "op2",
+      "op3",
+      "op4",
+      "op5",
+      "op6",
+      "op7"
+    ],
+    "failed": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+      "user_goal": "程序验收案例，非玩家使用记录",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": "3d4",
+        "versatile_damage": "3d6",
+        "weight_kg": 2.375,
+        "rarity": "VeryRare",
+        "armor_class": null,
+        "enchantment": 3,
+        "value": 742,
+        "damage_type": "Cold"
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "unresolved": [],
+    "text_review_pending": false
+  },
+  "failures": [],
+  "status": "passed",
+  "mechanical_compile": "passed_fixture_name_not_user_confirmation",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "M01",
+          "base_revision": 1,
+          "context_digest": "742d617cfedf1983b2aa413b91be72dceae88672aa1374f789e9bb99d4c36013"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+          "user_goal": "程序验收案例，非玩家使用记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "current": [
+              "Versatile",
+              "Melee",
+              "Dippable"
+            ],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": "1d8",
+            "current": "1d8",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": "1d10",
+            "current": "1d10",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 1.35,
+            "current": 1.35,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": "Slashing",
+            "current": "Slashing",
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_f99316622202f171",
+              "result": "template_audit",
+              "details": []
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "程序验收案例，非玩家使用记录",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "M01",
+          "text": "伤害设为3d4，双手伤害3d6，伤害类型寒冷，附魔等级3，重量2.375千克，稀有度极珍稀，配置价值742。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "M01",
+        "base_revision": 1,
+        "context_digest": "742d617cfedf1983b2aa413b91be72dceae88672aa1374f789e9bb99d4c36013",
+        "intent_summary": "修改基础伤害、双手伤害、伤害类型、附魔等级、重量、稀有度及价值。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "伤害设为3d4",
+            "meaning": "设置基础伤害为3d4",
+            "operation_ids": [
+              "op1"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r2",
+            "quote": "双手伤害3d6",
+            "meaning": "设置双手模式伤害为3d6",
+            "operation_ids": [
+              "op2"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r3",
+            "quote": "伤害类型寒冷",
+            "meaning": "设置伤害类型为Cold",
+            "operation_ids": [
+              "op3"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r4",
+            "quote": "附魔等级3",
+            "meaning": "设置附魔等级为3",
+            "operation_ids": [
+              "op4"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r5",
+            "quote": "重量2.375千克",
+            "meaning": "设置重量为2.375kg",
+            "operation_ids": [
+              "op5"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r6",
+            "quote": "稀有度极珍稀",
+            "meaning": "设置稀有度为VeryRare",
+            "operation_ids": [
+              "op6"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r7",
+            "quote": "配置价值742",
+            "meaning": "设置装备价值为742",
+            "operation_ids": [
+              "op7"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g1",
+            "kind": "set_parameter",
+            "target": "damage",
+            "payload": {
+              "value": "3d4",
+              "unit": null
+            }
+          },
+          {
+            "id": "op2",
+            "requirement_ids": [
+              "r2"
+            ],
+            "group_id": "g2",
+            "kind": "set_parameter",
+            "target": "versatile_damage",
+            "payload": {
+              "value": "3d6",
+              "unit": null
+            }
+          },
+          {
+            "id": "op3",
+            "requirement_ids": [
+              "r3"
+            ],
+            "group_id": "g3",
+            "kind": "set_parameter",
+            "target": "damage_type",
+            "payload": {
+              "value": "Cold",
+              "unit": null
+            }
+          },
+          {
+            "id": "op4",
+            "requirement_ids": [
+              "r4"
+            ],
+            "group_id": "g4",
+            "kind": "set_parameter",
+            "target": "enchantment",
+            "payload": {
+              "value": 3,
+              "unit": null
+            }
+          },
+          {
+            "id": "op5",
+            "requirement_ids": [
+              "r5"
+            ],
+            "group_id": "g5",
+            "kind": "set_parameter",
+            "target": "weight_kg",
+            "payload": {
+              "value": 2.375,
+              "unit": "kg"
+            }
+          },
+          {
+            "id": "op6",
+            "requirement_ids": [
+              "r6"
+            ],
+            "group_id": "g6",
+            "kind": "set_parameter",
+            "target": "rarity",
+            "payload": {
+              "value": "VeryRare",
+              "unit": null
+            }
+          },
+          {
+            "id": "op7",
+            "requirement_ids": [
+              "r7"
+            ],
+            "group_id": "g7",
+            "kind": "set_parameter",
+            "target": "value",
+            "payload": {
+              "value": 742,
+              "unit": null
+            }
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 12317,
+        "total_tokens": 13681,
+        "completion_tokens": 1364,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 12317
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 25610,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": "3d4",
+      "versatile_damage": "3d6",
+      "weight_kg": 2.375,
+      "rarity": "VeryRare",
+      "armor_class": null,
+      "enchantment": 3,
+      "value": 742,
+      "damage_type": "Cold"
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

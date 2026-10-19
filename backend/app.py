@@ -8,6 +8,8 @@ import logging
 from contextlib import asynccontextmanager
 from collections import defaultdict, deque
 from typing import Any
+from typing import Literal
+from threading import RLock
 
 from fastapi import FastAPI, Query, Request
 from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
@@ -62,7 +64,21 @@ class Feedback(StrictModel):
     detail: str = Field(default='', max_length=2000)
 
 
-def create_app(service=None, model=None):
+class CraftCreate(StrictModel):
+    mode: Literal['modify_existing', 'create_new']
+    base_equipment: str = Field(max_length=150)
+    inheritance: Literal['retain_base', 'reconfigure'] | None = None
+    acquisition: str | None = Field(default=None, max_length=150)
+    goal: str = Field(default='装备定制', min_length=1, max_length=2000)
+
+
+class CraftAction(StrictModel):
+    revision: int = Field(ge=1)
+    request_id: str = Field(min_length=1, max_length=100)
+    data: dict[str, Any] = Field(default_factory=dict)
+
+
+def create_app(service=None, model=None, craft_model=None):
     service = service or EquipmentService()
     jobs = Jobs(service)
     async def maintenance():
@@ -94,6 +110,61 @@ def create_app(service=None, model=None):
     app.state.service = service
     ai = AIService(service, model)
     app.state.ai = ai
+    craft_lock = RLock()
+    app.state.craft = None
+
+    def craft():
+        with craft_lock:
+            if app.state.craft is None:
+                from backend.workflow_v11 import CraftService
+                app.state.craft = CraftService(service, jobs, craft_model)
+            return app.state.craft
+
+    @app.get('/api/v11/catalog')
+    def craft_catalog(kind: str = 'equipment', search: str = '', offset: int = Query(0, ge=0), limit: int = Query(30, ge=1, le=100), mode: Literal['modify_existing', 'create_new'] | None = None):
+        return craft().candidates(kind, search, offset, limit, mode=mode)
+
+    @app.get('/api/v11/schema')
+    def craft_schema():
+        from backend.crafting_v11 import Plan
+        from backend.task8_protocol import schema
+        return {'plan': Plan.model_json_schema(), 'operations': schema('parse')}
+
+    @app.get('/api/v11/history')
+    def craft_history(request: Request):
+        return craft().history(request.state.visitor)
+
+    @app.post('/api/v11/sessions', status_code=201)
+    def craft_create(body: CraftCreate, request: Request):
+        return craft().create(body.model_dump(), request.state.visitor)
+
+    @app.get('/api/v11/sessions/{identifier}')
+    def craft_read(identifier: str):
+        return craft().view(identifier)
+
+    @app.post('/api/v11/sessions/{identifier}/{action}')
+    def craft_action(identifier: str, action: str, body: CraftAction, request: Request):
+        return craft().action(identifier, action, body.model_dump(), request.state.visitor)
+
+    @app.get('/api/v11/tasks/{identifier}')
+    def craft_task(identifier: str):
+        return craft().task(identifier)
+
+    @app.get('/api/v11/tasks/{identifier}/download')
+    def craft_download(identifier: str):
+        path = craft().download(identifier)
+        return FileResponse(path, media_type='application/zip', filename=path.name)
+
+    @app.post('/api/v11/tasks/{identifier}/feedback')
+    def craft_feedback(identifier: str, body: Feedback):
+        task = craft().task(identifier)
+        if body.outcome == 'success' and task['status'] != 'succeeded':
+            raise ServiceError('feedback_not_ready', '制作尚未成功，不能报告成功使用。', 409)
+        if body.outcome == 'problem' and not body.detail.strip():
+            raise ServiceError('feedback_detail_required', '请描述遇到的问题。', 422)
+        if not service.store.feedback(identifier, body.model_dump()):
+            raise ServiceError('feedback_conflict', '同一反馈编号不能提交不同内容。', 409)
+        return {'status':'recorded','evidence':'user_report','game_validation':'not_performed'}
 
     @app.post('/api/ai/sessions', status_code=201)
     def create_session(body: SessionCreate, request: Request):
@@ -135,6 +206,8 @@ def create_app(service=None, model=None):
                 kind, identifier = 'ai_sessions', parts[3]
             elif len(parts) >= 3 and parts[1] == 'plans':
                 kind, identifier = 'plans', parts[2]
+            elif len(parts) >= 4 and parts[1] == 'v11' and parts[2] in ('sessions', 'tasks'):
+                kind, identifier = 'v11_' + parts[2], parts[3]
             if kind and not service.store.allowed(kind, identifier, token):
                 return denied(404, 'record_unavailable', '记录不存在或不属于当前浏览器。')
             if request.method == 'POST':
@@ -142,11 +215,11 @@ def create_app(service=None, model=None):
                 if origin and origin.rstrip('/') != str(request.base_url).rstrip('/'):
                     return denied(403, 'origin_rejected', '请从本站页面提交。')
                 payload = await request.body()
-                if len(payload) > 24000:
+                if len(payload) > (64000 if path.startswith('/api/v11/') else 24000):
                     return denied(413, 'body_too_large', '请求内容过长。')
                 # IP limits prevent rotating cookies from bypassing model/cost limits.
                 identity = request.client.host if request.client else 'unknown'
-                bucket = 'model' if path.endswith('/messages') else 'write'
+                bucket = 'model' if path.endswith(('/messages', '/message', '/review')) else 'write'
                 key = (identity, bucket)
                 stamp = time.monotonic()
                 queue = limits[key]

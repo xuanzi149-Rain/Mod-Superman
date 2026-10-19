@@ -135,16 +135,12 @@ class ModelClient:
         record('provider_configured', provider=selected['provider'], model=selected['model'])
         if not selected['api_key']:
             raise ServiceError('model_not_configured', '服务端未配置'+selected['key_name']+'；可以手动填写参数。', 503)
-        prompt = (ROOT / 'prompts' / (PROMPT_VERSION + '.md')).read_text(encoding='utf-8')
         use_proxy = selected['use_proxy']
         record('network_route', system_proxy=use_proxy)
         try:
             with httpx.Client(timeout=httpx.Timeout(60, connect=10), transport=self.transport,
                               trust_env=use_proxy) as client:
-                payload = {'model': selected['model'], 'stream': False, 'max_tokens': 2500,
-                          'response_format': {'type': 'json_object'},
-                          'messages': [{'role': 'system', 'content': prompt + '\nJSON Schema:\n' + json.dumps(Interpretation.model_json_schema(), ensure_ascii=False)},
-                                       {'role': 'user', 'content': json.dumps(context, ensure_ascii=False)}]}
+                payload = self.payload(context, selected)
                 if selected['provider'] == 'bailian':
                     payload['enable_thinking'] = False
                 else:
@@ -197,6 +193,14 @@ class ModelClient:
             raise ServiceError('model_network_failed', '无法连接模型服务；草稿未改变，可重试或手动填写。', 502) from None
         except (ValueError, KeyError, IndexError, TypeError, AttributeError):
             raise ServiceError('model_invalid_output', '模型响应格式无效；草稿未改变，可重试。', 502) from None
+
+    def payload(self, context, selected):
+        from backend.player_language import policy
+        prompt = (ROOT / 'prompts' / (PROMPT_VERSION + '.md')).read_text(encoding='utf-8')+'\n'+policy()
+        return {'model': selected['model'], 'stream': False, 'max_tokens': 2500,
+                'response_format': {'type': 'json_object'},
+                'messages': [{'role': 'system', 'content': prompt + '\nJSON Schema:\n' + json.dumps(Interpretation.model_json_schema(), ensure_ascii=False)},
+                             {'role': 'user', 'content': json.dumps(context, ensure_ascii=False)}]}
 
     @staticmethod
     def http_error(status, provider='deepseek'):

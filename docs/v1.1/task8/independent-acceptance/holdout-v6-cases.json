@@ -1,0 +1,4 @@
+[
+  {"id":"H01","fixture":"passive_copy","mode":"create_new","text":"做一件新装备，沿用底装参数，把原来的平衡被动做成效果一样的独立副本；旧平衡被动不要再保留，免得算两遍。","expect":{"effect":{"kind":"passive_copy","base_passive":"ARM_Balance_1_Passive"},"removed":"ARM_Balance_1_Passive"}},
+  {"id":"H02","fixture":"passive_copy","mode":"modify_existing","text":"这件装备的平衡效果我还要，数值别变。请替换成独立词条，同时去掉原来的平衡。","expect":{"effect":{"kind":"passive_copy","base_passive":"ARM_Balance_1_Passive"},"removed":"ARM_Balance_1_Passive"}}
+]

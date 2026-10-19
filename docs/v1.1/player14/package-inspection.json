@@ -1,0 +1,41 @@
+{
+  "packages": [
+    {
+      "task": "25010bd9-cf23-47d9-83c0-c0e0a192073b",
+      "new_equipment": "MS_f3616130da225a4796d7405a41a87344",
+      "new_root_template": "efe89250-3362-5022-83cd-d736b392bc28",
+      "base_record": "MAG_Duergar_Sword_KingsKnife",
+      "pak_sha256": "09c6d3666b49d5ac36531f8e19160ad7e18afc68c984dce8a2287e15fec00303"
+    },
+    {
+      "task": "3255d278-56de-4c07-b3ad-2a179ab008f0",
+      "new_equipment": "MS_4e36576ee6b85da680cd974687294a3d",
+      "new_root_template": "47f44c7c-3705-595b-bcb0-5662e5897183",
+      "base_record": "MAG_Duergar_Sword_KingsKnife",
+      "pak_sha256": "786fcaecc5a2e524ac1788cb327c316899059e9ee827a2c3644b4d1f213c74c4"
+    },
+    {
+      "task": "43d8ea1f-c18d-4b6e-af0c-06d7d2720c85",
+      "new_equipment": "MS_18b77b804f81532c8195c57870026873",
+      "new_root_template": "baac0c9c-3056-54c4-856d-4503ffe0103d",
+      "base_record": "MAG_Duergar_Sword_KingsKnife",
+      "pak_sha256": "296a866722ccfc80ad60fc44171a2a759fab7f3d807c99e0667d9cdaee970fe8"
+    }
+  ],
+  "spell_inspection": [
+    {
+      "task": "3255d278-56de-4c07-b3ad-2a179ab008f0",
+      "spell_ids": [
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca",
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca_2",
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca_3",
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca_4",
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca_5",
+        "Target_MS_11a30d6a9dd25ee6a6093dbc66c87dca_6"
+      ],
+      "healing_2d4": true,
+      "does_not_override_original_spell": true,
+      "source_sha256": "bc9066be393c2dc28dcedb279ff0e9023c1b009db0c02168832ee507655d9064"
+    }
+  ]
+}

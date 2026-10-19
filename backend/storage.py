@@ -48,7 +48,7 @@ class Store:
         if kind == 'plans':
             self.event(f'plan:{identifier}:{payload["status"]}', payload.get('ai_session'), identifier,
                        'generation' if payload['status'] != 'preview' else 'preview', payload['status'])
-        else:
+        elif kind == 'ai_sessions':
             for item in payload.get('history', []):
                 self.event(f'ai:{identifier}:{item["request_id"]}', identifier, None,
                            item.get('kind', 'parse'), 'failed' if item.get('error') else 'succeeded', item)

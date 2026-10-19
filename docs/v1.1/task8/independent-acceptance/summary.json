@@ -1,0 +1,155 @@
+{
+  "final_status": "passed_local_task8_acceptance_with_harness_correction_rechecked",
+  "date": "2026-10-17",
+  "prompt_version": "task8-v6",
+  "model": "qwen3.7-plus",
+  "endpoint": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "scope": "Task8 module capability acceptance only; no task9/10, website integration, D holdout set, external users or game testing",
+  "model_runs": [
+    {
+      "path": "model-first",
+      "version": "v2",
+      "cases": 24,
+      "passed_raw": 20,
+      "failed_raw": 4,
+      "assessment": "M02/C09 harness false failures; M06/L03 actual protocol failures; retained original results"
+    },
+    {
+      "path": "model-regression-v3",
+      "version": "v3",
+      "cases": 24,
+      "passed": 24,
+      "role": "regression_after_repairs_not_independent_first_run"
+    },
+    {
+      "path": "fresh-first-v4",
+      "version": "v4",
+      "cases": 8,
+      "passed": 7,
+      "failed": [
+        "F06"
+      ],
+      "role": "fresh_first_run_then_used_for_repair"
+    },
+    {
+      "path": "fresh-regression-v5",
+      "version": "v5",
+      "cases": 8,
+      "passed": 7,
+      "failed": [
+        "F06"
+      ],
+      "role": "regression_new_prompt_operation_type_failure_retained"
+    },
+    {
+      "path": "passive-regression-v6",
+      "version": "v6",
+      "cases": 1,
+      "passed": 1,
+      "role": "F06_repaired_regression"
+    },
+    {
+      "path": "holdout-final-v6",
+      "version": "v6",
+      "cases": 2,
+      "passed": 2,
+      "role": "fresh_replacement_first_run_after_v6_frozen"
+    },
+    {
+      "path": "p4-regression-v4",
+      "version": "v4",
+      "cases": 4,
+      "passed": 4,
+      "role": "prior_P4_regression"
+    }
+  ],
+  "text_review": {
+    "cases": 6,
+    "families": [
+      "constant",
+      "bonus",
+      "trigger",
+      "independent_status",
+      "grant_spell",
+      "passive_copy"
+    ],
+    "passed_final_pipeline": 6,
+    "semantic_review": "semantic-review.json",
+    "reviewer": "assistant_not_user",
+    "raw_paths": [
+      "review-first-v2",
+      "review-intermediate-v3",
+      "review-final-v4",
+      "review-instant-v4"
+    ],
+    "version_note": "v5/v6 review prompt byte-identical to v4; no new model-review run claimed"
+  },
+  "packaging": {
+    "B_fixtures": 13,
+    "first_passed": 12,
+    "rechecked_passive_passed": 1,
+    "review_actor": "mock_review_automated_fixture",
+    "paths": [
+      "pack-first",
+      "pack-passive-recheck"
+    ],
+    "additional_pure_bonus_status": "final-status-pack.json",
+    "additional_review_actor": "recorded_real_v4_response_replayed_same_fact_digest"
+  },
+  "program_checks": {
+    "earlier_full": {
+      "tests": 197,
+      "passed": 197,
+      "path": "independent-final-regression.log"
+    },
+    "v4_affected": {
+      "tests": 95,
+      "passed": 95,
+      "path": "final-v4-affected-regression.log"
+    },
+    "v6_focused": {
+      "tests": 3,
+      "passed": 3,
+      "path": "final-v6-focused.log"
+    },
+    "final_full": {
+      "tests": 198,
+      "passed_initial": 197,
+      "failed_initial": 1,
+      "elapsed_seconds": 413.858,
+      "path": "final-v5-full-regression.log",
+      "failure": "test_native_passive_context_distinguishes_inherited_removed_and_added: harness mutated a defensive copy; fixed to use Draft/operation API",
+      "recheck": "final-v6-focused.log: corrected context test and two prompt routing/budget tests passed",
+      "version_note": "Full process loaded v5 before v6 prompt-only clarification; v6 prompt checks and live F06/H01/H02 independently passed. No single all-green 198 run claimed."
+    },
+    "conclusion": "All 198 test behaviors have passing evidence across full run and corrected targeted rerun; no outstanding product failure."
+  },
+  "assets_sha256": {
+    "backend/task8.py": "781156cf945598a69274927a293525226f709f258872b31bec2bcded40ce5780",
+    "backend/task8_protocol.py": "65c8fc74d55dd253c3930e6d234f35dccd8fbc5be09a7ae63249105820885d7a",
+    "backend/text_review_v11.py": "4a7b7ed3acebac3722f8ef445885b6e073079477b7c2b904a4d646fa81b278b9",
+    "scripts/crafting_compiler_v11.py": "13f5a5bcad4741930096c5c3a6046ae55568432dc5b02eb1c09c62d162fa121c",
+    "prompts/task8-parse-v6.md": "4226709c5fb7c1834b2f44385ed0ec98814241ec2aa204917d6cc6b19ef51e7a",
+    "prompts/task8-review-v6.md": "41e16dd51148f27b225fe8224a18d7542feea271b51b48e64aea418726f59428",
+    "data/v1.1/task8/parse-output.schema.json": "5889f81d1916c4d10112a4de216c4729864e80c6aa588afc319abafe8fd37779",
+    "data/v1.1/task8/review-output.schema.json": "4c1c71a0724b679f53b8ca736fd6a339449df2709f78fb12c61652a49a935d6b",
+    "data/v1.1/task8/prompt-examples.json": "118982dbf21a6d85b8a854fbd82b3b9df0a8d627dcbb35b1cef35532c01825de",
+    "tests/test_task8_acceptance.py": "4765cd9c8dda4e1c53793df54138c7bd14b665a596dda03973a6dbddc33c4d95"
+  },
+  "boundaries": {
+    "website_integration": "not_started",
+    "task9": "not_started",
+    "task10": "not_started",
+    "game_validation": "not_performed",
+    "external_user_testing": "not_performed",
+    "public_deployment": "not_performed",
+    "statistical_generalization_improvement": "not_claimed",
+    "user_acceptance": "prior_P4_accepted; current_technical_acceptance_executed_by_assistant"
+  },
+  "interpretation": "Coverage is categories/operations/key error paths, not all equipment or combinations. Repaired cases become regression; no pooled independent accuracy metric across versions.",
+  "documentation_checks": {
+    "local_links": "passed",
+    "schema_source_runtime_equivalence": "passed",
+    "git_diff_check": "passed"
+  }
+}

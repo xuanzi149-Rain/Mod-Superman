@@ -1,0 +1,857 @@
+{
+  "modify_existing": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": "测试装备",
+      "description": "测试背景"
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": "2d6",
+      "versatile_damage": null,
+      "weight_kg": 1.25,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": 300,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "constant",
+        "id": "ability",
+        "ability": "Strength",
+        "amount": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "initiative",
+        "bonus": "initiative",
+        "amount": 2,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "movement",
+        "bonus": "movement",
+        "amount": 3,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "skill",
+        "bonus": "skill",
+        "amount": 1,
+        "selector": "Stealth",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "save",
+        "bonus": "saving_throw",
+        "amount": 1,
+        "selector": "Wisdom",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "ac",
+        "bonus": "armor_class",
+        "amount": 1,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "resistance",
+        "bonus": "resistance",
+        "amount": 1,
+        "selector": "Fire",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "independent_status",
+        "id": "status",
+        "base_status": "LONGSTRIDER",
+        "display": {
+          "name": "力量状态",
+          "description": null
+        },
+        "duration_turns": 2,
+        "stacking": "ignore",
+        "ability": "Strength",
+        "bonuses": [],
+        "amount": 1
+      },
+      {
+        "kind": "trigger",
+        "id": "apply",
+        "event": "on_hit",
+        "condition": "target_full_health",
+        "target": "self",
+        "action": "status",
+        "dice": null,
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": "status",
+        "duration_turns": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "trigger",
+        "id": "damage",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "target",
+        "action": "damage",
+        "dice": "1d4",
+        "damage_type": "Fire",
+        "status_ref": null,
+        "status_draft_id": null,
+        "duration_turns": 1,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "trigger",
+        "id": "heal",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "1d4",
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": null,
+        "duration_turns": 1,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "grant_spell",
+        "id": "spell",
+        "base_spell": "Target_HealingWord",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": 24.0,
+        "area_radius_m": null,
+        "action_cost": "action",
+        "cooldown": "short_rest",
+        "spell_slot": null,
+        "remove_spell_slot": true,
+        "healing": "2d4",
+        "damage": null,
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "create_weapon": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": "测试装备",
+      "description": "测试背景"
+    },
+    "parameters": {
+      "weapon_properties": [
+        "Versatile",
+        "Melee",
+        "Dippable",
+        "Finesse"
+      ],
+      "dexterity_rule": null,
+      "damage": "2d6",
+      "versatile_damage": "2d8",
+      "weight_kg": 1.25,
+      "rarity": "Rare",
+      "armor_class": null,
+      "enchantment": 2,
+      "value": 300,
+      "damage_type": "Fire"
+    },
+    "effects": [
+      {
+        "kind": "constant",
+        "id": "ability",
+        "ability": "Strength",
+        "amount": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "initiative",
+        "bonus": "initiative",
+        "amount": 2,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "movement",
+        "bonus": "movement",
+        "amount": 3,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "skill",
+        "bonus": "skill",
+        "amount": 1,
+        "selector": "Stealth",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "save",
+        "bonus": "saving_throw",
+        "amount": 1,
+        "selector": "Wisdom",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "ac",
+        "bonus": "armor_class",
+        "amount": 1,
+        "selector": null,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "resistance",
+        "bonus": "resistance",
+        "amount": 1,
+        "selector": "Fire",
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "independent_status",
+        "id": "status",
+        "base_status": "LONGSTRIDER",
+        "display": {
+          "name": "力量状态",
+          "description": null
+        },
+        "duration_turns": 2,
+        "stacking": "ignore",
+        "ability": "Strength",
+        "bonuses": [],
+        "amount": 1
+      },
+      {
+        "kind": "trigger",
+        "id": "apply",
+        "event": "on_hit",
+        "condition": "target_full_health",
+        "target": "self",
+        "action": "status",
+        "dice": null,
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": "status",
+        "duration_turns": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "trigger",
+        "id": "damage",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "target",
+        "action": "damage",
+        "dice": "1d4",
+        "damage_type": "Fire",
+        "status_ref": null,
+        "status_draft_id": null,
+        "duration_turns": 1,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "trigger",
+        "id": "heal",
+        "event": "on_hit",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "1d4",
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": null,
+        "duration_turns": 1,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      },
+      {
+        "kind": "grant_spell",
+        "id": "spell",
+        "base_spell": "Target_HealingWord",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": 24.0,
+        "area_radius_m": null,
+        "action_cost": "action",
+        "cooldown": "short_rest",
+        "spell_slot": null,
+        "remove_spell_slot": true,
+        "healing": "2d4",
+        "damage": null,
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "create_body_armor": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": "full",
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": "Rare",
+      "armor_class": 18,
+      "enchantment": null,
+      "value": 300,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "trigger",
+        "id": "heal",
+        "event": "on_damaged",
+        "condition": "always",
+        "target": "self",
+        "action": "heal",
+        "dice": "1d4",
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": null,
+        "duration_turns": 1,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "create_shield": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:004ab562-5cd4-4f1f-8aa5-497e7e2c5f4f",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": 3,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "create_ring_with_reviewed_behavior": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:5492c9bb-31a9-4f30-bfd4-935ff97c8eaf",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "preserve_reviewed",
+    "icon": null,
+    "unresolved": []
+  },
+  "armor_appearance_swap": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": "equipment:02ae5d88-8044-43df-8363-02a2900776db",
+    "template_behavior": "reject_special",
+    "icon": "Item_ARM_Breastplate_2",
+    "unresolved": []
+  },
+  "special_gale_template": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "preserve_reviewed",
+    "icon": null,
+    "unresolved": []
+  },
+  "independent_status": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "independent_status",
+        "id": "s",
+        "base_status": "BLESS",
+        "display": {
+          "name": "独立防护状态",
+          "description": null
+        },
+        "duration_turns": 2,
+        "stacking": "additive",
+        "ability": "Strength",
+        "bonuses": [
+          {
+            "kind": "bonus",
+            "id": "ac",
+            "bonus": "armor_class",
+            "amount": 2,
+            "selector": null,
+            "display": {
+              "name": null,
+              "description": null
+            }
+          }
+        ],
+        "amount": 1
+      },
+      {
+        "kind": "trigger",
+        "id": "t",
+        "event": "on_heal",
+        "condition": "always",
+        "target": "self",
+        "action": "status",
+        "dice": null,
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": "s",
+        "duration_turns": 2,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "passive_copy": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "passive_copy",
+        "id": "balance",
+        "base_passive": "ARM_Balance_1_Passive",
+        "display": {
+          "name": "独立平衡",
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [
+      "ARM_Balance_1_Passive"
+    ],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "status_spell_upcasts": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:179c4e2f-a568-40be-b9c6-25c2541aeb12",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "grant_spell",
+        "id": "bless",
+        "base_spell": "Target_Bless",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": null,
+        "area_radius_m": null,
+        "action_cost": null,
+        "cooldown": "long_rest",
+        "spell_slot": {
+          "level": 2,
+          "amount": 1
+        },
+        "remove_spell_slot": false,
+        "healing": null,
+        "damage": null,
+        "status_duration_turns": 3
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "delayed_heal": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:179c4e2f-a568-40be-b9c6-25c2541aeb12",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "grant_spell",
+        "id": "radiance",
+        "base_spell": "Shout_HealingRadiance",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": null,
+        "area_radius_m": 6.0,
+        "action_cost": null,
+        "cooldown": null,
+        "spell_slot": null,
+        "remove_spell_slot": false,
+        "healing": "2d4",
+        "damage": null,
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "damage_spell": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:179c4e2f-a568-40be-b9c6-25c2541aeb12",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "grant_spell",
+        "id": "missile",
+        "base_spell": "Projectile_MagicMissile",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": 24.0,
+        "area_radius_m": null,
+        "action_cost": "bonus_action",
+        "cooldown": "once_per_turn",
+        "spell_slot": null,
+        "remove_spell_slot": true,
+        "healing": null,
+        "damage": "2d4",
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "container_spell": {
+    "schema_version": "1.1-draft-4",
+    "mode": "create_new",
+    "base_equipment": "equipment:179c4e2f-a568-40be-b9c6-25c2541aeb12",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": "独立装备",
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "grant_spell",
+        "id": "orb",
+        "base_spell": "Projectile_ChromaticOrb",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "range_m": 24.0,
+        "area_radius_m": null,
+        "action_cost": null,
+        "cooldown": null,
+        "spell_slot": null,
+        "remove_spell_slot": false,
+        "healing": null,
+        "damage": null,
+        "status_duration_turns": null
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": "dammon_act1",
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

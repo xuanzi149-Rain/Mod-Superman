@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-17",
+  "scope": "C tasks 9-10 original plan",
+  "full_regression": {
+    "tests": 204,
+    "passed": 204,
+    "seconds": 502.437,
+    "log": "build/v1.1/phase-c-full-tests.log"
+  },
+  "final_api_regression": {
+    "tests": 10,
+    "passed": 10,
+    "seconds": 89.675,
+    "overlaps_full_suite": true,
+    "log": "build/v1.1/phase-c-final-api-v2.log"
+  },
+  "legacy_frontend": {
+    "tests": 12,
+    "passed": 12
+  },
+  "model": "fixed response for C workflow; prior task8 live-model evidence separate",
+  "new_live_model_calls": 0,
+  "browser_checks": [
+    "modify_existing delivery",
+    "create_new delivery",
+    "trigger edit 1d6 to 2d6 and on_hit to on_damaged",
+    "invalid dice inline validation and recovery",
+    "restart restores draft",
+    "manual resolution after template acknowledgment",
+    "history delivery restored",
+    "download link clicked",
+    "legacy entry opens",
+    "390px viewport content/client width both 375"
+  ],
+  "packages": [
+    {
+      "task_id": "1138c551-e8fb-4b39-ba4f-170c1c11de7a",
+      "mode": "modify_existing",
+      "zip": "build\\v1.1\\phase-c-ui-data\\v11-downloads\\1138c551-e8fb-4b39-ba4f-170c1c11de7a.zip",
+      "sha256": "e93eaadc19a93d36d85f8d0a1fc3f45919d2970c58c1126cb13fadebbbdafc5b",
+      "files": [
+        "ModSuperman_1138c551-e8fb-4b39-ba4f-170c1c11de7a.pak",
+        "使用说明.txt",
+        "修改清单.json"
+      ],
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    },
+    {
+      "task_id": "5d6e3278-69be-467f-9813-64d7343f2aee",
+      "mode": "create_new",
+      "zip": "build\\v1.1\\phase-c-ui-data\\v11-downloads\\5d6e3278-69be-467f-9813-64d7343f2aee.zip",
+      "sha256": "7159ae45990abccad5c441a17b2260b09264168b3a5231da073c2762182d5b14",
+      "files": [
+        "ModSuperman_5d6e3278-69be-467f-9813-64d7343f2aee.pak",
+        "使用说明.txt",
+        "修改清单.json"
+      ],
+      "checks": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      }
+    }
+  ],
+  "game_validation": "not_performed",
+  "external_user_test": "not_performed",
+  "public_deployment": "not_performed",
+  "phase_D": "not_started"
+}

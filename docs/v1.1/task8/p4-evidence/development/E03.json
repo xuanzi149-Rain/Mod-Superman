@@ -1,0 +1,391 @@
+{
+  "case_id": "E03",
+  "task": "parse",
+  "source": "synthetic_development_replay",
+  "prompt_version": "task8-v2",
+  "context": {
+    "request": {
+      "request_id": "demo_p1_3",
+      "base_revision": 3,
+      "context_digest": "ctx_p1_3"
+    },
+    "selection": {
+      "mode": "create_new",
+      "base_equipment": "equipment:5492c9bb-31a9-4f30-bfd4-935ff97c8eaf",
+      "inheritance_strategy": null
+    },
+    "current_plan": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:5492c9bb-31a9-4f30-bfd4-935ff97c8eaf",
+      "user_goal": "合成案例，非玩家记录",
+      "display": {
+        "name": "示例装备",
+        "description": null
+      },
+      "parameters": {},
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": "dammon_act1",
+      "appearance_equipment": null,
+      "template_behavior": "preserve_reviewed",
+      "icon": null,
+      "unresolved": []
+    },
+    "effective_values": {
+      "weight_kg": {
+        "original": 2,
+        "current": 1,
+        "unit": "kg",
+        "source": "fixture"
+      }
+    },
+    "capabilities": {
+      "version": "B-fixture-2026-10-17",
+      "category_summary": [
+        "parameters",
+        "constant",
+        "bonus",
+        "trigger",
+        "independent_status",
+        "grant_spell",
+        "passive_copy",
+        "display",
+        "resources"
+      ],
+      "candidates": [],
+      "checks": [],
+      "completeness": "relevant_candidates_only"
+    },
+    "intent_state": {
+      "goal": "照着这个戒指做一个新的，叫‘夜行者’，加 2 点敏捷，原来的戒指不要变。",
+      "clarifications": [],
+      "open_issues": [],
+      "withdrawn": []
+    },
+    "latest_message": {
+      "id": "msg_p1_3",
+      "text": "照着这个戒指做一个新的，叫‘夜行者’，加 2 点敏捷，原来的戒指不要变。",
+      "answers_issue_ids": []
+    },
+    "recent_history": [],
+    "snapshots": []
+  },
+  "expected_output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_p1_3",
+    "base_revision": 3,
+    "context_digest": "ctx_p1_3",
+    "intent_summary": "名称和敏捷加成明确，仍需决定基础内容的继承方式。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "叫‘夜行者’",
+        "meaning": "叫‘夜行者’",
+        "operation_ids": [],
+        "issue_ids": [],
+        "text_request_ids": [
+          "t1"
+        ],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r2",
+        "quote": "加 2 点敏捷",
+        "meaning": "加 2 点敏捷",
+        "operation_ids": [
+          "op1"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r3",
+        "quote": "照着这个戒指做一个新的",
+        "meaning": "照着这个戒指做一个新的",
+        "operation_ids": [],
+        "issue_ids": [
+          "i1"
+        ],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r4",
+        "quote": "原来的戒指不要变",
+        "meaning": "当前模式已是创建独立新装备，无需修改模式。",
+        "operation_ids": [],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": true
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r2"
+        ],
+        "group_id": "g2",
+        "kind": "add_effect",
+        "target": "tmp_dex",
+        "payload": {
+          "effect": {
+            "kind": "constant",
+            "ability": "Dexterity",
+            "amount": 2
+          }
+        }
+      }
+    ],
+    "issues": [
+      {
+        "id": "i1",
+        "requirement_ids": [
+          "r3"
+        ],
+        "kind": "clarification",
+        "detail": "基础参数和原有效果的继承策略未确定。",
+        "question": "保留基础戒指的参数和效果，还是复用资源、重新设定可配置内容？",
+        "options": [
+          {
+            "id": "retain",
+            "label": "保留基础内容"
+          },
+          {
+            "id": "reconfigure",
+            "label": "重新设定可配置内容"
+          }
+        ],
+        "evidence_refs": []
+      }
+    ],
+    "issue_updates": [],
+    "text_requests": [
+      {
+        "id": "t1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "target": {
+          "owner": "equipment",
+          "field": "name"
+        },
+        "mode": "exact",
+        "text": "夜行者",
+        "style": null
+      }
+    ]
+  },
+  "mode": "real_model",
+  "p3_user_judgment": null,
+  "output": {
+    "schema_version": "parse-v1",
+    "request_id": "demo_p1_3",
+    "base_revision": 3,
+    "context_digest": "ctx_p1_3",
+    "intent_summary": "名称和敏捷加成明确，仍需决定基础内容的继承方式。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "叫‘夜行者’",
+        "meaning": "叫‘夜行者’",
+        "operation_ids": [],
+        "issue_ids": [],
+        "text_request_ids": [
+          "t1"
+        ],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r2",
+        "quote": "加 2 点敏捷",
+        "meaning": "加 2 点敏捷",
+        "operation_ids": [
+          "op1"
+        ],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r3",
+        "quote": "照着这个戒指做一个新的",
+        "meaning": "照着这个戒指做一个新的",
+        "operation_ids": [],
+        "issue_ids": [
+          "i1"
+        ],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      },
+      {
+        "id": "r4",
+        "quote": "原来的戒指不要变",
+        "meaning": "当前模式已是创建独立新装备，无需修改模式。",
+        "operation_ids": [],
+        "issue_ids": [],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": true
+      }
+    ],
+    "operations": [
+      {
+        "id": "op1",
+        "requirement_ids": [
+          "r2"
+        ],
+        "group_id": "g2",
+        "kind": "add_effect",
+        "target": "tmp_dex",
+        "payload": {
+          "effect": {
+            "kind": "constant",
+            "ability": "Dexterity",
+            "amount": 2
+          }
+        }
+      }
+    ],
+    "issues": [
+      {
+        "id": "i1",
+        "requirement_ids": [
+          "r3"
+        ],
+        "kind": "clarification",
+        "detail": "基础参数和原有效果的继承策略未确定。",
+        "question": "保留基础戒指的参数和效果，还是复用资源、重新设定可配置内容？",
+        "options": [
+          {
+            "id": "retain",
+            "label": "保留基础内容"
+          },
+          {
+            "id": "reconfigure",
+            "label": "重新设定可配置内容"
+          }
+        ],
+        "evidence_refs": []
+      }
+    ],
+    "issue_updates": [],
+    "text_requests": [
+      {
+        "id": "t1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "target": {
+          "owner": "equipment",
+          "field": "name"
+        },
+        "mode": "exact",
+        "text": "夜行者",
+        "style": null
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 12771,
+    "total_tokens": 13301,
+    "completion_tokens": 530,
+    "prompt_tokens_details": {
+      "cached_tokens": 10880,
+      "text_tokens": 12771
+    }
+  },
+  "contract": "passed",
+  "projection_equal": true,
+  "status": "matched_reference",
+  "elapsed_ms": 9250,
+  "model": "qwen3.7-plus",
+  "diagnostics": {
+    "trace_id": "8eaf1d08-aee4-4028-a49c-18bfac63153a",
+    "thinking": "disabled",
+    "stages": [
+      {
+        "stage": "request_started",
+        "elapsed_ms": 0
+      },
+      {
+        "stage": "provider_configured",
+        "elapsed_ms": 0,
+        "provider": "bailian",
+        "model": "qwen3.7-plus"
+      },
+      {
+        "stage": "network_route",
+        "elapsed_ms": 0,
+        "system_proxy": false
+      },
+      {
+        "stage": "connection.connect_tcp.started",
+        "elapsed_ms": 15
+      },
+      {
+        "stage": "connection.connect_tcp.complete",
+        "elapsed_ms": 47
+      },
+      {
+        "stage": "connection.start_tls.started",
+        "elapsed_ms": 47
+      },
+      {
+        "stage": "connection.start_tls.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_headers.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_headers.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_body.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.send_request_body.complete",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.receive_response_headers.started",
+        "elapsed_ms": 62
+      },
+      {
+        "stage": "http11.receive_response_headers.complete",
+        "elapsed_ms": 9250
+      },
+      {
+        "stage": "response_headers",
+        "elapsed_ms": 9250,
+        "http_status": 200
+      },
+      {
+        "stage": "first_body_chunk",
+        "elapsed_ms": 9250
+      },
+      {
+        "stage": "body_complete",
+        "elapsed_ms": 9250,
+        "response_bytes": 2427
+      },
+      {
+        "stage": "completed",
+        "elapsed_ms": 9250
+      }
+    ]
+  }
+}

@@ -1,0 +1,692 @@
+{
+  "date": "2026-10-17",
+  "denominator": "website catalog records, not distinct names or all game equipment",
+  "counts": {
+    "total": 1872,
+    "model_record_found": 1708,
+    "model_file_listed": 1708,
+    "qualified_before": 1053,
+    "qualified_after": 1160
+  },
+  "by_category": {
+    "clothing": {
+      "total": 207,
+      "model_record_found": 206,
+      "model_file_listed": 206,
+      "qualified_before": 24,
+      "qualified_after": 24
+    },
+    "weapon": {
+      "total": 689,
+      "model_record_found": 555,
+      "model_file_listed": 555,
+      "qualified_before": 307,
+      "qualified_after": 414
+    },
+    "shield": {
+      "total": 65,
+      "model_record_found": 57,
+      "model_file_listed": 57,
+      "qualified_before": 56,
+      "qualified_after": 56
+    },
+    "amulet": {
+      "total": 125,
+      "model_record_found": 119,
+      "model_file_listed": 119,
+      "qualified_before": 114,
+      "qualified_after": 114
+    },
+    "body": {
+      "total": 196,
+      "model_record_found": 195,
+      "model_file_listed": 195,
+      "qualified_before": 170,
+      "qualified_after": 170
+    },
+    "ring": {
+      "total": 144,
+      "model_record_found": 139,
+      "model_file_listed": 139,
+      "qualified_before": 136,
+      "qualified_after": 136
+    },
+    "head": {
+      "total": 171,
+      "model_record_found": 166,
+      "model_file_listed": 166,
+      "qualified_before": 0,
+      "qualified_after": 0
+    },
+    "cloak": {
+      "total": 32,
+      "model_record_found": 32,
+      "model_file_listed": 32,
+      "qualified_before": 15,
+      "qualified_after": 15
+    },
+    "gloves": {
+      "total": 142,
+      "model_record_found": 141,
+      "model_file_listed": 141,
+      "qualified_before": 138,
+      "qualified_after": 138
+    },
+    "boots": {
+      "total": 101,
+      "model_record_found": 98,
+      "model_file_listed": 98,
+      "qualified_before": 93,
+      "qualified_after": 93
+    }
+  },
+  "newly_qualified": [
+    {
+      "id": "equipment:01a26e77-c4bc-4237-ae71-59c634723a95",
+      "name": "硬头锤"
+    },
+    {
+      "id": "equipment:01da5a5b-97cd-4989-9ae3-af646eb35bc9",
+      "name": "多节树枝"
+    },
+    {
+      "id": "equipment:11ae855e-c30b-4cb1-b1c7-9f71d9252f5d",
+      "name": "飞镖"
+    },
+    {
+      "id": "equipment:129069f3-6294-4c23-aa16-40daa1c48b35",
+      "name": "战镐"
+    },
+    {
+      "id": "equipment:136a5889-4548-45de-bc2a-56f08ca91844",
+      "name": "长棍"
+    },
+    {
+      "id": "equipment:148cd3dd-bf44-4489-a593-0ead19359aa6",
+      "name": "长矛"
+    },
+    {
+      "id": "equipment:1534c8ee-3651-477d-999c-b22efc9f850d",
+      "name": "造物之光"
+    },
+    {
+      "id": "equipment:1a63e2ff-7a05-4546-9ef1-75a4b151f513",
+      "name": "短弯刀"
+    },
+    {
+      "id": "equipment:1ebdc61e-3bc6-4da5-adb9-34dd839b012a",
+      "name": "吉斯洋基巨剑"
+    },
+    {
+      "id": "equipment:1f5cbcc5-5ba7-4273-ab53-7a12a40cc438",
+      "name": "手弩"
+    },
+    {
+      "id": "equipment:1fdc0473-8d0f-4e59-8ef8-9bd67568c002",
+      "name": "重尖刺棒"
+    },
+    {
+      "id": "equipment:20bd2850-f6b3-4f13-bf96-c566d8df0de4",
+      "name": "巨棒"
+    },
+    {
+      "id": "equipment:276e6ec4-7169-4fea-955e-43f26e82214e",
+      "name": "短剑"
+    },
+    {
+      "id": "equipment:2798c9f8-b06b-44d4-9d6c-e6d982c502fa",
+      "name": "巨剑"
+    },
+    {
+      "id": "equipment:28e67c96-c955-450e-b217-bb7609b6dbd3",
+      "name": "巨锤"
+    },
+    {
+      "id": "equipment:2e65cacd-f96d-46d9-b9b5-0f4fc0df190d",
+      "name": "战锤"
+    },
+    {
+      "id": "equipment:2efeda1e-c5d1-48ef-af6f-b1706fd4c3e2",
+      "name": "长戟"
+    },
+    {
+      "id": "equipment:2f5c7142-c8d7-4f6a-98b9-47a3ed00e1c5",
+      "name": "战斧"
+    },
+    {
+      "id": "equipment:3186614b-537e-44f1-82bc-c9edba59e593",
+      "name": "重尖刺棒"
+    },
+    {
+      "id": "equipment:344ac552-11ff-4150-8bb4-7eed8fb78588",
+      "name": "长剑"
+    },
+    {
+      "id": "equipment:3a9e4e60-9f58-4fb9-8a16-4cf784ad6f0d",
+      "name": "鞭刑杖"
+    },
+    {
+      "id": "equipment:3af0f251-36b5-425f-8d2a-f81559a70967",
+      "name": "残剑"
+    },
+    {
+      "id": "equipment:3c4c27dd-dd67-456c-9567-bc9fb7867238",
+      "name": "三叉戟"
+    },
+    {
+      "id": "equipment:44f1ec46-4976-41ac-9697-313083bbc3c1",
+      "name": "长棍"
+    },
+    {
+      "id": "equipment:45bbe45d-1a5d-4e64-9750-af6744ec617e",
+      "name": "长柄刀"
+    },
+    {
+      "id": "equipment:4b54911a-a32d-48ad-8691-ff28801e1275",
+      "name": "吉斯洋基短剑"
+    },
+    {
+      "id": "equipment:4c25cfed-9a0f-4c38-ba09-cf11f272c0e5",
+      "name": "塞伦涅信徒短矛"
+    },
+    {
+      "id": "equipment:4c6e48bc-2651-45ec-9f6d-83b585a7edfc",
+      "name": "镰刀"
+    },
+    {
+      "id": "equipment:4d76009b-7410-424a-8391-362aa95852cd",
+      "name": "战镐"
+    },
+    {
+      "id": "equipment:54f4b97c-ede8-49e2-a5aa-50c6f15c232f",
+      "name": "短棒"
+    },
+    {
+      "id": "equipment:57e8af03-6452-4bb8-a74a-bc4b17a79fc3",
+      "name": "手弩"
+    },
+    {
+      "id": "equipment:58f57bdc-1d89-4b60-aedc-11f36e270205",
+      "name": "轻弩"
+    },
+    {
+      "id": "equipment:5908898d-5d9e-40de-ab07-3f8fb5f0174c",
+      "name": "国王匕首"
+    },
+    {
+      "id": "equipment:5ca50a09-548b-4134-a0c7-98f10e8d69e6",
+      "name": "钉头锤"
+    },
+    {
+      "id": "equipment:5cc3db84-3891-4795-afa3-d3cbfffc066e",
+      "name": "投枪"
+    },
+    {
+      "id": "equipment:5d24f624-1145-46c5-b595-3f2c8b2f314e",
+      "name": "短棒"
+    },
+    {
+      "id": "equipment:5e7631fa-ea5a-420d-9bc0-32e7a540538e",
+      "name": "轻弩"
+    },
+    {
+      "id": "equipment:665e1c25-5c1f-48b2-a075-ee6409e8b019",
+      "name": "巨棒"
+    },
+    {
+      "id": "equipment:6ccc6f4d-f2a7-4e38-a96d-c3fec92fc2de",
+      "name": "刺剑"
+    },
+    {
+      "id": "equipment:6dc63d1d-9efc-4031-b8bb-34684196286b",
+      "name": "长矛"
+    },
+    {
+      "id": "equipment:70b863dd-fc73-4276-b1d2-330d5e54fe3f",
+      "name": "巨斧"
+    },
+    {
+      "id": "equipment:723a5397-cd16-4969-8e47-f00a1ba7c368",
+      "name": "长戟"
+    },
+    {
+      "id": "equipment:746b4059-90f5-428a-9d5a-fdac34201daf",
+      "name": "法杖"
+    },
+    {
+      "id": "equipment:74c41595-b1df-45e4-bb3f-a93b9d7f421c",
+      "name": "短弓"
+    },
+    {
+      "id": "equipment:76045155-50ca-4047-a23b-46c1c4ab085e",
+      "name": "手斧"
+    },
+    {
+      "id": "equipment:769adbf8-d3bf-48f7-8c2b-21fb892b1d33",
+      "name": "吉斯洋基巨剑"
+    },
+    {
+      "id": "equipment:7c749dd0-f750-4d6d-8ea0-5401b3c6b13d",
+      "name": "巨棒"
+    },
+    {
+      "id": "equipment:7f8cebbf-c3b0-47a0-ba6a-2c37dacff173",
+      "name": "手斧"
+    },
+    {
+      "id": "equipment:80c499a7-d2e6-4fe2-bd17-8b393adaef37",
+      "name": "三叉戟"
+    },
+    {
+      "id": "equipment:82d1c904-861b-4c76-8df6-2643b46dbb81",
+      "name": "飞镖"
+    },
+    {
+      "id": "equipment:87a16db5-9a01-4053-a17d-a3d17a721db7",
+      "name": "硬头锤"
+    },
+    {
+      "id": "equipment:8b58571f-5d21-4fb6-80eb-bc1081f809d4",
+      "name": "刺剑"
+    },
+    {
+      "id": "equipment:907a794b-b089-406b-880d-6f2df2bb3f13",
+      "name": "吉斯洋基长剑"
+    },
+    {
+      "id": "equipment:90cb6f73-ad53-477b-b06e-a92a2c7db163",
+      "name": "吉斯洋基巨剑"
+    },
+    {
+      "id": "equipment:91b72625-27da-4d2f-b97f-3c74ccf76e91",
+      "name": "短剑"
+    },
+    {
+      "id": "equipment:97be1f14-e49a-45fe-89c7-99c04653599d",
+      "name": "匕首"
+    },
+    {
+      "id": "equipment:9b3005ad-3457-4003-a976-f549f360c378",
+      "name": "短矛"
+    },
+    {
+      "id": "equipment:9ddcb3b2-14fb-48d7-9047-cd2ee34de51c",
+      "name": "匕首"
+    },
+    {
+      "id": "equipment:a1add11d-c904-4fe3-a777-e118bd030b1c",
+      "name": "钉头锤"
+    },
+    {
+      "id": "equipment:a20a96d6-cc50-442c-b278-60d8b30de397",
+      "name": "投枪"
+    },
+    {
+      "id": "equipment:a75ebd91-46dd-4c6a-881e-878e5ba6f67a",
+      "name": "战锤"
+    },
+    {
+      "id": "equipment:b674ea52-2b6f-4977-b6d5-98810304a98b",
+      "name": "吉斯洋基弩"
+    },
+    {
+      "id": "equipment:b789aedc-c010-47b0-9801-d9aacdce4c56",
+      "name": "长棍"
+    },
+    {
+      "id": "equipment:b9a01258-ae0b-4217-82d9-a9f6197b9c89",
+      "name": "轻型锤"
+    },
+    {
+      "id": "equipment:bb97362e-db06-4bfc-981e-3e1eef3eca69",
+      "name": "多节树枝"
+    },
+    {
+      "id": "equipment:beb4fa70-6b2b-4e7b-b0c5-3fb67bb48210",
+      "name": "巨锤"
+    },
+    {
+      "id": "equipment:c3bf6216-310c-4b71-ab7e-9997d8c8d251",
+      "name": "轻型锤"
+    },
+    {
+      "id": "equipment:c5a790b2-d66c-48af-8471-da98a4f47730",
+      "name": "法杖"
+    },
+    {
+      "id": "equipment:c71e2798-31ae-4f57-8073-c6195c2e9d02",
+      "name": "扭曲的树枝"
+    },
+    {
+      "id": "equipment:c86a3bf4-16b4-4d76-a33d-3df5c265aca8",
+      "name": "军团魔长戟"
+    },
+    {
+      "id": "equipment:cd50dd17-b1ed-4e8d-8825-ffc1e3cc19e0",
+      "name": "镰刀"
+    },
+    {
+      "id": "equipment:cdfab852-aa07-46b2-ae92-8ab2bb9b1898",
+      "name": "短矛"
+    },
+    {
+      "id": "equipment:d1082e88-b1e2-479d-913f-1413784d95a1",
+      "name": "吉斯洋基巨剑"
+    },
+    {
+      "id": "equipment:d28a5c6d-b569-40b7-abd5-4b6f325c98ce",
+      "name": "短弓"
+    },
+    {
+      "id": "equipment:dcd46d13-d316-492a-a350-8e7492bce9c4",
+      "name": "短弯刀"
+    },
+    {
+      "id": "equipment:dfc51f62-6a05-4bd4-ae92-d1a8a2e3d5a7",
+      "name": "巨剑"
+    },
+    {
+      "id": "equipment:e290f181-d9a7-478e-a648-35d4a0f378b1",
+      "name": "投石器"
+    },
+    {
+      "id": "equipment:e8df5166-5a68-42ec-b71f-4dfb754f7aa4",
+      "name": "多洛的匕首"
+    },
+    {
+      "id": "equipment:e99fd01c-2c7a-459e-8df0-3d7349239430",
+      "name": "巨斧"
+    },
+    {
+      "id": "equipment:ea00c5c9-b010-4fa3-bf10-0c7b8c5e7854",
+      "name": "钉头锤"
+    },
+    {
+      "id": "equipment:ed2339ed-db72-4753-b467-b257bb02a2fc",
+      "name": "钉头锤"
+    },
+    {
+      "id": "equipment:f28bf96c-83ba-4536-936c-c2574db85569",
+      "name": "贝雕镰刀"
+    },
+    {
+      "id": "equipment:f344c6b2-64bc-4c6d-a66d-5d3966191210",
+      "name": "长剑"
+    },
+    {
+      "id": "equipment:f7a7ab99-6902-4389-8134-1fed85e978e1",
+      "name": "战斧"
+    },
+    {
+      "id": "equipment:fa97e363-e81f-49f9-b663-62aae8c552ce",
+      "name": "投石器"
+    },
+    {
+      "id": "equipment:fde218da-d768-4be8-b95f-586a124357d3",
+      "name": "长柄刀"
+    },
+    {
+      "id": "equipment:0553ced5-00b0-4c39-8ee4-519f6401f44a",
+      "name": "吉斯洋基长剑"
+    },
+    {
+      "id": "equipment:1fea9dfa-96a6-43c5-bce8-34452baa073e",
+      "name": "锯齿矛"
+    },
+    {
+      "id": "equipment:288356cc-0c6b-43c1-b049-dde418faf1f2",
+      "name": "地精短弯刀"
+    },
+    {
+      "id": "equipment:2d065f6e-a8a9-4119-bec8-ab44ed37c6b0",
+      "name": "波尔镰刀"
+    },
+    {
+      "id": "equipment:4c9d18fd-fb3a-4e24-996c-ed57179acd5e",
+      "name": "简易短矛"
+    },
+    {
+      "id": "equipment:58c90cf9-5541-4909-a853-d1a0ca31c046",
+      "name": "仪式法杖"
+    },
+    {
+      "id": "equipment:765dd845-e71c-4a96-bff2-b4ecb08478dc",
+      "name": "吉斯洋基弩"
+    },
+    {
+      "id": "equipment:77816940-d8d1-48d6-a0d3-ac749fd2ca84",
+      "name": "仪式法杖"
+    },
+    {
+      "id": "equipment:7ebf3d2b-39ff-4a18-9114-4d09d17f432f",
+      "name": "粗制硬头锤"
+    },
+    {
+      "id": "equipment:81b017b5-d185-4026-8871-a053aca8648c",
+      "name": "简易短矛"
+    },
+    {
+      "id": "equipment:824a370a-5fc6-4435-b58f-33a0d91f5b08",
+      "name": "吉斯洋基短剑"
+    },
+    {
+      "id": "equipment:8a527abd-a2ff-4267-a067-d26bdf6742ee",
+      "name": "损坏的链枷"
+    },
+    {
+      "id": "equipment:a07f2e91-e084-4fe5-9dbb-ef7de76a3c0a",
+      "name": "波尔镰刀"
+    },
+    {
+      "id": "equipment:b71e3d28-3e60-4187-9cec-8143a467bc31",
+      "name": "地精短弯刀"
+    },
+    {
+      "id": "equipment:cb8405e3-704c-43d2-9bbe-89959b4f085e",
+      "name": "波尔的镰刀"
+    },
+    {
+      "id": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+      "name": "地脉迷城之王的匕首"
+    },
+    {
+      "id": "equipment:523a959d-4101-4beb-9a8e-276c3f687c02",
+      "name": "碎魂者巨剑"
+    },
+    {
+      "id": "equipment:8108ee1e-9992-4464-b679-cb70815aa750",
+      "name": "塞伦涅信徒硬头锤"
+    },
+    {
+      "id": "equipment:b11756a8-519a-406c-be36-c3603c3edae1",
+      "name": "奥术力场之弩"
+    },
+    {
+      "id": "equipment:d1c0d579-f213-49d5-a8c7-c2453c680d74",
+      "name": "军团魔长戟"
+    },
+    {
+      "id": "equipment:d3e121fb-09c0-4478-84f1-f4f3e28cd50f",
+      "name": "多洛的凄凉"
+    }
+  ],
+  "regressed": [],
+  "remaining_issue_counts_nonexclusive": {
+    "body_model_missing:06aaae02-bb9e-4fa3-ac00-b08e13a5b0fa": 204,
+    "body_model_missing:47c0315c-7dc6-4862-b39b-8bf3a10f8b54": 201,
+    "body_model_missing:541473b3-0bf3-4e68-b1ab-d85894d96d3e": 212,
+    "body_model_missing:5640e766-aa53-428d-815b-6a0b4ef95aca": 202,
+    "body_model_missing:6326d417-315c-4605-964e-d0fad73d719b": 199,
+    "body_model_missing:6503c830-9200-409a-bd26-895738587a4a": 203,
+    "body_model_missing:6d38f246-15cb-48b5-9b85-378016a7a78e": 354,
+    "body_model_missing:6dd3db4f-e2db-4097-b82e-12f379f94c2e": 193,
+    "body_model_missing:71180b76-5752-4a97-b71f-911a69197f58": 212,
+    "body_model_missing:7d73f501-f65e-46af-a13b-2cacf3985d05": 211,
+    "body_model_missing:7dd0aa66-5177-4f65-b7d7-187c02531b0b": 211,
+    "body_model_missing:8f00cf38-4588-433a-8175-8acdbbf33f33": 199,
+    "body_model_missing:9a8bbeba-850c-402f-bac5-ff15696e6497": 356,
+    "body_model_missing:a0737289-ca84-4fde-bd52-25bae4fe8dea": 211,
+    "body_model_missing:a5789cd3-ecd6-411b-a53a-368b659bc04a": 199,
+    "body_model_missing:a933e2a8-aee1-4ecb-80d2-8f47b706f024": 199,
+    "body_model_missing:abf674d2-2ea4-4a74-ade0-125429f69f83": 197,
+    "body_model_missing:ad21d837-2db5-4e46-8393-7d875dd71287": 212,
+    "body_model_missing:b4a34ce7-41be-44d9-8486-938fe1472149": 201,
+    "body_model_missing:c491d027-4332-4fda-948f-4a3df6772baa": 204,
+    "body_model_missing:cf421f4e-107b-4ae6-86aa-090419c624a5": 208,
+    "body_model_missing:e39505f7-f576-4e70-a99e-8e29cd381a11": 194,
+    "body_model_missing:eb81b1de-985e-4e3a-8573-5717dc1fa15c": 199,
+    "body_model_missing:f07faafa-0c6f-4f79-a049-70e96b23d51b": 198,
+    "body_model_missing:f625476d-29ec-4a6d-9086-42209af0cf6f": 196,
+    "skeleton_mapping_not_reviewed": 197,
+    "visual_model_not_verified": 134,
+    "body_mapping_missing:06aaae02-bb9e-4fa3-ac00-b08e13a5b0fa": 17,
+    "body_mapping_missing:47c0315c-7dc6-4862-b39b-8bf3a10f8b54": 27,
+    "body_mapping_missing:541473b3-0bf3-4e68-b1ab-d85894d96d3e": 17,
+    "body_mapping_missing:5640e766-aa53-428d-815b-6a0b4ef95aca": 23,
+    "body_mapping_missing:6326d417-315c-4605-964e-d0fad73d719b": 26,
+    "body_mapping_missing:6503c830-9200-409a-bd26-895738587a4a": 23,
+    "body_mapping_missing:6d38f246-15cb-48b5-9b85-378016a7a78e": 26,
+    "body_mapping_missing:6dd3db4f-e2db-4097-b82e-12f379f94c2e": 25,
+    "body_mapping_missing:71180b76-5752-4a97-b71f-911a69197f58": 17,
+    "body_mapping_missing:7d73f501-f65e-46af-a13b-2cacf3985d05": 23,
+    "body_mapping_missing:7dd0aa66-5177-4f65-b7d7-187c02531b0b": 23,
+    "body_mapping_missing:8f00cf38-4588-433a-8175-8acdbbf33f33": 23,
+    "body_mapping_missing:9a8bbeba-850c-402f-bac5-ff15696e6497": 24,
+    "body_mapping_missing:a0737289-ca84-4fde-bd52-25bae4fe8dea": 23,
+    "body_mapping_missing:a5789cd3-ecd6-411b-a53a-368b659bc04a": 26,
+    "body_mapping_missing:a933e2a8-aee1-4ecb-80d2-8f47b706f024": 23,
+    "body_mapping_missing:abf674d2-2ea4-4a74-ade0-125429f69f83": 23,
+    "body_mapping_missing:ad21d837-2db5-4e46-8393-7d875dd71287": 17,
+    "body_mapping_missing:b4a34ce7-41be-44d9-8486-938fe1472149": 23,
+    "body_mapping_missing:c491d027-4332-4fda-948f-4a3df6772baa": 23,
+    "body_mapping_missing:cf421f4e-107b-4ae6-86aa-090419c624a5": 17,
+    "body_mapping_missing:e39505f7-f576-4e70-a99e-8e29cd381a11": 26,
+    "body_mapping_missing:eb81b1de-985e-4e3a-8573-5717dc1fa15c": 26,
+    "body_mapping_missing:f07faafa-0c6f-4f79-a049-70e96b23d51b": 23,
+    "body_mapping_missing:f625476d-29ec-4a6d-9086-42209af0cf6f": 26,
+    "unreviewed_template_child:SpeakerGroupList": 5,
+    "ground_visual_missing": 30,
+    "armor_equipment_mapping_missing": 5,
+    "unreviewed_template_child:ConstellationConfigGlobalParameters": 15,
+    "unreviewed_template_child:StatusList": 94,
+    "unreviewed_template_action:OnUsePeaceActions:7": 1,
+    "unreviewed_template_action:OnDestroyActions:5": 1,
+    "icon_unverified": 3,
+    "unreviewed_template_action:OnUsePeaceActions:8": 1,
+    "unreviewed_template_action:OnUsePeaceActions:19": 1,
+    "icon_atlas_not_verified": 4
+  },
+  "target": {
+    "id": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+    "visual": {
+      "source": ".tools\\v11-body\\Public\\Shared\\Content\\Assets\\Weapons\\[PAK]_Duergar\\_merged.lsx",
+      "AttachBone": "",
+      "AttachmentSkeletonResource": "",
+      "BlueprintInstanceResourceID": "",
+      "BoundsMax": "0.07134837 0.04076917 0.26540524",
+      "BoundsMin": "-0.07134837 -0.02029219 -0.83001494",
+      "ClothColliderResourceID": "",
+      "HairPresetResourceId": "",
+      "HairType": "0",
+      "ID": "c1147395-e43e-ba86-0fb0-0e29ea0e4831",
+      "MaterialType": "0",
+      "Name": "WPN_Duergar_Sword_KingsKnife",
+      "NeedsSkeletonRemap": "False",
+      "RemapperSlotId": "",
+      "ScalpMaterialId": "",
+      "SkeletonResource": "",
+      "SkeletonSlot": "",
+      "Slot": "Unassigned",
+      "SoftbodyResourceID": "",
+      "SourceFile": "Generated/Public/Shared/Assets/Weapons/Duergar/WPN_DUE_Sword_KingsKnife/Resources/WPN_Duergar_Sword_KingsKnife.GR2",
+      "SupportsVertexColorMask": "False",
+      "Template": "Generated/Public/Shared/Assets/Weapons/Duergar/WPN_DUE_Sword_KingsKnife/Resources/WPN_Duergar_Sword_KingsKnife.Dummy_WPN_HUM_Shortsword_REF.0",
+      "_OriginalFileVersion_": "144115207403209015"
+    },
+    "audit": {
+      "qualified": true,
+      "issues": [],
+      "body_mapping": {},
+      "special_actions": [],
+      "inherited_tags": [
+        "9e3ed11b-61c4-4540-8c26-13168c8dc0d0",
+        "b148cfca-53d8-4b73-b052-de08394a235e",
+        "c826fd1e-4780-43d4-b49b-87f30c060fe6"
+      ],
+      "policy": "inherit_complete_native_template; explicit acknowledgement for reviewed story actions"
+    },
+    "task_id": "234207e2-d08e-4f2b-a19c-da035b48182f",
+    "plan": {
+      "schema_version": "1.1-draft-4",
+      "mode": "create_new",
+      "base_equipment": "equipment:025e162a-45ec-4f4c-89da-04d8e8dfe606",
+      "user_goal": "装备定制",
+      "display": {
+        "name": "地脉迷城之王的匕首·独立副本",
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": "dammon_act1",
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "checks": {
+      "source_generation": "passed",
+      "conversion": "passed",
+      "pak_creation": "passed",
+      "package_check": "passed",
+      "game_validation": "not_performed"
+    },
+    "zip": "build\\v1.1\\weapon-index-acceptance\\v11-downloads\\234207e2-d08e-4f2b-a19c-da035b48182f.zip",
+    "zip_sha256": "9992def8d1ec640924a71b6721597c357f1e42595b4e9a0458552981e87a24c8",
+    "zip_entries": [
+      "ModSuperman_234207e2-d08e-4f2b-a19c-da035b48182f.pak",
+      "使用说明.txt",
+      "修改清单.json"
+    ],
+    "version": {
+      "prompt": "task8-v6",
+      "compiler": "v11-task8-v4",
+      "resources": "80edf9ee0f7ee06942898e901d7ab9053ceb9abae99c65081945d02baa08c6c3",
+      "catalog": "b092442f6f309ee844ae3711034f41420d0bdbe2c9ebfa36a906d8a65114463e",
+      "schema": "1.1-draft-4"
+    }
+  },
+  "model_evidence": "fixed response, no live call",
+  "game_validation": "not_performed",
+  "phase_D": "not_started",
+  "regression": {
+    "passed": 103,
+    "failed": 0,
+    "seconds": 493.039,
+    "log": "build/v1.1/weapon-index-regression.log",
+    "modules": [
+      "tests.test_weapon_index_v11",
+      "tests.test_phase_b_completion_v11",
+      "tests.test_compiler_v11",
+      "tests.test_workflow_v11",
+      "tests.test_task8",
+      "tests.test_task8_acceptance"
+    ]
+  },
+  "running_site_check": {
+    "url": "http://127.0.0.1:8000",
+    "create_candidate_total": 1160,
+    "target_found": true
+  }
+}

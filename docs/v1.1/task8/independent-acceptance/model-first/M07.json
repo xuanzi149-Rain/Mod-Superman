@@ -1,0 +1,472 @@
+{
+  "case": {
+    "id": "M07",
+    "fixture": "create_body_armor",
+    "text": "每次自己受到伤害后，无额外条件，给自己施加持续3回合的独立状态：护甲等级加2，不加属性，重复触发刷新持续时间。复用大步奔行的状态表现。",
+    "expect": {
+      "status_pair": 3
+    },
+    "mode": "modify_existing"
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v2",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [
+      "op1",
+      "op2"
+    ],
+    "failed": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+      "user_goal": "B整体验收固定案例",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+      "user_goal": "B整体验收固定案例",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [
+        {
+          "kind": "independent_status",
+          "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+          "base_status": "LONGSTRIDER",
+          "display": {
+            "name": "独立状态",
+            "description": null
+          },
+          "duration_turns": 3,
+          "stacking": "replace",
+          "ability": "Strength",
+          "bonuses": [
+            {
+              "kind": "bonus",
+              "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad_bonus_0",
+              "bonus": "armor_class",
+              "amount": 2,
+              "selector": null,
+              "display": {
+                "name": null,
+                "description": null
+              }
+            }
+          ],
+          "amount": 0
+        },
+        {
+          "kind": "trigger",
+          "id": "e_61e681c74d99522ca0e3b5f78fa12d85",
+          "event": "on_damaged",
+          "condition": "always",
+          "target": "self",
+          "action": "status",
+          "dice": null,
+          "damage_type": null,
+          "status_ref": null,
+          "status_draft_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+          "duration_turns": 3,
+          "display": {
+            "name": null,
+            "description": null
+          }
+        }
+      ],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "unresolved": [],
+    "text_review_pending": true
+  },
+  "failures": [],
+  "status": "passed",
+  "mechanical_compile": "passed_fixture_name_not_user_confirmation",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "M07",
+          "base_revision": 1,
+          "context_digest": "d64c6444b45ca77b56fad51262106e9260531da742b5135986aead175266ab3a"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+          "user_goal": "B整体验收固定案例",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [],
+            "current": [],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": "capped_2",
+            "current": "capped_2",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 9.0,
+            "current": 9.0,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": 14,
+            "current": 14,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "LONGSTRIDER",
+              "type": "StatusData",
+              "effective": {
+                "StatusType": "BOOST",
+                "DisplayName": "hc35d06d7g1376g4b24g9812gda02164090f1;1",
+                "Description": "h38ec5b73g541fg4c1egb175gb0fa6d3fd7c9;2",
+                "DescriptionParams": "Distance(3)",
+                "Icon": "Spell_Transmutation_Longstrider",
+                "SoundLoop": "Spell_Status_Longstrider_MO",
+                "SoundStop": "Spell_Status_Longstrider_MO_Stop",
+                "StackId": "LONGSTRIDER",
+                "Boosts": "ActionResource(Movement,3,0)",
+                "StatusGroups": "SG_RemoveOnRespec",
+                "StatusEffect": "e14337a2-55b0-495a-8294-02f7de8d0209"
+              },
+              "dependency_count": 1
+            },
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_445506e065a844ef",
+              "result": "template_audit",
+              "details": []
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "B整体验收固定案例",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "M07",
+          "text": "每次自己受到伤害后，无额外条件，给自己施加持续3回合的独立状态：护甲等级加2，不加属性，重复触发刷新持续时间。复用大步奔行的状态表现。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "M07",
+        "base_revision": 1,
+        "context_digest": "d64c6444b45ca77b56fad51262106e9260531da742b5135986aead175266ab3a",
+        "intent_summary": "建议新增独立状态与触发效果，复用 LONGSTRIDER 表现。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "每次自己受到伤害后，无额外条件，给自己施加持续3回合的独立状态：护甲等级加2，不加属性，重复触发刷新持续时间。复用大步奔行的状态表现。",
+            "meaning": "受伤时施加持续3回合的AC+2独立状态，堆叠方式为覆盖（刷新），使用 LONGSTRIDER 作为视觉/音频表现基础。",
+            "operation_ids": [
+              "op1",
+              "op2"
+            ],
+            "issue_ids": [],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [
+          {
+            "id": "op1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g1",
+            "kind": "add_effect",
+            "target": "tmp_status_ac_boost",
+            "payload": {
+              "effect": {
+                "kind": "independent_status",
+                "base_status": "LONGSTRIDER",
+                "duration_turns": 3,
+                "stacking": "replace",
+                "bonuses": [
+                  {
+                    "kind": "bonus",
+                    "bonus": "armor_class",
+                    "amount": 2,
+                    "selector": null
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": "op2",
+            "requirement_ids": [
+              "r1"
+            ],
+            "group_id": "g1",
+            "kind": "add_effect",
+            "target": "tmp_trigger_on_damaged",
+            "payload": {
+              "effect": {
+                "kind": "trigger",
+                "event": "on_damaged",
+                "condition": "always",
+                "target": "self",
+                "action": "status",
+                "status_draft_id": "tmp_status_ac_boost",
+                "duration_turns": 3
+              }
+            }
+          }
+        ],
+        "issues": [],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 13409,
+        "total_tokens": 13869,
+        "completion_tokens": 460,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880,
+          "text_tokens": 13409
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 10328,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:4814825e-23ee-41ed-9784-d9963434150d",
+    "user_goal": "B整体验收固定案例",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "independent_status",
+        "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+        "base_status": "LONGSTRIDER",
+        "display": {
+          "name": "独立状态",
+          "description": null
+        },
+        "duration_turns": 3,
+        "stacking": "replace",
+        "ability": "Strength",
+        "bonuses": [
+          {
+            "kind": "bonus",
+            "id": "e_f4e9e890c5895e4ab149ca0f2bda0dad_bonus_0",
+            "bonus": "armor_class",
+            "amount": 2,
+            "selector": null,
+            "display": {
+              "name": null,
+              "description": null
+            }
+          }
+        ],
+        "amount": 0
+      },
+      {
+        "kind": "trigger",
+        "id": "e_61e681c74d99522ca0e3b5f78fa12d85",
+        "event": "on_damaged",
+        "condition": "always",
+        "target": "self",
+        "action": "status",
+        "dice": null,
+        "damage_type": null,
+        "status_ref": null,
+        "status_draft_id": "e_f4e9e890c5895e4ab149ca0f2bda0dad",
+        "duration_turns": 3,
+        "display": {
+          "name": null,
+          "description": null
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  }
+}

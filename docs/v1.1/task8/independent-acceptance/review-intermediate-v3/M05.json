@@ -1,0 +1,335 @@
+{
+  "case_id": "M05",
+  "source": "build\\v1.1\\task8\\independent-20261017-130917",
+  "model": "qwen3.7-plus",
+  "result": {
+    "adopted": [
+      "e_5271915e55f75fb481e152a29a1e9e4b:description",
+      "e_cf48a37198425a52b01fb05003bbe787:description",
+      "e_8c44c709ca855b01b6e39867aeee698e:description"
+    ],
+    "pending": [],
+    "state": "ready"
+  },
+  "status": "protocol_adoption_compile_passed_semantic_read_required",
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:1865323f-b428-4791-a0a9-578841e57463",
+    "user_goal": "程序验收案例，非玩家使用记录",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "bonus",
+        "id": "e_5271915e55f75fb481e152a29a1e9e4b",
+        "bonus": "skill",
+        "amount": 2,
+        "selector": "Arcana",
+        "display": {
+          "name": null,
+          "description": "装备期间，奥秘技能检定获得 +2 加值。"
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "e_cf48a37198425a52b01fb05003bbe787",
+        "bonus": "saving_throw",
+        "amount": 1,
+        "selector": "Charisma",
+        "display": {
+          "name": null,
+          "description": "装备期间，魅力豁免检定获得 +1 加值。"
+        }
+      },
+      {
+        "kind": "bonus",
+        "id": "e_8c44c709ca855b01b6e39867aeee698e",
+        "bonus": "resistance",
+        "amount": 1,
+        "selector": "Cold",
+        "display": {
+          "name": null,
+          "description": "装备期间，获得对冷冻伤害的抗性。"
+        }
+      }
+    ],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "log": [
+    {
+      "task": "review",
+      "context": {
+        "request": {
+          "request_id": "d1fde274-6c9e-44ed-8fb0-5742faf0e566",
+          "base_revision": 1,
+          "context_digest": "4ee506554e96e8f3f9ec73ed172d9dd85067ae54bf3a856a9ea60788c8eb97b6"
+        },
+        "resource_digest": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+        "plan_digest": "05a0b47e5e956ec55ea6a4efdb67bf5285671c80e382026e4164d591e86cf13d",
+        "facts_digest": "0937bb527e0ef6e54f194d0adfc15129dc79e18de995182d96083aa23d55f1f9",
+        "facts": [
+          {
+            "id": "equipment",
+            "owner": "equipment",
+            "dimensions": {
+              "mode": "modify_existing",
+              "parameters": {
+                "weapon_properties": {
+                  "original": [
+                    "Versatile",
+                    "Melee",
+                    "Dippable"
+                  ],
+                  "current": [
+                    "Versatile",
+                    "Melee",
+                    "Dippable"
+                  ],
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "dexterity_rule": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage": {
+                  "original": "1d8",
+                  "current": "1d8",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "versatile_damage": {
+                  "original": "1d10",
+                  "current": "1d10",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "weight_kg": {
+                  "original": 1.35,
+                  "current": 1.35,
+                  "unit": "kg",
+                  "source": "effective_native_fields"
+                },
+                "rarity": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "armor_class": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "enchantment": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "value": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage_type": {
+                  "original": "Slashing",
+                  "current": "Slashing",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                }
+              },
+              "inherited_fields": {
+                "Level": "1",
+                "UseCosts": "ActionPoint:1",
+                "Damage Type": "Slashing",
+                "Damage": "1d8",
+                "WeaponRange": "150",
+                "ValueLevel": "2",
+                "ValueUUID": "3ae7de83-816a-43e3-a0e1-4d5b78664fc6",
+                "ValueScale": "1",
+                "ValueRounding": "1",
+                "Weight": "1.35",
+                "Slot": "Melee Main Weapon",
+                "PersonalStatusImmunities": "SILENCED;SG_Condition;BLEEDING;BURNING",
+                "InventoryTab": "Equipment",
+                "ItemColor": "DefaultGray",
+                "Weapon Group": "MartialMeleeWeapon",
+                "RootTemplate": "1865323f-b428-4791-a0a9-578841e57463",
+                "BoostsOnEquipMainHand": "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack);",
+                "VersatileDamage": "1d10",
+                "Weapon Properties": "Versatile;Melee;Dippable",
+                "Proficiency Group": "Longswords;MartialWeapons"
+              },
+              "removed_original_passives": [],
+              "inherited_dependencies": {},
+              "acquisition": null,
+              "template_behavior": "reject_special"
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_5271915e55f75fb481e152a29a1e9e4b",
+            "owner": "e_5271915e55f75fb481e152a29a1e9e4b",
+            "dimensions": {
+              "kind": "bonus",
+              "id": "e_5271915e55f75fb481e152a29a1e9e4b",
+              "bonus": "skill",
+              "amount": 2,
+              "selector": "Arcana",
+              "activation_condition": "装备期间"
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_cf48a37198425a52b01fb05003bbe787",
+            "owner": "e_cf48a37198425a52b01fb05003bbe787",
+            "dimensions": {
+              "kind": "bonus",
+              "id": "e_cf48a37198425a52b01fb05003bbe787",
+              "bonus": "saving_throw",
+              "amount": 1,
+              "selector": "Charisma",
+              "activation_condition": "装备期间"
+            },
+            "missing": []
+          },
+          {
+            "id": "effect_e_8c44c709ca855b01b6e39867aeee698e",
+            "owner": "e_8c44c709ca855b01b6e39867aeee698e",
+            "dimensions": {
+              "kind": "bonus",
+              "id": "e_8c44c709ca855b01b6e39867aeee698e",
+              "bonus": "resistance",
+              "amount": 1,
+              "selector": "Cold",
+              "activation_condition": "装备期间"
+            },
+            "missing": []
+          },
+          {
+            "id": "compiled_dependencies",
+            "owner": "equipment",
+            "dimensions": {
+              "final_native_records": {
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/PassiveData.txt": "new entry \"MS_8c9e8ed899f85956b2508d1a3f2c75ff\"\ntype \"PassiveData\"\ndata \"Boosts\" \"Skill(Arcana,2)\"\ndata \"DisplayName\" \"h746e20e1g69adg5764g9b17g1ae597692aac;1\"\ndata \"Description\" \"h6a98cbc5gfc9bg5a90ga91egf9bd44f39526;1\"\n\nnew entry \"MS_ef72e10f509b5befb74bacd84a0e0e4b\"\ntype \"PassiveData\"\ndata \"Boosts\" \"RollBonus(SavingThrow,1,Charisma)\"\ndata \"DisplayName\" \"h8d6b0e65g5b81g5e47ga675g00a17db64255;1\"\ndata \"Description\" \"h59280454gf0e0g586ag938agf00929baaf5e;1\"\n\nnew entry \"MS_8179a7e5b5805ed59ade9b66569a2aee\"\ntype \"PassiveData\"\ndata \"Boosts\" \"Resistance(Cold,Resistant)\"\ndata \"DisplayName\" \"he7b28369g5a10g5ca2g810fgb81891eb41f2;1\"\ndata \"Description\" \"h51a3e6e7g5684g5254g98f3g7fac0549d4a3;1\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/Weapon.txt": "new entry \"WPN_Longsword\"\ntype \"Weapon\"\nusing \"WPN_Longsword\"\ndata \"PassivesOnEquip\" \"MS_8c9e8ed899f85956b2508d1a3f2c75ff;MS_ef72e10f509b5befb74bacd84a0e0e4b;MS_8179a7e5b5805ed59ade9b66569a2aee\"\n\n"
+              }
+            },
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "e_5271915e55f75fb481e152a29a1e9e4b:description",
+            "owner": "e_5271915e55f75fb481e152a29a1e9e4b",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_5271915e55f75fb481e152a29a1e9e4b",
+              "compiled_dependencies"
+            ]
+          },
+          {
+            "id": "e_cf48a37198425a52b01fb05003bbe787:description",
+            "owner": "e_cf48a37198425a52b01fb05003bbe787",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_cf48a37198425a52b01fb05003bbe787",
+              "compiled_dependencies"
+            ]
+          },
+          {
+            "id": "e_8c44c709ca855b01b6e39867aeee698e:description",
+            "owner": "e_8c44c709ca855b01b6e39867aeee698e",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_8c44c709ca855b01b6e39867aeee698e",
+              "compiled_dependencies"
+            ]
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "review-v1",
+        "request_id": "d1fde274-6c9e-44ed-8fb0-5742faf0e566",
+        "base_revision": 1,
+        "context_digest": "4ee506554e96e8f3f9ec73ed172d9dd85067ae54bf3a856a9ea60788c8eb97b6",
+        "plan_digest": "05a0b47e5e956ec55ea6a4efdb67bf5285671c80e382026e4164d591e86cf13d",
+        "items": [
+          {
+            "text_id": "e_5271915e55f75fb481e152a29a1e9e4b:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "装备期间，奥秘技能检定获得 +2 加值。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          },
+          {
+            "text_id": "e_cf48a37198425a52b01fb05003bbe787:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "装备期间，魅力豁免检定获得 +1 加值。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          },
+          {
+            "text_id": "e_8c44c709ca855b01b6e39867aeee698e:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "装备期间，获得对冷冻伤害的抗性。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 5252,
+        "total_tokens": 5879,
+        "completion_tokens": 627,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "text_tokens": 5252
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+test_all_six_effect_types_adapt_into_B (tests.test_task8.Task8Tests.test_all_six_effect_types_adapt_into_B) ... ok
+test_all_spec_examples_structural_and_semantic (tests.test_task8.Task8Tests.test_all_spec_examples_structural_and_semantic) ... ok
+test_conflicting_parameter_writes_block_group (tests.test_task8.Task8Tests.test_conflicting_parameter_writes_block_group) ... ok
+test_dependency_pair_commits_once (tests.test_task8.Task8Tests.test_dependency_pair_commits_once) ... ok
+test_duplicate_keys_and_nonfinite_rejected (tests.test_task8.Task8Tests.test_duplicate_keys_and_nonfinite_rejected) ... ok
+test_duplicate_request_does_not_apply_twice (tests.test_task8.Task8Tests.test_duplicate_request_does_not_apply_twice) ... ok
+test_failed_group_does_not_erase_valid_group (tests.test_task8.Task8Tests.test_failed_group_does_not_erase_valid_group) ... ok
+test_full_current_effect_not_replaced_by_patch (tests.test_task8.Task8Tests.test_full_current_effect_not_replaced_by_patch) ... ok
+test_lookup_exhaustion_offers_choice_without_substitution (tests.test_task8.Task8Tests.test_lookup_exhaustion_offers_choice_without_substitution) ... ok
+test_model_prompt_budget_and_example_counts (tests.test_task8.Task8Tests.test_model_prompt_budget_and_example_counts) ... ok
+test_original_effect_restore_and_select_unknown (tests.test_task8.Task8Tests.test_original_effect_restore_and_select_unknown) ... ok
+test_parameter_and_relative_changes (tests.test_task8.Task8Tests.test_parameter_and_relative_changes) ... ok
+test_resource_change_invalidates_receipt (tests.test_task8.Task8Tests.test_resource_change_invalidates_receipt) ... ok
+test_review_no_missing_text_or_wrong_facts (tests.test_task8.Task8Tests.test_review_no_missing_text_or_wrong_facts) ... ok
+test_review_receipt_actual_compilation_and_invalidation (tests.test_task8.Task8Tests.test_review_receipt_actual_compilation_and_invalidation) ... ok
+test_snapshot_is_new_revision_and_restores_unresolved (tests.test_task8.Task8Tests.test_snapshot_is_new_revision_and_restores_unresolved) ... ok
+test_spell_custom_text_applies_to_root_and_grant_not_all_children (tests.test_task8.Task8Tests.test_spell_custom_text_applies_to_root_and_grant_not_all_children) ... ok
+test_state_is_not_lost_on_bad_output (tests.test_task8.Task8Tests.test_state_is_not_lost_on_bad_output) ... ok
+test_unknown_requirement_blocks_partial_success (tests.test_task8.Task8Tests.test_unknown_requirement_blocks_partial_success) ... ok
+test_unknown_text_owner_rejected_before_application (tests.test_task8.Task8Tests.test_unknown_text_owner_rejected_before_application) ... ok
+test_v2_routes_targeted_examples_within_budget (tests.test_task8.Task8Tests.test_v2_routes_targeted_examples_within_budget) ... ok
+test_all_bonus_subtypes_and_nested_status_updates (tests.test_task8_acceptance.IndependentAcceptance.test_all_bonus_subtypes_and_nested_status_updates) ... ok
+test_all_review_targets_and_resource_selection (tests.test_task8_acceptance.IndependentAcceptance.test_all_review_targets_and_resource_selection) ... ok
+test_context_reset_does_not_reapply_old_pending_text (tests.test_task8_acceptance.IndependentAcceptance.test_context_reset_does_not_reapply_old_pending_text) ... ok
+test_context_revalidate_and_stale_response (tests.test_task8_acceptance.IndependentAcceptance.test_context_revalidate_and_stale_response) ... ok
+test_inheritance_reconfigure_can_be_resolved_without_erasing_base (tests.test_task8_acceptance.IndependentAcceptance.test_inheritance_reconfigure_can_be_resolved_without_erasing_base) ... ok
+test_invalid_types_bounds_and_unknown_fields_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_invalid_types_bounds_and_unknown_fields_rejected) ... ok
+test_issue_lifecycle_independent_success_and_withdrawal (tests.test_task8_acceptance.IndependentAcceptance.test_issue_lifecycle_independent_success_and_withdrawal) ... ok
+test_relative_effect_uses_inherited_spell_value (tests.test_task8_acceptance.IndependentAcceptance.test_relative_effect_uses_inherited_spell_value) ... ok
+test_relative_parameter_precision_rejects_without_clipping (tests.test_task8_acceptance.IndependentAcceptance.test_relative_parameter_precision_rejects_without_clipping) ... ok
+test_reset_rewrite_standard_and_confirmation_invalidation (tests.test_task8_acceptance.IndependentAcceptance.test_reset_rewrite_standard_and_confirmation_invalidation) ... ok
+test_resource_change_between_review_and_adoption_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_resource_change_between_review_and_adoption_rejected) ... ok
+test_restore_original_passive_and_remove_copy_together (tests.test_task8_acceptance.IndependentAcceptance.test_restore_original_passive_and_remove_copy_together) ... ok
+test_six_effects_add_update_delete_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_six_effects_add_update_delete_both_modes) ... ok
+test_special_template_ack_is_bound_to_current_audit (tests.test_task8_acceptance.IndependentAcceptance.test_special_template_ack_is_bound_to_current_audit) ... ok
+test_spell_profiles_delay_container_costs_are_compiled (tests.test_task8_acceptance.IndependentAcceptance.test_spell_profiles_delay_container_costs_are_compiled) ... ok
+test_status_duration_relative_and_dependency_atomicity (tests.test_task8_acceptance.IndependentAcceptance.test_status_duration_relative_and_dependency_atomicity) ... ok
+test_ten_parameters_set_restore_in_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_ten_parameters_set_restore_in_both_modes) ... ok
+test_text_same_target_conflict_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_text_same_target_conflict_rejected) ... ok
+test_timeout_retry_does_not_apply_partial_changes (tests.test_task8_acceptance.IndependentAcceptance.test_timeout_retry_does_not_apply_partial_changes) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 102.926s
+
+OK

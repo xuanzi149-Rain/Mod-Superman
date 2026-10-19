@@ -1,0 +1,65 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 90-160
+~			8 button 新建方案, ID: new
++		74 text 修改已保存。
+~				78 text 修改已有装备 · 修订 3 告诉我，你想怎么改？
+~				79 text entry area (settable) 告诉我，你想怎么改？, ID: prompt
+~				80 button 解析并更新方案, ID: send
+~				81 button 切换基础装备／模式, ID: switch-base
+~						89 text 已删除属性加成
++						90 definition list
++							91 container 属性
++								92 text 属性
++							93 text 敏捷
++							94 container 加成数值
++								95 text 加成数值
++							96 text 2
++			97 container
++				98 button (expanded) 基础信息与参数, Secondary Actions: Collapse
++					99 text 基础信息与参数
++				100 text 名称：轻语匕首
++				101 button 编辑名称与说明, ID: equipment-text
++				102 table
++					103 row
++						104 cell
++							105 text 字段
++						106 cell
++							107 text 原版
++						108 cell
++							109 text 当前方案
++					110 row
++						111 cell
++							112 text 稀有度
++						113 cell
++							114 text 稀有
++						115 cell
++							116 text 传说
++				117 button 编辑基础参数, ID: parameters
++			118 container
++				119 button (expanded) 独立词条与主动技能（0）, Secondary Actions: Collapse
++					120 text 独立词条与主动技能（0）
++				121 text 尚未新增独立效果。原装备效果仍按继承规则保留。
++				122 pop up button (collapsed, settable) Description: 新增效果类型, Value: 属性加成, ID: effect-kind, Secondary Actions: Expand
++					123 menu
++						124 (selected) 属性加成
++						125 加成类别
++						126 条件触发
++						127 独立状态
++						128 主动技能副本
++						129 独立被动副本
++				130 button 添加效果, ID: add-effect
++			131 button (collapsed) 原生继承与资源设置, Secondary Actions: Expand
++				132 text 原生继承与资源设置
++			133 container
++				134 heading 文案核对, Value: 2
++					135 text 文案核对
++				136 text 当前没有待核对的自定义文字。
++				137 button 核对自定义文案, ID: review
++				138 button 恢复待核对项的标准文字, ID: standard
++			139 button 检查并进入确认, ID: preview
++			140 button 撤销到上个方案, ID: undo
++			141 text 当前：轻语匕首
++			142 text 修改已有装备 · 修订 3
++			143 text 方案已通过程序检查
+The focused UI element is 1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html

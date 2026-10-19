@@ -1,0 +1,913 @@
+{
+  "$defs": {
+    "BaseParameters": {
+      "additionalProperties": false,
+      "properties": {
+        "weapon_properties": {
+          "anyOf": [
+            {
+              "items": {
+                "enum": [
+                  "Finesse",
+                  "Light",
+                  "Heavy",
+                  "Reach",
+                  "Twohanded",
+                  "Versatile",
+                  "Thrown",
+                  "Melee",
+                  "Ranged",
+                  "Dippable",
+                  "Magical"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Weapon Properties"
+        },
+        "dexterity_rule": {
+          "anyOf": [
+            {
+              "enum": [
+                "none",
+                "full",
+                "capped_2"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dexterity Rule"
+        },
+        "damage": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Damage"
+        },
+        "versatile_damage": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Versatile Damage"
+        },
+        "weight_kg": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Weight Kg"
+        },
+        "rarity": {
+          "anyOf": [
+            {
+              "enum": [
+                "Common",
+                "Uncommon",
+                "Rare",
+                "VeryRare",
+                "Legendary"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rarity"
+        },
+        "armor_class": {
+          "anyOf": [
+            {
+              "maximum": 30,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Armor Class"
+        },
+        "enchantment": {
+          "anyOf": [
+            {
+              "maximum": 5,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Enchantment"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "maximum": 100000,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "damage_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "Slashing",
+                "Piercing",
+                "Bludgeoning",
+                "Acid",
+                "Cold",
+                "Fire",
+                "Force",
+                "Lightning",
+                "Necrotic",
+                "Poison",
+                "Psychic",
+                "Radiant",
+                "Thunder"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Damage Type"
+        }
+      },
+      "title": "BaseParameters",
+      "type": "object"
+    },
+    "ConstantEffect": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "constant",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "ability": {
+          "enum": [
+            "Strength",
+            "Dexterity",
+            "Constitution",
+            "Intelligence",
+            "Wisdom",
+            "Charisma"
+          ],
+          "title": "Ability",
+          "type": "string"
+        },
+        "amount": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Amount",
+          "type": "integer"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "ability",
+        "amount"
+      ],
+      "title": "ConstantEffect",
+      "type": "object"
+    },
+    "Display": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "maxLength": 60,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Name"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Description"
+        }
+      },
+      "title": "Display",
+      "type": "object"
+    },
+    "GrantedSpell": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "grant_spell",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "base_spell": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Base Spell",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        },
+        "range_m": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 100,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Range M"
+        },
+        "area_radius_m": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 100,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Area Radius M"
+        },
+        "action_cost": {
+          "anyOf": [
+            {
+              "enum": [
+                "action",
+                "bonus_action",
+                "none"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Action Cost"
+        },
+        "cooldown": {
+          "anyOf": [
+            {
+              "enum": [
+                "once_per_turn",
+                "short_rest",
+                "long_rest",
+                "none"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Cooldown"
+        },
+        "spell_slot": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/SpellSlotCost"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "remove_spell_slot": {
+          "default": false,
+          "title": "Remove Spell Slot",
+          "type": "boolean"
+        },
+        "healing": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Healing"
+        },
+        "damage": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Damage"
+        },
+        "status_duration_turns": {
+          "anyOf": [
+            {
+              "maximum": 10,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Duration Turns"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "base_spell"
+      ],
+      "title": "GrantedSpell",
+      "type": "object"
+    },
+    "IndependentStatus": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "independent_status",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "base_status": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Base Status",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        },
+        "duration_turns": {
+          "maximum": 10,
+          "minimum": 1,
+          "title": "Duration Turns",
+          "type": "integer"
+        },
+        "stacking": {
+          "enum": [
+            "replace",
+            "ignore",
+            "additive"
+          ],
+          "title": "Stacking",
+          "type": "string"
+        },
+        "ability": {
+          "enum": [
+            "Strength",
+            "Dexterity",
+            "Constitution",
+            "Intelligence",
+            "Wisdom",
+            "Charisma"
+          ],
+          "title": "Ability",
+          "type": "string"
+        },
+        "bonuses": {
+          "items": {
+            "$ref": "#/$defs/NativeBonus"
+          },
+          "maxItems": 12,
+          "title": "Bonuses",
+          "type": "array"
+        },
+        "amount": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Amount",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "base_status",
+        "display",
+        "duration_turns",
+        "stacking",
+        "ability",
+        "amount"
+      ],
+      "title": "IndependentStatus",
+      "type": "object"
+    },
+    "NativeBonus": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "bonus",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "bonus": {
+          "enum": [
+            "initiative",
+            "movement",
+            "skill",
+            "saving_throw",
+            "armor_class",
+            "resistance"
+          ],
+          "title": "Bonus",
+          "type": "string"
+        },
+        "amount": {
+          "default": 1,
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Amount",
+          "type": "integer"
+        },
+        "selector": {
+          "anyOf": [
+            {
+              "maxLength": 150,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Selector"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "bonus"
+      ],
+      "title": "NativeBonus",
+      "type": "object"
+    },
+    "PassiveCopy": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "passive_copy",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "base_passive": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Base Passive",
+          "type": "string"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "base_passive"
+      ],
+      "title": "PassiveCopy",
+      "type": "object"
+    },
+    "SpellSlotCost": {
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "maximum": 6,
+          "minimum": 1,
+          "title": "Level",
+          "type": "integer"
+        },
+        "amount": {
+          "default": 1,
+          "maximum": 3,
+          "minimum": 1,
+          "title": "Amount",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "level"
+      ],
+      "title": "SpellSlotCost",
+      "type": "object"
+    },
+    "TriggerEffect": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "trigger",
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "title": "Id",
+          "type": "string"
+        },
+        "event": {
+          "enum": [
+            "on_hit",
+            "on_heal",
+            "on_damaged"
+          ],
+          "title": "Event",
+          "type": "string"
+        },
+        "condition": {
+          "enum": [
+            "always",
+            "target_full_health"
+          ],
+          "title": "Condition",
+          "type": "string"
+        },
+        "target": {
+          "enum": [
+            "self",
+            "target"
+          ],
+          "title": "Target",
+          "type": "string"
+        },
+        "action": {
+          "default": "status",
+          "enum": [
+            "status",
+            "damage",
+            "heal"
+          ],
+          "title": "Action",
+          "type": "string"
+        },
+        "dice": {
+          "anyOf": [
+            {
+              "pattern": "^(?:[1-9]|10)d(?:4|6|8|10|12|20)$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dice"
+        },
+        "damage_type": {
+          "anyOf": [
+            {
+              "enum": [
+                "Slashing",
+                "Piercing",
+                "Bludgeoning",
+                "Acid",
+                "Cold",
+                "Fire",
+                "Force",
+                "Lightning",
+                "Necrotic",
+                "Poison",
+                "Psychic",
+                "Radiant",
+                "Thunder"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Damage Type"
+        },
+        "status_ref": {
+          "anyOf": [
+            {
+              "maxLength": 150,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Ref"
+        },
+        "status_draft_id": {
+          "anyOf": [
+            {
+              "maxLength": 150,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_:-]+$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Status Draft Id"
+        },
+        "duration_turns": {
+          "maximum": 10,
+          "minimum": 1,
+          "title": "Duration Turns",
+          "type": "integer"
+        },
+        "display": {
+          "$ref": "#/$defs/Display"
+        }
+      },
+      "required": [
+        "kind",
+        "id",
+        "event",
+        "condition",
+        "target",
+        "duration_turns"
+      ],
+      "title": "TriggerEffect",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.1-draft-4",
+      "default": "1.1-draft-4",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "modify_existing",
+        "create_new"
+      ],
+      "title": "Mode",
+      "type": "string"
+    },
+    "base_equipment": {
+      "maxLength": 150,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_:-]+$",
+      "title": "Base Equipment",
+      "type": "string"
+    },
+    "user_goal": {
+      "maxLength": 2000,
+      "minLength": 1,
+      "title": "User Goal",
+      "type": "string"
+    },
+    "display": {
+      "$ref": "#/$defs/Display"
+    },
+    "parameters": {
+      "$ref": "#/$defs/BaseParameters"
+    },
+    "effects": {
+      "items": {
+        "discriminator": {
+          "mapping": {
+            "bonus": "#/$defs/NativeBonus",
+            "constant": "#/$defs/ConstantEffect",
+            "grant_spell": "#/$defs/GrantedSpell",
+            "independent_status": "#/$defs/IndependentStatus",
+            "passive_copy": "#/$defs/PassiveCopy",
+            "trigger": "#/$defs/TriggerEffect"
+          },
+          "propertyName": "kind"
+        },
+        "oneOf": [
+          {
+            "$ref": "#/$defs/ConstantEffect"
+          },
+          {
+            "$ref": "#/$defs/NativeBonus"
+          },
+          {
+            "$ref": "#/$defs/PassiveCopy"
+          },
+          {
+            "$ref": "#/$defs/TriggerEffect"
+          },
+          {
+            "$ref": "#/$defs/GrantedSpell"
+          },
+          {
+            "$ref": "#/$defs/IndependentStatus"
+          }
+        ]
+      },
+      "maxItems": 30,
+      "title": "Effects",
+      "type": "array"
+    },
+    "removed_original_passives": {
+      "items": {
+        "maxLength": 150,
+        "minLength": 1,
+        "pattern": "^[A-Za-z0-9_:-]+$",
+        "type": "string"
+      },
+      "maxItems": 30,
+      "title": "Removed Original Passives",
+      "type": "array"
+    },
+    "acquisition": {
+      "anyOf": [
+        {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Acquisition"
+    },
+    "appearance_equipment": {
+      "anyOf": [
+        {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Appearance Equipment"
+    },
+    "template_behavior": {
+      "default": "reject_special",
+      "enum": [
+        "reject_special",
+        "preserve_reviewed"
+      ],
+      "title": "Template Behavior",
+      "type": "string"
+    },
+    "icon": {
+      "anyOf": [
+        {
+          "maxLength": 150,
+          "minLength": 1,
+          "pattern": "^[A-Za-z0-9_:-]+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Icon"
+    },
+    "unresolved": {
+      "items": {
+        "maxLength": 2000,
+        "minLength": 1,
+        "type": "string"
+      },
+      "maxItems": 20,
+      "title": "Unresolved",
+      "type": "array"
+    }
+  },
+  "required": [
+    "mode",
+    "base_equipment",
+    "user_goal"
+  ],
+  "title": "Plan",
+  "type": "object"
+}

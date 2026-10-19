@@ -1,0 +1,214 @@
+{
+  "case": {
+    "id": "N01",
+    "task": "parse",
+    "input": {
+      "request": {
+        "request_id": "N01",
+        "base_revision": 3,
+        "context_digest": "frozen_N01"
+      },
+      "selection": {
+        "mode": "modify_existing",
+        "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+        "inheritance_strategy": null
+      },
+      "current_plan": {
+        "schema_version": "1.1-draft-4",
+        "mode": "modify_existing",
+        "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+        "user_goal": "合成案例，非玩家记录",
+        "display": {
+          "name": null,
+          "description": null
+        },
+        "parameters": {},
+        "effects": [],
+        "removed_original_passives": [],
+        "acquisition": null,
+        "appearance_equipment": null,
+        "template_behavior": "reject_special",
+        "icon": null,
+        "unresolved": []
+      },
+      "effective_values": {
+        "weight_kg": {
+          "original": 2,
+          "current": 1,
+          "unit": "kg",
+          "source": "fixture"
+        }
+      },
+      "capabilities": {
+        "version": "B-fixture-2026-10-17",
+        "category_summary": [
+          "parameters",
+          "constant",
+          "bonus",
+          "trigger",
+          "independent_status",
+          "grant_spell",
+          "passive_copy",
+          "display",
+          "resources"
+        ],
+        "candidates": [],
+        "checks": [],
+        "completeness": "relevant_candidates_only",
+        "lookup_state": "expanded"
+      },
+      "intent_state": {
+        "goal": "给护符加上晨星回响技能。",
+        "clarifications": [],
+        "open_issues": [],
+        "withdrawn": []
+      },
+      "latest_message": {
+        "id": "msg_missing_catalog",
+        "text": "给护符加上晨星回响技能。",
+        "answers_issue_ids": []
+      },
+      "recent_history": [],
+      "snapshots": []
+    },
+    "expectation": {
+      "no_operations": true,
+      "information_missing": true
+    },
+    "meaning": "补查后仍缺少命名技能，保留缺口，不能要求技术标识或自动创建替代。"
+  },
+  "prompt_version": "task8-v4",
+  "model": "qwen3.7-plus",
+  "output": {
+    "schema_version": "parse-v1",
+    "request_id": "N01",
+    "base_revision": 3,
+    "context_digest": "frozen_N01",
+    "intent_summary": "请求添加“晨星回响”技能，但系统未找到该资源，需澄清具体效果或确认名称。",
+    "requirements": [
+      {
+        "id": "r1",
+        "quote": "给护符加上晨星回响技能。",
+        "meaning": "给护符加上晨星回响技能。",
+        "operation_ids": [],
+        "issue_ids": [
+          "i1"
+        ],
+        "text_request_ids": [],
+        "issue_update_ids": [],
+        "no_change": false
+      }
+    ],
+    "operations": [],
+    "issues": [
+      {
+        "id": "i1",
+        "requirement_ids": [
+          "r1"
+        ],
+        "kind": "information_missing",
+        "detail": "已补查目录，但未找到名为“晨星回响”的技能或被动资源。请描述该技能的具体触发条件、效果类型（如伤害、治疗、状态）及数值，以便检查能否创建独立词条或寻找近似替代。",
+        "question": null,
+        "options": [],
+        "evidence_refs": []
+      }
+    ],
+    "issue_updates": [],
+    "text_requests": []
+  },
+  "usage": {
+    "prompt_tokens": 12444,
+    "total_tokens": 12691,
+    "completion_tokens": 247,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "text_tokens": 12444
+    }
+  },
+  "contract": "passed",
+  "checks": {
+    "no_operations": true,
+    "missing": true
+  },
+  "status": "passed_mechanical_checks",
+  "elapsed_ms": 5938,
+  "diagnostics": {
+    "trace_id": "00b51f98-9945-4c9b-baf5-cdd1a60961c8",
+    "thinking": "disabled",
+    "stages": [
+      {
+        "stage": "request_started",
+        "elapsed_ms": 0
+      },
+      {
+        "stage": "provider_configured",
+        "elapsed_ms": 0,
+        "provider": "bailian",
+        "model": "qwen3.7-plus"
+      },
+      {
+        "stage": "network_route",
+        "elapsed_ms": 0,
+        "system_proxy": false
+      },
+      {
+        "stage": "connection.connect_tcp.started",
+        "elapsed_ms": 172
+      },
+      {
+        "stage": "connection.connect_tcp.complete",
+        "elapsed_ms": 250
+      },
+      {
+        "stage": "connection.start_tls.started",
+        "elapsed_ms": 250
+      },
+      {
+        "stage": "connection.start_tls.complete",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.send_request_headers.started",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.send_request_headers.complete",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.send_request_body.started",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.send_request_body.complete",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.receive_response_headers.started",
+        "elapsed_ms": 266
+      },
+      {
+        "stage": "http11.receive_response_headers.complete",
+        "elapsed_ms": 5938
+      },
+      {
+        "stage": "response_headers",
+        "elapsed_ms": 5938,
+        "http_status": 200
+      },
+      {
+        "stage": "first_body_chunk",
+        "elapsed_ms": 5938
+      },
+      {
+        "stage": "body_complete",
+        "elapsed_ms": 5938,
+        "response_bytes": 1374
+      },
+      {
+        "stage": "completed",
+        "elapsed_ms": 5938
+      }
+    ]
+  }
+}

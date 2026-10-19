@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-17",
+  "final_status": "passed",
+  "total_tests": 170,
+  "task8_tests": 18,
+  "final_elapsed_seconds": 43.067,
+  "command": "python -m unittest discover -s tests -v",
+  "runtime": "Codex bundled Python with PYTHONPATH=.runtime/python",
+  "final_temp_location": "user LOCALAPPDATA/Temp",
+  "environment_notes": "Earlier Windows PermissionError runs retained. No service code changes or test suppression used to make final run pass.",
+  "logs": [
+    {
+      "path": "docs/v1.1/task8/baseline-evidence/regression.log",
+      "status": "sandbox_temp_permission_failure",
+      "sha256": "056be63242667b701c1cd7583e6878bfcabd15fa2bfd42c24433b413ad1ea4ed"
+    },
+    {
+      "path": "docs/v1.1/task8/baseline-evidence/regression-final.log",
+      "status": "project_temp_replace_permission_failure",
+      "sha256": "c038b42858c4932ddf04233d52c42848b5be8c784fe2cee10eddde9473be2523"
+    },
+    {
+      "path": "docs/v1.1/task8/baseline-evidence/regression-recheck.log",
+      "status": "project_temp_replace_permission_failure",
+      "sha256": "630363f369b63fa16fe87a925b309b0abfedbf337899b51a20a9fdfac69832f4"
+    },
+    {
+      "path": "docs/v1.1/task8/baseline-evidence/regression-localtemp.log",
+      "status": "passed",
+      "sha256": "e6736e8ec089dcf069eecf43e73e3b5c7ff3b85e3dd55e8a69b60da379f7190f"
+    }
+  ],
+  "game_validation": "not_performed"
+}

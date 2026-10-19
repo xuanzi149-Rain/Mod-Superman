@@ -1,0 +1,179 @@
+{
+  "case": {
+    "id": "N03",
+    "task": "review",
+    "input": {
+      "request": {
+        "request_id": "N03",
+        "base_revision": 4,
+        "context_digest": "frozen_N03"
+      },
+      "plan_digest": "plan_R01",
+      "facts_digest": "facts_R01",
+      "facts": [
+        {
+          "id": "fact_strength",
+          "owner": "strength_bonus",
+          "dimensions": {
+            "condition": "装备期间",
+            "ability": "Strength",
+            "amount": 4
+          },
+          "source": "fixture_effective_plan",
+          "missing": []
+        }
+      ],
+      "texts": [
+        {
+          "id": "text_1",
+          "owner": "strength_bonus",
+          "field": "description",
+          "mode": "exact",
+          "source_text": "喝下后永久增加4点力量",
+          "source_text_digest": "text_N03",
+          "style": null,
+          "required_fact_ids": [
+            "fact_strength"
+          ]
+        }
+      ]
+    },
+    "expectation": {
+      "source_status": "conflict",
+      "proposal_status": "consistent"
+    },
+    "meaning": "力量4点文案核对变体；建议不能改变真实效果。"
+  },
+  "prompt_version": "task8-v4",
+  "model": "qwen3.7-plus",
+  "output": {
+    "schema_version": "review-v1",
+    "request_id": "N03",
+    "base_revision": 4,
+    "context_digest": "frozen_N03",
+    "plan_digest": "plan_R01",
+    "items": [
+      {
+        "text_id": "text_1",
+        "source_text_digest": "text_N03",
+        "source_status": "conflict",
+        "findings": [
+          {
+            "dimension": "condition",
+            "quote": "喝下后永久",
+            "fact_refs": [
+              "fact_strength"
+            ],
+            "explanation": "事实表明效果仅在装备期间生效，而非饮用后永久生效。"
+          },
+          {
+            "dimension": "trigger",
+            "quote": "喝下后",
+            "fact_refs": [
+              "fact_strength"
+            ],
+            "explanation": "事实未包含饮用触发机制，仅说明装备期间的条件。"
+          }
+        ],
+        "proposed_text": "装备期间，力量提高 4 点。",
+        "proposal_status": "consistent",
+        "proposal_findings": []
+      }
+    ]
+  },
+  "usage": {
+    "prompt_tokens": 2449,
+    "total_tokens": 2647,
+    "completion_tokens": 198,
+    "prompt_tokens_details": {
+      "cached_tokens": 512,
+      "text_tokens": 2449
+    }
+  },
+  "contract": "passed",
+  "checks": {
+    "source_status": true,
+    "proposal_status": true
+  },
+  "status": "passed_mechanical_checks",
+  "elapsed_ms": 4812,
+  "diagnostics": {
+    "trace_id": "44388bf4-f2b7-4d75-b7a7-7fb2c769aae9",
+    "thinking": "disabled",
+    "stages": [
+      {
+        "stage": "request_started",
+        "elapsed_ms": 0
+      },
+      {
+        "stage": "provider_configured",
+        "elapsed_ms": 0,
+        "provider": "bailian",
+        "model": "qwen3.7-plus"
+      },
+      {
+        "stage": "network_route",
+        "elapsed_ms": 0,
+        "system_proxy": false
+      },
+      {
+        "stage": "connection.connect_tcp.started",
+        "elapsed_ms": 15
+      },
+      {
+        "stage": "connection.connect_tcp.complete",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "connection.start_tls.started",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "connection.start_tls.complete",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.send_request_headers.started",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.send_request_headers.complete",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.send_request_body.started",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.send_request_body.complete",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.receive_response_headers.started",
+        "elapsed_ms": 31
+      },
+      {
+        "stage": "http11.receive_response_headers.complete",
+        "elapsed_ms": 4812
+      },
+      {
+        "stage": "response_headers",
+        "elapsed_ms": 4812,
+        "http_status": 200
+      },
+      {
+        "stage": "first_body_chunk",
+        "elapsed_ms": 4812
+      },
+      {
+        "stage": "body_complete",
+        "elapsed_ms": 4812,
+        "response_bytes": 1155
+      },
+      {
+        "stage": "completed",
+        "elapsed_ms": 4812
+      }
+    ]
+  }
+}

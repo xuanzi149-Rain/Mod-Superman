@@ -1,0 +1,110 @@
+{
+  "cases": [
+    {
+      "id": "M01",
+      "status": "passed"
+    },
+    {
+      "id": "M02",
+      "status": "failed"
+    },
+    {
+      "id": "M03",
+      "status": "passed"
+    },
+    {
+      "id": "M04",
+      "status": "passed"
+    },
+    {
+      "id": "M05",
+      "status": "passed"
+    },
+    {
+      "id": "M06",
+      "status": "failed"
+    },
+    {
+      "id": "M07",
+      "status": "passed"
+    },
+    {
+      "id": "M08",
+      "status": "passed"
+    },
+    {
+      "id": "M09",
+      "status": "passed"
+    },
+    {
+      "id": "C01",
+      "status": "passed"
+    },
+    {
+      "id": "C02",
+      "status": "passed"
+    },
+    {
+      "id": "C03",
+      "status": "passed"
+    },
+    {
+      "id": "C04",
+      "status": "passed"
+    },
+    {
+      "id": "C05",
+      "status": "passed"
+    },
+    {
+      "id": "C06",
+      "status": "passed"
+    },
+    {
+      "id": "C07",
+      "status": "passed"
+    },
+    {
+      "id": "C08",
+      "status": "passed"
+    },
+    {
+      "id": "C09",
+      "status": "failed"
+    },
+    {
+      "id": "L01",
+      "status": "passed"
+    },
+    {
+      "id": "L02",
+      "status": "passed"
+    },
+    {
+      "id": "L03",
+      "status": "failed"
+    },
+    {
+      "id": "L04",
+      "status": "passed"
+    },
+    {
+      "id": "L05",
+      "status": "passed"
+    },
+    {
+      "id": "L06",
+      "status": "passed"
+    }
+  ],
+  "suite_fingerprint": "a8f4e19df14386f081bab6c25c9f0e58a7b44a36d71a204dc287a2d3017c2041",
+  "version": "task8-v2",
+  "model": "qwen3.7-plus",
+  "scope": "Synthetic independent live-context acceptance; no website or game validation",
+  "assets": {
+    "backend\\task8.py": "4e4dc7880893e06c326f8fe2454900525f96a7b01adc5cb8fe0b41752a43e4c1",
+    "backend\\task8_protocol.py": "a4ed63c84d87727c26f8edbd260a8cd6a0245efb83daaa6c65cce4550480cd9a",
+    "prompts\\task8-parse-v2.md": "b7d5e4e7cb672a50edc7edafb16e3cd4b42703213a0d8eee9fc30ccac38dc550",
+    "prompts\\task8-review-v2.md": "eed9eea1b0cbc37498e1a3e58375b0fe53ef78fd2acca7f1867611d777895081"
+  }
+}

@@ -155,7 +155,9 @@ def generate(request, output_root=ROOT / "build/equipment-mvp", *, confirmed=Fal
         (directory / "result.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (directory / "使用说明.txt").write_text(
         json.dumps(clean, ensure_ascii=False, indent=2) +
-        "\n退出游戏，将 .pak 复制到 %LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\Mods，重启并启用。\n"
+        "\n安装：完全退出游戏，将 .pak 文件复制到 %LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\Mods。\n"
+        "可将上述路径粘贴到资源管理器地址栏；不要放入 Steam 安装目录 Data/Mods，也不要复制整个 ZIP。\n"
+        "重启游戏，在主菜单 Mod 管理器的已安装列表中查找 ModSuperman 开头的模块并启用。\n"
         "停用同对象的旧测试包，加载测试存档，重新装备后检查；恢复时停用并重启加载原档。\n"
         "Stats 修改影响共用记录的装备，可能被子记录继承；名称只覆盖简体中文。\n"
         "伤害与双手伤害分别修改，未提交的字段保持原规则。未直接修改售价，最终价格需游戏实测。\n"

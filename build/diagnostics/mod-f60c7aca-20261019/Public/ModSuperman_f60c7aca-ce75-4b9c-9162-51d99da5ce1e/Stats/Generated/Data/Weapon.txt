@@ -1,0 +1,5 @@
+new entry "WPN_Longbow_1"
+type "Weapon"
+using "WPN_Longbow_1"
+data "PassivesOnEquip" "MS_f293255322d35693ae76f2cb90d5b279;MS_85667b24b2505642b43f75a7c95d1a04"
+

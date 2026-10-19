@@ -1,0 +1,14 @@
+{
+  "purpose": "task8-v9 格式恢复真实模型复测与 v10 修正复测，已完成",
+  "endpoint": "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1",
+  "model": "qwen3.7-plus",
+  "cases": [
+    "伤害增加1，其他保持不变。",
+    "基础伤害改成2d6，其他保持不变。",
+    "重量减半，其他保持不变。"
+  ],
+  "context": "合成 B 阶段固定装备草稿、游戏原生资源字段、task8-v9 Prompt 与协议；不含用户历史或密钥",
+  "limit": "每条最多一次自动纠正；总计最多 6 次模型调用",
+  "status": "completed_user_authorized_4_of_6_calls",
+  "actual_calls": 4
+}

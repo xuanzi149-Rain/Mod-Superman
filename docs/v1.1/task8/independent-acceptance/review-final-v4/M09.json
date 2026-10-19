@@ -1,0 +1,239 @@
+{
+  "case_id": "M09",
+  "source": "build\\v1.1\\task8\\independent-20261017-130917",
+  "model": "qwen3.7-plus",
+  "result": {
+    "adopted": [
+      "e_8aa8f7619deb5611abb8b958ac050b3e:description"
+    ],
+    "pending": [],
+    "state": "ready"
+  },
+  "status": "protocol_adoption_compile_passed_semantic_read_required",
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [
+      {
+        "kind": "passive_copy",
+        "id": "e_8aa8f7619deb5611abb8b958ac050b3e",
+        "base_passive": "ARM_Balance_1_Passive",
+        "display": {
+          "name": null,
+          "description": "装备期间，敏捷属性检定、豁免检定以及杂技、巧手和隐匿技能检定获得 +1 加值。"
+        }
+      }
+    ],
+    "removed_original_passives": [
+      "ARM_Balance_1_Passive"
+    ],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "log": [
+    {
+      "task": "review",
+      "context": {
+        "request": {
+          "request_id": "87706aef-7e26-4707-bb9b-e3227ed818ce",
+          "base_revision": 1,
+          "context_digest": "2f5b9cd36b88bf4b12547a8008976ed16513995b727519b2517f8107a6aff4ef"
+        },
+        "resource_digest": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+        "plan_digest": "b94b1a9d23c2577badc603f205cb6294c593d203b7891e2af996a82abc639272",
+        "facts_digest": "ad749a05f5bb5d9c9460e3f8674572575eae49409a7891e41ec8135957fa9256",
+        "facts": [
+          {
+            "id": "equipment",
+            "owner": "equipment",
+            "dimensions": {
+              "mode": "modify_existing",
+              "parameters": {
+                "weapon_properties": {
+                  "original": [],
+                  "current": [],
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "dexterity_rule": {
+                  "original": "capped_2",
+                  "current": "capped_2",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "versatile_damage": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "weight_kg": {
+                  "original": 9.0,
+                  "current": 9.0,
+                  "unit": "kg",
+                  "source": "effective_native_fields"
+                },
+                "rarity": {
+                  "original": "Rare",
+                  "current": "Rare",
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "armor_class": {
+                  "original": 15,
+                  "current": 15,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "enchantment": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "value": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                },
+                "damage_type": {
+                  "original": null,
+                  "current": null,
+                  "unit": null,
+                  "source": "effective_native_fields"
+                }
+              },
+              "inherited_fields": {
+                "Level": "1",
+                "Slot": "Breast",
+                "UseCosts": "ActionPoint:1",
+                "ValueLevel": "3",
+                "ValueUUID": "f0307da3-feb7-40b0-bd62-18eea9167021",
+                "ValueScale": "1",
+                "ValueRounding": "1",
+                "Weight": "9",
+                "ComboCategory": "DyableArmor",
+                "InventoryTab": "Equipment",
+                "ArmorType": "ChainShirt",
+                "Shield": "No",
+                "Armor Class Ability": "Dexterity",
+                "RootTemplate": "461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+                "ArmorClass": "15",
+                "MinAmount": "1",
+                "MaxAmount": "1",
+                "Priority": "1",
+                "MinLevel": "1",
+                "Ability Modifier Cap": "2",
+                "Proficiency Group": "MediumArmor",
+                "Rarity": "Rare",
+                "PassivesOnEquip": "ARM_SuperiorMaterial_1_Passive;ARM_Balance_1_Passive"
+              },
+              "removed_original_passives": [
+                "ARM_Balance_1_Passive"
+              ],
+              "inherited_dependencies": {},
+              "acquisition": null,
+              "template_behavior": "reject_special"
+            },
+            "missing": [
+              "ARM_SuperiorMaterial_1_Passive:unreviewed_function:DamageReduction"
+            ]
+          },
+          {
+            "id": "effect_e_8aa8f7619deb5611abb8b958ac050b3e",
+            "owner": "e_8aa8f7619deb5611abb8b958ac050b3e",
+            "dimensions": {
+              "kind": "passive_copy",
+              "id": "e_8aa8f7619deb5611abb8b958ac050b3e",
+              "base_passive": "ARM_Balance_1_Passive",
+              "display_name": "独立被动",
+              "activation_condition": "装备期间"
+            },
+            "missing": []
+          },
+          {
+            "id": "compiled_dependencies",
+            "owner": "equipment",
+            "dimensions": {
+              "final_native_records": {
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/PassiveData.txt": "new entry \"MS_56f2e2dd867359c0b140f9dfc5f618b8\"\ntype \"PassiveData\"\ndata \"DisplayName\" \"hccea4657gda3bg5db9g8e70g70d0a8de6e2e;1\"\ndata \"Description\" \"h52c66277g437cg5319g979ag7911bb308ce2;1\"\ndata \"DescriptionParams\" \"\"\ndata \"Boosts\" \"RollBonus(SavingThrow, 1, Dexterity);RollBonus(RawAbility, 1, Dexterity);RollBonus(SkillCheck, 1, Acrobatics);RollBonus(SkillCheck, 1, SleightOfHand);RollBonus(SkillCheck, 1, Stealth)\"\n\n",
+                "Public/ModSuperman_00000000-0000-0000-0000-000000000008/Stats/Generated/Data/Armor.txt": "new entry \"ARM_ChainShirt_Body_2\"\ntype \"Armor\"\nusing \"ARM_ChainShirt_Body_2\"\ndata \"PassivesOnEquip\" \"ARM_SuperiorMaterial_1_Passive;MS_56f2e2dd867359c0b140f9dfc5f618b8\"\n\n"
+              }
+            },
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "e_8aa8f7619deb5611abb8b958ac050b3e:description",
+            "owner": "e_8aa8f7619deb5611abb8b958ac050b3e",
+            "field": "description",
+            "mode": "rewrite",
+            "source_text": null,
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "style": "用中文准确说明该词条的触发、条件、对象、数值、持续时间、资源成本和限制；只依据提供的最终事实，不增加效果。",
+            "required_fact_ids": [
+              "effect_e_8aa8f7619deb5611abb8b958ac050b3e",
+              "compiled_dependencies"
+            ]
+          }
+        ]
+      },
+      "output": {
+        "schema_version": "review-v1",
+        "request_id": "87706aef-7e26-4707-bb9b-e3227ed818ce",
+        "base_revision": 1,
+        "context_digest": "2f5b9cd36b88bf4b12547a8008976ed16513995b727519b2517f8107a6aff4ef",
+        "plan_digest": "b94b1a9d23c2577badc603f205cb6294c593d203b7891e2af996a82abc639272",
+        "items": [
+          {
+            "text_id": "e_8aa8f7619deb5611abb8b958ac050b3e:description",
+            "source_text_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "source_status": "not_provided",
+            "findings": [],
+            "proposed_text": "装备期间，敏捷属性检定、豁免检定以及杂技、巧手和隐匿技能检定获得 +1 加值。",
+            "proposal_status": "consistent",
+            "proposal_findings": []
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 4341,
+        "total_tokens": 4684,
+        "completion_tokens": 343,
+        "prompt_tokens_details": {
+          "cached_tokens": 2304,
+          "text_tokens": 4341
+        }
+      }
+    }
+  ]
+}

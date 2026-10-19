@@ -1,0 +1,13 @@
+{
+  "status": "agent_semantic_review_passed",
+  "reviewer": "assistant_not_user",
+  "cases": {
+    "M04": "装备期间魅力+3，条件与数值正确",
+    "M05": "装备期间奥秘+2、魅力豁免+1及Cold抗性；冷冻为同义表述",
+    "M06": "使用此武器命中后恢复自身2d6；无虚构持续",
+    "M07": "AC+2持续3回合、刷新不叠加；无属性归零；普通名称不误报",
+    "M08": "动作、21米、3d4、活体非亡灵非构装体、无槽位、长休次数均与提供事实一致；无新增盟友限制",
+    "M09": "与原生Boosts列明的敏捷RawAbility/SavingThrow及Acrobatics/SleightOfHand/Stealth+1对应，非凭记忆扩展"
+  },
+  "note": "M09技能列表经原生Boosts核实有明确依据；不将最初疑虑写为真实失败。parse v4与v3文件逐字相同，v4仅继续修复审核和零属性生成。"
+}

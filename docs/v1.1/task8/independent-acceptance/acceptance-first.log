@@ -1,0 +1,71 @@
+test_all_bonus_subtypes_and_nested_status_updates (tests.test_task8_acceptance.IndependentAcceptance.test_all_bonus_subtypes_and_nested_status_updates) ... ok
+test_all_review_targets_and_resource_selection (tests.test_task8_acceptance.IndependentAcceptance.test_all_review_targets_and_resource_selection) ... ok
+test_context_reset_does_not_reapply_old_pending_text (tests.test_task8_acceptance.IndependentAcceptance.test_context_reset_does_not_reapply_old_pending_text) ... ERROR
+test_relative_effect_uses_inherited_spell_value (tests.test_task8_acceptance.IndependentAcceptance.test_relative_effect_uses_inherited_spell_value) ... FAIL
+test_relative_parameter_precision_rejects_without_clipping (tests.test_task8_acceptance.IndependentAcceptance.test_relative_parameter_precision_rejects_without_clipping) ... ok
+test_reset_rewrite_standard_and_confirmation_invalidation (tests.test_task8_acceptance.IndependentAcceptance.test_reset_rewrite_standard_and_confirmation_invalidation) ... ERROR
+test_resource_change_between_review_and_adoption_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_resource_change_between_review_and_adoption_rejected) ... FAIL
+test_six_effects_add_update_delete_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_six_effects_add_update_delete_both_modes) ... ok
+test_status_duration_relative_and_dependency_atomicity (tests.test_task8_acceptance.IndependentAcceptance.test_status_duration_relative_and_dependency_atomicity) ... ok
+test_ten_parameters_set_restore_in_both_modes (tests.test_task8_acceptance.IndependentAcceptance.test_ten_parameters_set_restore_in_both_modes) ... ok
+test_text_same_target_conflict_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_text_same_target_conflict_rejected) ... FAIL
+
+======================================================================
+ERROR: test_context_reset_does_not_reapply_old_pending_text (tests.test_task8_acceptance.IndependentAcceptance.test_context_reset_does_not_reapply_old_pending_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 126, in test_context_reset_does_not_reapply_old_pending_text
+    r=self.apply(s,[operation('change_context','context',dict(mode='create_new',base_equipment=self.fixtures['create_body_armor']['base_equipment'],carry_policy='reset',evidence_quote='接受保留'))])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 63, in apply
+    return s.apply(o,c)
+           ^^^^^^^^^^^^
+  File "C:\Users\17583\Desktop\Mod-Superman\backend\task8.py", line 298, in apply
+    o=validate_output('parse',output,context)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17583\Desktop\Mod-Superman\backend\task8_protocol.py", line 30, in validate_output
+    raise ValueError('schema:' + '/'.join(map(str, first.path)) + ':' + first.message[:500])
+ValueError: schema:operations/0:{'kind': 'change_context', 'target': 'context', 'payload': {'mode': 'create_new', 'base_equipment': 'equipment:4814825e-23ee-41ed-9784-d9963434150d', 'carry_policy': 'reset', 'evidence_quote': '接受保留'}, 'group_id': 'g', 'id': 'op0', 'requirement_ids': ['r']} is not valid under any of the given schemas
+
+======================================================================
+ERROR: test_reset_rewrite_standard_and_confirmation_invalidation (tests.test_task8_acceptance.IndependentAcceptance.test_reset_rewrite_standard_and_confirmation_invalidation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 153, in test_reset_rewrite_standard_and_confirmation_invalidation
+    s.use_standard_text();p=s.preview();s.confirm(expected_revision=p['revision'],expected_digest=p['digest'])
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17583\Desktop\Mod-Superman\backend\task8.py", line 467, in confirm
+    raise ValueError('capability_review_failed')
+ValueError: capability_review_failed
+
+======================================================================
+FAIL: test_relative_effect_uses_inherited_spell_value (tests.test_task8_acceptance.IndependentAcceptance.test_relative_effect_uses_inherited_spell_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 121, in test_relative_effect_uses_inherited_spell_value
+    self.assertFalse(r['failed'],r);self.assertIsNotNone(s.draft.plan.effects[0].range_m)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [{'operations': ['op0'], 'error': 'unknown_relative_basis'}] is not false : {'revision': 3, 'applied': [], 'failed': [{'operations': ['op0'], 'error': 'unknown_relative_basis'}], 'before': {'schema_version': '1.1-draft-4', 'mode': 'create_new', 'base_equipment': 'equipment:1865323f-b428-4791-a0a9-578841e57463', 'user_goal': '程序验收案例，非玩家使用记录', 'display': {'name': None, 'description': None}, 'parameters': {'weapon_properties': None, 'dexterity_rule': None, 'damage': None, 'versatile_damage': None, 'weight_kg': None, 'rarity': None, 'armor_class': None, 'enchantment': None, 'value': None, 'damage_type': None}, 'effects': [{'kind': 'grant_spell', 'id': 'e_695fe5f682335b9ba21d45bc20b27763', 'base_spell': 'Target_HealingWord', 'display': {'name': None, 'description': None}, 'range_m': None, 'area_radius_m': None, 'action_cost': None, 'cooldown': None, 'spell_slot': None, 'remove_spell_slot': False, 'healing': None, 'damage': None, 'status_duration_turns': None}], 'removed_original_passives': [], 'acquisition': 'dammon_act1', 'appearance_equipment': None, 'template_behavior': 'reject_special', 'icon': None, 'unresolved': []}, 'after': {'schema_version': '1.1-draft-4', 'mode': 'create_new', 'base_equipment': 'equipment:1865323f-b428-4791-a0a9-578841e57463', 'user_goal': '程序验收案例，非玩家使用记录', 'display': {'name': None, 'description': None}, 'parameters': {'weapon_properties': None, 'dexterity_rule': None, 'damage': None, 'versatile_damage': None, 'weight_kg': None, 'rarity': None, 'armor_class': None, 'enchantment': None, 'value': None, 'damage_type': None}, 'effects': [{'kind': 'grant_spell', 'id': 'e_695fe5f682335b9ba21d45bc20b27763', 'base_spell': 'Target_HealingWord', 'display': {'name': None, 'description': None}, 'range_m': None, 'area_radius_m': None, 'action_cost': None, 'cooldown': None, 'spell_slot': None, 'remove_spell_slot': False, 'healing': None, 'damage': None, 'status_duration_turns': None}], 'removed_original_passives': [], 'acquisition': 'dammon_act1', 'appearance_equipment': None, 'template_behavior': 'reject_special', 'icon': None, 'unresolved': ['unknown_relative_basis']}, 'unresolved': [{'id': 'failed_03efacdf-586d-4a17-b68c-d2211b78370a_op0', 'kind': 'capability_gap', 'detail': 'unknown_relative_basis', 'requirements': ['独立验收：接受保留，取消旧要求，改为当前方案']}], 'text_review_pending': False}
+
+======================================================================
+FAIL: test_resource_change_between_review_and_adoption_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_resource_change_between_review_and_adoption_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 134, in test_resource_change_between_review_and_adoption_rejected
+    with self.assertRaisesRegex(ValueError,'stale_review'):s.adopt_review(replacements=['equipment:description'])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_text_same_target_conflict_rejected (tests.test_task8_acceptance.IndependentAcceptance.test_text_same_target_conflict_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\17583\Desktop\Mod-Superman\tests\test_task8_acceptance.py", line 139, in test_text_same_target_conflict_rejected
+    with self.assertRaisesRegex(ValueError,'conflicting_text'):self.apply(s,texts=texts,message='名称甲或乙')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 11 tests in 47.679s
+
+FAILED (failures=3, errors=2)

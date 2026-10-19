@@ -1,0 +1,3777 @@
+{
+  "equipment:00353281-1abb-4de6-893b-d6bf7f748da8": {
+    "name": "手术刀",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:3d01cf80-2d13-4225-a520-6558a7f407cd": {
+    "name": "手术刀",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:dbaa448b-50b6-402a-8b51-95b9f53ebc21": {
+    "name": "手术刀",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:004ab562-5cd4-4f1f-8aa5-497e7e2c5f4f": {
+    "name": "铁条盾",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:e4b4c45f-0563-4b00-851c-30a64fcb18ec": {
+    "name": "铁条盾",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:00544958-4656-4e69-8feb-282cb11a6c9e": {
+    "name": "重弩",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 2，版本 1"
+  },
+  "equipment:04622e3d-5b3f-4f2c-a0db-513a717d911f": {
+    "name": "重弩",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 1，版本 1"
+  },
+  "equipment:1711c0b3-dfdb-46ca-9008-293ebbf9ab3e": {
+    "name": "重弩",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 1，版本 2"
+  },
+  "equipment:17e752a3-8321-46a1-a139-53f67209b749": {
+    "name": "重弩",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:f75005ab-40c3-4e42-b3ed-2b2fb8aa010a": {
+    "name": "重弩",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 2，版本 2"
+  },
+  "equipment:01a26e77-c4bc-4237-ae71-59c634723a95": {
+    "name": "硬头锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:3186796d-3ab3-4d49-bfc2-cba1aff0cf5a": {
+    "name": "硬头锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:87a16db5-9a01-4053-a17d-a3d17a721db7": {
+    "name": "硬头锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:dd848a74-782c-4fcf-a06f-9c979fecf54b": {
+    "name": "硬头锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:01da5a5b-97cd-4989-9ae3-af646eb35bc9": {
+    "name": "多节树枝",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:bb97362e-db06-4bfc-981e-3e1eef3eca69": {
+    "name": "多节树枝",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:028fdf79-07b7-4a34-af59-eb40dea1fc1d": {
+    "name": "苍白橡树",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:13f6ff0c-08c4-4e9f-a624-511389b68dc2": {
+    "name": "苍白橡树",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:02ae5d88-8044-43df-8363-02a2900776db": {
+    "name": "皮甲",
+    "category": "body",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:4c4396db-fa4a-4541-9b2a-23e43211dde7": {
+    "name": "皮甲",
+    "category": "body",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:738b0d75-74ce-466b-864d-c5f0f764842b": {
+    "name": "皮甲",
+    "category": "body",
+    "detail": "外观 4"
+  },
+  "equipment:be29b42a-e3ab-4a41-b4c2-7443cf65162f": {
+    "name": "皮甲",
+    "category": "body",
+    "detail": "外观 3"
+  },
+  "equipment:f91623dd-7dcd-4d05-b353-6a15f5caa921": {
+    "name": "皮甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:032c0c5e-158f-4c51-8fbe-f7658f43c853": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:20612f0e-2dae-45c1-8398-94840a6af489": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:45d7f817-7f92-48ad-994c-e94c35822b48": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:6b572a46-c70a-49fe-ac56-a68eb186ca9c": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:c3d8f808-3f35-4206-9f6d-a26961953616": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:ee6309db-5347-435c-94d8-a84f5996ea56": {
+    "name": "光洁的项链",
+    "category": "amulet",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:049173ec-636a-487e-a9ed-bfafeadf6bb7": {
+    "name": "长弓 +1",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:9dd26064-6cd1-4400-a6b8-e898c084ca64": {
+    "name": "长弓 +1",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:0623bfdc-08d2-437c-b7ee-618680b2c8b2": {
+    "name": "青铜项链",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:fda631e5-83f5-4ae4-b28f-cf4da102e3be": {
+    "name": "青铜项链",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:06270b96-794d-4e01-ab90-835888df526f": {
+    "name": "雪白树枝帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:cb240901-f10b-4134-8eda-bec94c5ad2d5": {
+    "name": "雪白树枝帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:07ad0e9f-7fb4-418f-a1ef-06b431c252be": {
+    "name": "法师帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:acd2666c-2682-4807-bf23-e7f221b0a092": {
+    "name": "法师帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:ad63e235-24fd-441a-91e3-1083c98610c4": {
+    "name": "法师帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:086ae8fd-c44e-43a7-b8be-777b551a06d6": {
+    "name": "感知护符",
+    "category": "amulet",
+    "detail": "珍奇，版本 1"
+  },
+  "equipment:14a6da9a-6689-4c70-96a1-d03319ba3278": {
+    "name": "感知护符",
+    "category": "amulet",
+    "detail": "珍奇，版本 2"
+  },
+  "equipment:7eaa1331-877c-40d7-9811-8238aee09f68": {
+    "name": "感知护符",
+    "category": "amulet",
+    "detail": "极珍奇"
+  },
+  "equipment:0af630e0-82eb-4b83-baa2-e296f97a7a4e": {
+    "name": "戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:2f157b63-5500-406f-bf32-90011d612907": {
+    "name": "戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:79a8c7ea-188a-47e9-a30c-61fbc75a7d2b": {
+    "name": "戒指",
+    "category": "ring",
+    "detail": "版本 3"
+  },
+  "equipment:7a8aa614-b3a2-4f80-9355-b9c7da7fd62a": {
+    "name": "戒指",
+    "category": "ring",
+    "detail": "版本 4"
+  },
+  "equipment:aea3df9f-c407-46ab-8564-713022febaa7": {
+    "name": "戒指",
+    "category": "ring",
+    "detail": "版本 5"
+  },
+  "equipment:0b1e7b94-6ec9-4ae4-a81b-5c91b88eff1f": {
+    "name": "骨锯",
+    "category": "weapon",
+    "detail": "无附魔加值，伤害 1d6，重量 0.9 kg"
+  },
+  "equipment:81177d6e-6761-4f8e-9bbe-1e291dd18664": {
+    "name": "骨锯",
+    "category": "weapon",
+    "detail": "附魔 +1，伤害 1d8，精良，重量 1.35 kg"
+  },
+  "equipment:b9739be6-7c2b-4fe9-be36-13ff1094e79c": {
+    "name": "骨锯",
+    "category": "weapon",
+    "detail": "无附魔加值，伤害 1d8，重量 1.35 kg"
+  },
+  "equipment:0b30d06e-5bd4-45e5-bb89-a0b167e06d06": {
+    "name": "至上真神护符",
+    "category": "amulet",
+    "detail": "外观 2"
+  },
+  "equipment:b933c594-f953-4de6-85a9-65c2ed3a2a0c": {
+    "name": "至上真神护符",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:0c0c1031-4a04-4e8f-ba8a-8aafa2a396e8": {
+    "name": "链甲衫",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:921cd1e1-c39c-44c3-a090-b667322af7f8": {
+    "name": "链甲衫",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:0d9cf507-148d-4dda-8477-fb0ea531d38b": {
+    "name": "德鲁伊护腕",
+    "category": "gloves",
+    "detail": "版本 1"
+  },
+  "equipment:eb99ce71-8ef2-4ff6-a94a-a7b9cff3d45b": {
+    "name": "德鲁伊护腕",
+    "category": "gloves",
+    "detail": "版本 2"
+  },
+  "equipment:0db0d565-db86-4213-befa-096c3bd09330": {
+    "name": "鳞甲",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:ca0aafad-0f1e-4d76-8e3b-925397bb436b": {
+    "name": "鳞甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:1068659c-f12b-4930-ac4f-c4892af58cd7": {
+    "name": "魔网长袍",
+    "category": "clothing",
+    "detail": "版本 1"
+  },
+  "equipment:73dd34d5-873c-445c-be94-705d611f63b2": {
+    "name": "魔网长袍",
+    "category": "clothing",
+    "detail": "版本 2"
+  },
+  "equipment:11ae855e-c30b-4cb1-b1c7-9f71d9252f5d": {
+    "name": "飞镖",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:82d1c904-861b-4c76-8df6-2643b46dbb81": {
+    "name": "飞镖",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:fb08eef6-f6a0-454e-ab14-c1470f3ba18d": {
+    "name": "飞镖",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:129069f3-6294-4c23-aa16-40daa1c48b35": {
+    "name": "战镐",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:4d76009b-7410-424a-8391-362aa95852cd": {
+    "name": "战镐",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:6f769b8f-6fbf-4be0-953b-a5ecab1a1ffc": {
+    "name": "战镐",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:a088775a-8f75-42f2-aa74-76a3f80701fa": {
+    "name": "战镐",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:12f0f615-1198-4c82-afa1-4b6b880ee020": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:145db0f8-0c8b-4788-8d9b-5b9846b11a97": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "珍奇"
+  },
+  "equipment:1be2b8cc-4ce6-4c73-9a9d-73b741ffd5ce": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 6"
+  },
+  "equipment:1dc6610c-0dbf-4b5a-b671-2af3a7c80a8e": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 5"
+  },
+  "equipment:3b80f247-bdbf-46f6-b695-277c8b96c465": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 1"
+  },
+  "equipment:4433fb5e-c0af-4466-a20b-a36dbd45a59f": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:540d6714-c030-4fd5-83e0-592a0f443d70": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 9"
+  },
+  "equipment:584cc5a4-b7d5-4bd5-bd95-8f30df613abf": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:5d3b434b-4448-47c3-8dc3-92e1ca946e29": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 11"
+  },
+  "equipment:615092b5-91d5-4144-8e0f-d0fdd4d3c862": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 8"
+  },
+  "equipment:6c9f69a8-7cf7-4b57-b4e0-64cfaa04fd05": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:8e34fd76-8b6d-48a5-89e3-942289bec31e": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 3，版本 3"
+  },
+  "equipment:8ee5bdde-c22f-452f-add9-2d82ec3dc390": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 10"
+  },
+  "equipment:992d9eb6-0dda-46b8-95cc-f71c4bced905": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 2"
+  },
+  "equipment:abdcc7a4-db92-4eca-8afc-6b180ce861aa": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 2"
+  },
+  "equipment:c6ec5f13-d54c-44ca-9387-3be692a9ae10": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 4"
+  },
+  "equipment:ca7faba9-aafb-4a04-b838-17b5d4eadee6": {
+    "name": "皮手套",
+    "category": "gloves",
+    "detail": "外观 7"
+  },
+  "equipment:1306c1bf-7db6-4036-9799-a5d1a1745694": {
+    "name": "吉斯洋基半身甲",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:38c63f49-3c50-46d0-90d3-68b247542c36": {
+    "name": "吉斯洋基半身甲",
+    "category": "body",
+    "detail": "外观 3"
+  },
+  "equipment:85ed2fdb-c676-4e14-9641-ffda788078e8": {
+    "name": "吉斯洋基半身甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:d1ec23df-f3d6-4378-ab07-dea2ff1ad556": {
+    "name": "吉斯洋基半身甲",
+    "category": "body",
+    "detail": "外观 4"
+  },
+  "equipment:136a5889-4548-45de-bc2a-56f08ca91844": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:44f1ec46-4976-41ac-9697-313083bbc3c1": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:96e2abaf-78ff-4dcb-a6a3-a5f0c348bd9f": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 5，版本 1"
+  },
+  "equipment:b5c85eb7-ed4f-4e90-a317-5547ddaf3650": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:b789aedc-c010-47b0-9801-d9aacdce4c56": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:cbb7cf1a-0b97-48c9-93a6-131620b3a6d8": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 5，版本 2"
+  },
+  "equipment:f99fe985-168c-4ab6-8c21-8fbd1ef16a1a": {
+    "name": "长棍",
+    "category": "weapon",
+    "detail": "外观 4"
+  },
+  "equipment:148cd3dd-bf44-4489-a593-0ead19359aa6": {
+    "name": "长矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:6dc63d1d-9efc-4031-b8bb-34684196286b": {
+    "name": "长矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:baa5b139-42ad-40fd-b6c3-6b52b092c48e": {
+    "name": "长矛",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:15be2ce4-3f2c-4b75-8068-bd13fd69a3d5": {
+    "name": "青铜坠饰",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:72837a82-6dcd-41bb-a657-2a395744b499": {
+    "name": "青铜坠饰",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:168b9099-19f5-44e4-b55c-e64ceb60b71f": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:3ae83f97-63f4-4dab-848f-0b8ac5c26649": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 4"
+  },
+  "equipment:799fd23a-8e18-4642-8650-521dd7880c2b": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:7ec40cde-4d96-4352-b93e-cdcab6383337": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 3"
+  },
+  "equipment:9410a467-3e49-4b14-b067-ea8ad6a0d431": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:a3e3fdd6-d07c-4162-a13e-18b5f83d5179": {
+    "name": "简易长袍",
+    "category": "body",
+    "detail": "外观 2，版本 3"
+  },
+  "equipment:173aad0e-0db4-4f2f-8f24-49e6898b8f90": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:2a4b298c-88cb-4951-b244-2e65e6819945": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:37990e69-4de5-4c3c-b720-878fb4b0ffbd": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:52f6619c-edd3-4493-a420-c124f52c2a03": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:6ebf81ac-0144-4a03-85d7-df978ea82b1a": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:a631b70a-22e9-4e2c-bb07-2164c2beb5d0": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:aa39ec3a-55c5-465c-8a3f-d5eb810c073f": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:d24378c9-7d4a-4ae2-b464-f415fc1fdecd": {
+    "name": "金戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:17925d9f-e319-4b6d-8e25-90cb802d932c": {
+    "name": "巨斧 +1",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:3411e0f1-d6a6-4535-a0c6-3e21ae0b8410": {
+    "name": "巨斧 +1",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:afbfaee7-e2cd-48e7-8c46-d2377c7320e3": {
+    "name": "巨斧 +1",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:179c4e2f-a568-40be-b9c6-25c2541aeb12": {
+    "name": "黄铜吊坠",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:73807c08-d2cf-4858-8aa2-4bf88e4ac257": {
+    "name": "黄铜吊坠",
+    "category": "amulet",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:b5382ac4-4055-4acf-b3fe-9c20d54957f9": {
+    "name": "黄铜吊坠",
+    "category": "amulet",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:fa28af9d-f179-4eeb-9780-a4cde893ac1f": {
+    "name": "黄铜吊坠",
+    "category": "amulet",
+    "detail": "外观 2，版本 3"
+  },
+  "equipment:fad9fc4b-cf23-446b-8098-163a1042e45f": {
+    "name": "黄铜吊坠",
+    "category": "amulet",
+    "detail": "外观 2，版本 4"
+  },
+  "equipment:083ddacf-e03c-4681-887b-80dee8158b26": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 4，版本 1"
+  },
+  "equipment:1865323f-b428-4791-a0a9-578841e57463": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 5，版本 1"
+  },
+  "equipment:2af7255d-bae1-4d4c-a8ba-4a2b5909a794": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 6"
+  },
+  "equipment:344ac552-11ff-4150-8bb4-7eed8fb78588": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 1，版本 1"
+  },
+  "equipment:6b7364d6-d33b-4cf6-a398-b2bd0f75138f": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 5，版本 2"
+  },
+  "equipment:7050c02e-f0e1-46b8-9400-2514805ecd2e": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:82d42ba1-5488-49a7-b4db-32332cee7521": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 4，版本 2"
+  },
+  "equipment:a4338d7c-5b70-4076-9711-d3803fab2e1b": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 2"
+  },
+  "equipment:a96c763c-db4e-4fc3-968b-ebed9d404aee": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 3"
+  },
+  "equipment:dd0e60fd-a334-411b-97cf-fa6a015c578b": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 4，版本 3"
+  },
+  "equipment:f344c6b2-64bc-4c6d-a66d-5d3966191210": {
+    "name": "长剑",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 1，版本 2"
+  },
+  "equipment:0d6cf147-e47a-481e-9ed7-a2d85e358d2c": {
+    "name": "镶钉皮甲",
+    "category": "body",
+    "detail": "护甲等级 12，外观 1"
+  },
+  "equipment:19451420-13f6-444c-a15b-7abb6dde3f91": {
+    "name": "镶钉皮甲",
+    "category": "body",
+    "detail": "护甲等级 12，外观 2"
+  },
+  "equipment:e3f2d3d9-8ec6-4033-911a-966630fd1344": {
+    "name": "镶钉皮甲",
+    "category": "body",
+    "detail": "护甲等级 13，珍奇"
+  },
+  "equipment:19ce6720-03b6-4d22-bf35-4963b510d1da": {
+    "name": "巨棒",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 4.5 kg，外观 1，版本 1"
+  },
+  "equipment:20bd2850-f6b3-4f13-bf96-c566d8df0de4": {
+    "name": "巨棒",
+    "category": "weapon",
+    "detail": "伤害 2d12，重量 8.5 kg"
+  },
+  "equipment:260c6ee9-d9c2-4ea9-83e1-f330dd0d5df6": {
+    "name": "巨棒",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 4.5 kg，外观 1，版本 2"
+  },
+  "equipment:665e1c25-5c1f-48b2-a075-ee6409e8b019": {
+    "name": "巨棒",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 4.5 kg，外观 2，版本 1"
+  },
+  "equipment:7c749dd0-f750-4d6d-8ea0-5401b3c6b13d": {
+    "name": "巨棒",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 4.5 kg，外观 2，版本 2"
+  },
+  "equipment:1a2a58b7-4bd5-44d5-b1fe-8cd7e5b53def": {
+    "name": "巨剑 +1",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 1"
+  },
+  "equipment:81a83529-5bb6-4c72-b1af-6fc8f45c5706": {
+    "name": "巨剑 +1",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:e943a695-db88-49f0-ac06-22c8d0e7b8c8": {
+    "name": "巨剑 +1",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 2"
+  },
+  "equipment:1a63e2ff-7a05-4546-9ef1-75a4b151f513": {
+    "name": "短弯刀",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:b8167a9b-44a8-4cfe-ad88-dbfb7f00c7da": {
+    "name": "短弯刀",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:dcd46d13-d316-492a-a350-8e7492bce9c4": {
+    "name": "短弯刀",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:1b9f07ee-f3ba-4e95-8949-ce551de3346f": {
+    "name": "蚀刻护符",
+    "category": "amulet",
+    "detail": "外观 2"
+  },
+  "equipment:362720e4-fb7d-492b-9b39-2b99e58e8231": {
+    "name": "蚀刻护符",
+    "category": "amulet",
+    "detail": "外观 3"
+  },
+  "equipment:3d4b7fde-0036-4d15-b082-3ced76e14b0d": {
+    "name": "蚀刻护符",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:1bbbc944-19a4-4001-8be3-edb2d8784828": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:3a3a688b-4d18-44df-9190-003493492070": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:912bbc6f-f4f0-4815-9ed5-d914289402e6": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:b04fcde0-694d-4783-a701-106363c98272": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:e75e18a0-0a94-42b4-8745-063ea00a5a66": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:f2f3d3a1-459f-483e-85d9-3170ffd71e93": {
+    "name": "光洁项链",
+    "category": "amulet",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:1c6b06f6-6ccb-412b-958f-1fd71836d32a": {
+    "name": "可靠的靴子",
+    "category": "clothing",
+    "detail": "外观 1"
+  },
+  "equipment:b61e283d-eba5-4fd2-86a3-21e490ad16bf": {
+    "name": "可靠的靴子",
+    "category": "clothing",
+    "detail": "外观 2"
+  },
+  "equipment:1c6e9b7d-db4d-4815-ad38-ef5a2ab481df": {
+    "name": "波尔的镰刀",
+    "category": "weapon",
+    "detail": "伤害 2d4，珍奇"
+  },
+  "equipment:cb8405e3-704c-43d2-9bbe-89959b4f085e": {
+    "name": "波尔的镰刀",
+    "category": "weapon",
+    "detail": "伤害 1d4"
+  },
+  "equipment:01c5196e-24a3-4b3f-884c-24797a70d702": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 9"
+  },
+  "equipment:029840f8-65a4-4cc7-988d-d52f76b92f56": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 10，版本 1"
+  },
+  "equipment:110ec1df-fba9-4f92-ba2b-8f0123357570": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 10，版本 2"
+  },
+  "equipment:16d3a315-e79b-49ee-98b1-3951594c51f0": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 2"
+  },
+  "equipment:1dcdf52e-b596-4e3a-8d1c-8fff17ed8c2c": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 1"
+  },
+  "equipment:22413938-1bde-4f9b-b3c4-30b29e89e887": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 2"
+  },
+  "equipment:2324a287-e1d5-41af-a2f3-fe28af83838c": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 5"
+  },
+  "equipment:35c0a291-fe35-4a3e-94d5-adbf31b269d4": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 3"
+  },
+  "equipment:5a0ee632-9145-48b2-9b92-97c32c2ccbd9": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 11"
+  },
+  "equipment:73b125e5-cfd6-42d6-a47a-3c9210c07f16": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 4"
+  },
+  "equipment:78c6f9d2-f95e-4487-b1b7-421bebdaa2a4": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 7"
+  },
+  "equipment:7bd04fd0-1e43-4e9f-99d9-e808dae6fd66": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 4"
+  },
+  "equipment:ad173ef4-0b36-4e15-8aef-ccb6423331f5": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 5"
+  },
+  "equipment:ae234e85-42a8-43d8-8719-0d0e1a0c15f2": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 6"
+  },
+  "equipment:b109178d-5f3f-4aa0-b5b1-ef1bd8d2655b": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 6"
+  },
+  "equipment:befb6947-0cc2-4233-998b-48d5ab3c9e95": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 3"
+  },
+  "equipment:c1531ce8-a2ce-4606-9cb7-5ed6d56b69a6": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 12，版本 7"
+  },
+  "equipment:ca434b15-c387-4557-810a-d11fcf773b15": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 1"
+  },
+  "equipment:e39636f7-adc1-4181-89a3-484ef832e6d8": {
+    "name": "金属手套",
+    "category": "gloves",
+    "detail": "外观 8"
+  },
+  "equipment:1df12296-498c-494c-b639-f103b63156a3": {
+    "name": "白银坠饰",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:86be236b-6da5-4fce-8d96-f027c0780140": {
+    "name": "白银坠饰",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:8b5fb90f-f957-4a1a-b8eb-2baff0c3b40b": {
+    "name": "白银坠饰",
+    "category": "amulet",
+    "detail": "精良"
+  },
+  "equipment:1eab180b-5bf9-48ea-aece-7ba20d1deb78": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:30090359-3b25-4730-9fbe-ec4009bda582": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:55ff421b-239d-495b-acc0-5791f9232b77": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:71195299-578a-4a38-b039-1046355c3181": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:7562984a-7680-4538-ab83-93c78e5b96c8": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:8ea0e5b1-3d4a-47bd-85e7-609bee20313b": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:8ef907f5-5987-4c6d-a3bd-4e1b4c2a3a0d": {
+    "name": "匕首 +1",
+    "category": "weapon",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:1ebdc61e-3bc6-4da5-adb9-34dd839b012a": {
+    "name": "吉斯洋基巨剑",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 1"
+  },
+  "equipment:769adbf8-d3bf-48f7-8c2b-21fb892b1d33": {
+    "name": "吉斯洋基巨剑",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 2"
+  },
+  "equipment:90cb6f73-ad53-477b-b06e-a92a2c7db163": {
+    "name": "吉斯洋基巨剑",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 3"
+  },
+  "equipment:91d38c71-4614-463f-8b35-338e5b3bbf9f": {
+    "name": "吉斯洋基巨剑",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:d1082e88-b1e2-479d-913f-1413784d95a1": {
+    "name": "吉斯洋基巨剑",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，版本 4"
+  },
+  "equipment:1f5cbcc5-5ba7-4273-ab53-7a12a40cc438": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:57e8af03-6452-4bb8-a74a-bc4b17a79fc3": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:7f2203f8-0162-4c3d-8635-c700fa2982ab": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:a5d843ab-c3af-4e60-a925-bb2e15828938": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:c532cfaf-0bdd-4eed-9333-bfca5d7ba6da": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:d47b6341-daa8-438a-b57e-9f1051b778dd": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:f554e750-4a86-45d7-b1a5-027e27df55ef": {
+    "name": "手弩",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:1fdc0473-8d0f-4e59-8ef8-9bd67568c002": {
+    "name": "重尖刺棒",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:3186614b-537e-44f1-82bc-c9edba59e593": {
+    "name": "重尖刺棒",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:134a78a5-7a20-415a-9af1-5b141db51d42": {
+    "name": "石化贝壳",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:2099af4a-caa2-4e06-9b6d-fa6e9754bd09": {
+    "name": "石化贝壳",
+    "category": "shield",
+    "detail": "外观 4"
+  },
+  "equipment:22dd91be-6433-4569-a7b3-ce3d6ea59b5b": {
+    "name": "石化贝壳",
+    "category": "shield",
+    "detail": "外观 5"
+  },
+  "equipment:65fff410-33fd-49a6-aacd-d24610bc0e7b": {
+    "name": "石化贝壳",
+    "category": "shield",
+    "detail": "外观 3"
+  },
+  "equipment:efdb7b03-83b0-4284-b1fb-06c5c78424d0": {
+    "name": "石化贝壳",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:20e6fc7e-a9d1-403b-a725-e3fe781521bb": {
+    "name": "轻锤 +1",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:d0419aaf-9e20-4029-b8e9-9e1a62661b13": {
+    "name": "轻锤 +1",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:212bf756-b237-4ede-9c67-e871fd60e788": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 9"
+  },
+  "equipment:42de5102-7a39-44d2-b1d8-645ec4d8b0ce": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:4700fad1-769e-4831-9b3f-4ead08c49cfa": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 5"
+  },
+  "equipment:556de2bd-99a6-4d62-b78c-d4681ce5bdfa": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 2"
+  },
+  "equipment:6a491be1-7480-4069-8ac2-277728652fbf": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 8，版本 1"
+  },
+  "equipment:6bb7a595-7646-48a9-9c44-d39f16c1c5cb": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 8，版本 2"
+  },
+  "equipment:836e13ab-78a6-4ca3-ba8e-adc4c25205f1": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:b307af36-a2da-4c01-aac3-a31771edd407": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 1"
+  },
+  "equipment:b8f42945-a42e-46cb-a424-3a0a5e97157a": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 6"
+  },
+  "equipment:cb28ea7d-2838-43e7-a807-11277c44facb": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 4"
+  },
+  "equipment:dc59e71e-a303-497d-9ab7-7354cf8897d8": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 8，版本 3"
+  },
+  "equipment:f107cc6a-3a6e-4a58-be16-fbe73b3f7ae8": {
+    "name": "雅致的靴子",
+    "category": "clothing",
+    "detail": "外观 7"
+  },
+  "equipment:21ac01b5-93c7-42b8-9b84-44ea01c2bae1": {
+    "name": "速度之靴",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:8b22d15a-85bb-4c8d-90cf-a773fc451eac": {
+    "name": "速度之靴",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:24fa28d4-f679-44bf-865e-c7e70dcb9588": {
+    "name": "木盾",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:4491fcaf-03bf-4087-baf3-b638657080f6": {
+    "name": "木盾",
+    "category": "shield",
+    "detail": "外观 3"
+  },
+  "equipment:747387ac-0dc7-47ab-8c69-75269ffc4dbc": {
+    "name": "木盾",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:2577a332-8ad2-4e54-b52b-f4f7cc5823a1": {
+    "name": "皮靴",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:969bab00-b269-46a5-a7e9-dd4887814719": {
+    "name": "皮靴",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:258ce9f3-3f32-4546-ae6e-196b3e8e91b5": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 5"
+  },
+  "equipment:27fcc5b1-9d08-40d4-ba6a-5bdaf102d3ce": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:3cc9b9ed-5b29-4f29-82b7-3d621a510a33": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:569b0f3d-abcd-4b01-aaf0-979091288163": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:97be1f14-e49a-45fe-89c7-99c04653599d": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:9ddcb3b2-14fb-48d7-9047-cd2ee34de51c": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:b66d62c4-b38f-43dd-920d-40d250d66d03": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:fbb9fdb1-932d-47df-81fb-5785cb19d3a3": {
+    "name": "匕首",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:25ecd0e9-709b-497d-815a-3be9b2c69f61": {
+    "name": "项链",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:303990e3-5546-44a3-9c5a-f9aa1702ad51": {
+    "name": "项链",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:788772cf-fa7c-478f-997d-7f3d03f7e9bc": {
+    "name": "项链",
+    "category": "amulet",
+    "detail": "版本 3"
+  },
+  "equipment:7c0888c8-a3e8-477e-b249-a35879e683a0": {
+    "name": "项链",
+    "category": "amulet",
+    "detail": "版本 4"
+  },
+  "equipment:26a9fba6-1a60-4691-84ea-da7ffcb304e0": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:46102e6b-43ae-4784-bbbb-623b959a3019": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:5ca50a09-548b-4134-a0c7-98f10e8d69e6": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:a1add11d-c904-4fe3-a777-e118bd030b1c": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:ea00c5c9-b010-4fa3-bf10-0c7b8c5e7854": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:ed2339ed-db72-4753-b467-b257bb02a2fc": {
+    "name": "钉头锤",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:26b81847-b0dd-4150-aef7-602fcbb72eca": {
+    "name": "铁条盾 +1",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:a28ecc05-b67b-493b-8cd2-ac7229e703d2": {
+    "name": "铁条盾 +1",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:0a6f620d-32f4-499a-9c11-db105441a57a": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 1"
+  },
+  "equipment:0d5e17a5-510d-468a-8607-77a326bc453c": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d4，重量 0.45 kg，外观 2，版本 1"
+  },
+  "equipment:276e6ec4-7169-4fea-955e-43f26e82214e": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 3，版本 1"
+  },
+  "equipment:467ddb4f-6791-41fa-99f7-ee8620d63bbe": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 4，版本 1"
+  },
+  "equipment:542a5052-fd63-4215-89a8-cdb2f5e3a541": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d4，重量 0.45 kg，外观 2，版本 2"
+  },
+  "equipment:91b72625-27da-4d2f-b97f-3c74ccf76e91": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 3，版本 2"
+  },
+  "equipment:b39629a9-c5e0-4835-8c07-f780b830f798": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 2"
+  },
+  "equipment:b3f8f4ad-c56d-4fc2-8173-8a17cc36d756": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d4，重量 0.45 kg，外观 1"
+  },
+  "equipment:d23c3194-8d98-4baa-b3b6-1281b08d44c1": {
+    "name": "短剑",
+    "category": "weapon",
+    "detail": "伤害 1d6，重量 0.9 kg，外观 4，版本 2"
+  },
+  "equipment:278ac367-34c4-441c-b4a6-8d7f11255e46": {
+    "name": "金项链",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:c612c1e6-0ff0-40a1-b199-b25db1c9808e": {
+    "name": "金项链",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:27943fda-2491-4e67-a740-559d02dc08fa": {
+    "name": "长弓",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:86e3d864-309c-4c17-ba38-877ce487d481": {
+    "name": "长弓",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:9160904e-0c71-49df-8f9e-b1e232a2421d": {
+    "name": "长弓",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:f5a95e54-b4ff-482d-b5f4-392917125c86": {
+    "name": "长弓",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:fa25b3c8-57aa-411f-a74e-58f4f1826569": {
+    "name": "长弓",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:037311db-7fdf-41be-bf4a-184920f90896": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 5"
+  },
+  "equipment:2798c9f8-b06b-44d4-9d6c-e6d982c502fa": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:33918af0-a994-43f0-8a22-40727f4d1560": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:5e8597e6-7695-4333-8895-1ffe7a47db1d": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:a0d3f2f8-3277-48fb-bc74-8d94d9d086d8": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 4"
+  },
+  "equipment:dfc51f62-6a05-4bd4-ae92-d1a8a2e3d5a7": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:ecfb9f69-5bc3-402e-acd8-c91d57e28403": {
+    "name": "巨剑",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:28373d60-893f-411c-a029-35c31665c821": {
+    "name": "邪教烙铁",
+    "category": "weapon",
+    "detail": "伤害 1d4，重量 0.9 kg"
+  },
+  "equipment:4d64bcbe-a37d-4537-8ff1-510083989435": {
+    "name": "邪教烙铁",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 3.15 kg，版本 1"
+  },
+  "equipment:60f96f90-ae41-455c-90fb-c8b611c7dc3e": {
+    "name": "邪教烙铁",
+    "category": "weapon",
+    "detail": "伤害 1d8，重量 3.15 kg，版本 2"
+  },
+  "equipment:28e67c96-c955-450e-b217-bb7609b6dbd3": {
+    "name": "巨锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:5487ceb4-b009-46ae-8ed6-cd3baaf0a18d": {
+    "name": "巨锤",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:beb4fa70-6b2b-4e7b-b0c5-3fb67bb48210": {
+    "name": "巨锤",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:2ae874a1-4573-4de3-a595-444591564303": {
+    "name": "废木盾",
+    "category": "shield",
+    "detail": "外观 3"
+  },
+  "equipment:33ab760a-e617-4e12-a3c6-1758c83cc3a7": {
+    "name": "废木盾",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:dd7550d6-112d-476e-9234-4901a95bd7f6": {
+    "name": "废木盾",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:2e0547f5-09ed-4ded-b9e0-e55d9e412a25": {
+    "name": "洛山达护符",
+    "category": "amulet",
+    "detail": "外观 2"
+  },
+  "equipment:b0c41250-7884-4d6f-bf95-2a4860ddf659": {
+    "name": "洛山达护符",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:2e65cacd-f96d-46d9-b9b5-0f4fc0df190d": {
+    "name": "战锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:6b17998d-2e79-405d-8b1f-beb53658312f": {
+    "name": "战锤",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:a75ebd91-46dd-4c6a-881e-878e5ba6f67a": {
+    "name": "战锤",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:2efeda1e-c5d1-48ef-af6f-b1706fd4c3e2": {
+    "name": "长戟",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:723a5397-cd16-4969-8e47-f00a1ba7c368": {
+    "name": "长戟",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:f928a70d-5b23-4605-9cae-5342f9ed206e": {
+    "name": "长戟",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:2f5c7142-c8d7-4f6a-98b9-47a3ed00e1c5": {
+    "name": "战斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:a086b825-8f17-4f0e-855b-178f8cdc515a": {
+    "name": "战斧",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:f7a7ab99-6902-4389-8134-1fed85e978e1": {
+    "name": "战斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:2f7aadd5-65ea-4ab6-8c55-88ee584c72df": {
+    "name": "优雅长袍",
+    "category": "clothing",
+    "detail": "外观 2"
+  },
+  "equipment:bf4700bb-f1db-4586-8332-4e3e0c3e0fe0": {
+    "name": "优雅长袍",
+    "category": "clothing",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:d943c31f-a8c9-49b0-8eba-f120b5075a67": {
+    "name": "优雅长袍",
+    "category": "clothing",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:30b19abd-fc49-4826-811f-9c4c556ae6f0": {
+    "name": "吉斯洋基护腕",
+    "category": "gloves",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:8d8c1761-d647-4cb6-8e3d-e1bf6d6c872d": {
+    "name": "吉斯洋基护腕",
+    "category": "gloves",
+    "detail": "外观 2"
+  },
+  "equipment:d89a534b-43d5-4975-b819-79c5c4d1de83": {
+    "name": "吉斯洋基护腕",
+    "category": "gloves",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:30c5721d-bdc3-4150-8cd1-d99197eb4870": {
+    "name": "债务人衣装",
+    "category": "clothing",
+    "detail": "外观 2"
+  },
+  "equipment:6f7d15a8-9bcb-45de-94c5-8c77424aaf42": {
+    "name": "债务人衣装",
+    "category": "clothing",
+    "detail": "外观 1"
+  },
+  "equipment:319c625a-cfb7-4e44-ac3f-370a00c0d4ef": {
+    "name": "吉斯洋基靴子",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:684f6bc4-a4bb-4896-9596-a76854df1a94": {
+    "name": "吉斯洋基靴子",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:31c99c28-f062-44ba-9ee6-cf969af920c4": {
+    "name": "镶钉盾",
+    "category": "shield",
+    "detail": "护甲等级 2，外观 2"
+  },
+  "equipment:4124301b-638c-49fe-92b5-9ec5e18637bd": {
+    "name": "镶钉盾",
+    "category": "shield",
+    "detail": "护甲等级 2，外观 1，版本 1"
+  },
+  "equipment:8cdcb6bb-be71-4f26-9871-9312514c2436": {
+    "name": "镶钉盾",
+    "category": "shield",
+    "detail": "护甲等级 3，珍奇，外观 1"
+  },
+  "equipment:b7d8a185-dfc5-4113-ab53-0ca009073c8d": {
+    "name": "镶钉盾",
+    "category": "shield",
+    "detail": "护甲等级 3，珍奇，外观 2"
+  },
+  "equipment:d2af60ea-1b72-4d25-a188-6d8bc4fe255b": {
+    "name": "镶钉盾",
+    "category": "shield",
+    "detail": "护甲等级 2，外观 1，版本 2"
+  },
+  "equipment:32028a6e-ef0c-440a-b078-495fd2b09f3a": {
+    "name": "黯淡的戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:d2253fa1-a5a3-4c19-9d7e-5a1e436b9fae": {
+    "name": "黯淡的戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:ecf4a8a4-7859-4a82-8c08-0c9526f29500": {
+    "name": "黯淡的戒指",
+    "category": "ring",
+    "detail": "版本 3"
+  },
+  "equipment:3324ec12-1c95-4eef-ac0d-99375a5ff88e": {
+    "name": "红宝石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:5cbedb00-e900-439e-9035-50ab581fc5b9": {
+    "name": "红宝石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:81d843ad-2343-4964-b5d0-3db44dfee4e1": {
+    "name": "红宝石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:a58add7a-0279-4618-85f8-f48044df837f": {
+    "name": "红宝石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:3344b3a0-eb1b-41e5-a7ab-2151a42c9a32": {
+    "name": "紫水晶戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:a9f741f6-a758-47ea-bb21-9a37d3ddfe42": {
+    "name": "紫水晶戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:b7aab838-cafa-4b7d-a8d5-95ec3488f909": {
+    "name": "紫水晶戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:cda6f48d-9d06-45ee-80a2-055faf2b3801": {
+    "name": "紫水晶戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:348b0f52-8960-43e0-ae38-c1d3b1974c3f": {
+    "name": "饰环",
+    "category": "head",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:437aede9-dea6-46fd-ade2-fc9cfef16c3d": {
+    "name": "饰环",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:e7ce40d6-1c00-4a41-91ca-e06617c5e894": {
+    "name": "饰环",
+    "category": "head",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:34a71679-0ab5-4fd4-bba8-d6ad341ee490": {
+    "name": "半身甲",
+    "category": "body",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:39854fea-e29b-44a0-bdcc-b66311b0e79b": {
+    "name": "半身甲",
+    "category": "body",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:4aa373b2-0cb7-4b69-af38-0d1352236a1f": {
+    "name": "半身甲",
+    "category": "body",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:6fbbe358-8915-4781-b738-098c3e5a3bff": {
+    "name": "半身甲",
+    "category": "body",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:34dceb64-7246-4a2a-b7c0-411725ce468e": {
+    "name": "白银环带",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:359f2ebc-37fe-4f8e-835f-ac894ecdcf96": {
+    "name": "白银环带",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:37be86c0-f4af-48af-86c9-e91c57ce04bc": {
+    "name": "术士长袍",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:4ba55c6f-1302-4069-9e04-ff0bf2a7ede2": {
+    "name": "术士长袍",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:5ebd4ed6-17e6-4787-86d6-bbcaad8c6565": {
+    "name": "术士长袍",
+    "category": "body",
+    "detail": "版本 3"
+  },
+  "equipment:a81be340-0706-4201-bb4c-da52920574cf": {
+    "name": "术士长袍",
+    "category": "body",
+    "detail": "版本 4"
+  },
+  "equipment:f518ca6e-6422-4ea6-9c92-adc4da9a48f4": {
+    "name": "术士长袍",
+    "category": "body",
+    "detail": "版本 5"
+  },
+  "equipment:3931efcb-8287-4c25-9322-1595cb24ce8b": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": ""
+  },
+  "equipment:49214667-75eb-4880-b210-97e9056d84ce": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:a7bf4122-dc84-4c43-8491-ef815644a31b": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:b804fda2-1f64-4b0c-9961-dc873dab632a": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:d7a45053-fad4-4923-9d1e-6ed92c3a7194": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:f52c91d4-aa54-4b7f-ab4a-65717892b805": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:ff2db301-84a9-4449-a85e-babe48f10c02": {
+    "name": "手套",
+    "category": "gloves",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:3945a26c-d689-453e-86e6-d01add014e16": {
+    "name": "弯刀 +1",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:7cc7a0e1-d0b8-4569-afb2-d538e8941894": {
+    "name": "弯刀 +1",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:397dbd19-efed-4507-85f9-66daebad5258": {
+    "name": "布甲",
+    "category": "body",
+    "detail": "外观 3"
+  },
+  "equipment:63cc7723-245d-4b62-b9e6-5a47283cf777": {
+    "name": "布甲",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:9a487731-93df-45bd-bfcb-9bc82140c719": {
+    "name": "布甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:3c4c27dd-dd67-456c-9567-bc9fb7867238": {
+    "name": "三叉戟",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:80c499a7-d2e6-4fe2-bd17-8b393adaef37": {
+    "name": "三叉戟",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:d3807461-7c32-44ae-9aba-49ef4d3bf35e": {
+    "name": "三叉戟",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:3d016a8b-f5fb-4992-9cc5-73385c28333d": {
+    "name": "法官头盔",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:e864552e-b257-48c9-ac61-d65c9b5863d5": {
+    "name": "法官头盔",
+    "category": "head",
+    "detail": "外观 1"
+  },
+  "equipment:3e1b3db9-036e-4931-ab92-c3730a1c3d5f": {
+    "name": "战锤 +1",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:d98520f3-65ea-4a5a-be3f-86c25f647476": {
+    "name": "战锤 +1",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:3fc2ba50-3070-4caa-abe8-3bf885969bde": {
+    "name": "长剑 +1",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:970c962d-dca1-4b90-8d02-81a4e59e3f08": {
+    "name": "长剑 +1",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:41eed7f8-308a-4ab8-9f47-8ef619d6da57": {
+    "name": "绿宝石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:4bd69459-037e-4be9-8697-2b68ab7fdf74": {
+    "name": "绿宝石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:5cd7c5d3-fb97-4757-b5fd-dcc7a43110a7": {
+    "name": "绿宝石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:7ff7d7b1-6fdd-44b7-b0ca-d9f4ebf5bb72": {
+    "name": "绿宝石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:431f019e-3706-4a23-af48-e29acbc0e43b": {
+    "name": "卓尔镶钉皮甲",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:cab3455f-59fe-42be-8dcd-7cd61149389a": {
+    "name": "卓尔镶钉皮甲",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:43b7fbf5-7f6e-4e9e-bce7-c679eea44593": {
+    "name": "轻弩",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:58f57bdc-1d89-4b60-aedc-11f36e270205": {
+    "name": "轻弩",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:5e7631fa-ea5a-420d-9bc0-32e7a540538e": {
+    "name": "轻弩",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:e189bcb1-bf40-4839-81c1-a26492e5cd1c": {
+    "name": "轻弩",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:45483fcc-45b8-47e4-b776-c690230aaa65": {
+    "name": "巨斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:70b863dd-fc73-4276-b1d2-330d5e54fe3f": {
+    "name": "巨斧",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:9fffd630-0361-4a3e-95b1-67bcfd43ca9b": {
+    "name": "巨斧",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:d5712e24-ce9e-42ce-8fad-6e049b62c28c": {
+    "name": "巨斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:e99fd01c-2c7a-459e-8df0-3d7349239430": {
+    "name": "巨斧",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:45bbe45d-1a5d-4e64-9750-af6744ec617e": {
+    "name": "长柄刀",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:7507770e-7cef-46b5-8e5d-454d8fedcb6a": {
+    "name": "长柄刀",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:99f3b2d9-e03d-4cd5-9a67-5435a95682da": {
+    "name": "长柄刀",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:fde218da-d768-4be8-b95f-586a124357d3": {
+    "name": "长柄刀",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:465340b0-523f-48ac-a832-4db4a1183c74": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 6，版本 1"
+  },
+  "equipment:86a4cad6-2ffc-4b4b-a89c-42ba22590f77": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 5"
+  },
+  "equipment:8ed92d35-159c-493c-a8da-fba455f181e4": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 7"
+  },
+  "equipment:a1978b4d-3d93-49ec-9a8b-d19171ed35d5": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 6，版本 2"
+  },
+  "equipment:a5f5a875-932b-44c4-8b45-88d2ed379787": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 1"
+  },
+  "equipment:c2f0ea14-9384-4b5e-a0eb-81909ce72d38": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 4"
+  },
+  "equipment:d002844c-ea81-4208-92c2-fbcb7bad4f86": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 2"
+  },
+  "equipment:fc49414b-49d6-4f57-ae92-721d9d912d83": {
+    "name": "披风",
+    "category": "cloak",
+    "detail": "外观 3"
+  },
+  "equipment:467cca20-42bb-45cd-8eac-6ed49bbc2707": {
+    "name": "长袍",
+    "category": "body",
+    "detail": "外观 3"
+  },
+  "equipment:69302808-57a0-4fbb-9938-137bce5421d1": {
+    "name": "长袍",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:a2221f54-df0d-4129-aef2-6a2f8113ffe3": {
+    "name": "长袍",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:46b64a36-8446-45bd-98e8-ee81e3136baa": {
+    "name": "手斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:53b2ef56-dee1-470c-af97-122862698b61": {
+    "name": "手斧",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:76045155-50ca-4047-a23b-46c1c4ab085e": {
+    "name": "手斧",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:7f8cebbf-c3b0-47a0-ba6a-2c37dacff173": {
+    "name": "手斧",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:4814825e-23ee-41ed-9784-d9963434150d": {
+    "name": "胸甲",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:f94eafb0-4277-45cd-96c8-03d0184eed51": {
+    "name": "胸甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:48318705-311a-4b4c-b911-18d260d6db0f": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 9"
+  },
+  "equipment:506289c6-c461-4a6b-b6a5-aa78e55d7445": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 8"
+  },
+  "equipment:6835bc61-36a4-4055-889b-4931e570682a": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 5"
+  },
+  "equipment:746b4059-90f5-428a-9d5a-fdac34201daf": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 7，版本 1"
+  },
+  "equipment:9515172b-511a-44dc-bf97-8b63bca4ea10": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:b07c4b32-af04-44a0-964d-436aa1a0a80d": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:b46e702a-1094-4a58-9b91-c75ad5ddf57d": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 6"
+  },
+  "equipment:c5a790b2-d66c-48af-8471-da98a4f47730": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 7，版本 2"
+  },
+  "equipment:d25bc94a-5ee9-448f-9210-f2dad61ae7e5": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:f606e1cb-b6ad-4787-a633-d74c480e4eea": {
+    "name": "法杖",
+    "category": "weapon",
+    "detail": "外观 4"
+  },
+  "equipment:494f21ac-5a1b-4e91-bd30-551b79532516": {
+    "name": "轻锤",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 1"
+  },
+  "equipment:d0bf4aef-e423-49ab-9177-c86b2a8efc9a": {
+    "name": "轻锤",
+    "category": "weapon",
+    "detail": "无附魔加值，外观 2"
+  },
+  "equipment:d4033a02-cea0-4f26-a6a9-7c1a836c4112": {
+    "name": "轻锤",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:49b84359-6a28-460e-af98-4526c5fca6fd": {
+    "name": "电气石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:66dc3535-3757-403b-8236-de380bf3f4ca": {
+    "name": "电气石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:937bf6e0-185d-4245-9465-b84b962f66a7": {
+    "name": "电气石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:9f12dae8-3291-4969-a044-e53ffaac5937": {
+    "name": "电气石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:3300291c-ea87-4562-8346-c3d36b36fb46": {
+    "name": "蛇皮帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:37381e67-4ee1-4f4e-b1cf-b80d3bfe124f": {
+    "name": "蛇皮帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:4a4e2cf1-a02f-41c4-b68f-5f5301f74577": {
+    "name": "蛇皮帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:4b54911a-a32d-48ad-8691-ff28801e1275": {
+    "name": "吉斯洋基短剑",
+    "category": "weapon",
+    "detail": ""
+  },
+  "equipment:824a370a-5fc6-4435-b58f-33a0d91f5b08": {
+    "name": "吉斯洋基短剑",
+    "category": "weapon",
+    "detail": "精良"
+  },
+  "equipment:4c6e48bc-2651-45ec-9f6d-83b585a7edfc": {
+    "name": "镰刀",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:50d677ed-3a0e-40e9-8291-ee6823af5672": {
+    "name": "镰刀",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:cd50dd17-b1ed-4e8d-8825-ffc1e3cc19e0": {
+    "name": "镰刀",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:3dac40e1-7441-42c8-841f-f3fa691fa3ea": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:4caecc0f-4ae3-4284-bc98-3f01593a8865": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 5"
+  },
+  "equipment:5b8fe99f-56d9-48a8-a9d0-8290ebae6461": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 1"
+  },
+  "equipment:77bee355-c1be-4182-bbe9-2279d3c856d6": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:84912ccc-b15c-4d6e-b69e-154f3fa2ebbe": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:89792dc1-221b-462e-adcb-026f2cafbb95": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:c069f1f2-1040-4c71-b796-5a95eecfa711": {
+    "name": "盾牌",
+    "category": "shield",
+    "detail": "外观 2"
+  },
+  "equipment:4e2487ad-5675-4459-a1f9-dd3d785a8b89": {
+    "name": "铜指环",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:5f2b3262-bc71-4873-beb5-b51968e565ee": {
+    "name": "铜指环",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:4ef7dcd7-3328-4218-b0d3-520f2afaa529": {
+    "name": "链枷",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:9eadef92-5dd0-408e-9b55-1cf791cafe9d": {
+    "name": "链枷",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:baaa7f02-a9a1-4b8d-bde9-28ed7828b531": {
+    "name": "链枷",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:50c43f27-a12e-412c-88f0-56e15eba692a": {
+    "name": "火把",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:8d175e5e-355e-4b27-9890-d35e36204487": {
+    "name": "火把",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:50d054ee-4982-46eb-8f16-7a1c71ec8e28": {
+    "name": "白银项链",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:a117bf60-4623-485d-8fd8-a2d2273fea00": {
+    "name": "白银项链",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:51873c0d-f319-45e6-a6a2-79164cd8f3db": {
+    "name": "白银护符",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:d6b70158-3493-4c76-9f8d-e410e2e36cec": {
+    "name": "白银护符",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:53723ca6-68c3-4b9d-a027-c1c6fa31a061": {
+    "name": "青铜戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:5dafe8e9-8437-4347-96eb-98b58efaacf6": {
+    "name": "青铜戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:9e1ef422-c33e-4429-a197-abc07a02d767": {
+    "name": "青铜戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:dea05ee1-43e5-4c64-ad16-4a55e877075f": {
+    "name": "青铜戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:543d5c85-d5c5-4768-be78-b8173c4e6450": {
+    "name": "肮脏赭色衣物",
+    "category": "clothing",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:bdc2247f-32a3-4ded-bffc-8aeb770f23d4": {
+    "name": "肮脏赭色衣物",
+    "category": "clothing",
+    "detail": "外观 1"
+  },
+  "equipment:e32488ea-f93d-4318-abe2-69070dc5e026": {
+    "name": "肮脏赭色衣物",
+    "category": "clothing",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:54566608-c5e2-40e1-b2fc-014ba43a67ae": {
+    "name": "金坠饰",
+    "category": "amulet",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:c652a8d0-14e6-4999-8b98-a9325c845bce": {
+    "name": "金坠饰",
+    "category": "amulet",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:e2467d34-1b3f-4e7a-987b-bbf77b9db73c": {
+    "name": "金坠饰",
+    "category": "amulet",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:fc44cf0e-04dc-4feb-b143-b1c52cffe252": {
+    "name": "金坠饰",
+    "category": "amulet",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:546ec50a-955b-447c-9670-cae53f7555d5": {
+    "name": "红玉髓戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:d4d7ed7f-3b51-4be4-8b3c-15dcd4f9de91": {
+    "name": "红玉髓戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:54f4b97c-ede8-49e2-a5aa-50c6f15c232f": {
+    "name": "短棒",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:5d24f624-1145-46c5-b595-3f2c8b2f314e": {
+    "name": "短棒",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:692654e2-951e-4298-a7df-bea709e1215f": {
+    "name": "短棒",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:a1dc6fa4-6572-4eed-85a0-4ea60d9a1104": {
+    "name": "短棒",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:d9c87013-1f41-4c17-b71d-f353ec0d64e8": {
+    "name": "短棒",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:5a948b12-ca43-4256-9821-0d151036dbd1": {
+    "name": "硬头锤 +1",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:eacd55d8-80aa-415f-8013-1221c4ac7f7b": {
+    "name": "硬头锤 +1",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:5b22795e-8193-4933-98f9-9667d6f60b53": {
+    "name": "黑戒",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:bab95f06-fcff-42f5-beb8-7c694eae8545": {
+    "name": "黑戒",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:5cc3db84-3891-4795-afa3-d3cbfffc066e": {
+    "name": "投枪",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:a20a96d6-cc50-442c-b278-60d8b30de397": {
+    "name": "投枪",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:5fb93f62-06fa-4dc1-9c59-ff3fd48043d4": {
+    "name": "珍珠项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:8174f2b6-e595-4d18-a3bb-b1617d0524ac": {
+    "name": "珍珠项链",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:938f131a-9a25-44d1-a318-ec85b2ef8f7c": {
+    "name": "珍珠项链",
+    "category": "amulet",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:ecd570ea-af01-4835-a9c8-967edf4afe85": {
+    "name": "珍珠项链",
+    "category": "amulet",
+    "detail": "外观 3"
+  },
+  "equipment:6147c8e3-6a8d-451c-9d2f-c7e13f1c4938": {
+    "name": "抛光戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:efe2746c-10d4-4082-9133-d05b6f7fa291": {
+    "name": "抛光戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:620aa9df-0710-4ed7-8336-023d0d29373a": {
+    "name": "染血护符",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:a06c5fe3-3149-4972-8ca0-b584a461d57c": {
+    "name": "染血护符",
+    "category": "amulet",
+    "detail": "外观 2"
+  },
+  "equipment:b0a0af0b-6642-4713-b884-6e09fd79d2c9": {
+    "name": "染血护符",
+    "category": "amulet",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:cb0fbc0e-9088-41e6-bce4-da9a9ba14529": {
+    "name": "染血护符",
+    "category": "amulet",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:638307c5-20ec-41a3-8c2f-c86d56bbaf73": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:8379218b-db3e-4ff4-a4ea-5061b183acf4": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:8eba01b5-b731-447f-887e-0cf0dd4d53d4": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:cda47bec-cb10-4540-8fb3-c3c4e6f47be8": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:f2624ca8-4a09-4da4-93b2-a7a126c6d44d": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:f284c260-84d9-45d6-8a15-257401f361dc": {
+    "name": "石榴石戒指",
+    "category": "ring",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:63b224be-b135-4b2b-93f5-95af3f06fdfa": {
+    "name": "暗淡的坠饰",
+    "category": "amulet",
+    "detail": "版本 1"
+  },
+  "equipment:8bba4a7c-a7df-4d1f-b202-286522a028fa": {
+    "name": "暗淡的坠饰",
+    "category": "amulet",
+    "detail": "版本 2"
+  },
+  "equipment:65bb04bb-4313-4446-b250-727a712000c9": {
+    "name": "黑曜石戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:9926e42f-5e1a-47ec-a413-eb5696c24841": {
+    "name": "黑曜石戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:3097e308-49be-4916-9cdb-d2ac374a371a": {
+    "name": "旧宽檐帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:65f78de8-f6aa-4080-84de-73e654b02883": {
+    "name": "旧宽檐帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:c97a76c1-bb35-495c-be88-4bf502af6070": {
+    "name": "旧宽檐帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:673f429b-cc2e-411e-92a8-6b07e1410fd5": {
+    "name": "守望者头盔",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:b2cffb00-b79a-49fa-b150-a895a16c1fd4": {
+    "name": "守望者头盔",
+    "category": "head",
+    "detail": "外观 1"
+  },
+  "equipment:67914214-e45d-4181-97e6-1c22e406b031": {
+    "name": "生离死别",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:6d0d3206-50b5-48ed-af92-a146ed6b98f2": {
+    "name": "生离死别",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:67a87879-533e-4f9b-8274-f5bd37748ace": {
+    "name": "头盔",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:b1ae374f-9c03-40ee-8c87-a99ff9a69484": {
+    "name": "头盔",
+    "category": "head",
+    "detail": "外观 1"
+  },
+  "equipment:68262d1e-aa97-41c3-8daf-9910359705f9": {
+    "name": "橄榄石戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:9c147265-5b32-44fe-af57-fa0d3f6c5712": {
+    "name": "橄榄石戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:4ec2c054-daad-4ab5-94a8-c2103b7387df": {
+    "name": "衣物",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:686a3c43-b494-4fcd-bda7-acb399cdee5a": {
+    "name": "衣物",
+    "category": "body",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:fefa15ce-2277-42eb-b49a-83e5ac2594c6": {
+    "name": "衣物",
+    "category": "body",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:324e9bbf-9215-40c7-9b3c-1700cb4d1fca": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:643ccbd3-4e7a-4c98-9ea3-312a3d786d30": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:689e8d3e-b79b-417b-8cd2-9d08b2f5e618": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:69f11355-f511-4c5b-9477-b91030d5b44b": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:903fd8b0-f789-4818-8239-fcef9cfeaf42": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 3"
+  },
+  "equipment:aa4be0b4-e2f7-4e22-a708-249276fe47f7": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 1，版本 3"
+  },
+  "equipment:b873b44d-0a18-482e-9a44-9aa08389c3b3": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 5"
+  },
+  "equipment:ba75d8d1-250a-41e3-a36f-20ba166b768d": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:cb8e630f-342c-4f3a-9e62-5f7d62f08164": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 1，版本 4"
+  },
+  "equipment:d1d144ed-7dfa-4a30-b62f-ff9e5b3e1197": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:e3d70237-c1da-4195-b486-d17e69e45174": {
+    "name": "金属靴",
+    "category": "boots",
+    "detail": "外观 6"
+  },
+  "equipment:694320b7-726b-4804-9dd6-fbc8a307a05f": {
+    "name": "刺绣长檐尖帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:a71164c3-0e21-4a79-976d-189d107f361d": {
+    "name": "刺绣长檐尖帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:da39ec14-720a-45a5-8c63-91cac1cd1fde": {
+    "name": "刺绣长檐尖帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:69e57d02-44a2-4e39-8b2a-502413761219": {
+    "name": "卓尔皮手套",
+    "category": "gloves",
+    "detail": "外观 1"
+  },
+  "equipment:e28caa8e-e3d6-4cd3-a275-a58c6255e8ca": {
+    "name": "卓尔皮手套",
+    "category": "gloves",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:f740cc6f-c7dd-4c31-8dbd-04138f59801e": {
+    "name": "卓尔皮手套",
+    "category": "gloves",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:6ccc6f4d-f2a7-4e38-a96d-c3fec92fc2de": {
+    "name": "刺剑",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:7061f489-4b13-4982-aa09-cf0ad961e75f": {
+    "name": "刺剑",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:8b58571f-5d21-4fb6-80eb-bc1081f809d4": {
+    "name": "刺剑",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:6d6ba641-ca9e-4e5b-add9-6b174ecc651c": {
+    "name": "十字镐",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:8693aa7e-cd47-4990-80e7-51041f036400": {
+    "name": "十字镐",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:73690248-deea-4713-84d6-c1c8fb045869": {
+    "name": "低语面具",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:8fd9c26e-afb8-4d27-b178-4ca1a7c04ea9": {
+    "name": "低语面具",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:73bc347e-01fa-4d0b-9ac9-37a7d0d9770a": {
+    "name": "暗夜法官之靴",
+    "category": "boots",
+    "detail": ""
+  },
+  "equipment:e33850ba-f697-40f5-abec-2951077f2cef": {
+    "name": "暗夜法官之靴",
+    "category": "boots",
+    "detail": "珍奇"
+  },
+  "equipment:74c41595-b1df-45e4-bb3f-a93b9d7f421c": {
+    "name": "短弓",
+    "category": "weapon",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:7a5041ea-94d7-441f-a575-f6f6dca5f187": {
+    "name": "短弓",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:c5403c1d-f372-43e1-927a-9189e9e3545d": {
+    "name": "短弓",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:d28a5c6d-b569-40b7-abd5-4b6f325c98ce": {
+    "name": "短弓",
+    "category": "weapon",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:78837dd4-b4fb-4c9d-937d-d3ef56b4d9c9": {
+    "name": "黎明之握硬头锤",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:7b961f08-46c1-46b1-99bc-c59283831a0b": {
+    "name": "黎明之握硬头锤",
+    "category": "weapon",
+    "detail": "附魔 +3，传说"
+  },
+  "equipment:7a05135d-b285-4186-8a32-a870f1684b60": {
+    "name": "手斧 +1",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:d0fac624-a2ff-447b-adf0-e2304c9714c9": {
+    "name": "手斧 +1",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:7bbfed72-1302-4709-8da5-2220343d7d29": {
+    "name": "火焰刀",
+    "category": "weapon",
+    "detail": "伤害 4d6"
+  },
+  "equipment:86792fbe-2344-4742-b114-e3836442c943": {
+    "name": "火焰刀",
+    "category": "weapon",
+    "detail": "伤害 5d6"
+  },
+  "equipment:dfb5a6ef-baee-4c0e-9b9d-7f5bd9458131": {
+    "name": "火焰刀",
+    "category": "weapon",
+    "detail": "伤害 3d6"
+  },
+  "equipment:1576903a-cb77-4a05-be24-1714d8c61e34": {
+    "name": "弯刀",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:56cc3db7-9278-4233-b28d-0a7f78e197ec": {
+    "name": "弯刀",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:868217db-9dcb-414c-bb88-e321ab3e0349": {
+    "name": "弯刀",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:afdc3411-7dad-4483-8ee1-e6a8f37b3ee4": {
+    "name": "弯刀",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:8b1c2137-76e4-4a47-bebb-cf50847aca08": {
+    "name": "铜戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:e146d1fc-a114-4a7a-85d8-9312c0eeeecc": {
+    "name": "铜戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:0553ced5-00b0-4c39-8ee4-519f6401f44a": {
+    "name": "吉斯洋基长剑",
+    "category": "weapon",
+    "detail": "精良"
+  },
+  "equipment:907a794b-b089-406b-880d-6f2df2bb3f13": {
+    "name": "吉斯洋基长剑",
+    "category": "weapon",
+    "detail": ""
+  },
+  "equipment:91a45770-6596-4ca9-9ae8-eb35cb54a36f": {
+    "name": "短矛",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:9b3005ad-3457-4003-a976-f549f360c378": {
+    "name": "短矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:9f0f1c0e-012d-44e1-9b29-86c64d2bf675": {
+    "name": "短矛",
+    "category": "weapon",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:b8878c58-e510-4c2f-97f0-da9cc442a75f": {
+    "name": "短矛",
+    "category": "weapon",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:cdfab852-aa07-46b2-ae92-8ab2bb9b1898": {
+    "name": "短矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:87689639-a401-424f-a00e-be2953b14d51": {
+    "name": "兽皮甲 +1",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:94ed8ec8-93a4-4a8c-bc47-55cb3faae7c0": {
+    "name": "兽皮甲 +1",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:95b4e2c4-759a-4d33-a2d1-4e0ee6ed4f29": {
+    "name": "板甲",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:b4c754d8-94ef-4df2-9dbd-2fbc4311f53b": {
+    "name": "板甲",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:96613037-cbac-4f43-a39b-584e6f2629c7": {
+    "name": "布甲 +2",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:fc721f60-be51-4903-b5cf-79e43bf0343c": {
+    "name": "布甲 +2",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:04838ed0-5989-4dc3-a9f8-f76402371a8f": {
+    "name": "月亮提灯",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:9aca1109-a59d-47d3-8f35-f248b70518f9": {
+    "name": "月亮提灯",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:b1f0dd4c-cc5d-4cdb-892c-7ad05fafad5a": {
+    "name": "月亮提灯",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:6f679766-7de0-4152-a1e0-6619ad23178d": {
+    "name": "长檐尖帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:a05f4468-4e26-4856-b996-ba8ab8e55a14": {
+    "name": "长檐尖帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:f72c8db2-52f5-4ba9-a581-a30c9c99b2f0": {
+    "name": "长檐尖帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:3ff2f3b9-daf6-457b-85e3-bd5ac95b6318": {
+    "name": "太阳硬头锤",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:a24ceeff-2db2-40be-b633-720b0bbab736": {
+    "name": "太阳硬头锤",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:b1bf7df1-94e0-43b1-b083-e55eaafde2ae": {
+    "name": "卓尔皮靴",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:cda7838e-f619-4eea-913c-817ae3f2df09": {
+    "name": "卓尔皮靴",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:b1e7bbad-db77-4790-af6b-f300b52498e7": {
+    "name": "狗项圈",
+    "category": "amulet",
+    "detail": "外观 2"
+  },
+  "equipment:f5e6c5d5-7361-446f-aa78-d394b2e4042c": {
+    "name": "狗项圈",
+    "category": "amulet",
+    "detail": "外观 1"
+  },
+  "equipment:765dd845-e71c-4a96-bff2-b4ecb08478dc": {
+    "name": "吉斯洋基弩",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:b674ea52-2b6f-4977-b6d5-98810304a98b": {
+    "name": "吉斯洋基弩",
+    "category": "weapon",
+    "detail": "附魔 +1"
+  },
+  "equipment:b67670c0-8b96-4e4d-8740-7c7e22c42bc4": {
+    "name": "金环带",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:b72c3fb7-c172-4dfa-81bb-f924a3c1ec19": {
+    "name": "金环带",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:26b77cf7-8722-4e61-a820-555de653e8ab": {
+    "name": "德鲁伊镶钉皮甲",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:b8468a39-a5ff-4de0-85be-a8883a479628": {
+    "name": "德鲁伊镶钉皮甲",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:4cdd79b2-b06b-48a0-b948-eb0ec55d5ab5": {
+    "name": "宽边帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:b8bd447c-eef3-441e-9fb8-303b5b926432": {
+    "name": "宽边帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:d45ff2bd-d699-4663-92de-76b7da10da86": {
+    "name": "宽边帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:b9a01258-ae0b-4217-82d9-a9f6197b9c89": {
+    "name": "轻型锤",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:c3bf6216-310c-4b71-ab7e-9997d8c8d251": {
+    "name": "轻型锤",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:0eac066e-130d-4f71-a240-f7cd2115ab65": {
+    "name": "蜘蛛步伐法杖",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:baa8bd91-09ec-4c92-a0e1-4a5a9d4ea8ed": {
+    "name": "蜘蛛步伐法杖",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:4a712833-fe5c-4780-bc56-620972336eda": {
+    "name": "半身甲 +1",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:c3407c8d-0180-4f5a-9530-e1167e7290b3": {
+    "name": "半身甲 +1",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:c86a3bf4-16b4-4d76-a33d-3df5c265aca8": {
+    "name": "军团魔长戟",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:d1c0d579-f213-49d5-a8c7-c2453c680d74": {
+    "name": "军团魔长戟",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:58968403-4dd6-4611-a7a2-a293ae7cf0b0": {
+    "name": "暗夜法官面具",
+    "category": "head",
+    "detail": "精良"
+  },
+  "equipment:cf24494b-ad50-406b-8624-85de5afb7af5": {
+    "name": "暗夜法官面具",
+    "category": "head",
+    "detail": ""
+  },
+  "equipment:bca0fca1-b81d-47a7-9be3-18e43a8fe626": {
+    "name": "暗夜之矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:d590884d-55a2-4136-9777-531ee7d53f7e": {
+    "name": "暗夜之矛",
+    "category": "weapon",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:d8ff0a88-b8cb-4c5b-8cf7-4d4984b1e8b6": {
+    "name": "暗夜之矛",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:df98266c-526b-4bef-907e-3f0cad83e86b": {
+    "name": "暗夜之矛",
+    "category": "weapon",
+    "detail": "外观 3"
+  },
+  "equipment:7e1c9b63-62c7-494f-b136-26d8fb2958bd": {
+    "name": "板甲 + 1",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:dd905194-9a67-4c61-b26d-5b4da4725cde": {
+    "name": "板甲 + 1",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:e290f181-d9a7-478e-a648-35d4a0f378b1": {
+    "name": "投石器",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:fa97e363-e81f-49f9-b663-62aae8c552ce": {
+    "name": "投石器",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:27f1c6cd-c716-440d-ba7c-795c431ce5a3": {
+    "name": "暗夜法官头盔",
+    "category": "head",
+    "detail": "精良"
+  },
+  "equipment:3523b640-e9da-4d89-b031-6ffe1d5fd3ed": {
+    "name": "暗夜法官头盔",
+    "category": "head",
+    "detail": "极珍奇"
+  },
+  "equipment:e6786129-7084-4a18-8b74-2cbf06c28c08": {
+    "name": "暗夜法官头盔",
+    "category": "head",
+    "detail": ""
+  },
+  "equipment:ec9d4bd6-343d-4f75-ac71-af2447a82661": {
+    "name": "莎尔的裂纹头盔",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:efc037be-d159-49de-8967-bd5fecb27a07": {
+    "name": "莎尔的裂纹头盔",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:f56496ba-a50e-49b9-8697-778160376416": {
+    "name": "缟玛瑙戒指",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:fc5dbbb6-10ec-427d-abe5-a04f5182e332": {
+    "name": "缟玛瑙戒指",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:2e3a2651-18ce-44b0-b7bd-3e2565bf666c": {
+    "name": "野蛮人服装",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:f6599c3f-cfcd-4721-9cc2-1df5d8ff0154": {
+    "name": "野蛮人服装",
+    "category": "body",
+    "detail": "外观 1"
+  },
+  "equipment:5cd32769-4855-44a9-b726-c83c145a22c4": {
+    "name": "兽皮甲 + 2",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:fd4ab5b0-67e6-4a8b-8745-2003f2f5ada3": {
+    "name": "兽皮甲 + 2",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:935c1a18-d402-4fa8-9793-50813c08df02": {
+    "name": "野蛮人护甲",
+    "category": "body",
+    "detail": "极珍奇"
+  },
+  "equipment:fe52d44c-ecda-4dcb-aefa-058e5df0d849": {
+    "name": "野蛮人护甲",
+    "category": "body",
+    "detail": ""
+  },
+  "equipment:0e09b4ec-2698-4d87-9477-04b1d27f34c5": {
+    "name": "大宽边帽",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:543a8152-447e-4e51-a314-1caf2cb6d9df": {
+    "name": "大宽边帽",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:ff47e1c4-f49f-460c-b6a6-dce635fa48c4": {
+    "name": "大宽边帽",
+    "category": "head",
+    "detail": "版本 3"
+  },
+  "equipment:0466c509-9947-441a-ad51-85ad4f407f38": {
+    "name": "焰拳头盔",
+    "category": "head",
+    "detail": "外观 1"
+  },
+  "equipment:5c98c7c8-97f3-4675-bf22-920168450949": {
+    "name": "焰拳头盔",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:83219bb0-800e-46fe-9dd8-24d98ae63f3c": {
+    "name": "焰拳头盔",
+    "category": "head",
+    "detail": "外观 3"
+  },
+  "equipment:0522005e-f164-407e-a308-c8c89395ef70": {
+    "name": "凯瑟里克饰环",
+    "category": "head",
+    "detail": "外观 2"
+  },
+  "equipment:ac8a482b-788e-4689-a8ce-0a13e802eaec": {
+    "name": "凯瑟里克饰环",
+    "category": "head",
+    "detail": "外观 1"
+  },
+  "equipment:0ec7d956-e65f-4bfa-b677-22f399f81a32": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 2，版本 1"
+  },
+  "equipment:1cb3fb1b-2dfc-446a-9c9b-666eb0de05d6": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 3，版本 1"
+  },
+  "equipment:1dc7ff19-a089-4289-8a4f-77c4be1c229d": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 3，版本 2"
+  },
+  "equipment:305718fa-de30-474f-97a8-41ae79b4919e": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 11，版本 1"
+  },
+  "equipment:3caad2f1-719f-4070-b7f0-887c49c773d3": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:498c155f-8675-4a55-9cb0-89dd7270469f": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 10"
+  },
+  "equipment:50a2cef0-8e1b-4166-ac15-06f8bde59e29": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 4，版本 1"
+  },
+  "equipment:5fa043bf-0445-49ad-9e82-0df77c639fe2": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 12"
+  },
+  "equipment:6afe0665-ef74-44bb-916a-fb00a267b4b9": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 9，版本 1"
+  },
+  "equipment:6d076cab-f23a-4a80-89b6-107be7f345bd": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 2，版本 2"
+  },
+  "equipment:78063154-288f-41aa-a99f-e56cbf601129": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 8"
+  },
+  "equipment:7d989a9c-ab69-43e0-8fca-02b13d254ae2": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:7efbf614-e004-4e64-b39e-c7928e703b8b": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 7，版本 1"
+  },
+  "equipment:82c84433-0464-442a-8e5a-0891d829f99a": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 5"
+  },
+  "equipment:8494f6d9-d588-4d18-bb0d-c5a58e911771": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 9，版本 2"
+  },
+  "equipment:9fecf84d-911f-4986-9454-0429ac437f45": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 6，版本 1"
+  },
+  "equipment:d19364cf-18f9-4841-919b-1e3f0ba2c58c": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 6，版本 2"
+  },
+  "equipment:d40b567d-6b66-447e-8923-2bbd0d7aea00": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 7，版本 2"
+  },
+  "equipment:d692d48f-9a39-4001-8a38-c01e397953dc": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 4，版本 2"
+  },
+  "equipment:e1797af7-5459-4db2-99da-5703fa203edb": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 11，版本 2"
+  },
+  "equipment:e419b771-2ea2-439d-a9e9-c2796398dd09": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": ""
+  },
+  "equipment:f328179e-f5e1-4fd4-bd41-efad411223e8": {
+    "name": "内衣",
+    "category": "clothing",
+    "detail": "外观 2，版本 3"
+  },
+  "equipment:14b2e775-9734-4fa0-82c3-2e560b8f2e2f": {
+    "name": "忠仆礼帽",
+    "category": "head",
+    "detail": "珍奇"
+  },
+  "equipment:198e801b-b91e-4b78-b8a6-4fe630a6a3f1": {
+    "name": "忠仆礼帽",
+    "category": "head",
+    "detail": ""
+  },
+  "equipment:15308373-ef3f-401f-adb5-522e5b4ef2d6": {
+    "name": "僧侣缠手带",
+    "category": "gloves",
+    "detail": "版本 1"
+  },
+  "equipment:d06d06dc-0aa6-407e-b4b4-3225978be1c7": {
+    "name": "僧侣缠手带",
+    "category": "gloves",
+    "detail": "版本 2"
+  },
+  "equipment:1667126c-fd47-4e83-919b-c7534081b9ad": {
+    "name": "耐色石镶嵌匕首",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:72da5a2e-0b20-4d0b-812b-951faba8b2a2": {
+    "name": "耐色石镶嵌匕首",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:19710a61-25df-4851-884e-1c33d2fa4d45": {
+    "name": "灰烬弯刀",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:cac16ce7-f5fd-4314-8b79-94b56d6a8a09": {
+    "name": "灰烬弯刀",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:197c32e4-6693-4d0e-846e-c5e1dc085010": {
+    "name": "暗夜之歌的头盔",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:215c953d-9087-4e91-9a9c-9cf366634e02": {
+    "name": "暗夜之歌的头盔",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:229dd0c4-6b13-4dbd-be48-0fedf292700a": {
+    "name": "旋涡链枷",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:8f8ad4f1-ee45-45f5-9368-3da979ada65a": {
+    "name": "旋涡链枷",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:2eeabe97-8f29-4f4f-827e-6cfcd8fd1779": {
+    "name": "塞伦涅的暗夜短矛",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:d2fe9a24-affd-464a-b757-a48d6f50dd7d": {
+    "name": "塞伦涅的暗夜短矛",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:3112f0f5-4073-45d2-8e37-eeafa1558896": {
+    "name": "米尔寇之镰",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:9e0e734c-4680-4288-9883-d6adf939fada": {
+    "name": "米尔寇之镰",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:35cf6a5c-ce38-40a3-a04f-71aa408242a5": {
+    "name": "幽影诅咒伐木斧",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:64000dd2-aae4-41c4-a16f-dca738d9743a": {
+    "name": "幽影诅咒伐木斧",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:3d4fa7bf-b914-47ff-b663-6566a335210e": {
+    "name": "卡扎多尔的法杖",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:cf5e22bc-493c-459e-8b05-c1d903960f17": {
+    "name": "卡扎多尔的法杖",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:42aa49c5-8ad2-4c2d-bb60-16016fa53205": {
+    "name": "爆笑帽",
+    "category": "head",
+    "detail": "珍奇"
+  },
+  "equipment:545faeb8-78a1-447c-9a75-f1c23683e599": {
+    "name": "爆笑帽",
+    "category": "head",
+    "detail": ""
+  },
+  "equipment:53b3e771-5835-4703-8845-28169b836b8c": {
+    "name": "收割者的拥抱",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:adae74e9-c103-4ddc-b7d2-1fa24b527f83": {
+    "name": "收割者的拥抱",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:639a6279-f487-4783-9381-493f63e66ade": {
+    "name": "深海三叉戟",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:ba86b029-9232-4ad2-9e2d-9edcdd1d728b": {
+    "name": "深海三叉戟",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:75cea463-4395-4600-ad93-7017415b16e3": {
+    "name": "注射器",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:95c3af3c-83b9-4cc0-b633-1493b7daca4d": {
+    "name": "注射器",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:764dcd70-9206-457c-9366-7aa9e3370514": {
+    "name": "环锯",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:8fee8eb3-f16b-4b9a-85a0-d46a9cd4937e": {
+    "name": "环锯",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:776324ed-a368-4994-b5f6-fd9112a10c9b": {
+    "name": "俄耳甫斯之锤",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:9ff968d4-08ff-4da1-a288-959ac8d7abe1": {
+    "name": "俄耳甫斯之锤",
+    "category": "weapon",
+    "detail": "附魔 +3，传说"
+  },
+  "equipment:81158eec-1fd0-4fd7-8b02-ce7f5e45f8b5": {
+    "name": "人工吸血器",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:a27e3e3a-ef55-4733-9655-29c7913d26d5": {
+    "name": "人工吸血器",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:09dcd9c8-07c7-46a5-a006-c179e50079d1": {
+    "name": "跨步之靴",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:8770f821-38bc-41cc-aae9-02988d46df02": {
+    "name": "跨步之靴",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:63312eb6-3b73-4a74-9a0a-bc19af7af28a": {
+    "name": "第一滴血匕首",
+    "category": "weapon",
+    "detail": "附魔 +2，传说，外观 1"
+  },
+  "equipment:9e6d5d59-e582-454f-a4e5-6dfffb1bfc9b": {
+    "name": "第一滴血匕首",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:d90abf24-3c4e-4bbf-84aa-def05ca9962a": {
+    "name": "第一滴血匕首",
+    "category": "weapon",
+    "detail": "附魔 +2，传说，外观 2"
+  },
+  "equipment:9f8e7c03-a48a-4946-b6b6-378af83eb4e3": {
+    "name": "耐色石暴君铁手套",
+    "category": "gloves",
+    "detail": "版本 1"
+  },
+  "equipment:fb8ac687-a75b-4206-bfa8-6d714119857e": {
+    "name": "耐色石暴君铁手套",
+    "category": "gloves",
+    "detail": "版本 2"
+  },
+  "equipment:1352a999-76cc-46c5-a67a-26edc2011911": {
+    "name": "守护戒指",
+    "category": "ring",
+    "detail": "珍奇"
+  },
+  "equipment:bfeab8b5-8f50-470c-b2f4-0a45f8b331d3": {
+    "name": "守护戒指",
+    "category": "ring",
+    "detail": ""
+  },
+  "equipment:c25e9381-7fbd-4e07-9383-9df8aa43d4ed": {
+    "name": "卫士巨剑",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:ebdf1022-bb30-4a03-ac29-82f488bfce4f": {
+    "name": "卫士巨剑",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:dff731f7-d6da-403d-80cf-7f3d9cc7345b": {
+    "name": "死亡追踪者斗篷",
+    "category": "cloak",
+    "detail": "版本 1"
+  },
+  "equipment:e3938af1-a8b5-4608-862d-8252150a0d5b": {
+    "name": "死亡追踪者斗篷",
+    "category": "cloak",
+    "detail": "版本 2"
+  },
+  "equipment:03cdd4e3-4a5f-47fb-b606-0ce9d0a8ff5c": {
+    "name": "粉碎机之戒",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:3023d5a5-14f0-4549-8ff2-1f34336c243c": {
+    "name": "粉碎机之戒",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:0de9e072-7048-4d07-8bbe-79e0591674c2": {
+    "name": "悲伤",
+    "category": "weapon",
+    "detail": "附魔 +1，伤害 1d10，珍奇，重量 2.7 kg"
+  },
+  "equipment:cf42b0d0-89d8-4756-b6d7-1e258dceeab0": {
+    "name": "悲伤",
+    "category": "weapon",
+    "detail": "附魔 +2，伤害 1d6，极珍奇，重量 1.8 kg"
+  },
+  "equipment:288356cc-0c6b-43c1-b049-dde418faf1f2": {
+    "name": "地精短弯刀",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:b71e3d28-3e60-4187-9cec-8143a467bc31": {
+    "name": "地精短弯刀",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:2d065f6e-a8a9-4119-bec8-ab44ed37c6b0": {
+    "name": "波尔镰刀",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:a07f2e91-e084-4fe5-9dbb-ef7de76a3c0a": {
+    "name": "波尔镰刀",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:4c9d18fd-fb3a-4e24-996c-ed57179acd5e": {
+    "name": "简易短矛",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:81b017b5-d185-4026-8871-a053aca8648c": {
+    "name": "简易短矛",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:5492c9bb-31a9-4f30-bfd4-935ff97c8eaf": {
+    "name": "卡勒杜兰·滑手的物像",
+    "category": "ring",
+    "detail": "版本 1"
+  },
+  "equipment:f2b2327e-0aae-4389-87fb-cc999f7121ed": {
+    "name": "卡勒杜兰·滑手的物像",
+    "category": "ring",
+    "detail": "版本 2"
+  },
+  "equipment:58c90cf9-5541-4909-a853-d1a0ca31c046": {
+    "name": "仪式法杖",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:77816940-d8d1-48d6-a0d3-ac749fd2ca84": {
+    "name": "仪式法杖",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:5a85604b-79c9-47e4-9a6e-a5be08ea9515": {
+    "name": "地精弓",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:fd6f48fc-b153-4e6b-9a7f-86ac2963c95f": {
+    "name": "地精弓",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:087072a9-0cfa-4ace-ac3e-e0528aeb62b3": {
+    "name": "魔法金属靴",
+    "category": "boots",
+    "detail": "外观 2"
+  },
+  "equipment:bca606cb-2d56-4213-b20b-681c99a6878f": {
+    "name": "魔法金属靴",
+    "category": "boots",
+    "detail": "外观 1"
+  },
+  "equipment:0a64283a-1fc4-45cd-9e5e-f463f6b762ea": {
+    "name": "博德安之盔",
+    "category": "head",
+    "detail": "版本 1"
+  },
+  "equipment:52000947-d1a4-4fd5-a711-6c6bf1993ca4": {
+    "name": "博德安之盔",
+    "category": "head",
+    "detail": "版本 2"
+  },
+  "equipment:11efdb40-8246-4707-b40c-1e57635dfbc1": {
+    "name": "布衣",
+    "category": "body",
+    "detail": "外观 2"
+  },
+  "equipment:427d12a3-dff2-4b59-978e-8e55daaed4ce": {
+    "name": "布衣",
+    "category": "body",
+    "detail": "外观 1，版本 1"
+  },
+  "equipment:bc7f99a1-ecb5-45ef-9f72-71a62637fc39": {
+    "name": "布衣",
+    "category": "body",
+    "detail": "外观 1，版本 2"
+  },
+  "equipment:1e294e87-978e-4b27-948c-252f02cc005e": {
+    "name": "魔法手弩",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:37627613-50b9-407e-9fcd-02962fb4cc33": {
+    "name": "魔法手弩",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:759a080f-bd13-4cd8-a417-1677b8ee9d73": {
+    "name": "魔法手弩",
+    "category": "weapon",
+    "detail": "附魔 +2，极珍奇"
+  },
+  "equipment:20318684-a35f-4830-b566-41ecd379893a": {
+    "name": "暗夜法官半身甲",
+    "category": "body",
+    "detail": "护甲等级 16，珍奇"
+  },
+  "equipment:742d43ff-b74d-4cbe-9554-51773bbccdc2": {
+    "name": "暗夜法官半身甲",
+    "category": "body",
+    "detail": "护甲等级 17，极珍奇"
+  },
+  "equipment:20c66f8d-f455-42fc-8e48-543512247e75": {
+    "name": "沃斯的银剑",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:5b55498e-c5b6-42c2-b564-c6155e2e3fc6": {
+    "name": "沃斯的银剑",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:275a03d2-e71a-4a45-b095-4260765a9f2f": {
+    "name": "魔法巨棒",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 1"
+  },
+  "equipment:779c191d-be2f-471c-b08c-f71025de0a09": {
+    "name": "魔法巨棒",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 2"
+  },
+  "equipment:923c8261-1fde-45af-9c6d-96da3fa5f373": {
+    "name": "魔法巨棒",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:2a9cdb8d-3ca1-4e0f-9de6-50ce793682d6": {
+    "name": "魔法刺剑",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:a8914750-d674-4a91-8089-139cfed6665c": {
+    "name": "魔法刺剑",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:31809893-c293-4c89-b6b6-437a3c49b604": {
+    "name": "灵指手套",
+    "category": "gloves",
+    "detail": "精良"
+  },
+  "equipment:fbc9b0ad-f31e-4cdc-a1cc-1e2204cb46c5": {
+    "name": "灵指手套",
+    "category": "gloves",
+    "detail": "珍奇"
+  },
+  "equipment:378d532c-fe34-4848-b1ef-14ae0eee8a0a": {
+    "name": "魔法巨锤",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 1"
+  },
+  "equipment:78336568-59ba-43f6-96e5-903559ceb5a4": {
+    "name": "魔法巨锤",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 2"
+  },
+  "equipment:c9b297c5-febb-4855-83c9-0eb272a5dc5e": {
+    "name": "魔法巨锤",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:40139c36-deec-42a5-b698-9090f0717c35": {
+    "name": "魔法三叉戟",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:81c57f0a-9feb-49e1-a871-b2ce87def858": {
+    "name": "魔法三叉戟",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:4b3d2d3d-3dd5-4872-af6c-7acb3756b6c7": {
+    "name": "精神剧痛饰环",
+    "category": "head",
+    "detail": "珍奇"
+  },
+  "equipment:5cd6935a-4be9-4018-9fc2-e340b96ac519": {
+    "name": "精神剧痛饰环",
+    "category": "head",
+    "detail": "极珍奇"
+  },
+  "equipment:518a925b-eb77-44e7-999d-e8c195b2261d": {
+    "name": "暗夜法官手套",
+    "category": "gloves",
+    "detail": "精良"
+  },
+  "equipment:73a443e0-2056-4e4c-b8d2-d4283d8d3595": {
+    "name": "暗夜法官手套",
+    "category": "gloves",
+    "detail": "珍奇"
+  },
+  "equipment:56906f41-61a3-4c23-aa46-2295e08d9add": {
+    "name": "魔网长袍",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:adbd02c8-ee1e-4c0f-9688-78be9b98415a": {
+    "name": "魔网长袍",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:5961d027-75fd-4ad7-964c-8b786b5839fb": {
+    "name": "猩红诡计",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:9d8db4db-e4c8-49a7-9b75-974202de8515": {
+    "name": "猩红诡计",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:70909020-27ff-4a63-a03f-30d4818dd1c3": {
+    "name": "地狱硬头锤",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:8e13f737-40e5-4be5-817e-1c5d6199b08b": {
+    "name": "地狱硬头锤",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:70f12271-9f4a-4628-8f35-d19d8099f09a": {
+    "name": "魔法轻弩",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:c1b0236f-cc14-458c-a3ea-1b44f732e0e1": {
+    "name": "魔法轻弩",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:75b70806-639d-4549-b865-9a4479ea2fc5": {
+    "name": "魔法战斧",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:dc412fef-4652-4890-ace3-5271d74df513": {
+    "name": "魔法战斧",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:7774e393-4ac2-4cf9-999d-83776b3ce0f7": {
+    "name": "魔法金属手套",
+    "category": "gloves",
+    "detail": "版本 1"
+  },
+  "equipment:8572eb7d-c994-4c26-84f3-a897eb2e520b": {
+    "name": "魔法金属手套",
+    "category": "gloves",
+    "detail": "版本 2"
+  },
+  "equipment:85477bfe-ed0f-45dc-8647-3aa8487cbd99": {
+    "name": "机器人手套",
+    "category": "gloves",
+    "detail": ""
+  },
+  "equipment:d10ec0b7-5868-4563-9a34-e1ab72d50269": {
+    "name": "机器人手套",
+    "category": "gloves",
+    "detail": "珍奇"
+  },
+  "equipment:880cbc43-f8b2-41d7-b0cc-ba88604d71ad": {
+    "name": "魔法轻锤",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:e34a5280-01be-4d2b-aeb7-78f5237d1a27": {
+    "name": "魔法轻锤",
+    "category": "weapon",
+    "detail": "无附魔加值"
+  },
+  "equipment:90c2224f-94c6-4177-82f4-10b37f1e3b48": {
+    "name": "德鲁伊护甲",
+    "category": "body",
+    "detail": "版本 1"
+  },
+  "equipment:c4a7b335-f6d3-4041-ab64-a5ce55816fe9": {
+    "name": "德鲁伊护甲",
+    "category": "body",
+    "detail": "版本 2"
+  },
+  "equipment:d0a3d13a-5ce4-4732-87b1-31654747277f": {
+    "name": "德鲁伊护甲",
+    "category": "body",
+    "detail": "版本 3"
+  },
+  "equipment:f021f81d-7540-4e83-aa88-638892cb45a4": {
+    "name": "德鲁伊护甲",
+    "category": "body",
+    "detail": "版本 4"
+  },
+  "equipment:91ae041c-b0b6-456a-805d-b2d7982f3d94": {
+    "name": "科温的焚化工具",
+    "category": "weapon",
+    "detail": "无附魔加值，重量 1.8 kg"
+  },
+  "equipment:d5b4619a-c65f-42eb-b5bb-055aa1249a38": {
+    "name": "科温的焚化工具",
+    "category": "weapon",
+    "detail": "附魔 +1，精良，重量 1.35 kg"
+  },
+  "equipment:984e2cc0-1cf7-4a0e-abb9-eef40da7bd6e": {
+    "name": "魔法手斧",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:c8b23430-2d4b-42f0-965b-2668d9d5623f": {
+    "name": "魔法手斧",
+    "category": "weapon",
+    "detail": "版本 2"
+  },
+  "equipment:a69014ac-1d00-4968-b3b7-4dc6b2f0c862": {
+    "name": "魔法战镐",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 1"
+  },
+  "equipment:bf791015-3a93-4332-a1f1-1af00cc3acd1": {
+    "name": "魔法战镐",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:e0bf0351-f67b-4f3d-935c-ca066af0c838": {
+    "name": "魔法战镐",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇，版本 2"
+  },
+  "equipment:a9c59b5c-f0fe-46f5-9462-eda3549d199b": {
+    "name": "魔法钉头锤",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:f796b9b6-9d02-482c-9705-105155f0e6e2": {
+    "name": "魔法钉头锤",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:c12ae6db-0317-47f5-9bae-092a1c9c9b76": {
+    "name": "魔法短矛",
+    "category": "weapon",
+    "detail": "附魔 +2，珍奇"
+  },
+  "equipment:e6bd90fc-d07d-4f6d-94c7-f494b1f9df53": {
+    "name": "魔法短矛",
+    "category": "weapon",
+    "detail": "附魔 +1，精良"
+  },
+  "equipment:c9b018e7-f3a9-4500-a6b0-386d7e6b7295": {
+    "name": "地狱刺剑",
+    "category": "weapon",
+    "detail": "外观 2"
+  },
+  "equipment:e925fb75-96a5-4634-9e0b-a239e48da115": {
+    "name": "地狱刺剑",
+    "category": "weapon",
+    "detail": "外观 1"
+  },
+  "equipment:e76b0896-dc70-4fb9-b202-cf5efc2de15a": {
+    "name": "混沌之剑",
+    "category": "weapon",
+    "detail": "版本 1"
+  },
+  "equipment:ed8c8311-fb23-4620-95a9-8f2b24e10c91": {
+    "name": "混沌之剑",
+    "category": "weapon",
+    "detail": "版本 2"
+  }
+}

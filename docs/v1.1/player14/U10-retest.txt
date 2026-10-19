@@ -1,0 +1,77 @@
+Browser tab: 5, Title: "Mod-Superman · 装备制作 1.1", URL: "http://127.0.0.1:8767/frontend/index.html".
+1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html
+	2 link Description: 跳到制作区, Value: 127.0.0.1:8767/frontend/index.html#workspace
+	3 container
+		4 link Description: MOD—SUPERMAN 1.1, Value: 127.0.0.1:8767/frontend/index.html
+		5 container 其他操作
+			6 link Description: 1.0 历史入口, Value: 127.0.0.1:8767/frontend/legacy.html
+			7 button 我的方案, ID: history
+			8 button 新建方案, ID: new
+	9 container
+		10 text BALDUR’S GATE 3 · 装备定制
+		11 heading 让装备，符合你的玩法。, Value: 1, ID: heading
+			73 text 让装备，符合你的玩法。
+		13 text 修改现有装备，或以原生资源创建一件新装备。
+		14 content list 制作进度
+			15 container step1
+				16 text 01 选择与调整
+			17 container step2
+				18 text 02 核对与确认
+			19 container step3
+				20 text 03 制作与下载
+		74 text 需求已保存，尚有待处理事项。
+		22 container Description: 制作工作区, ID: workspace
+			75 container
+				76 heading 轻语匕首, Value: 2
+					77 text 轻语匕首
+				78 text 修改已有装备 · 修订 2 告诉我，你想怎么改？
+				79 text entry area (settable) 告诉我，你想怎么改？, ID: prompt
+				80 button 解析并更新方案, ID: send
+				81 button 切换基础装备／模式, ID: switch-base
+				82 text 只修改展示文字时请明确说明；无法完成的要求会继续保留。
+			83 container issues
+				84 text 待处理要求 1
+				85 text 这项要求仍待确认，系统需要进一步匹配对应效果。请描述希望发生的效果、作用对象和触发条件；原需求会保留，不会自动替换成其他效果。
+				86 button 补充说明
+				87 button 撤回这项要求
+			88 container
+				89 button (expanded) 基础信息与参数, Secondary Actions: Collapse
+					90 text 基础信息与参数
+				91 text 名称：轻语匕首
+				92 button 编辑名称与说明, ID: equipment-text
+				93 text 基础参数沿用原版。
+				94 button 编辑基础参数, ID: parameters
+			95 container
+				96 button (expanded) 独立词条与主动技能（0）, Secondary Actions: Collapse
+					97 text 独立词条与主动技能（0）
+				98 text 尚未新增独立效果。原装备效果仍按继承规则保留。
+				99 pop up button (collapsed, settable) Description: 新增效果类型, Value: 属性加成, ID: effect-kind, Secondary Actions: Expand
+					100 menu
+						101 (selected) 属性加成
+						102 加成类别
+						103 条件触发
+						104 独立状态
+						105 主动技能副本
+						106 独立被动副本
+				107 button 添加效果, ID: add-effect
+			108 button (collapsed) 原生继承与资源设置, Secondary Actions: Expand
+				109 text 原生继承与资源设置
+			110 container
+				111 heading 文案核对, Value: 2
+					112 text 文案核对
+				113 text 当前没有待核对的自定义文字。
+				114 button 核对自定义文案, ID: review
+				115 button 恢复待核对项的标准文字, ID: standard
+			116 button 检查并进入确认, ID: preview
+			117 button 撤销到上个方案, ID: undo
+		23 container
+			24 button (expanded) 制作须知, Secondary Actions: Collapse
+				25 text 制作须知
+			26 text 模型解析你的需求，程序校验并生成文件。未知能力会保留为待处理问题。 确认后才开始制作；修改方案后需要重新确认。 使用已有美术资源。网页为方案示意，不代表游戏内实际外观。 游戏实测尚未进行 请备份存档。打包成功、用户报告与游戏验证分别记录。
+		72 container aside-state
+			118 text 当前：轻语匕首
+			119 text 修改已有装备 · 修订 2
+			120 text 方案仍需调整或核对
+		27 text 原生资源 · 独立副本 · 每一步可核对
+
+The focused UI element is 1 AXWebArea Mod-Superman · 装备制作 1.1, URL: 127.0.0.1:8767/frontend/index.html

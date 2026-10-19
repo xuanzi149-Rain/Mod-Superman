@@ -1,0 +1,314 @@
+{
+  "IF": {
+    "record": "ABERRANT_SHAPE",
+    "field": "Boosts",
+    "expression": "VoicebarkBlock();BlockSpellCast();DialogueBlock();UnlockSpell(Shout_AberrantShape_Dismiss);IF(HasPassive('WildShape_Combat',context.Source)):UnlockSpell(Shout_WildShape_Combat_Heal,AddChildren,d136c5d9-0ff0-43da-acce-a74a07f8d6bf)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_POLYMORPHED.txt"
+  },
+  "UnlockSpell": {
+    "record": "ABERRANT_SHAPE",
+    "field": "Boosts",
+    "expression": "VoicebarkBlock();BlockSpellCast();DialogueBlock();UnlockSpell(Shout_AberrantShape_Dismiss);IF(HasPassive('WildShape_Combat',context.Source)):UnlockSpell(Shout_WildShape_Combat_Heal,AddChildren,d136c5d9-0ff0-43da-acce-a74a07f8d6bf)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_POLYMORPHED.txt"
+  },
+  "HasPassive": {
+    "record": "ABERRANT_SHAPE",
+    "field": "Boosts",
+    "expression": "VoicebarkBlock();BlockSpellCast();DialogueBlock();UnlockSpell(Shout_AberrantShape_Dismiss);IF(HasPassive('WildShape_Combat',context.Source)):UnlockSpell(Shout_WildShape_Combat_Heal,AddChildren,d136c5d9-0ff0-43da-acce-a74a07f8d6bf)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_POLYMORPHED.txt"
+  },
+  "ApplyStatus": {
+    "record": "ABERRANT_SHAPE",
+    "field": "OnRemoveFunctors",
+    "expression": "ApplyStatus(SELF,ABERRANT_SHAPE_REMOVE_VFX,100,1)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_POLYMORPHED.txt"
+  },
+  "Disadvantage": {
+    "record": "ABJURE_ENEMY_FRIGHT",
+    "field": "Boosts",
+    "expression": "Disadvantage(AllAbilities);Disadvantage(AttackRoll);ActionResourceBlock(Movement)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "IsMiss": {
+    "record": "ABJURE_ENEMY_SLOW",
+    "field": "RemoveConditions",
+    "expression": "(HasDamageEffectFlag(DamageFlags.Hit) or HasDamageEffectFlag(DamageFlags.Critical)) and not (IsCriticalMiss() or IsMiss())",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "IsWeaponAttack": {
+    "record": "ABSORB_ELEMENTS_ACID_DAMAGE",
+    "field": "Boosts",
+    "expression": "IF(IsWeaponAttack()):DamageBonus(1d6, Acid, false)",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "IsCritical": {
+    "record": "ABSORB_ELEMENTS_ACID_DAMAGE",
+    "field": "RemoveConditions",
+    "expression": "IsWeaponAttack() and (not IsMiss() or IsCritical())",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "HasStatus": {
+    "record": "ABSORB_ELEMENTS_ACID_DAMAGE",
+    "field": "OnApplyFunctors",
+    "expression": "IF(not HasStatus('MAG_SPELLBLADE_ACID_ENERGY_APPLIED_VFX')):ApplyStatus(MAG_SPELLBLADE_ACID_ENERGY_APPLIED_VFX, 100, -1)",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "RemoveStatus": {
+    "record": "ABSORB_ELEMENTS_ACID_DAMAGE",
+    "field": "OnRemoveFunctors",
+    "expression": "RemoveStatus(MAG_SPELLBLADE_ACID_ENERGY_APPLIED_VFX)",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Item": {
+    "record": "ACID",
+    "field": "OnApplyConditions",
+    "expression": "not Item(context.Source)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "AC": {
+    "record": "ACID",
+    "field": "Boosts",
+    "expression": "AC(-2)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "DealDamage": {
+    "record": "ACID_ARROW",
+    "field": "TickFunctors",
+    "expression": "DealDamage(2d4, Acid,Magical)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "ActionResource": {
+    "record": "ACTION_SURGE",
+    "field": "Boosts",
+    "expression": "ActionResource(ActionPoint,1,0)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "RegainHitPoints": {
+    "record": "AID",
+    "field": "OnApplyFunctors",
+    "expression": " IF(IsDowned()):RegainHitPoints(1); AI_ONLY:IF(not HasStatus('AID')):RegainHitPoints(5)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Advantage": {
+    "record": "AI_HELPER_ANIMATINGSPORES",
+    "field": "Boosts",
+    "expression": "AC(5);Advantage(AllAbilities);;Ability(Strength,5);Ability(Dexterity,5);Ability(Constitution,5);Advantage(AttackTarget);ActionResource(Movement,4,0)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Ability": {
+    "record": "AI_HELPER_ANIMATINGSPORES",
+    "field": "Boosts",
+    "expression": "AC(5);Advantage(AllAbilities);;Ability(Strength,5);Ability(Dexterity,5);Ability(Constitution,5);Advantage(AttackTarget);ActionResource(Movement,4,0)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "WeaponEnchantment": {
+    "record": "AI_HELPER_DIPWEAPON_OIL_DAMAGEATTACKBUFF",
+    "field": "Boosts",
+    "expression": "WeaponEnchantment(1); CharacterWeaponDamage(1)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "WeaponDamage": {
+    "record": "AI_HELPER_DIPWEAPON_OIL_REDUCE",
+    "field": "Boosts",
+    "expression": "WeaponDamage(1d10,Piercing);Advantage(AllAbilities)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "RollBonus": {
+    "record": "AI_HELPER_DIPWEAPON_OIL_WIZARDSBANE",
+    "field": "Boosts",
+    "expression": "RollBonus(MeleeSpellAttack, 3);RollBonus(RangedSpellAttack, 3); SpellSaveDC(3); Advantage(Concentration)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Initiative": {
+    "record": "ALCH_ELIXIR_ALERTNESS",
+    "field": "Boosts",
+    "expression": "Initiative(5);StatusImmunity(SURPRISED)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "StatusImmunity": {
+    "record": "ALCH_ELIXIR_ALERTNESS",
+    "field": "Boosts",
+    "expression": "Initiative(5);StatusImmunity(SURPRISED)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "IsKillingBlow": {
+    "record": "ALCH_Elixir_Bloodlust_Passive",
+    "field": "Conditions",
+    "expression": "Character() and IsKillingBlow() and not HasStatus('ALCH_ELIXIR_BLOODLUST_TEMPAP', context.Source) ",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "Character": {
+    "record": "ALCH_Elixir_Bloodlust_Passive",
+    "field": "Conditions",
+    "expression": "Character() and IsKillingBlow() and not HasStatus('ALCH_ELIXIR_BLOODLUST_TEMPAP', context.Source) ",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "WeaponProperty": {
+    "record": "ALCH_OIL_DAMAGEATTACKBUFF_DIPPED",
+    "field": "Boosts",
+    "expression": "WeaponEnchantment(1); CharacterWeaponDamage(1);WeaponProperty(Magical)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Resistance": {
+    "record": "ALCH_OIL_REMOVERESISTANCEFIRE_CONDITION",
+    "field": "Boosts",
+    "expression": "Resistance(Fire,Vulnerable)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "AttackedWithPassiveSourceWeapon": {
+    "record": "ALCH_Oil_Bane_Passive",
+    "field": "Conditions",
+    "expression": "AttackedWithPassiveSourceWeapon()",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "SavingThrow": {
+    "record": "ALCH_Oil_Bane_Passive",
+    "field": "StatsFunctors",
+    "expression": "IF(not SavingThrow(Ability.Charisma, 11)):ApplyStatus(ALCH_OIL_BANE_CONDITION,100,2)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "IsDamageTypeFire": {
+    "record": "ALCH_Oil_Combustion_Condition_Passive",
+    "field": "Conditions",
+    "expression": "IsDamageTypeFire()",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "RemoveCause": {
+    "record": "ALCH_POTION_REST_SLEEP_GREATER",
+    "field": "OnRemoveFunctors",
+    "expression": "IF(RemoveCause(StatusRemoveCause.TimeOut)):ApplyStatus(ALCH_POTION_REST_SLEEP_GREATER_RESTORATION,100,1)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_INCAPACITATED.txt"
+  },
+  "RestoreResource": {
+    "record": "ALCH_POTION_REST_SLEEP_GREATER_RESTORATION",
+    "field": "OnApplyFunctors",
+    "expression": "ResetCooldowns(UntilRest);RegainHitPoints(Target.MaxHP);RemoveStatus(SPELLSLOT_1);RemoveStatus(SPELLSLOT_2);RemoveStatus(SPELLSLOT_3);RemoveStatus(SPELLSLOT_4);RemoveStatus(SPELLSLOT_5);RestoreResource(SpellSlot,100%,1);RestoreResource(SpellSlot,100%,2);RestoreResource(SpellSlot,100%,3);RestoreResource(SpellSlot,100%,4);RestoreResource(SpellSlot,100%,5);RestoreResource(SpellSlot,100%,6);RestoreResource(WarlockSpellSlot,100%,1);RestoreResource(WarlockSpellSlot,100%,2);RestoreResource(WarlockSpellSlot,100%,3);RestoreResource(WarlockSpellSlot,100%,4);RestoreResource(WarlockSpellSlot,100%,5);RestoreResource(WarlockSpellSlot,100%,6);RestoreResource(ShadowSpellSlot,100%,1);RemoveStatus(SORCERYPOINT_1);RemoveStatus(SORCERYPOINT_2);RemoveStatus(SORCERYPOINT_3);RemoveStatus(SORCERYPOINT_4);RemoveStatus(SORCERYPOINT_5);RemoveStatus(TRANSMUTERS_STONE_USED);RestoreResource(SorceryPoint,100%,0);RestoreResource(ChannelDivinity,100%,0);RestoreResource(SuperiorityDie,100%,0);RestoreResource(KiPoint,100%,0);RestoreResource(WildShape,100%,0);RestoreResource(WeaponActionPoint,100%,0);RestoreResource(TidesOfChaos,100%,0);RestoreResource(ChannelOath,100%,0);RestoreResource(Rage,100%,0);RestoreResource(BardicInspiration,100%,0);RestoreResource(HitDice,100%,0);RestoreResource(ArcaneRecoveryPoint,100%,0);RestoreResource(NaturalRecoveryPoint,100%,0);RestoreResource(RitualPoint,100%,0);RestoreResource(LayOnHandsCharge,100%,0);RestoreResource(Interrupt_HellishRebukeTiefling_Charge,100%,0);RestoreResource(Interrupt_HellishRebukeWarlockMI_Charge,100%,0);RestoreResource(FungalInfestationCharge,100%,0);RestoreResource(LuckPoint,100%,0);RestoreResource(WarPriestActionPoint,100%,0);RestoreResource(ArcaneShot,100%,0);RestoreResource(StarMapPoint,100%,0);RestoreResource(CosmicOmen,100%,0);RestoreResource(WrithingTidePoint,100%,0);RestoreResource(Bladesong,100%,0)",
+    "source": ".tools/healing-word-GustavX/Public/GustavX/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Tagged": {
+    "record": "APOSTLE_CHILL_TOUCH",
+    "field": "Boosts",
+    "expression": "BlockRegainHP(Living;Undead); IF(Tagged('UNDEAD', context.Source)):Disadvantage(AttackRoll)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Enemy": {
+    "record": "ARCANEBURSTING_DAMAGE",
+    "field": "OnApplyFunctors",
+    "expression": "IF(Enemy()):DealDamage(2d6,Force,Magical)",
+    "source": ".tools/healing-word-GustavX/Public/GustavX/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Skill": {
+    "record": "ARM_Boots_Metal",
+    "field": "Boosts",
+    "expression": "Skill(Athletics,1)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Armor.txt"
+  },
+  "ClassLevel": {
+    "record": "ASPECT_OF_THE_STALLION",
+    "field": "Boosts",
+    "expression": "TemporaryHP(2*ClassLevel(Barbarian))",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "ProficiencyBonus": {
+    "record": "ASTRAL_KNOWLEDGE_CHARISMA",
+    "field": "Boosts",
+    "expression": "ProficiencyBonus(Skill,Persuasion);ProficiencyBonus(Skill,Deception);ProficiencyBonus(Skill,Intimidation);ProficiencyBonus(Skill,Performance)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "IsMeleeAttack": {
+    "record": "AURA_OF_HATE",
+    "field": "Boosts",
+    "expression": "IF(IsMeleeAttack()):CharacterWeaponDamage(max(1, Cause.CharismaModifier))",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Combat": {
+    "record": "AURA_OF_TERROR",
+    "field": "RemoveConditions",
+    "expression": "not Combat()",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "UseSpell": {
+    "record": "AspectOfTheBeast_HoneyBadger",
+    "field": "StatsFunctors",
+    "expression": "IF(HasPassive('TotemSpirit_Bear', context.Source)):UseSpell(Shout_Rage_Totem_Bear,true,true,true);IF(HasPassive('TotemSpirit_Eagle', context.Source)):UseSpell(Shout_Rage_Totem_Eagle,true,true,true);IF(HasPassive('TotemSpirit_Elk', context.Source)):UseSpell(Shout_Rage_Totem_Elk,true,true,true);IF(HasPassive('TotemSpirit_Tiger', context.Source)):UseSpell(Shout_Rage_Totem_Tiger,true,true,true);IF(HasPassive('TotemSpirit_Wolf', context.Source)):UseSpell(Shout_Rage_Totem_Wolf,true,true,true)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "Dead": {
+    "record": "BANISHED_TEMP",
+    "field": "OnApplyFunctors",
+    "expression": "IF(not Dead()):ApplyStatus(BANISHED,100,2)",
+    "source": ".tools/healing-word-GustavX/Public/GustavX/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "CreateSurface": {
+    "record": "BLIGHT_SPONTANEOUSGROWTH",
+    "field": "TickFunctors",
+    "expression": "CreateSurface(1.5,2,ShadowCursedVines)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "ConditionResult": {
+    "record": "BURNING",
+    "field": "Boosts",
+    "expression": "IF(ConditionResult(context.AttackWeapon.IsValid) or (context.Target.IsValid and Item()) or not (context.Target.IsValid or not Item(context.Source))):WeaponDamage(1d4, Fire);IF(Item(context.Source)):WeaponProperty(Unstowable);",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "LevelMapValue": {
+    "record": "Bladesong_Boost",
+    "field": "Boosts",
+    "expression": "ActionResource(Movement,3,0);Advantage(Skill,Acrobatics);RollBonus(SavingThrow,LevelMapValue(Bladesong),Constitution);IF(not ClassLevelHigherOrEqualThan(5,'Wizard')):AC(2);IF(ClassLevelHigherOrEqualThan(5,'Wizard') and not ClassLevelHigherOrEqualThan(9,'Wizard')):AC(3);IF(ClassLevelHigherOrEqualThan(9,'Wizard')):AC(4);",
+    "source": ".tools/healing-word-GustavX/Public/GustavX/Stats/Generated/Data/Passive.txt"
+  },
+  "Ally": {
+    "record": "CHARMED",
+    "field": "RemoveConditions",
+    "expression": "HasDamageEffectFlag(DamageFlags.Hit) and HasSpellFlag(SpellFlags.Harmful) and (IsInflicterEqualToSource() or Ally(context.HitDescription.InflicterObject, context.Source))",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "HasMaxHP": {
+    "record": "ColossusSlayer",
+    "field": "Conditions",
+    "expression": "IsWeaponAttack() and HasDamageEffectFlag(DamageFlags.Hit) and not HasMaxHP()",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Passive.txt"
+  },
+  "IsAttack": {
+    "record": "CombatMark",
+    "field": "Conditions",
+    "expression": "IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and not HasStatus('COMBAT_MARK',context.Target,context.Source)",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Passive.txt"
+  },
+  "Self": {
+    "record": "DEN_HellridersPride_Passive",
+    "field": "Conditions",
+    "expression": "Character() and not Self()",
+    "source": ".tools/healing-word-Gustav/Public/Gustav/Stats/Generated/Data/Passive.txt"
+  },
+  "IsDamageTypePiercing": {
+    "record": "DamageDealtRecently",
+    "field": "StatsFunctors",
+    "expression": "IF(IsDamageTypeAcid()):ApplyStatus(DAMAGE_DEALT_ACID,100,1);IF(IsDamageTypeCold()):ApplyStatus(DAMAGE_DEALT_COLD,100,1);IF(IsDamageTypeFire()):ApplyStatus(DAMAGE_DEALT_FIRE,100,1);IF(IsDamageTypeLightning()):ApplyStatus(DAMAGE_DEALT_LIGHTNING,100,1);IF(IsDamageTypeThunder()):ApplyStatus(DAMAGE_DEALT_THUNDER,100,1);IF(IsDamageTypeRadiant()):ApplyStatus(DAMAGE_DEALT_RADIANT,100,1);IF(IsDamageTypePoison()):ApplyStatus(DAMAGE_DEALT_POISON,100,1);IF(IsDamageTypePsychic()):ApplyStatus(DAMAGE_DEALT_PSYCHIC,100,1);IF(IsDamageTypeForce()):ApplyStatus(DAMAGE_DEALT_FORCE,100,1);IF(IsDamageTypeSlashing()):ApplyStatus(DAMAGE_DEALT_SLASHING,100,1);IF(IsDamageTypePiercing()):ApplyStatus(DAMAGE_DEALT_PIERCING,100,1);IF(IsDamageTypeBludgeoning()):ApplyStatus(DAMAGE_DEALT_BLUDGEONING,100,1)",
+    "source": ".tools/equipment-shared/Public/Shared/Stats/Generated/Data/Passive.txt"
+  },
+  "SurfaceChange": {
+    "record": "MAG_Frost_GenerateSurfaceOnColdDamage_Ring_Passive",
+    "field": "StatsFunctors",
+    "expression": "GROUND:SurfaceChange(Freeze);GROUND:CreateSurface(2,2,WaterFrozen)",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Passive.txt"
+  },
+  "IsRangedAttack": {
+    "record": "POTION_OF_THE_GREATARCHER",
+    "field": "Boosts",
+    "expression": "IF(IsRangedAttack()):Advantage(AttackRoll);UnlockSpell(Projectile_POTION_OfTheGreatArcher_ExtraAttack)",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Status_BOOST.txt"
+  },
+  "Attack": {
+    "record": "Projectile_AOE",
+    "field": "SpellRoll",
+    "expression": "Attack(AttackType.RangedWeaponAttack);CastOffhand[Attack(AttackType.RangedOffHandWeaponAttack)]",
+    "source": ".tools/equipment-shared/Public/SharedDev/Stats/Generated/Data/Spell_Projectile.txt"
+  },
+  "HasMaxHPWithoutTemporaryHP": {
+    "record": "SHA_FleshGolem_Berserk",
+    "field": "Conditions",
+    "expression": "HasMaxHPWithoutTemporaryHP()",
+    "source": ".tools/healing-word-Gustav/Public/GustavDev/Stats/Generated/Data/Passive.txt"
+  }
+}

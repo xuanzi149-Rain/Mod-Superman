@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "case": "modify_existing",
+      "actor": "automated_fixture_not_user",
+      "model": "fixture_not_real_model",
+      "directory": "build\\v1.1\\task8\\acceptance\\c0b2956e-a494-44f9-860f-6beac83646fd\\a23cf255c89e7a4a\\attempt-0mfsacoy",
+      "revision": 3,
+      "plan_digest": "a23cf255c89e7a4a2af72e68ffbd1a3f89dfd0b2700bf3933a684f1560793ed5",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "pak_sha256": "4f82f952380acc7a16a707acf4b2dec8a6e4465b24aed332a2e922531c1c3764"
+    },
+    {
+      "case": "create_weapon",
+      "actor": "automated_fixture_not_user",
+      "model": "fixture_not_real_model",
+      "directory": "build\\v1.1\\task8\\acceptance\\93f8d784-2aa3-441b-ae8f-870fe9b1a264\\1f75f286cb30c002\\attempt-dhbeeab4",
+      "revision": 3,
+      "plan_digest": "1f75f286cb30c002c55931b4c310244cb14dd194d2a767a364061155c24331cd",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "pak_sha256": "6d960cf4e238d4153b33e77846bea1f066c39489ee30fd291a4f6c840c3e5e5f"
+    },
+    {
+      "case": "create_body_armor",
+      "actor": "automated_fixture_not_user",
+      "model": "fixture_not_real_model",
+      "directory": "build\\v1.1\\task8\\acceptance\\bd42e274-6b57-4eb3-b283-208351c0fcc2\\f8386b730811cbae\\attempt-gbtsy6nu",
+      "revision": 3,
+      "plan_digest": "f8386b730811cbae3a3eff280d8b873d963142827c87db08258510d536e7d1c0",
+      "stages": {
+        "source_generation": "passed",
+        "conversion": "passed",
+        "pak_creation": "passed",
+        "package_check": "passed",
+        "game_validation": "not_performed"
+      },
+      "pak_sha256": "65f0d944bf08a8834579f2f91ed6122c31bba996ed085a2fdf524259b7eb2b65"
+    }
+  ],
+  "game_validation": "not_performed",
+  "scope": "task8_python_to_B_no_HTTP_no_UI"
+}

@@ -1,0 +1,407 @@
+{
+  "case": {
+    "id": "F06",
+    "fixture": "passive_copy",
+    "text": "保留平衡的现有效果，但换为独立被动副本，并从装备移除原被动防止重复。",
+    "expect": {
+      "effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      },
+      "removed": "ARM_Balance_1_Passive"
+    },
+    "mode": "modify_existing"
+  },
+  "model": "qwen3.7-plus",
+  "version": "task8-v4",
+  "initial_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {},
+    "parameters": {},
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": []
+  },
+  "first_result": {
+    "revision": 2,
+    "applied": [],
+    "failed": [],
+    "normalizations": [],
+    "before": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+      "user_goal": "独立被动",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": []
+    },
+    "after": {
+      "schema_version": "1.1-draft-4",
+      "mode": "modify_existing",
+      "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+      "user_goal": "独立被动",
+      "display": {
+        "name": null,
+        "description": null
+      },
+      "parameters": {
+        "weapon_properties": null,
+        "dexterity_rule": null,
+        "damage": null,
+        "versatile_damage": null,
+        "weight_kg": null,
+        "rarity": null,
+        "armor_class": null,
+        "enchantment": null,
+        "value": null,
+        "damage_type": null
+      },
+      "effects": [],
+      "removed_original_passives": [],
+      "acquisition": null,
+      "appearance_equipment": null,
+      "template_behavior": "reject_special",
+      "icon": null,
+      "unresolved": [
+        "当前草稿 effects 为空，无法确定要复制哪个原被动。请指定要复制的被动名称或描述其效果。"
+      ]
+    },
+    "unresolved": [
+      {
+        "id": "F06_i1",
+        "requirement_ids": [
+          "r1",
+          "r2"
+        ],
+        "kind": "clarification",
+        "detail": "当前草稿 effects 为空，无法确定要复制哪个原被动。请指定要复制的被动名称或描述其效果。",
+        "question": "请指定要复制为独立被动副本的原被动名称。",
+        "options": [
+          {
+            "id": "opt_arm_balance",
+            "label": "ARM_Balance_1_Passive (平衡被动)"
+          }
+        ],
+        "evidence_refs": []
+      }
+    ],
+    "text_review_pending": false
+  },
+  "failures": [
+    {
+      "missing_effect": {
+        "kind": "passive_copy",
+        "base_passive": "ARM_Balance_1_Passive"
+      }
+    },
+    "original_passive_not_removed"
+  ],
+  "status": "failed",
+  "log": [
+    {
+      "task": "parse",
+      "context": {
+        "request": {
+          "request_id": "F06",
+          "base_revision": 1,
+          "context_digest": "80b2fca665e63faec82c7a3dd3c857de239f18ff51b55ff3071914dd356c4f07"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+          "inheritance_strategy": "retain_base"
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+          "user_goal": "独立被动",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {
+            "weapon_properties": null,
+            "dexterity_rule": null,
+            "damage": null,
+            "versatile_damage": null,
+            "weight_kg": null,
+            "rarity": null,
+            "armor_class": null,
+            "enchantment": null,
+            "value": null,
+            "damage_type": null
+          },
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weapon_properties": {
+            "original": [],
+            "current": [],
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "dexterity_rule": {
+            "original": "capped_2",
+            "current": "capped_2",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "versatile_damage": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "weight_kg": {
+            "original": 9.0,
+            "current": 9.0,
+            "unit": "kg",
+            "source": "effective_native_fields"
+          },
+          "rarity": {
+            "original": "Rare",
+            "current": "Rare",
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "armor_class": {
+            "original": 15,
+            "current": 15,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "enchantment": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "value": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          },
+          "damage_type": {
+            "original": null,
+            "current": null,
+            "unit": null,
+            "source": "effective_native_fields"
+          }
+        },
+        "capabilities": {
+          "version": "7e0036fa2cc3ef5b4d45d8de2136fcd4640b6fe65428e97a675768cd968d31c6",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [
+            {
+              "id": "ARM_Balance_1_Passive",
+              "type": "PassiveData",
+              "effective": {
+                "DisplayName": "hfa195d11gb383g4f2fg9d6ag948e8cdf8bcd;2",
+                "Description": "h459b537egde90g4a50gb159g7948d4baef7c;2",
+                "DescriptionParams": "1",
+                "Boosts": "RollBonus(SavingThrow, 1, Dexterity);RollBonus(RawAbility, 1, Dexterity);RollBonus(SkillCheck, 1, Acrobatics);RollBonus(SkillCheck, 1, SleightOfHand);RollBonus(SkillCheck, 1, Stealth)"
+              },
+              "dependency_count": 1
+            },
+            {
+              "id": "ARM_SuperiorMaterial_1_Passive",
+              "type": "PassiveData",
+              "effective": {
+                "DisplayName": "hb08d6e6dge3e1g4fd1g81cegc90c18f5a783;2",
+                "Description": "h55624d56g5e10g488cgaaeeg5d15ed233e60;2",
+                "DescriptionParams": "1",
+                "Boosts": "DamageReduction(Slashing, Flat, 1)"
+              },
+              "dependency_issue": "ARM_SuperiorMaterial_1_Passive:unreviewed_function:DamageReduction"
+            },
+            {
+              "id": "dammon_act1",
+              "type": "acquisition",
+              "limitations": [
+                "NPC must be alive and still accessible",
+                "Existing stock refresh and new-save requirement unverified",
+                "Other acts use different tables; no automatic fallback"
+              ]
+            }
+          ],
+          "checks": [
+            {
+              "id": "template_ad4666fb50bf178e",
+              "result": "template_audit",
+              "details": []
+            },
+            {
+              "id": "check_growth_missing",
+              "result": "capability_gap",
+              "details": "当前原生生成规则仅开放 on_hit/on_heal/on_damaged；未实现击杀计数或永久成长规则，不得近似为固定加成。"
+            }
+          ],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "initial"
+        },
+        "intent_state": {
+          "goal": "独立被动",
+          "requirements": [],
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "F06",
+          "text": "保留平衡的现有效果，但换为独立被动副本，并从装备移除原被动防止重复。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "output": {
+        "schema_version": "parse-v1",
+        "request_id": "F06",
+        "base_revision": 1,
+        "context_digest": "80b2fca665e63faec82c7a3dd3c857de239f18ff51b55ff3071914dd356c4f07",
+        "intent_summary": "将原被动替换为独立被动副本，并移除原被动以防止重复。需澄清具体目标被动。",
+        "requirements": [
+          {
+            "id": "r1",
+            "quote": "保留平衡的现有效果，但换为独立被动副本",
+            "meaning": "添加一个基于现有被动效果的独立被动副本",
+            "operation_ids": [],
+            "issue_ids": [
+              "i1"
+            ],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          },
+          {
+            "id": "r2",
+            "quote": "从装备移除原被动防止重复",
+            "meaning": "移除原始被动效果",
+            "operation_ids": [],
+            "issue_ids": [
+              "i1"
+            ],
+            "text_request_ids": [],
+            "issue_update_ids": [],
+            "no_change": false
+          }
+        ],
+        "operations": [],
+        "issues": [
+          {
+            "id": "i1",
+            "requirement_ids": [
+              "r1",
+              "r2"
+            ],
+            "kind": "clarification",
+            "detail": "当前草稿 effects 为空，无法确定要复制哪个原被动。请指定要复制的被动名称或描述其效果。",
+            "question": "请指定要复制为独立被动副本的原被动名称。",
+            "options": [
+              {
+                "id": "opt_arm_balance",
+                "label": "ARM_Balance_1_Passive (平衡被动)"
+              }
+            ],
+            "evidence_refs": []
+          }
+        ],
+        "issue_updates": [],
+        "text_requests": []
+      },
+      "usage": {
+        "prompt_tokens": 12705,
+        "total_tokens": 13191,
+        "completion_tokens": 486,
+        "prompt_tokens_details": {
+          "cached_tokens": 10880,
+          "text_tokens": 12705
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 10500,
+  "final_plan": {
+    "schema_version": "1.1-draft-4",
+    "mode": "modify_existing",
+    "base_equipment": "equipment:461f1cbe-6d0d-40ee-8bf6-8a68e0570d6f",
+    "user_goal": "独立被动",
+    "display": {
+      "name": null,
+      "description": null
+    },
+    "parameters": {
+      "weapon_properties": null,
+      "dexterity_rule": null,
+      "damage": null,
+      "versatile_damage": null,
+      "weight_kg": null,
+      "rarity": null,
+      "armor_class": null,
+      "enchantment": null,
+      "value": null,
+      "damage_type": null
+    },
+    "effects": [],
+    "removed_original_passives": [],
+    "acquisition": null,
+    "appearance_equipment": null,
+    "template_behavior": "reject_special",
+    "icon": null,
+    "unresolved": [
+      "当前草稿 effects 为空，无法确定要复制哪个原被动。请指定要复制的被动名称或描述其效果。"
+    ]
+  }
+}

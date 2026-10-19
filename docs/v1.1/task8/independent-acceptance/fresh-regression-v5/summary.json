@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "id": "F01",
+      "status": "passed"
+    },
+    {
+      "id": "F02",
+      "status": "passed"
+    },
+    {
+      "id": "F03",
+      "status": "passed"
+    },
+    {
+      "id": "F04",
+      "status": "passed"
+    },
+    {
+      "id": "F05",
+      "status": "passed"
+    },
+    {
+      "id": "F06",
+      "status": "failed"
+    },
+    {
+      "id": "F07",
+      "status": "passed"
+    },
+    {
+      "id": "F08",
+      "status": "passed"
+    }
+  ],
+  "suite_fingerprint": "dacb77c58668c4c02f207cd42bce6aa6552f63500b808c571fef57d0f670a88d",
+  "version": "task8-v5",
+  "model": "qwen3.7-plus",
+  "scope": "Synthetic independent live-context acceptance; no website or game validation",
+  "assets": {
+    "backend\\task8.py": "669b86fe4e56f5fd388bc13b522e6e4c409ff76da603e26a04065633a8a38ebc",
+    "backend\\task8_protocol.py": "129e187889a36ff27627601eab9fb8e8d35728663b55fe01310432729fec57bc",
+    "prompts\\task8-parse-v5.md": "66c9f716ef30942b509d3c86a4c7473235eca7980b222e97c1c256433aaa2d1f",
+    "prompts\\task8-review-v5.md": "3b3307cbac25e701d76e049141584d4161e9963443eae053253d64e96986d45a"
+  }
+}

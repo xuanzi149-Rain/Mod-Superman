@@ -1,0 +1,265 @@
+{
+  "status": "frozen_before_first_run",
+  "source": "synthetic_variants_not_in_prompt_examples",
+  "cases": [
+    {
+      "id": "N01",
+      "task": "parse",
+      "input": {
+        "request": {
+          "request_id": "N01",
+          "base_revision": 3,
+          "context_digest": "frozen_N01"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+          "inheritance_strategy": null
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+          "user_goal": "合成案例，非玩家记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {},
+          "effects": [],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weight_kg": {
+            "original": 2,
+            "current": 1,
+            "unit": "kg",
+            "source": "fixture"
+          }
+        },
+        "capabilities": {
+          "version": "B-fixture-2026-10-17",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [],
+          "checks": [],
+          "completeness": "relevant_candidates_only",
+          "lookup_state": "expanded"
+        },
+        "intent_state": {
+          "goal": "给护符加上晨星回响技能。",
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "msg_missing_catalog",
+          "text": "给护符加上晨星回响技能。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "expectation": {
+        "no_operations": true,
+        "information_missing": true
+      },
+      "meaning": "补查后仍缺少命名技能，保留缺口，不能要求技术标识或自动创建替代。"
+    },
+    {
+      "id": "N02",
+      "task": "parse",
+      "input": {
+        "request": {
+          "request_id": "N02",
+          "base_revision": 3,
+          "context_digest": "frozen_N02"
+        },
+        "selection": {
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+          "inheritance_strategy": null
+        },
+        "current_plan": {
+          "schema_version": "1.1-draft-4",
+          "mode": "modify_existing",
+          "base_equipment": "equipment:1e172d76-3433-4ee7-ae1a-9e7d8ae0f12b",
+          "user_goal": "合成案例，非玩家记录",
+          "display": {
+            "name": null,
+            "description": null
+          },
+          "parameters": {},
+          "effects": [
+            {
+              "id": "strength_bonus",
+              "kind": "constant",
+              "ability": "Strength",
+              "amount": 4
+            },
+            {
+              "id": "dex_bonus",
+              "kind": "constant",
+              "ability": "Dexterity",
+              "amount": 2
+            }
+          ],
+          "removed_original_passives": [],
+          "acquisition": null,
+          "appearance_equipment": null,
+          "template_behavior": "reject_special",
+          "icon": null,
+          "unresolved": []
+        },
+        "effective_values": {
+          "weight_kg": {
+            "original": 2,
+            "current": 1,
+            "unit": "kg",
+            "source": "fixture"
+          }
+        },
+        "capabilities": {
+          "version": "B-fixture-2026-10-17",
+          "category_summary": [
+            "parameters",
+            "constant",
+            "bonus",
+            "trigger",
+            "independent_status",
+            "grant_spell",
+            "passive_copy",
+            "display",
+            "resources"
+          ],
+          "candidates": [],
+          "checks": [],
+          "completeness": "relevant_candidates_only"
+        },
+        "intent_state": {
+          "goal": "只改力量词条的说明为“佩戴时力量增加4点”，数值和实际效果都不变。",
+          "clarifications": [],
+          "open_issues": [],
+          "withdrawn": []
+        },
+        "latest_message": {
+          "id": "msg_p1_9",
+          "text": "只改力量词条的说明为“佩戴时力量增加4点”，数值和实际效果都不变。",
+          "answers_issue_ids": []
+        },
+        "recent_history": [],
+        "snapshots": []
+      },
+      "expectation": {
+        "no_operations": true,
+        "text_owner": "strength_bonus",
+        "exact_text": "佩戴时力量增加4点"
+      },
+      "meaning": "两个词条中已明确力量，不追问，不改装备实际效果。"
+    },
+    {
+      "id": "N03",
+      "task": "review",
+      "input": {
+        "request": {
+          "request_id": "N03",
+          "base_revision": 4,
+          "context_digest": "frozen_N03"
+        },
+        "plan_digest": "plan_R01",
+        "facts_digest": "facts_R01",
+        "facts": [
+          {
+            "id": "fact_strength",
+            "owner": "strength_bonus",
+            "dimensions": {
+              "condition": "装备期间",
+              "ability": "Strength",
+              "amount": 4
+            },
+            "source": "fixture_effective_plan",
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "text_1",
+            "owner": "strength_bonus",
+            "field": "description",
+            "mode": "exact",
+            "source_text": "喝下后永久增加4点力量",
+            "source_text_digest": "text_N03",
+            "style": null,
+            "required_fact_ids": [
+              "fact_strength"
+            ]
+          }
+        ]
+      },
+      "expectation": {
+        "source_status": "conflict",
+        "proposal_status": "consistent"
+      },
+      "meaning": "力量4点文案核对变体；建议不能改变真实效果。"
+    },
+    {
+      "id": "N04",
+      "task": "review",
+      "input": {
+        "request": {
+          "request_id": "N04",
+          "base_revision": 4,
+          "context_digest": "frozen_N04"
+        },
+        "plan_digest": "plan_R02",
+        "facts_digest": "facts_R02",
+        "facts": [
+          {
+            "id": "fact_strength",
+            "owner": "strength_bonus",
+            "dimensions": {
+              "condition": "装备期间",
+              "ability": "Strength",
+              "amount": 4
+            },
+            "source": "fixture_effective_plan",
+            "missing": []
+          }
+        ],
+        "texts": [
+          {
+            "id": "text_1",
+            "owner": "strength_bonus",
+            "field": "description",
+            "mode": "exact",
+            "source_text": "装备期间，力量提高4点。",
+            "source_text_digest": "text_N04",
+            "style": null,
+            "required_fact_ids": [
+              "fact_strength"
+            ]
+          }
+        ]
+      },
+      "expectation": {
+        "source_status": "consistent",
+        "proposal_status": "not_requested"
+      },
+      "meaning": "力量4点文案核对变体；建议不能改变真实效果。"
+    }
+  ]
+}
