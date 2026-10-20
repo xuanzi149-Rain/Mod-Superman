@@ -22,6 +22,9 @@ class FixedModel:
         return dict(schema_version='parse-v1',**c['request'],intent_summary='只修改稀有度',requirements=[dict(id='r1',quote=c['latest_message']['text'],meaning='稀有度',operation_ids=['op1'],issue_ids=[],text_request_ids=[],issue_update_ids=[],no_change=False)],operations=[op],issues=[],text_requests=[],issue_updates=[]),{'prompt_tokens':1,'completion_tokens':1}
 
 
+FixedModel.run_original=FixedModel.run
+
+
 class WorkflowTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -41,6 +44,36 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(r.status_code,200,r.text);return r.json()
     def edit(self,s,kind,target,payload):
         return self.act(s,'edit',{'operations':[{'kind':kind,'target':target,'payload':payload,'group_id':'g'}]})
+    def test_noop_input_is_transient_in_both_modes(self):
+        for mode in ('modify_existing','create_new'):
+            s=self.create(mode)
+            def no_op(model,task,c):
+                output,usage=FixedModel.run_original(model,task,c)
+                output['operations']=[]
+                output['requirements'][0].update(operation_ids=[],no_change=True)
+                return output,usage
+            with patch.object(FixedModel,'run',no_op):
+                result=self.act(s,'message',{'text':'问题未得到回答'})
+            self.assertTrue(result['input_retained'])
+            self.assertIn('没有提供具体回答',result['input_feedback'][0]['detail'])
+            self.assertEqual(result['plan'],s['plan'])
+            self.assertEqual(result['revision'],s['revision'])
+
+    def test_question_returns_answer_without_changing_plan(self):
+        s=self.create('create_new')
+        def answer(model,task,c):
+            output,usage=FixedModel.run_original(model,task,c)
+            output['operations']=[]
+            output['requirements'][0].update(operation_ids=[],no_change=True)
+            output['assistant_response']='会保留未提及的参数和效果。'
+            return output,usage
+        with patch.object(FixedModel,'run',answer):
+            result=self.act(s,'message',{'text':'会保留原来的效果吗？'})
+        self.assertEqual(result['assistant_response'],'会保留未提及的参数和效果。')
+        self.assertNotIn('input_feedback',result)
+        self.assertEqual(result['revision'],s['revision'])
+        self.assertEqual(result['plan'],s['plan'])
+
     def test_delete_draft_is_owned_persistent_and_preserves_delivery(self):
         s=self.create();ident=s['session_id'];url='/api/v11/sessions/'+ident+'/delete'
         with TestClient(self.app) as other:
@@ -77,6 +110,7 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(s['plan']['parameters']['weight_kg'],0)
         s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='reset',text=None,style=None)]})
         self.assertFalse(s['texts']);self.assertIsNone(s['plan']['display']['name'])
+
         self.assertEqual(s['plan']['parameters']['weight_kg'],0)
         s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='exact',text='Fool',style=None)]})
         s=self.act(s,'review')
@@ -87,6 +121,21 @@ class WorkflowTests(unittest.TestCase):
         restored=CraftService(self.service,self.app.state.jobs,FixedModel()).view(s['session_id'])
         self.assertIsNone(restored['plan']['parameters']['weight_kg'])
 
+
+    def test_new_defaults_and_legacy_inheritance_migration(self):
+        r=self.client.post('/api/v11/sessions',json={'mode':'create_new','base_equipment':self.fixtures['create_weapon']['base_equipment']})
+        self.assertEqual(r.status_code,201)
+        s=r.json();self.assertEqual(s['inheritance'],'retain_base')
+        self.assertFalse(s['issues']);self.assertEqual(s['plan']['removed_original_passives'],[])
+        s=self.edit(s,'set_parameter','weight_kg',{'value':0})
+        runtime=self.app.state.craft.get(s['session_id'])
+        runtime.inheritance='reconfigure'
+        runtime.issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'请选择继承策略'}
+        self.app.state.craft.save(s['session_id'],runtime)
+        restored=CraftService(self.service,self.app.state.jobs,FixedModel()).view(s['session_id'])
+        self.assertEqual(restored['inheritance'],'retain_base');self.assertFalse(restored['issues'])
+        self.assertEqual(restored['plan']['parameters']['weight_kg'],0)
+        self.assertEqual(restored['plan']['removed_original_passives'],[])
     def test_free_text_and_legacy_pending_restore_without_review(self):
         s=self.create()
         s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='exact',text='测试名称',style=None)]})
@@ -246,7 +295,7 @@ class WorkflowTests(unittest.TestCase):
         r=self.client.post('/api/v11/sessions',json={'mode':'modify_existing','base_equipment':bad})
         self.assertEqual(r.status_code,201)
         r=self.client.post('/api/v11/sessions',json={'mode':'create_new','base_equipment':self.fixtures['create_weapon']['base_equipment'],'inheritance':'retain_base','acquisition':'dammon_act1'})
-        self.assertEqual(r.status_code,201);self.assertEqual(r.json()['plan']['acquisition'],'dammon_act1')
+        self.assertEqual(r.status_code,201);self.assertEqual(r.json()['plan']['acquisition'],'camp_chest')
         self.assertNotIn('acquisition:unknown_or_unverified',r.json()['validation'])
 
     def test_legacy_unqualified_draft_can_switch_without_losing_free_name(self):
@@ -268,7 +317,7 @@ class WorkflowTests(unittest.TestCase):
             with self.subTest(mode=mode):
                 s=self.create(mode);s=self.edit(s,'set_parameter','rarity',{'value':'Rare'})
                 if mode=='create_new':
-                    s=self.edit(s,'select_reference','acquisition',{'reference_id':'dammon_act1'})
+                    s=self.edit(s,'select_reference','acquisition',{'reference_id':'camp_chest'})
                     s=self.act(s,'edit',{'texts':[dict(target={'owner':'equipment','field':'name'},mode='exact',text='接口验收装备',style=None)]})
                     s=self.act(s,'review')
                 self.assertTrue(s['ready'],s)
@@ -287,6 +336,6 @@ class WorkflowTests(unittest.TestCase):
                     self.assertIn('基础装备',z.read('使用说明.txt').decode())
                 r=self.client.post('/api/v11/tasks/'+ident+'/feedback',json={'request_id':str(uuid.uuid4()),'outcome':'success','stage':'game_effect','game_version':'test','detail':'模拟反馈'})
                 self.assertEqual(r.json()['game_validation'],'not_performed')
-                if mode=='create_new':self.assertIn('达蒙',task['instructions'])
+                if mode=='create_new':self.assertIn('营地个人宝箱',task['instructions'])
 
 if __name__=='__main__':unittest.main()

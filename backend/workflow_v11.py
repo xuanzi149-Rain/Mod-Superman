@@ -53,7 +53,7 @@ class CraftService:
                 audit=self.resources.get('body_template_audit',{}).get('templates',{})
                 values=[v for v in values if audit.get(v['id'].removeprefix('equipment:'),{}).get('qualified')]
         elif kind=='acquisition':
-            values=[{'id':a['id'],'name':'第一章 · 翠绿林地 · 达蒙','limitations':a['limitations']} for a in self.resources['acquisition_entries'] if a.get('npc_mapping',{}).get('matched')]
+            values=[{'id':a['id'],'name':a['name'],'limitations':a['limitations']} for a in self.resources['acquisition_entries']]
         elif kind=='icon':
             values=[{'id':k,'name':k} for k,v in self.resources['icon_asset_validation'].items() if v.get('asset_exists')]
         elif kind in ('SpellData','StatusData','PassiveData'):
@@ -95,9 +95,9 @@ class CraftService:
                 raise ServiceError('base_not_ready','这件装备暂时不能作为新装备来源，请选择列表中已检查的基础装备。',422)
             acquisition=body.get('acquisition')
             if acquisition is not None:
-                if not any(a['id']==acquisition and a.get('npc_mapping',{}).get('matched') for a in self.resources['acquisition_entries']):
+                if acquisition not in ('camp_chest','dammon_act1'):
                     raise ServiceError('invalid_acquisition','请选择列表中的获取地点。',422)
-                p.acquisition=acquisition
+                p.acquisition='camp_chest'
         elif body.get('acquisition') is not None:
             raise ServiceError('unexpected_acquisition','修改已有装备保留原获取方式。',422)
         ident=str(uuid.uuid4());s=Task8Session(p,self.catalog,self.resources,model=self.model,inheritance=body.get('inheritance'))
@@ -125,12 +125,14 @@ class CraftService:
             s.issues={key:player_issue(value) for key,value in s.issues.items()}
             s.draft=Draft(Plan.model_validate(saved['plan']));s.draft.revision=saved['revision']+1
             # Failed inputs are no longer persistent tasks. Keep actual plan constraints.
-            s.issues={k:v for k,v in s.issues.items() if k=='inheritance'}
+            s.issues={}
+            s.inheritance='retain_base'
             s.draft.plan.unresolved=[v['detail'] for v in s.issues.values()]
             s.history=[h for h in s.history if not h.get('feedback',{}).get('unresolved') and not h.get('feedback',{}).get('failed')]
             s.requirements=[]
             for snapshot in s.snapshots.values():
-                snapshot['issues']={k:v for k,v in snapshot.get('issues',{}).items() if k=='inheritance'}
+                snapshot['issues']={}
+                snapshot['inheritance']='retain_base'
                 snapshot['plan']['unresolved']=[v['detail'] for v in snapshot['issues'].values()]
             s.http_requests=saved.get('http_requests',{});s.last_result=saved.get('last_result');s.last_error=None;s.task_id=saved.get('task_id')
             s.latest_review=None;s.recovery='服务已重启，草稿已恢复；请重新核对并确认。'
@@ -221,6 +223,8 @@ class CraftService:
                 previous_draft=copy.deepcopy(s.draft)
                 result=s.submit(text,key,answers=data.get('answers',[]))
                 if result.get('unresolved') or result.get('failed'):
+                    for failure in result.get('failed',[]):
+                        s.log.append({'task':'validation_failure','error':failure.get('error'),'request_id':key})
                     feedback=[player_issue(i) for i in result.get('unresolved',[])]
                     if not feedback:
                         feedback=[{'detail':'本次修改未通过检查，暂时无法确定具体原因。'}]
@@ -229,6 +233,16 @@ class CraftService:
                     # Transient response only: no failed input, pending issue, request
                     # cache, snapshot or revision is persisted by this submission.
                     return {**self.view(ident,s),'input_retained':True,'input_feedback':feedback}
+                if result.get('before') == result.get('after'):
+                    # Answers and no-ops must not save the submitted text or invalidate
+                    # a previously confirmed draft. Return feedback only for this request.
+                    reply=result.get('assistant_response','').strip()
+                    for k,v in previous.items():setattr(s,k,v)
+                    s.draft=previous_draft
+                    response={**self.view(ident,s),'input_retained':True,'assistant_response':reply}
+                    if not reply:
+                        response['input_feedback']=[{'detail':'本次输入没有产生修改，模型也没有提供具体回答；暂时无法确定原因。'}]
+                    return response
             elif action=='edit':result=self.manual(s,data)
             elif action=='review':result=s.review_text() if s.texts else s.preview()
             elif action=='adopt':result=s.adopt_review(replacements=data.get('replacements',[]))
@@ -240,7 +254,7 @@ class CraftService:
             s.last_result=result;s.last_error=None;s.recovery=None
             s.http_requests[key]={'fingerprint':mark,'result':result}
             self.save(ident,s)
-            return {**self.view(ident,s),'operation_result':result}
+            return {**self.view(ident,s),'operation_result':result,'assistant_response':result.get('assistant_response','')}
         except ServiceError as error:
             s.last_error={'stage':action,'code':error.code,'message':error.message};self.save(ident,s);raise
         except (ValueError,KeyError,TypeError,StopIteration) as error:

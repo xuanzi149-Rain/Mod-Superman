@@ -152,6 +152,8 @@ class Plan(StrictModel):
 
     @model_validator(mode='after')
     def consistency(self):
+        if self.mode == 'create_new' and self.acquisition in (None, 'dammon_act1'):
+            self.acquisition = 'camp_chest'
         ids = [effect.id for effect in self.effects]
         if len(ids) != len(set(ids)):
             raise ValueError('Duplicate draft effect ID')
@@ -234,8 +236,7 @@ def check_resource_links(plan, resources):
                      else template['create_eligibility']['status'] == 'base_template_qualified')
         if not qualified:
             issues.append('base_equipment:unqualified_visual')
-        if not any(a['id'] == plan.acquisition and (a.get('npc_mapping') or {}).get('matched')
-                   for a in resources['acquisition_entries']):
+        if plan.acquisition != 'camp_chest':
             issues.append('acquisition:unknown_or_unverified')
     for field in ('damage', 'versatile_damage', 'damage_type', 'enchantment'):
         if getattr(plan.parameters, field) is not None and base['type'] != 'Weapon':

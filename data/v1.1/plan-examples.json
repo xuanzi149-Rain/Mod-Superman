@@ -62,7 +62,7 @@
       }
     ],
     "removed_original_passives": [],
-    "acquisition": "dammon_act1",
+    "acquisition": "camp_chest",
     "appearance_equipment": null,
     "template_behavior": "reject_special",
     "icon": null,

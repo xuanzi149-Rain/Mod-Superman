@@ -11,6 +11,7 @@ from backend.text_review_v11 import fingerprint
 from scripts.crafting_compiler_v11 import validate_plan, render_plan, FIELD_MAP
 from scripts.native_dependencies_v11 import closure, spell_profile
 from backend.resource_names import localized, name_score
+from backend.workflow_errors import validation_failure_reason
 from scripts.resource_audit_v11 import calls
 
 INCOMPLETE = {'unresolved_questions','display.name:required_for_new_equipment',
@@ -127,20 +128,13 @@ class Task8Session:
     def __init__(self, plan, catalog, resources, *, model=None, inheritance=None):
         self.draft=Draft(plan);self.catalog=catalog;self.resources=resources
         self.model=model or Task8Model();self.lock=threading.RLock()
-        self.inheritance=inheritance;self.issues={};self.texts={};self.history=[]
+        self.inheritance='retain_base';self.issues={};self.texts={};self.history=[]
         self.requests={};self.snapshots={};self.log=[];self.goal=plan.user_goal;self.requirements=[]
         self.latest_review=None;self.normalizations=[]
         self.resource_version=fingerprint(resources)
         for n,t in enumerate(plan.unresolved):
             if t!='text_review_pending':self.issues['initial_'+str(n)]={'id':'initial_'+str(n),'detail':t,'kind':'clarification'}
         self._queue_existing_texts()
-        if plan.mode=='create_new' and inheritance is None:
-            p=self.draft.plan
-            if plan.mode=='create_new' and inheritance is None:
-                self.issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'请选择继承策略'}
-                p.unresolved.append('请选择继承策略')
-            self.draft=Draft(p)
-
     def _queue_existing_texts(self):
         """Migrate legacy pending text verbatim; text semantics are not a gate."""
         p=self.draft.plan.model_dump(mode='json')
@@ -209,7 +203,7 @@ class Task8Session:
                 if r['type']=='SpellData':item['profile']=spell_profile(ref,records)
             except ValueError as e:item['dependency_issue']=str(e)
             values.append(item)
-        values += [{'id':a['id'],'type':'acquisition','limitations':a['limitations']} for a in self.resources['acquisition_entries'] if a.get('npc_mapping',{}).get('matched')]
+        values += [{'id':a['id'],'type':'acquisition','limitations':a['limitations']} for a in self.resources['acquisition_entries']]
         values += [{'id':key,'type':'equipment','name':v['display_name']} for key,v in self.catalog['items'].items()
                    if v.get('display_name') and v['display_name'] in text][:20]
         for ref in self.resources['icon_asset_validation']:
@@ -273,6 +267,7 @@ class Task8Session:
                     self.log.append({'task':'parse_lookup','context':c,'output':raw,'usage':usage})
                     o=validate_output('parse',raw,c)
                 result=self.apply(o,c)
+                result['assistant_response']=o.get('assistant_response','')
                 if c['capabilities']['lookup_state']=='expanded' and any(i['kind']=='information_missing' for i in o['issues']):
                     result['recovery']={
                         'status':'resource_not_found_in_current_catalog',
@@ -362,8 +357,7 @@ class Task8Session:
             p[t]=ref
         elif kind=='set_inheritance_intent':
             if p['mode']!='create_new':raise ValueError('inheritance_only_for_creation')
-            metadata['inheritance']=v['strategy']
-            if v['strategy']=='reconfigure':metadata['reconfigure']=True
+            metadata['inheritance']='retain_base'  # Legacy intent never clears inherited effects.
         elif kind=='set_template_behavior':
             if v['audit_id'] not in {x['id'] for x in c['capabilities']['checks'] if x.get('result')=='template_audit'}:raise ValueError('stale_template_audit')
             p['template_behavior']=v['value']
@@ -373,11 +367,11 @@ class Task8Session:
                 p.update(parameters={},effects=[],removed_original_passives=[],display={},appearance_equipment=None,icon=None,acquisition=None,template_behavior='reject_special')
                 metadata['reset_context']=True
             p.update(mode=v['mode'],base_equipment=v['base_equipment'],template_behavior='reject_special')
-            metadata['inheritance']=None
+            metadata['inheritance']='retain_base'
         elif kind=='restore_snapshot':
             snap=self.snapshots.get(v['snapshot_id'])
             if not snap or (snap['plan']['mode'],snap['plan']['base_equipment'])!=(p['mode'],p['base_equipment']):raise ValueError('snapshot_context_mismatch')
-            p.clear();p.update(copy.deepcopy(snap['plan']));metadata['inheritance']=snap['inheritance']
+            p.clear();p.update(copy.deepcopy(snap['plan']));metadata['inheritance']='retain_base'
             metadata['restore']=snap
         else:raise ValueError('unknown_operation')
 
@@ -434,7 +428,7 @@ class Task8Session:
                 except (ValueError,KeyError,TypeError) as e:
                     key='failed_'+context['request']['request_id']+'_'+group[0]['id']
                     detail=str(e)[:1000];failed.append({'operations':[op['id'] for op in group],'error':detail})
-                    issues[key]={'id':key,'kind':'capability_gap','detail':detail,
+                    issues[key]={'id':key,'kind':'capability_gap','detail':validation_failure_reason(detail),
                                  'requirements':[r['quote'] for r in o['requirements'] if set(r['operation_ids']) & {x['id'] for x in group}]}
             if metadata.get('restore'):
                 issues=copy.deepcopy(metadata['restore']['issues'])
@@ -461,11 +455,8 @@ class Task8Session:
             for u in o['issue_updates']:
                 if u['proposed_action']=='withdrawn' or (set(u['operation_ids'])<=set(applied) and set(u['text_request_ids'])<=applied_texts):
                     issues.pop(u['issue_id'],None)
-            if p['mode']=='create_new' and metadata['inheritance'] is None:
-                issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'请选择基础参数/效果的继承策略'}
-            elif metadata['inheritance']=='retain_base':issues.pop('inheritance',None)
-            if metadata.get('reconfigure'):
-                issues['inheritance']={'id':'inheritance','kind':'clarification','detail':'重新设定需逐项确认保留、移除及新参数，不能自动清空'}
+            metadata['inheritance']='retain_base'
+            issues.pop('inheritance',None)
             texts={k:t for k,t in texts.items() if t['target']['owner']=='equipment' or t['target']['owner'] in {e['id'] for e in p['effects']}}
             blockers=[str(i['detail'])[:1500] for i in issues.values()]
             if len(blockers)>20:raise ValueError('too_many_unresolved_requirements')

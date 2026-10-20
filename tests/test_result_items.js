@@ -23,3 +23,10 @@ vm.runInContext(summaryCode,ctx);
 const weaponDamage={id:'fire',kind:'weapon_damage',dice:'1d4',damage_type:'Fire',display:{}};
 assert.match(ctx.effectSummary(weaponDamage),/1d4/);assert.match(ctx.effectSummary(weaponDamage),/Fire/);
 state.plan.effects=[weaponDamage];rows=ctx.resultItems();assert.equal(rows.length,1);assert.equal(rows[0].operations[0].kind,'remove_effect');
+
+state.plan.effects=[];state.plan.parameters={weight_kg:1,weapon_properties:['Thrown','Light']};
+state.effective_values={weight_kg:{original:1},weapon_properties:{original:['Light','Thrown']}};
+rows=ctx.resultItems();assert.equal(rows.length,2);assert.ok(rows.every(x=>x.html.includes('与原值一致，已采用')));
+assert.equal(rows[1].operations[0].kind,'restore_parameter');
+assert.match(ctx.confirmationChanges(),/与原值一致，已采用/);
+console.log('Explicit equal values: numeric and reordered properties visible in edit and confirmation.');

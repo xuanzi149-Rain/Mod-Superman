@@ -38,3 +38,31 @@ def explain_failure(action, error):
     if action in ('message','review','adopt'):
         return '解析或核对结果未通过检查，程序未采用本次结果。暂时无法确定具体原因，请保留输入并反馈此提示，无需猜测或补填技术信息。'
     return '这项操作未能通过当前方案校验，暂时无法确定具体原因。请保留草稿并反馈刚才的操作，暂勿反复修改无关参数。'
+
+
+def validation_failure_reason(error):
+    """Translate deterministic checks; never invent an explanation for unknown codes."""
+    names={'Melee':'近战','Ranged':'远程','Twohanded':'双手','Versatile':'两用','Thrown':'投掷','Reach':'长柄','Heavy':'重型'}
+    reasons=[]
+    for code in str(error).split(';'):
+        if '_requires_resource_remap' in code:
+            key=code.split(':')[-1].removesuffix('_requires_resource_remap')
+            reason=f'本次解析结果改变了武器的“{names.get(key,"结构") }”属性；该属性关联动作或模板资源，目前不能只修改属性列表。'
+        elif 'magical_has_additional_source' in code:
+            reason='本次解析结果移除了魔法武器属性，但基础装备还从其他原生字段获得此属性，无法仅通过属性列表移除。'
+        elif 'conflicting_or_duplicate' in code:
+            reason='模型给出的武器属性包含重复项，或同时设置了不能并存的“双手”和“两用”。'
+        elif 'requires_weapon' in code:
+            reason='本次解析尝试修改武器专属参数，但当前基础装备不是武器。'
+        elif 'requires_versatile' in code:
+            reason='本次解析设置了双手伤害骰，但武器没有“两用”属性。'
+        elif 'three_decimals_max' in code:
+            reason='计算后的重量超过三位小数，未通过重量精度检查。'
+        elif 'validation error' in code or 'input_type=' in code:
+            reason='模型给出的参数未通过字段类型或取值范围检查；现有记录不足以确定具体字段。'
+        elif code=='conflicting_writes':
+            reason='模型在同一组修改中对同一个参数重复赋值，程序无法确定应采用哪个值。'
+        else:
+            reason='本次结果未通过程序校验；该检查尚无可读原因说明，目前无法确定具体原因。这不表示你的描述有错。'
+        if reason not in reasons:reasons.append(reason)
+    return ' '.join(reasons)

@@ -1260,7 +1260,7 @@
     "native_dependencies": "typed acyclic copies including statuses, subspells, containers, upcasts and AI variants; predicates and immunity retain native targets",
     "unknown_expressions": "blocked",
     "honour": "separate effective diff, preserve unless explicitly changed",
-    "acquisition": "dammon_act1 local entity/table verified; refresh unverified"
+    "acquisition": "camp_chest native OneTimeRewards; chapter-independent; in-game delivery unverified"
   },
   "deferred_families": {
     "weapon_properties": "missing_combination_rules",

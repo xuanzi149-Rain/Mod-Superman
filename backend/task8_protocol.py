@@ -223,7 +223,7 @@ def select_examples(task, context):
     for pattern, name in [(r'删除|删掉','E06'),(r'减半|翻倍','E04'),(r'免费|法术位','E07'),
                           (r'持续|叠加|状态','E11'),(r'永久.*增加|每杀','E08'),
                           (r'其他不变|改成|回复量','E05'),(r'背景|史诗|名字','E10'),
-                          (r'新.*戒指|继承','E03'),(r'更硬|不要太强','E02')]:
+                          (r'更硬|不要太强','E02')]:
         if re.search(pattern,text): choices.append(name)
     if context['latest_message'].get('answers_issue_ids'): choices.insert(0,'E12')
     names=['E01']+list(dict.fromkeys(choices))[:2]

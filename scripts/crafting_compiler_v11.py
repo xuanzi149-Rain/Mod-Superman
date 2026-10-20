@@ -1,4 +1,5 @@
 """Deterministic phase B compiler. Native expressions are emitted only by typed rules."""
+from scripts.camp_acquisition_v11 import ENTRY, rewards_xml, check_rewards
 from decimal import Decimal
 from copy import deepcopy
 import hashlib
@@ -33,6 +34,7 @@ def load_resources():
             if hashlib.sha256((ROOT / path).read_bytes()).hexdigest() != expected:
                 raise ValueError('Body audit source changed: ' + path)
         resources['body_template_audit'] = audit
+    resources['acquisition_entries'] = [dict(ENTRY)]
     return resources
 
 
@@ -61,7 +63,7 @@ def validate_plan(plan, catalog, resources, *, text_receipt=None):
             issues.append('base_equipment:unqualified_visual')
         if not plan.display.name:
             issues.append('display.name:required_for_new_equipment')
-        if not any(a['id'] == plan.acquisition and a.get('npc_mapping', {}).get('matched') for a in resources['acquisition_entries']):
+        if plan.acquisition != 'camp_chest':
             issues.append('acquisition:unknown_or_unverified')
         # A's flat template index does not inspect child nodes. Reject templates with special
         # use/story behaviour based on the original node, before inheriting it.
@@ -487,10 +489,7 @@ def render_plan(plan, module_id, *, catalog, resources, text_receipt=None):
                 ET.SubElement(node, 'attribute', id=field, type='TranslatedString', handle=handle, version='1')
         files[Path('Public') / module / 'RootTemplates/_merged.lsx'] = ET.tostring(root, encoding='utf-8', xml_declaration=True)
     if new:
-        entry = next(a for a in resources['acquisition_entries'] if a['id'] == plan.acquisition)
-        # Full local baseline plus one new subtable. Explicitly report table conflicts.
-        treasure = entry['raw'].rstrip() + f'\nnew subtable "-1"\nobject category "I_{equipment_id}",1,0,0,0,0,0,0,0\n'
-        files[Path('Public') / module / 'Stats/Generated/TreasureTable.txt'] = treasure.encode()
+        files[Path('Public') / module / 'OneTimeRewards/OneTimeRewards.lsx'] = rewards_xml(module_id, root_id)
     for kind, contents in groups.items():
         files[Path('Public') / module / 'Stats/Generated/Data' / (kind + '.txt')] = ''.join(contents).encode()
     if texts:
@@ -503,7 +502,7 @@ def render_plan(plan, module_id, *, catalog, resources, text_receipt=None):
     for child in info.findall('children'):
         info.remove(child)
     files[Path('Mods') / module / 'meta.lsx'] = ET.tostring(tree.getroot(), encoding='utf-8', xml_declaration=True)
-    manifest = {'module_uuid': module_id, 'plan_digest': digest(plan), 'equipment': equipment_id, 'root_template': root_id, 'effect_ids': ids, 'native_dependency_copies': dependency_manifests, 'template_audit': resources.get('body_template_audit', {}).get('templates', {}).get(plan.appearance_equipment.removeprefix('equipment:') if plan.appearance_equipment else key), 'mode': plan.mode, 'base_record': base_name, 'changed_fields': fields, 'game_validation': 'not_performed', 'warnings': ['Shared Stats overrides affect all instances and inheriting records.', 'Acquisition replaces the recorded Dammon table; mods editing the same table may conflict.', 'Stock refresh, saved inventories and actual game behavior are not verified.']}
+    manifest = {'module_uuid': module_id, 'plan_digest': digest(plan), 'equipment': equipment_id, 'root_template': root_id, 'effect_ids': ids, 'native_dependency_copies': dependency_manifests, 'template_audit': resources.get('body_template_audit', {}).get('templates', {}).get(plan.appearance_equipment.removeprefix('equipment:') if plan.appearance_equipment else key), 'mode': plan.mode, 'base_record': base_name, 'changed_fields': fields, 'game_validation': 'not_performed', 'warnings': ['Shared Stats overrides affect all instances and inheriting records.', 'New equipment uses a stable one-time camp chest reward without chapter conditions.', 'Existing-save delivery and actual game behavior are not verified.']}
     return files, manifest
 
 
@@ -559,9 +558,9 @@ def check_files(files, manifest, resources):
         root = ET.fromstring(rootfiles[0])
         if root.find('.//attribute[@id="Stats"]').get('value') != manifest['equipment']:
             raise ValueError('Template/Stats mismatch')
-        treasure = next(v.decode() for p, v in files.items() if p.name == 'TreasureTable.txt')
-        if f'"I_{manifest["equipment"]}"' not in treasure:
-            raise ValueError('Missing acquisition reference')
+        reward_files = [v for p,v in files.items() if p.name == 'OneTimeRewards.lsx']
+        if len(reward_files)!=1:raise ValueError('Missing camp chest reward')
+        check_rewards(reward_files[0],manifest['module_uuid'],manifest['root_template'])
 
 
 def generate_draft(draft, module_id, output_root, *, catalog, resources, packager=DIVINE):
@@ -595,6 +594,12 @@ def generate_draft(draft, module_id, output_root, *, catalog, resources, package
             if contents(path) != contents(roundtrip):
                 raise ValueError('Localization round-trip changed text')
         for path in list(source.rglob('*.lsx')):
+            if path.name == 'OneTimeRewards.lsx':
+                binary = directory / 'rewards-check.lsf'
+                roundtrip = directory / 'rewards-roundtrip.lsx'
+                run_tool(packager, '-a', 'convert-resource', '-s', str(path), '-d', str(binary), '-i', 'lsx', '-o', 'lsf')
+                run_tool(packager, '-a', 'convert-resource', '-s', str(binary), '-d', str(roundtrip), '-i', 'lsf', '-o', 'lsx')
+                check_rewards(roundtrip.read_bytes(), module_id, manifest['root_template'], binary_roundtrip=True)
             if path.name == '_merged.lsx':
                 run_tool(packager, '-a', 'convert-resource', '-s', str(path), '-d', str(path.with_suffix('.lsf')), '-i', 'lsx', '-o', 'lsf')
                 # Round-trip proves the resource can be parsed, beyond opaque package copying.
@@ -625,10 +630,9 @@ def generate_draft(draft, module_id, output_root, *, catalog, resources, package
                  '卸载：停用本包，重启游戏并加载启用前的备份存档。',
                  '模式：' + plan.mode, '方案摘要：' + digest(plan)]
         if plan.mode == 'create_new':
-            entry = next(a for a in resources['acquisition_entries'] if a['id'] == plan.acquisition)
-            notes.extend(['获取入口：第一章翠绿林地达蒙；必须仍存活且可访问。',
-                          '旧库存刷新及是否需要新档尚未验证，不保证旧存档立即出现。',
-                          '获取表：' + entry['table']])
+            notes.extend(['获取入口：营地个人宝箱；启用 Mod 并加载存档后返回营地查看。',
+                          '不限制章节、不依赖商人。按同一奖励标识一次性发放，不随读档重复补发。',
+                          '各章节、已有存档和多人情况下的实际发放尚未游戏验证。'])
             for behavior in manifest.get('template_audit', {}).get('special_actions', []):
                 notes.append('已确认保留的特殊行为：' + behavior.get('description', behavior.get('name', behavior['kind'])))
         (directory / '使用说明.txt').write_text('\n'.join(notes), encoding='utf-8')

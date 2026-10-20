@@ -35,6 +35,7 @@
   }
   function latestInput(previous, current, requestId) {
     if(current.input_retained) return (current.input_feedback||[]).map(x=>({reason:String(x.detail||'暂时无法确定具体原因。').replace(/原需求.*?已保留[，。；]?/g,'').replace(/距离、队友范围和伤害加成都已保留；/g,'').replace(/本次要求已保留，/g,'').replace(/你的原要求和补充说明已保留。/g,'').replace(/原要求及补充说明已保留。/g,''),solution:'本次输入未保存为方案要求，内容已留在上方输入框；可以修改后重新提交，也可以直接清空。已有方案不受影响。'}));
+    if(current.assistant_response) return [];
     const old = new Map((previous.issues||[]).map(x=>[x.id,JSON.stringify(x)]));
     const rows=(current.issues||[]).filter(x=>x.id.startsWith(requestId+'_')||old.get(x.id)!==JSON.stringify(x)).map(x=>({reason:x.detail,solution:x.question||'请在输入框中补充具体目标、数值或效果；若不再需要，请明确说明取消这项要求。'}));
     const result=current.operation_result||current.last_result||{};

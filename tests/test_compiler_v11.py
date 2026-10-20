@@ -65,9 +65,10 @@ class CompilerTests(unittest.TestCase):
         f,m,r=self.render(example('create_new'))
         self.assertNotEqual(m['equipment'],'WPN_Longsword')
         self.assertNotIn('WPN_Longsword',r)
-        t=next(v.decode() for p,v in f.items() if p.name=='TreasureTable.txt')
-        self.assertIn(self.r['acquisition_entries'][0]['raw'].rstrip(),t)
-        self.assertIn('I_'+m['equipment'],t)
+        self.assertFalse(any(p.name=='TreasureTable.txt' for p in f))
+        t=next(v.decode() for p,v in f.items() if p.name=='OneTimeRewards.lsx')
+        self.assertIn(m['root_template'],t)
+        self.assertIn('OneTimeReward',t)
 
     def test_stable_identity(self):
         p=example('create_new'); a=self.render(p);b=self.render(p)

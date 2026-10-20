@@ -32,6 +32,18 @@ class Task8Tests(unittest.TestCase):
             for e in examples()[task+'_examples']:
                 with self.subTest(case=e['id']):validate_output(task,e['expected_output'],e['input'])
 
+    def test_explicit_equal_parameters_are_kept(self):
+        from backend.task8 import effective_values
+        s=self.session();o,c=self.response(s)
+        values=effective_values(s.draft.plan,self.resources)
+        o['operations']=[dict(id='equal',requirement_ids=['r'],group_id='g',kind='set_parameter',target='weight_kg',payload={'value':values['weight_kg']['original'],'unit':'kg'})]
+        o['requirements']=[dict(id='r',quote=c['latest_message']['text'],meaning='保持原重量',operation_ids=['equal'],issue_ids=[],text_request_ids=[],issue_update_ids=[],no_change=False)]
+        o['issues']=[];o['text_requests']=[];o['issue_updates']=[]
+        result=s.apply(o,c)
+        self.assertFalse(result['failed'])
+        self.assertEqual(s.draft.plan.parameters.weight_kg,values['weight_kg']['original'])
+        self.assertIsNotNone(s.draft.plan.parameters.weight_kg)
+
     def test_parameter_and_relative_changes(self):
         s=self.session();o,c=self.response(s);s.apply(o,c)
         self.assertEqual(s.draft.plan.parameters.damage,'2d6')
