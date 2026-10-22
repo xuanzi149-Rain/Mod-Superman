@@ -26,6 +26,12 @@ def validate_output(task, output, context):
     if isinstance(output, str):
         output = json.loads(output, object_pairs_hook=no_duplicate_keys,
                             parse_constant=lambda x: (_ for _ in ()).throw(ValueError('nonfinite')))
+    # An absent optional answer and null/blank answer carry the same meaning.
+    # Do not repair any operation, numeric value, requirement or resource reference.
+    if task == 'parse' and isinstance(output, dict) and (output.get('assistant_response') is None or
+            isinstance(output.get('assistant_response'), str) and not output['assistant_response'].strip()):
+        output=copy.deepcopy(output)
+        output.pop('assistant_response',None)
     json.dumps(output, allow_nan=False)
     errors = list(Draft202012Validator(schema(task)).iter_errors(output))
     if errors:
@@ -232,11 +238,36 @@ def select_examples(task, context):
 
 def messages(task, context):
     prompt=(ROOT / 'prompts' / f'task8-{task}-{VERSION.removeprefix("task8-")}.md').read_text(encoding='utf-8')
-    result=[{'role':'system','content':prompt+'\n'+policy()+'\nJSON Schema:\n'+json.dumps(schema(task),ensure_ascii=False,separators=(',',':'))}]
-    for e in select_examples(task,context):
+    from backend.request_routing import simple_parameter_request
+    simple=task=='parse' and simple_parameter_request(context)
+    wire_schema=copy.deepcopy(schema(task))
+    if simple:
+        wire_schema['$defs']['Operation']['oneOf']=[o for o in wire_schema['$defs']['Operation']['oneOf']
+            if o['properties']['kind'].get('const')=='set_parameter' and o['properties']['target'].get('const') in ('weight_kg','rarity')]
+        # Remove definitions unreachable from the narrowed wire contract only.
+        # The authoritative validator still uses the complete original schema.
+        used=set()
+        def refs(value):
+            if isinstance(value,dict):
+                if '$ref' in value:
+                    key=value['$ref'].split('/')[-1]
+                    if key not in used:
+                        used.add(key);refs(wire_schema['$defs'][key])
+                for key,item in value.items():
+                    if key!='$defs':refs(item)
+            elif isinstance(value,list):
+                for item in value:refs(item)
+        refs(wire_schema)
+        wire_schema['$defs']={k:v for k,v in wire_schema['$defs'].items() if k in used}
+    result=[{'role':'system','content':prompt+'\n'+policy()+'\nJSON Schema:\n'+json.dumps(wire_schema,ensure_ascii=False,separators=(',',':'))}]
+    wire_context=copy.deepcopy(context)
+    if simple:
+        wire_context['capabilities']['candidates']=[]
+        wire_context.pop('native_equipment_fields',None)
+    for e in ([] if simple else select_examples(task,context)):
         result += [{'role':'user','content':json.dumps(e['input'],ensure_ascii=False)},
                    {'role':'assistant','content':json.dumps(e['expected_output'],ensure_ascii=False)}]
-    result.append({'role':'user','content':json.dumps(context,ensure_ascii=False)})
+    result.append({'role':'user','content':json.dumps(wire_context,ensure_ascii=False,separators=(',',':'))})
     # Preserve current state; discard optional examples before rejecting, never truncate facts.
     if sum(len(m['content']) for m in result)>100000: result=[result[0],result[-1]]
     if sum(len(m['content']) for m in result)>100000: raise ValueError('context_budget_exceeded')

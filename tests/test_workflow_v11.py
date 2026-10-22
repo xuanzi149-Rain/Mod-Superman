@@ -44,6 +44,15 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(r.status_code,200,r.text);return r.json()
     def edit(self,s,kind,target,payload):
         return self.act(s,'edit',{'operations':[{'kind':kind,'target':target,'payload':payload,'group_id':'g'}]})
+    def test_catalog_question_does_not_call_model(self):
+        s=self.create()
+        with patch.object(FixedModel,'run',side_effect=AssertionError('must not call model')):
+            result=self.act(s,'message',{'text':'可以改哪些参数'})
+        self.assertEqual(result['response_source'],'support_catalog')
+        self.assertIn('重量',result['assistant_response'])
+        self.assertEqual(result['plan'],s['plan'])
+        self.assertEqual(result['revision'],s['revision'])
+
     def test_noop_input_is_transient_in_both_modes(self):
         for mode in ('modify_existing','create_new'):
             s=self.create(mode)

@@ -219,6 +219,10 @@ class CraftService:
             if action=='message':
                 text=data.get('text','')
                 if not isinstance(text,str) or not text.strip() or len(text)>4000:raise ValueError('invalid_message')
+                from backend.request_routing import catalog_answer
+                answer=catalog_answer(text,s.draft.plan,self.catalog) if not data.get('answers') else None
+                if answer:
+                    return {**self.view(ident,s),'input_retained':True,'assistant_response':answer,'response_source':'support_catalog'}
                 previous={k:copy.deepcopy(getattr(s,k)) for k in SESSION_FIELDS}
                 previous_draft=copy.deepcopy(s.draft)
                 result=s.submit(text,key,answers=data.get('answers',[]))

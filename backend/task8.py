@@ -216,7 +216,9 @@ class Task8Session:
         self.resource_version=fingerprint(self.resources)
         key=(p.appearance_equipment or p.base_equipment).removeprefix('equipment:')
         audit=self.resources['body_template_audit']['templates'].get(key,{})
-        candidates=self.candidates(text,expanded)
+        from backend.request_routing import simple_parameter_request
+        simple=simple_parameter_request({'latest_message':{'text':text,'answers_issue_ids':list(answers)},'intent_state':{'open_issues':list(self.issues.values())}})
+        candidates=[] if simple and not expanded else self.candidates(text,expanded)
         checks=[{'id':'template_'+fingerprint(audit)[:16],'result':'template_audit',
                  'details':audit.get('special_actions',[])},
                 {'id':'check_growth_missing','result':'capability_gap',
